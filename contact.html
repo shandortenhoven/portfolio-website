@@ -1,20 +1,15 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
+    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="Contact Shandor ten Hoven — send a message using the form, or reach out via email."
+      content="Contact Shandor ten Hoven — send a message about collaborations, UX/UI roles, or product design work."
     />
     <title>Contact | Shandor ten Hoven</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap"
-      rel="stylesheet"
-    />
     <link rel="stylesheet" href="css/style.css" />
+    <script defer src="js/script.js"></script>
   </head>
 
   <body>
@@ -23,15 +18,15 @@
     <header class="site-header">
       <div class="container header-inner">
         <a class="logo" href="index.html" aria-label="Go to homepage">
-          <span class="logo-mark" aria-hidden="true">STH</span>
-          <span class="logo-text">Shandor ten Hoven</span>
+          <strong>STH</strong>
+          <span>Shandor ten Hoven</span>
         </a>
 
         <nav class="site-nav" aria-label="Primary">
           <ul class="nav-list">
             <li><a href="index.html">Work</a></li>
             <li><a href="about.html">About</a></li>
-            <li><a href="contact.html" aria-current="page">Contact</a></li>
+            <li><a class="nav-cta" href="contact.html" aria-current="page">Contact</a></li>
           </ul>
         </nav>
       </div>
@@ -39,66 +34,64 @@
 
     <main id="main">
       <section class="section">
-        <div class="container">
-          <h1>Contact</h1>
-          <p class="lead">Use the form below and I’ll reply as soon as possible.</p>
+        <div class="container contact-grid">
+          <div>
+            <h1>Contact</h1>
+            <p class="lead">
+              Want to collaborate or ask a question? Use the form and I’ll reply as soon as possible.
+            </p>
 
-          <div class="contact-grid">
+            <div class="contact-cards">
+              <div class="card">
+                <h2>Email</h2>
+                <p class="muted">Prefer email? Use this link:</p>
+                <p>
+                  <a class="link" href="mailto:Shandortenhoven@gmail.com">Shandortenhoven@gmail.com</a>
+                </p>
+              </div>
+
+              <div class="card">
+                <h2>LinkedIn</h2>
+                <p class="muted">Connect with me here:</p>
+                <p>
+                  <a
+                    class="link"
+                    href="https://www.linkedin.com/in/shandortenhoven"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    linkedin.com/in/shandortenhoven
+                  </a>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <h2>Send a message</h2>
+
+            <!-- This is a front-end form only (no backend). -->
             <form class="form" action="#" method="post">
-              <div class="field">
+              <div class="form-row">
                 <label for="name">Name</label>
                 <input id="name" name="name" type="text" autocomplete="name" required />
               </div>
 
-              <div class="field">
+              <div class="form-row">
                 <label for="email">Email</label>
                 <input id="email" name="email" type="email" autocomplete="email" required />
               </div>
 
-              <div class="field">
+              <div class="form-row">
                 <label for="message">Message</label>
                 <textarea id="message" name="message" rows="6" required></textarea>
               </div>
 
-              <button class="btn btn-primary" type="submit">Send</button>
-              <p class="form-note">
-                Prefer email? <a href="mailto:hello@example.com">hello@example.com</a>
-              </p>
+              <button class="btn" type="submit">Send</button>
             </form>
 
-            <aside class="contact-aside">
-              <h2>Get in touch</h2>
-              <p>
-                Want to collaborate or ask a question? The contact form is best (it keeps my personal number private),
-                but email works too.
-              </p>
-
-              <div class="button-row">
-                <a class="btn btn-secondary" href="mailto:hello@example.com">Email</a>
-                <a class="btn btn-secondary" href="files/cv.pdf" target="_blank" rel="noopener noreferrer">View CV</a>
-              </div>
-
-              <ul class="social-list" aria-label="Social links">
-                <li>
-                  <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                    <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
-                      <path
-                        d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5ZM.5 8h4V24h-4V8Zm7.5 0h3.8v2.2h.05c.53-1 1.83-2.2 3.77-2.2 4.03 0 4.78 2.65 4.78 6.1V24h-4v-8.3c0-2-.04-4.6-2.8-4.6-2.8 0-3.23 2.18-3.23 4.45V24h-4V8Z"
-                      />
-                    </svg>
-                  </a>
-                </li>
-                <li>
-                  <a href="mailto:hello@example.com" aria-label="Email">
-                    <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
-                      <path
-                        d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2Zm0 4-8 5L4 8V6l8 5 8-5v2Z"
-                      />
-                    </svg>
-                  </a>
-                </li>
-              </ul>
-            </aside>
+            <p class="fine muted">
+            </p>
           </div>
         </div>
       </section>
@@ -107,42 +100,52 @@
     <footer class="site-footer">
       <div class="container footer-inner">
         <div class="footer-top">
-          <p class="footer-title">Get in touch</p>
-          <p class="footer-text">
-            The fastest way to reach me is via email. You can also find me on LinkedIn.
-          </p>
-
-          <div class="footer-actions">
-            <a class="btn btn-primary" href="mailto:hello@example.com">Email</a>
-            <a class="btn btn-secondary" href="contact.html">Contact form</a>
+          <div>
+            <h2>Let’s build something clear.</h2>
+            <p class="muted">
+              Want to collaborate or ask a question? Send a message and I’ll reply as soon as possible.
+            </p>
           </div>
+          <div class="footer-actions">
+            <a class="btn" href="mailto:Shandortenhoven@gmail.com">Email</a>
+            <a class="btn btn-secondary" href="files/cv.pdf" target="_blank" rel="noopener">View CV</a>
+          </div>
+        </div>
 
+        <div class="footer-bottom">
           <ul class="social-list" aria-label="Social links">
             <li>
-              <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+              <a
+                class="social-link"
+                href="https://www.linkedin.com/in/shandortenhoven"
+                target="_blank"
+                rel="noopener"
+                aria-label="LinkedIn"
+              >
+                <svg viewBox="0 0 24 24" aria-hidden="true">
                   <path
-                    d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5ZM.5 8h4V24h-4V8Zm7.5 0h3.8v2.2h.05c.53-1 1.83-2.2 3.77-2.2 4.03 0 4.78 2.65 4.78 6.1V24h-4v-8.3c0-2-.04-4.6-2.8-4.6-2.8 0-3.23 2.18-3.23 4.45V24h-4V8Z"
+                    d="M20.45 20.45h-3.55v-5.56c0-1.33-.03-3.04-1.86-3.04-1.86 0-2.15 1.45-2.15 2.95v5.65H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.86 3.37-1.86 3.6 0 4.27 2.37 4.27 5.46v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.11 20.45H3.56V9h3.55v11.45z"
                   />
                 </svg>
               </a>
             </li>
             <li>
-              <a href="mailto:hello@example.com" aria-label="Email">
-                <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+              <a class="social-link" href="mailto:Shandortenhoven@gmail.com" aria-label="Email">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
                   <path
-                    d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2Zm0 4-8 5L4 8V6l8 5 8-5v2Z"
+                    d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"
                   />
                 </svg>
               </a>
             </li>
           </ul>
-        </div>
 
-        <div class="footer-bottom">
-          <p>© 2025 Shandor ten Hoven</p>
+          <p class="copyright">
+            © <span id="year">2025</span> Shandor ten Hoven
+          </p>
         </div>
       </div>
     </footer>
   </body>
 </html>
+
