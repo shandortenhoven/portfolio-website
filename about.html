@@ -1,22 +1,15 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="Shandor ten Hoven — UX/UI designer creating calm, clear interfaces that make complex things feel simple. Selected work: Expert & Kubo."
+      content="About Shandor ten Hoven, Product & UX/UI designer from Amsterdam in the Netherlands, with a hospitality leadership background, focused on clarity, trust, and calm product experiences."
     />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About | Shandor ten Hoven</title>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-
     <link rel="stylesheet" href="css/style.css" />
+    <script defer src="js/script.js"></script>
   </head>
 
   <body>
@@ -24,105 +17,129 @@
 
     <header class="site-header">
       <div class="container header-inner">
-        <a class="logo" href="index.html">STH <span>Shandor ten Hoven</span></a>
+        <a class="logo" href="index.html" aria-label="Go to homepage">
+          <strong>STH</strong>
+          <span>Shandor ten Hoven</span>
+        </a>
 
         <nav class="site-nav" aria-label="Primary">
-          <ul>
-            <li><a href="index.html#work">Work</a></li>
-            <li><a class="is-active" href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
+          <ul class="nav-list">
+            <li><a href="index.html">Work</a></li>
+            <li><a href="about.html" aria-current="page">About</a></li>
+            <li><a class="nav-cta" href="contact.html">Contact</a></li>
           </ul>
         </nav>
       </div>
     </header>
 
-    <main id="main" class="container">
-      <section class="page-hero" aria-labelledby="about-title">
-        <h1 id="about-title">About</h1>
+    <main id="main">
+      <section class="section">
+        <div class="container about-grid">
+          <div class="about-photo">
+            <picture>
+              <source srcset="img/profile/profile-lg.jpg" media="(min-width: 768px)" />
+              <img
+                src="img/profile/profile-sm.jpg"
+                alt="Portrait of Shandor ten Hoven"
+                loading="lazy"
+              />
+            </picture>
+          </div>
 
-        <p class="lede">
-          I’m a UX/UI designer who likes calm layouts, strong hierarchy, and products that feel obvious to use.
-          My hospitality leadership background trained me to stay structured under pressure — and to design with
-          real people in mind.
-        </p>
+          <div class="about-copy">
+            <h1>About</h1>
+            <p class="lead">
+              I’m a Product & UX/UI designer who likes calm layouts, strong hierarchy, and products that feel obvious to use.
+              My background in hospitality management trained me to stay structured under pressure, and to design with real people in mind.
+            </p>
 
-        <p>
-          In practice, that means I’m comfortable owning the messy middle: turning research into flows, flows into
-          screens, and screens into something you can test, iterate, and ship. I’m especially drawn to products where
-          clarity and trust matter — onboarding, payments, account areas, and anything people rely on when they’re
-          stressed or in a hurry.
-        </p>
+            <p>
+              In practice, that means I’m comfortable owning the messy middle: turning research into flows, flows into screens,
+              and screens into something you can test, iterate, and ship. I’m especially drawn to products where clarity and trust matter:
+              onboarding, payments, account areas, and anything people rely on when they’re stressed or in a hurry.
+            </p>
 
-        <div class="actions">
-          <a class="btn" href="files/cv.pdf" target="_blank" rel="noopener noreferrer">View CV</a>
-          <a class="btn btn-secondary" href="contact.html">Contact</a>
-        </div>
-      </section>
+            <div class="about-actions">
+              <a class="btn" href="files/cv.pdf" target="_blank" rel="noopener">View CV</a>
+              <a class="btn btn-secondary" href="contact.html">Contact</a>
+            </div>
 
-      <section class="about-grid" aria-label="About details">
-        <div class="about-photo">
-          <picture>
-            <source media="(min-width: 768px)" srcset="img/profile/profile-lg.jpg" />
-            <img
-              src="img/profile/profile-sm.jpg"
-              alt="Portrait of Shandor ten Hoven"
-              loading="lazy"
-            />
-          </picture>
-        </div>
+            <div class="about-lists">
+              <section class="card">
+                <h2>Skills</h2>
+                <ul class="bullets">
+                  <li>User research & synthesis</li>
+                  <li>Information architecture</li>
+                  <li>User flows & task design</li>
+                  <li>Wireframing & prototyping</li>
+                  <li>UI design & systems</li>
+                  <li>Usability testing</li>
+                </ul>
+              </section>
 
-        <div class="about-lists">
-          <section class="card" aria-labelledby="skills-title">
-            <h2 id="skills-title">Skills</h2>
-            <ul class="list">
-              <li>UX research synthesis (affinity mapping)</li>
-              <li>User flows & information architecture</li>
-              <li>Wireframing (low → mid → high fidelity)</li>
-              <li>Interaction design & UI systems</li>
-              <li>Usability testing & iteration</li>
-              <li>Responsive design fundamentals</li>
-            </ul>
-          </section>
-
-          <section class="card" aria-labelledby="tools-title">
-            <h2 id="tools-title">Tools</h2>
-            <ul class="list">
-              <li>Figma (components, styles, prototypes)</li>
-              <li>FigJam</li>
-              <li>VS Code</li>
-              <li>Git & GitHub</li>
-              <li>HTML & CSS</li>
-            </ul>
-          </section>
+              <section class="card">
+                <h2>Tools</h2>
+                <ul class="bullets">
+                  <li>Figma</li>
+                  <li>FigJam</li>
+                  <li>Google Workspace</li>
+                  <li>HTML & CSS (this site)</li>
+                  <li>GitHub</li>
+                </ul>
+              </section>
+            </div>
+          </div>
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
       <div class="container footer-inner">
-        <div>
-          <h2 class="footer-title">Get in touch</h2>
-          <p class="footer-text">
-            Want to collaborate or ask a question? Use the contact form and I’ll reply as soon as possible.
-          </p>
-          <a class="btn" href="contact.html">Email</a>
+        <div class="footer-top">
+          <div>
+            <h2>Let’s build something clear.</h2>
+            <p class="muted">
+              Want to collaborate or ask a question? Send a message and I’ll reply as soon as possible.
+            </p>
+          </div>
+          <div class="footer-actions">
+            <a class="btn" href="contact.html">Contact form</a>
+            <a class="btn btn-secondary" href="files/cv.pdf" target="_blank" rel="noopener">View CV</a>
+          </div>
         </div>
 
-        <div class="footer-links">
-          <h2 class="footer-title">Elsewhere</h2>
-          <ul>
+        <div class="footer-bottom">
+          <ul class="social-list" aria-label="Social links">
             <li>
-              <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+              <a
+                class="social-link"
+                href="https://www.linkedin.com/in/shandortenhoven"
+                target="_blank"
+                rel="noopener"
+                aria-label="LinkedIn"
+              >
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    d="M20.45 20.45h-3.55v-5.56c0-1.33-.03-3.04-1.86-3.04-1.86 0-2.15 1.45-2.15 2.95v5.65H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.86 3.37-1.86 3.6 0 4.27 2.37 4.27 5.46v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.11 20.45H3.56V9h3.55v11.45z"
+                  />
+                </svg>
+              </a>
             </li>
             <li>
-              <a href="mailto:hello@example.com">Email</a>
+              <a class="social-link" href="mailto:Shandortenhoven@gmail.com" aria-label="Email">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"
+                  />
+                </svg>
+              </a>
             </li>
           </ul>
-        </div>
-      </div>
 
-      <div class="container footer-bottom">
-        <small>© 2025 Shandor ten Hoven</small>
+          <p class="copyright">
+            © <span id="year">2025</span> Shandor ten Hoven
+          </p>
+        </div>
       </div>
     </footer>
   </body>
