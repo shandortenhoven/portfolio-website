@@ -1,46 +1,139 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kubo | Shandor ten Hoven</title>
-    <link rel="stylesheet" href="css/styles.css" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Kubo case study — a calm identity vault concept for organizing personal documents and reducing stress."
+    />
+    <title>Kubo Case Study | Shandor ten Hoven</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script defer src="js/script.js"></script>
   </head>
 
   <body>
-    <header>
-      <div>
-        <a href="index.html">
-          <img src="img/logo-placeholder.png" alt="Shandor ten Hoven logo" />
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="logo" href="index.html" aria-label="Go to homepage">
+          <strong>STH</strong>
+          <span>Shandor ten Hoven</span>
         </a>
 
-        <nav aria-label="Primary">
-          <ul>
-            <li><a href="index.html#work">Work</a></li>
+        <nav class="site-nav" aria-label="Primary">
+          <ul class="nav-list">
+            <li><a href="index.html">Work</a></li>
             <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a class="nav-cta" href="contact.html">Contact</a></li>
           </ul>
         </nav>
       </div>
     </header>
 
-    <main>
-      <section>
-        <h1>Kubo</h1>
-        <p>
-Kubo is a digital vault for real life: a place where passpor ts, contracts, warranties and receipts
-finally stay organised. It transforms messy adult hood paper work into somet hing clear,
-searchable, and surprisingly easy.
-        </p>
-        <a href="index.html#work">← Back to work</a>
+    <main id="main">
+      <section class="section">
+        <div class="container">
+          <p class="kicker">Case study</p>
+          <h1>Kubo</h1>
+          <p class="lead">
+            A calm identity vault concept designed to help people keep important documents organized and easy to find —
+            especially when time is tight.
+          </p>
+
+          <div class="project-hero">
+            <picture>
+              <source srcset="img/projects/project-kubo-lg.png" media="(min-width: 768px)" />
+              <img
+                src="img/projects/project-kubo-sm.png"
+                alt="Kubo project preview"
+                loading="lazy"
+              />
+            </picture>
+          </div>
+
+          <section class="section-tight">
+            <h2>Why this exists</h2>
+            <p>
+              When documents expire, travel is coming up, or admin tasks stack up, people need a system that reduces cognitive load.
+              Kubo explores a clean, reassuring interface with clear categorization and fast retrieval.
+            </p>
+          </section>
+
+          <section class="section-tight">
+            <h2>Design principles</h2>
+            <ul class="bullets">
+              <li><strong>Calm first:</strong> soft spacing, clear hierarchy, minimal noise.</li>
+              <li><strong>Find fast:</strong> search + structured categories.</li>
+              <li><strong>Reduce stress:</strong> “expiring soon” surfaced clearly, with simple actions.</li>
+            </ul>
+          </section>
+
+          <section class="section-tight">
+            <h2>Outcome</h2>
+            <p>
+              Kubo demonstrates a minimalist, trustworthy UI direction for document management — designed to feel lightweight,
+              friendly, and easy to navigate.
+            </p>
+
+            <div class="project-actions">
+              <a class="btn" href="contact.html">Talk about this project</a>
+              <a class="btn btn-secondary" href="index.html#work">Back to work</a>
+            </div>
+          </section>
+        </div>
       </section>
     </main>
 
-    <footer>
-      <section>
-        <p>© 2025 Shandor ten Hoven</p>
-      </section>
-      <script src="js/script.js"></script>
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div class="footer-top">
+          <div>
+            <h2>Let’s build something clear.</h2>
+            <p class="muted">
+              Want to collaborate or ask a question? Send a message and I’ll reply as soon as possible.
+            </p>
+          </div>
+          <div class="footer-actions">
+            <a class="btn" href="contact.html">Contact form</a>
+            <a class="btn btn-secondary" href="files/cv.pdf" target="_blank" rel="noopener">View CV</a>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <ul class="social-list" aria-label="Social links">
+            <li>
+              <a
+                class="social-link"
+                href="https://www.linkedin.com/in/shandortenhoven"
+                target="_blank"
+                rel="noopener"
+                aria-label="LinkedIn"
+              >
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    d="M20.45 20.45h-3.55v-5.56c0-1.33-.03-3.04-1.86-3.04-1.86 0-2.15 1.45-2.15 2.95v5.65H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.86 3.37-1.86 3.6 0 4.27 2.37 4.27 5.46v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.11 20.45H3.56V9h3.55v11.45z"
+                  />
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a class="social-link" href="mailto:Shandortenhoven@gmail.com" aria-label="Email">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"
+                  />
+                </svg>
+              </a>
+            </li>
+          </ul>
+
+          <p class="copyright">
+            © <span id="year">2025</span> Shandor ten Hoven
+          </p>
+        </div>
+      </div>
     </footer>
   </body>
 </html>
