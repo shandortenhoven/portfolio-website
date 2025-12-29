@@ -1,296 +1,92 @@
-<!doctype html>
+<!-- index.html -->
+<!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="Portfolio of Shandor ten Hoven — UX/UI designer crafting calm, clear interfaces and trust-building product experiences."
+      content="Shandor ten Hoven — UX/UI designer. Calm, clear interfaces that make complex things feel simple."
     />
-    <title>Shandor ten Hoven | Product & UX/UI Designer</title>
-    <link rel="stylesheet" href="css/style.css" />
-    <script defer src="js/script.js"></script>
+    <title>Shandor ten Hoven — UX/UI Designer</title>
+
+    <link rel="stylesheet" href="css/styles.css" />
   </head>
 
   <body>
-    <a class="skip-link" href="#main">Skip to content</a>
-
+    <!-- Header -->
     <header class="site-header">
       <div class="container header-inner">
-        <a class="logo" href="index.html" aria-label="Go to homepage">
-          <strong>STH</strong>
-          <span>Shandor ten Hoven</span>
+        <a class="brand" href="index.html" aria-label="Go to homepage">
+          <span class="brand-mark" aria-hidden="true">STH</span>
+          <span class="brand-name">Shandor ten Hoven</span>
         </a>
 
         <nav class="site-nav" aria-label="Primary">
           <ul class="nav-list">
-            <li><a href="index.html" aria-current="page">Work</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a class="nav-cta" href="contact.html">Contact</a></li>
+            <li><a class="nav-link" href="#work">Work</a></li>
+            <li><a class="nav-link" href="about.html">About</a></li>
+            <li><a class="nav-link" href="#contact">Contact</a></li>
           </ul>
         </nav>
       </div>
     </header>
 
-    <main id="main">
-      <!-- HERO -->
-      <section id="hero" class="section">
-        <div class="container hero-grid">
-          <div class="hero-copy">
-            <p class="kicker">Product & UX/UI Designer • Product-minded • Detail-driven</p>
-            <h1 class="hero-title">
-              I design calm, clear interfaces — and make complex things feel simple.
-            </h1>
-            <p class="lead">
-              I’m Shandor ten Hoven, a Product & UX/UI designer with a background leading hospitality teams.
-              I bring structure, empathy, and strong UI craft to digital products.
-            </p>
+    <main>
+      <!-- Hero -->
+      <section class="section hero" aria-label="Introduction">
+        <div class="container">
+          <p class="eyebrow">UX/UI Designer • Product-minded • Detail-driven</p>
 
-            <div class="hero-actions">
-              <a class="btn" href="#work">View selected work</a>
-              <a class="btn btn-secondary" href="files/cv.pdf" target="_blank" rel="noopener">
-                View CV
-              </a>
-            </div>
+          <h1 class="hero-title">
+            I design calm, clear interfaces — and make complex things feel simple.
+          </h1>
 
-            <div class="hero-highlights">
-              <p class="muted">Currently focused on</p>
-              <ul class="bullets">
-                <li>UI systems</li>
-                <li>Prototyping</li>
-                <li>Usability testing</li>
-                <li>Responsive design</li>
-              </ul>
-              <p class="muted">Based in NL • Open to Product Design & UX/UI roles</p>
-            </div>
+          <p class="hero-subtitle">
+            I’m Shandor Alexander ten Hoven, a UX/UI designer with a background leading
+            hospitality teams. I bring structure, empathy, and strong UI craft to digital
+            products.
+          </p>
+
+          <div class="button-row">
+            <a class="btn btn-primary" href="#work">View selected work</a>
+            <a class="btn btn-secondary" href="about.html">About me</a>
           </div>
 
-          <aside class="hero-card" aria-label="Quick summary">
-            <h2>What I’m best at</h2>
-            <p class="muted">
-              Turning research into flows, flows into screens, and screens into something you can test, iterate, and ship
-              especially where trust and clarity matter.
-            </p>
-            <a class="btn" href="contact.html">Start a conversation</a>
-          </aside>
+          <p class="meta-line">Based in NL • Open to UX/UI roles</p>
         </div>
       </section>
 
-      <!-- WORK -->
-      <section id="work" class="section">
+      <!-- Work -->
+      <section id="work" class="section work" aria-label="Selected work">
         <div class="container">
-          <div class="section-head">
-            <h2>Selected work</h2>
-            <p class="muted">
-              Two projects that show range: a mentorship platform built around trust + speed, and a calm identity vault concept.
+          <header class="section-header">
+            <h2 class="section-title">Selected work</h2>
+            <p class="section-lead">
+              Two projects that show range: a mentorship platform built around trust + speed,
+              and a calm identity vault concept.
             </p>
-          </div>
+          </header>
 
-          <div class="projects-grid">
+          <div class="grid grid-projects">
             <!-- Expert -->
             <article class="project-card">
-              <div class="project-media">
-                <picture>
-                  <source srcset="img/projects/project-expert-lg.png" media="(min-width: 768px)" />
+              <a class="project-link" href="expert.html" aria-label="Open Expert case study">
+                <div class="project-media">
                   <img
-                    src="img/projects/project-expert-sm.png"
-                    alt="Expert app — mentorship platform UI preview"
+                    class="project-image"
+                    src="img/projects/project-expert-lg.png"
+                    srcset="
+                      img/projects/project-expert-sm.png 600w,
+                      img/projects/project-expert-lg.png 1200w
+                    "
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    alt="Expert project preview"
                     loading="lazy"
                   />
-                </picture>
-              </div>
-
-              <div class="project-body">
-                <div class="project-top">
-                  <h3>Expert</h3>
-                  <p class="muted">
-                    Responsive mentorship platform concept focused on instant trust, fast discovery, and one-click booking.
-                  </p>
                 </div>
 
-                <ul class="project-meta" aria-label="Project tags">
-                  <li>UX Research</li>
-                  <li>Wireframes → Hi-fi</li>
-                  <li>Usability Testing</li>
-                  <li>Design System</li>
-                </ul>
-
-                <div class="project-actions">
-                  <a class="btn" href="expert.html">Read case study</a>
-                </div>
-              </div>
-            </article>
-
-            <!-- Kubo -->
-            <article class="project-card">
-              <div class="project-media">
-                <picture>
-                  <source srcset="img/projects/project-kubo-lg.png" media="(min-width: 768px)" />
-                  <img
-                    src="img/projects/project-kubo-sm.png"
-                    alt="Kubo — identity vault mobile UI preview"
-                    loading="lazy"
-                  />
-                </picture>
-              </div>
-
-              <div class="project-body">
-                <div class="project-top">
-                  <h3>Kubo</h3>
-                  <p class="muted">
-                    A calm identity vault concept designed to reduce stress around important personal documents.
-                  </p>
-                </div>
-
-                <ul class="project-meta" aria-label="Project tags">
-                  <li>Information Architecture</li>
-                  <li>UI Craft</li>
-                  <li>Mobile-first</li>
-                </ul>
-
-                <div class="project-actions">
-                  <a class="btn" href="kubo.html">Read case study</a>
-                </div>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <!-- SVG / LOCAL SECTION -->
-      <section id="local" class="section">
-        <div class="container local-grid">
-          <div>
-            <p class="kicker">A small extra</p>
-            <h2>Based in Amsterdam</h2>
-            <p class="muted">
-              I like building interfaces that feel calm and intentional, with small details that make the experience feel alive.
-              Here’s a tiny animated illustration to bring that vibe into the site.
-            </p>
-            <a class="btn btn-secondary" href="contact.html">Let’s work together</a>
-          </div>
-
-          <div class="local-art" aria-label="Animated Amsterdam illustration">
-            <svg class="amsterdam-svg" viewBox="0 0 520 320" role="img" aria-labelledby="amsTitle amsDesc">
-              <title id="amsTitle">Amsterdam canal houses</title>
-              <desc id="amsDesc">A simple illustration of canal houses with an animated flag and a bobbing boat.</desc>
-
-              <rect x="0" y="220" width="520" height="100" class="svg-water"></rect>
-
-              <g class="svg-houses">
-                <rect x="70" y="90" width="90" height="130" rx="8" class="svg-house"></rect>
-                <rect x="175" y="60" width="95" height="160" rx="8" class="svg-house"></rect>
-                <rect x="285" y="80" width="85" height="140" rx="8" class="svg-house"></rect>
-                <rect x="385" y="70" width="70" height="150" rx="8" class="svg-house"></rect>
-
-                <g class="svg-windows">
-                  <rect x="92" y="115" width="18" height="22" rx="3"></rect>
-                  <rect x="120" y="115" width="18" height="22" rx="3"></rect>
-                  <rect x="92" y="150" width="18" height="22" rx="3"></rect>
-                  <rect x="120" y="150" width="18" height="22" rx="3"></rect>
-
-                  <rect x="198" y="90" width="18" height="22" rx="3"></rect>
-                  <rect x="228" y="90" width="18" height="22" rx="3"></rect>
-                  <rect x="198" y="125" width="18" height="22" rx="3"></rect>
-                  <rect x="228" y="125" width="18" height="22" rx="3"></rect>
-                  <rect x="213" y="160" width="18" height="22" rx="3"></rect>
-
-                  <rect x="306" y="110" width="18" height="22" rx="3"></rect>
-                  <rect x="332" y="110" width="18" height="22" rx="3"></rect>
-                  <rect x="306" y="145" width="18" height="22" rx="3"></rect>
-                  <rect x="332" y="145" width="18" height="22" rx="3"></rect>
-
-                  <rect x="401" y="100" width="18" height="22" rx="3"></rect>
-                  <rect x="426" y="100" width="18" height="22" rx="3"></rect>
-                  <rect x="401" y="135" width="18" height="22" rx="3"></rect>
-                  <rect x="426" y="135" width="18" height="22" rx="3"></rect>
-                </g>
-
-                <path d="M70 90 L115 60 L160 90" class="svg-roof"></path>
-                <path d="M175 60 L222 30 L270 60" class="svg-roof"></path>
-                <path d="M285 80 L327 55 L370 80" class="svg-roof"></path>
-                <path d="M385 70 L420 45 L455 70" class="svg-roof"></path>
-
-                <line x1="222" y1="30" x2="222" y2="12" class="svg-pole"></line>
-                <path d="M222 12 C240 16, 250 10, 265 14 C250 22, 240 18, 222 20 Z" class="svg-flag"></path>
-              </g>
-
-              <g class="svg-boat">
-                <path d="M210 248 C240 265, 300 265, 330 248 L210 248 Z" class="svg-boat-body"></path>
-                <line x1="270" y1="210" x2="270" y2="248" class="svg-mast"></line>
-                <path d="M270 210 L300 238 L270 238 Z" class="svg-sail"></path>
-              </g>
-            </svg>
-          </div>
-        </div>
-      </section>
-
-      <!-- CONTACT CTA SECTION (Homepage) -->
-      <section id="contact" class="section">
-        <div class="container contact-cta">
-          <div class="card contact-cta-card">
-            <div>
-              <h2>Let’s build something clear.</h2>
-              <p class="muted">
-                Want to collaborate or ask a question? Use the contact form. I’ll reply as soon as possible.
-              </p>
-            </div>
-
-            <div class="contact-cta-actions">
-              <a class="btn" href="contact.html">Contact form</a>
-              <a class="btn btn-secondary" href="mailto:Shandortenhoven@gmail.com">Email</a>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <footer class="site-footer">
-      <div class="container footer-inner">
-        <div class="footer-top">
-          <div>
-            <h2>Let’s build something clear.</h2>
-            <p class="muted">
-              Want to collaborate or ask a question? Send a message and I’ll reply as soon as possible.
-            </p>
-          </div>
-          <div class="footer-actions">
-            <a class="btn" href="contact.html">Contact form</a>
-            <a class="btn btn-secondary" href="files/cv.pdf" target="_blank" rel="noopener">View CV</a>
-          </div>
-        </div>
-
-        <div class="footer-bottom">
-          <ul class="social-list" aria-label="Social links">
-            <li>
-              <a
-                class="social-link"
-                href="https://www.linkedin.com/in/shandortenhoven"
-                target="_blank"
-                rel="noopener"
-                aria-label="LinkedIn"
-              >
-                <svg viewBox="0 0 24 24" aria-hidden="true">
-                  <path
-                    d="M20.45 20.45h-3.55v-5.56c0-1.33-.03-3.04-1.86-3.04-1.86 0-2.15 1.45-2.15 2.95v5.65H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.86 3.37-1.86 3.6 0 4.27 2.37 4.27 5.46v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.11 20.45H3.56V9h3.55v11.45z"
-                  />
-                </svg>
-              </a>
-            </li>
-            <li>
-              <a class="social-link" href="mailto:Shandortenhoven@gmail.com" aria-label="Email">
-                <svg viewBox="0 0 24 24" aria-hidden="true">
-                  <path
-                    d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"
-                  />
-                </svg>
-              </a>
-            </li>
-          </ul>
-
-          <p class="copyright">© <span id="year">2025</span> Shandor ten Hoven</p>
-        </div>
-      </div>
-    </footer>
-  </body>
-</html>
+                <div class="project-body">
+                  <h3 class="project-title">Expert</h3>
+                  <p class="project-desc">
+                    A pay-per-session advice platfor
