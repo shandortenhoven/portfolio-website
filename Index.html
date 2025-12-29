@@ -1,20 +1,15 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
+    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="Shandor ten Hoven — UX/UI designer creating calm, clear interfaces that make complex things feel simple. Selected work: Expert and Kubo."
+      content="Portfolio of Shandor ten Hoven — UX/UI designer crafting calm, clear interfaces and trust-building product experiences."
     />
-    <title>Shandor ten Hoven | Product & UX/UI Designer</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap"
-      rel="stylesheet"
-    />
+    <title>Shandor ten Hoven | UX/UI Designer</title>
     <link rel="stylesheet" href="css/style.css" />
+    <script defer src="js/script.js"></script>
   </head>
 
   <body>
@@ -23,15 +18,15 @@
     <header class="site-header">
       <div class="container header-inner">
         <a class="logo" href="index.html" aria-label="Go to homepage">
-          <span class="logo-mark" aria-hidden="true">STH</span>
-          <span class="logo-text">Shandor ten Hoven</span>
+          <strong>STH</strong>
+          <span>Shandor ten Hoven</span>
         </a>
 
         <nav class="site-nav" aria-label="Primary">
           <ul class="nav-list">
             <li><a href="index.html" aria-current="page">Work</a></li>
             <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a class="nav-cta" href="contact.html">Contact</a></li>
           </ul>
         </nav>
       </div>
@@ -39,127 +34,126 @@
 
     <main id="main">
       <!-- HERO -->
-      <section id="hero" class="section hero">
+      <section id="hero" class="section">
         <div class="container hero-grid">
           <div class="hero-copy">
-            <p class="eyebrow">Product & UX/UI Designer • Product-minded • Detail-driven</p>
-
-            <h1>I design calm, clear interfaces and make complex things feel simple.</h1>
-
+            <p class="kicker">UX/UI Designer • Product-minded • Detail-driven</p>
+            <h1 class="hero-title">
+              I design calm, clear interfaces and make complex things feel simple.
+            </h1>
             <p class="lead">
-              I’m Shandor Alexander ten Hoven, a Product & UX/UI designer with a background leading hospitality teams.
+              I’m Shandor  ten Hoven, a Product & UX/UI designer with a background leading hospitality teams.
               I bring structure, empathy, and strong UI craft to digital products.
             </p>
 
-            <div class="button-row">
-              <a class="btn btn-primary" href="#work">View selected work</a>
-              <a class="btn btn-secondary" href="files/cv.pdf" target="_blank" rel="noopener noreferrer">View CV</a>
+            <div class="hero-actions">
+              <a class="btn" href="#work">View selected work</a>
+              <a class="btn btn-secondary" href="files/cv.pdf" target="_blank" rel="noopener">
+                View CV
+              </a>
             </div>
 
-            <div class="hero-meta">
-              <p class="meta-title">Currently focused on</p>
-              <ul class="meta-list">
+            <div class="hero-highlights">
+              <p class="muted">Currently focused on</p>
+              <ul class="bullets">
                 <li>UI systems</li>
                 <li>Prototyping</li>
                 <li>Usability testing</li>
                 <li>Responsive design</li>
               </ul>
-
-              <p class="meta-foot">Based in NL • Open to Product design & UX/UI roles</p>
+              <p class="muted">Based in NL • Open to Product Design & UX/UI roles</p>
             </div>
           </div>
+
+          <aside class="hero-card" aria-label="Quick summary">
+            <h2>What I’m best at</h2>
+            <p>
+              Turning research into flows, flows into screens, and screens into something you can test, iterate, and ship
+              especially where trust and clarity matter.
+            </p>
+            <a class="btn" href="contact.html">Start a conversation</a>
+          </aside>
         </div>
       </section>
 
       <!-- WORK -->
       <section id="work" class="section">
         <div class="container">
-          <h2>Selected work</h2>
-          <p class="section-intro">
-            Two projects that show range: a mentorship platform built around trust + speed, and a calm identity vault concept.
-          </p>
-
-          <div class="project-grid">
-            <!-- Expert -->
-            <article class="project-card">
-              <a class="project-media" href="expert.html" aria-label="Read the Expert case study">
-                <picture>
-                  <source media="(min-width: 900px)" srcset="img/projects/project-expert-lg.png" />
-                  <img
-                    src="img/projects/project-expert-sm.png"
-                    alt="Expert project hero image showing three mobile screens"
-                    width="1200"
-                    height="800"
-                    loading="lazy"
-                  />
-                </picture>
-              </a>
-
-              <div class="project-body">
-                <h3>Expert</h3>
-                <p>
-                  Responsive web app that helps people book 1:1 sessions with experienced professionals. I shaped the product
-                  from research → flows → wireframes → hi-fi UI, then iterated using usability feedback.
-                </p>
-
-                <ul class="tag-list" aria-label="Skills used in Expert">
-                  <li>UX research</li>
-                  <li>User flows</li>
-                  <li>Wireframing</li>
-                  <li>UI design</li>
-                  <li>Testing</li>
-                </ul>
-
-                <a class="btn btn-primary" href="expert.html">Read case study</a>
-              </div>
-            </article>
-
-            <!-- Kubo -->
-            <article class="project-card">
-              <a class="project-media" href="kubo.html" aria-label="Read the Kubo case study">
-                <picture>
-                  <source media="(min-width: 900px)" srcset="img/projects/project-kubo-lg.png" />
-                  <img
-                    src="img/projects/project-kubo-sm.png"
-                    alt="Kubo project hero image showing three mobile screens"
-                    width="1200"
-                    height="800"
-                    loading="lazy"
-                  />
-                </picture>
-              </a>
-
-              <div class="project-body">
-                <h3>Kubo</h3>
-                <p>
-                  A personal “identity vault” concept to keep documents organised and expiring items visible. I explored IA,
-                  calm visual hierarchy, and a mobile-first UI that stays clear in both light and dark contexts.
-                </p>
-
-                <ul class="tag-list" aria-label="Skills used in Kubo">
-                  <li>Information architecture</li>
-                  <li>UI hierarchy</li>
-                  <li>Mobile-first</li>
-                  <li>Prototyping</li>
-                </ul>
-
-                <a class="btn btn-primary" href="kubo.html">Read case study</a>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <!-- CONTACT CTA -->
-      <section id="contact-cta" class="section contact-cta">
-        <div class="container contact-cta-inner">
-          <div>
-            <h2>Let’s build something clean and confident.</h2>
-            <p class="section-intro">
-              Want to collaborate or ask a question? Use the contact form and I’ll reply as soon as possible.
+          <div class="section-head">
+            <h2>Selected work</h2>
+            <p class="muted">
+              Two projects that show range: a mentorship platform built around trust + speed, and a calm identity vault concept.
             </p>
           </div>
-          <a class="btn btn-primary" href="contact.html">Go to contact form</a>
+
+          <div class="projects-grid">
+            <!-- Project: Expert -->
+            <article class="project-card">
+              <div class="project-media">
+                <picture>
+                  <source srcset="img/projects/project-expert-lg.png" media="(min-width: 768px)" />
+                  <img
+                    src="img/projects/project-expert-sm.png"
+                    alt="Expert app — mentorship platform UI preview"
+                    loading="lazy"
+                  />
+                </picture>
+              </div>
+
+              <div class="project-body">
+                <div class="project-top">
+                  <h3>Expert</h3>
+                  <p class="muted">
+                    Responsive mentorship platform concept focused on instant trust, fast discovery, and one-click booking.
+                  </p>
+                </div>
+
+                <ul class="project-meta" aria-label="Project tags">
+                  <li>UX Research</li>
+                  <li>Wireframes → Hi-fi</li>
+                  <li>Usability Testing</li>
+                  <li>Design System</li>
+                </ul>
+
+                <div class="project-actions">
+                  <a class="btn" href="expert.html">Read case study</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Project: Kubo -->
+            <article class="project-card">
+              <div class="project-media">
+                <picture>
+                  <source srcset="img/projects/project-kubo-lg.png" media="(min-width: 768px)" />
+                  <img
+                    src="img/projects/project-kubo-sm.png"
+                    alt="Kubo — identity vault mobile UI preview"
+                    loading="lazy"
+                  />
+                </picture>
+              </div>
+
+              <div class="project-body">
+                <div class="project-top">
+                  <h3>Kubo</h3>
+                  <p class="muted">
+                    A calm identity vault concept designed to reduce stress around important personal documents.
+                  </p>
+                </div>
+
+                <ul class="project-meta" aria-label="Project tags">
+                  <li>Information Architecture</li>
+                  <li>UI Craft</li>
+                  <li>Mobile-first</li>
+                </ul>
+
+                <div class="project-actions">
+                  <a class="btn" href="kubo.html">Read case study</a>
+                </div>
+              </div>
+            </article>
+          </div>
         </div>
       </section>
     </main>
@@ -167,44 +161,54 @@
     <footer class="site-footer">
       <div class="container footer-inner">
         <div class="footer-top">
-          <p class="footer-title">Get in touch</p>
-          <p class="footer-text">
-            The fastest way to reach me is via email. You can also find me on LinkedIn.
-          </p>
-
-          <div class="footer-actions">
-            <a class="btn btn-primary" href="mailto:hello@example.com">Email</a>
-            <a class="btn btn-secondary" href="contact.html">Contact form</a>
+          <div>
+            <h2>Let’s build something clear.</h2>
+            <p class="muted">
+              Want to collaborate or ask a question? Send a message and I’ll reply as soon as possible.
+            </p>
           </div>
+          <div class="footer-actions">
+            <a class="btn" href="contact.html">Contact form</a>
+            <a class="btn btn-secondary" href="files/cv.pdf" target="_blank" rel="noopener">View CV</a>
+          </div>
+        </div>
 
+        <div class="footer-bottom">
           <ul class="social-list" aria-label="Social links">
             <li>
-              <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                <!-- LinkedIn icon (inline SVG) -->
-                <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+              <a
+                class="social-link"
+                href="https://www.linkedin.com/in/shandortenhoven"
+                target="_blank"
+                rel="noopener"
+                aria-label="LinkedIn"
+              >
+                <!-- LinkedIn SVG -->
+                <svg viewBox="0 0 24 24" aria-hidden="true">
                   <path
-                    d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5ZM.5 8h4V24h-4V8Zm7.5 0h3.8v2.2h.05c.53-1 1.83-2.2 3.77-2.2 4.03 0 4.78 2.65 4.78 6.1V24h-4v-8.3c0-2-.04-4.6-2.8-4.6-2.8 0-3.23 2.18-3.23 4.45V24h-4V8Z"
+                    d="M20.45 20.45h-3.55v-5.56c0-1.33-.03-3.04-1.86-3.04-1.86 0-2.15 1.45-2.15 2.95v5.65H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.86 3.37-1.86 3.6 0 4.27 2.37 4.27 5.46v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.11 20.45H3.56V9h3.55v11.45z"
                   />
                 </svg>
               </a>
             </li>
             <li>
-              <a href="mailto:hello@example.com" aria-label="Email">
-                <!-- Mail icon (inline SVG) -->
-                <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+              <a class="social-link" href="mailto:Shandortenhoven@gmail.com" aria-label="Email">
+                <!-- Email SVG -->
+                <svg viewBox="0 0 24 24" aria-hidden="true">
                   <path
-                    d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2Zm0 4-8 5L4 8V6l8 5 8-5v2Z"
+                    d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"
                   />
                 </svg>
               </a>
             </li>
           </ul>
-        </div>
 
-        <div class="footer-bottom">
-          <p>© 2025 Shandor ten Hoven</p>
+          <p class="copyright">
+            © <span id="year">2025</span> Shandor ten Hoven
+          </p>
         </div>
       </div>
     </footer>
   </body>
 </html>
+
