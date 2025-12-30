@@ -1,101 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact Shandor ten Hoven</title>
-  <link rel="stylesheet" href="css/styles.css" />
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Shandor ten Hoven</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
 
-<body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="index.html">
-        <div class="brand-badge">STH</div>
-        <div class="brand-text">
-          <div class="brand-title">Shandor ten Hoven</div>
-          <div class="brand-sub">Product & UX/UI Designer</div>
-        </div>
-      </a>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="./Index.html" aria-label="Homepage">
+          <span class="brand-mark">STH</span>
+          <span class="brand-name">Shandor ten Hoven</span>
+          <span class="brand-role">Product & UX/UI Designer</span>
+        </a>
 
-      <nav class="nav" aria-label="Primary">
-        <a href="index.html">Work</a>
-        <a href="about.html">About</a>
-        <a class="active" href="contact.html">Contact</a>
-      </nav>
-    </div>
-  </header>
+        <nav class="nav" aria-label="Primary">
+          <a class="nav-link" href="./Index.html#work">Work</a>
+          <a class="nav-link" href="./about.html">About</a>
+          <a class="nav-link is-active" href="./contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
 
-  <main>
-    <section class="section">
-      <div class="container">
-        <div class="kicker">Contact</div>
-        <h1 style="margin:0 0 10px; font-size:42px; letter-spacing:-0.02em;">Send a message</h1>
-        <p style="max-width:70ch;">
-          Want to collaborate or ask a question? Use the form below and I’ll reply as soon as possible.
-        </p>
+    <main>
+      <section class="section">
+        <div class="container contact-grid">
+          <div>
+            <p class="kicker">Contact</p>
+            <h1 class="page-title">Send a message</h1>
+            <p class="page-lead">
+              Want to collaborate or ask a question? Use the form and I’ll reply as soon as possible.
+            </p>
 
-        <div class="contact-grid">
-          <div class="form-card">
-            <!-- simple mailto form: works without backend -->
-            <form action="mailto:Shandortenhoven@gmail.com" method="post" enctype="text/plain">
-              <label for="name">Name</label>
-              <input id="name" name="name" type="text" required />
+            <div class="card contact-card">
+              <form class="form" action="#" method="post">
+                <div class="form-row">
+                  <label for="name">Name</label>
+                  <input id="name" name="name" type="text" autocomplete="name" required />
+                </div>
 
-              <label for="email">Email</label>
-              <input id="email" name="email" type="email" required />
+                <div class="form-row">
+                  <label for="email">Email</label>
+                  <input id="email" name="email" type="email" autocomplete="email" required />
+                </div>
 
-              <label for="message">Message</label>
-              <textarea id="message" name="message" required></textarea>
+                <div class="form-row">
+                  <label for="message">Message</label>
+                  <textarea id="message" name="message" rows="6" required></textarea>
+                </div>
 
-              <div class="form-actions">
-                <button class="btn primary" type="submit">Send</button>
-                <a class="btn" href="mailto:Shandortenhoven@gmail.com">Email instead</a>
-              </div>
-            </form>
+                <button class="btn btn-primary" type="submit">Send</button>
+              </form>
+            </div>
           </div>
 
-          <aside class="form-card">
-            <h2 style="margin:0 0 8px;">Get in touch</h2>
-            <p>
-              Prefer email or LinkedIn? Use the links below.
+          <aside class="card card-body">
+            <h2 class="card-title">Get in touch</h2>
+            <p class="card-text">
+              Prefer email or LinkedIn? Reach out directly.
             </p>
 
-            <div class="card-actions" style="margin-top:12px;">
-              <a class="btn primary" href="mailto:Shandortenhoven@gmail.com">Email</a>
-              <a class="btn" href="https://www.linkedin.com/in/shandortenhoven" target="_blank" rel="noreferrer">LinkedIn</a>
+            <div class="stack">
+              <a class="btn btn-ghost" href="mailto:Shandortenhoven@gmail.com">Shandortenhoven@gmail.com</a>
+              <a
+                class="btn btn-ghost"
+                href="https://www.linkedin.com/in/shandortenhoven"
+                target="_blank"
+                rel="noreferrer"
+              >
+                LinkedIn profile
+              </a>
             </div>
-
-            <p style="margin-top:14px; color:var(--muted-2); font-weight:600;">
-              Based in Amsterdam • NL
-            </p>
           </aside>
         </div>
-      </div>
-    </section>
-  </main>
+      </section>
+    </main>
 
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-card">
+    <footer class="site-footer">
+      <div class="container footer-card">
         <div>
-          <h2>Let’s build something clear.</h2>
-          <div class="footer-meta">Want to collaborate or ask a question? Use the contact form and I’ll reply as soon as possible.</div>
+          <h2 class="footer-title">Let’s build something clear.</h2>
+          <p class="footer-text">
+            Want to collaborate or ask a question? Use the contact form and I’ll reply as soon as possible.
+          </p>
         </div>
-        <div class="card-actions">
-          <a class="btn primary" href="contact.html">Contact form</a>
-          <a class="btn" href="mailto:Shandortenhoven@gmail.com">Email</a>
-        </div>
-      </div>
 
-      <div class="smallprint">
-        <div class="social" aria-label="Social links">
-          <a class="icon-btn" href="https://www.linkedin.com/in/shandortenhoven" target="_blank" rel="noreferrer" aria-label="LinkedIn">in</a>
-          <a class="icon-btn" href="mailto:Shandortenhoven@gmail.com" aria-label="Email">✉</a>
+        <div class="footer-actions">
+          <a class="btn btn-primary" href="./contact.html">Contact form</a>
+          <a class="btn btn-ghost" href="mailto:Shandortenhoven@gmail.com">Email</a>
         </div>
-        <div>© 2025 Shandor ten Hoven</div>
+
+        <div class="footer-bottom">
+          <div class="social">
+            <a class="icon-btn" href="https://www.linkedin.com/in/shandortenhoven" target="_blank" rel="noreferrer" aria-label="LinkedIn">in</a>
+            <a class="icon-btn" href="mailto:Shandortenhoven@gmail.com" aria-label="Email">✉</a>
+          </div>
+          <p class="copyright">© 2025 Shandor ten Hoven</p>
+        </div>
       </div>
-    </div>
-  </footer>
-</body>
+    </footer>
+  </body>
 </html>
