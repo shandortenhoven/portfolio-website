@@ -1,167 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta
-      name="description"
-      content="About Shandor ten Hoven — UX/UI designer focused on calm layouts, strong hierarchy, and product thinking. Skills, tools, and background."
-    />
-    <title>About Shandor ten Hoven</title>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About — Shandor ten Hoven</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <div class="brand-badge">STH</div>
+        <div class="brand-text">
+          <div class="brand-title">Shandor ten Hoven</div>
+          <div class="brand-sub">Product & UX/UI Designer</div>
+        </div>
+      </a>
 
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
+      <nav class="nav" aria-label="Primary">
+        <a href="index.html">Work</a>
+        <a class="active" href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-  <body>
-    <a class="skip-link" href="#main">Skip to content</a>
-
-    <header class="site-header">
-      <div class="container header-inner">
-        <a class="logo" href="index.html" aria-label="Home">
-          <span class="logo-mark" aria-hidden="true">STH</span>
-          <span class="logo-text">Shandor ten Hoven</span>
-        </a>
-
-        <nav class="nav" aria-label="Primary">
-          <ul class="nav-list">
-            <li><a href="index.html#work">Work</a></li>
-            <li><a href="about.html" aria-current="page">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
-
-    <main id="main">
-      <section class="section section-about-hero">
-        <div class="container about-hero-grid">
-          <div class="about-media">
-            <div class="media-card">
-              <picture>
-                <source srcset="img/profile/profile-lg.jpg" media="(min-width: 900px)" />
-                <img
-                  class="avatar"
-                  src="img/profile/profile-sm.jpg"
-                  alt="Portrait of Shandor ten Hoven"
-                  width="900"
-                  height="900"
-                />
-              </picture>
-            </div>
-          </div>
-
-          <div class="about-copy">
-            <p class="eyebrow">About</p>
-            <h1 class="page-title">Design with clarity and care.</h1>
-
-            <p class="muted">
-              I’m a UX/UI designer who likes calm layouts, strong hierarchy, and products that feel obvious to use.
-              My background in hospitality management trained me to stay structured under pressure, and to design with real people in mind.
-            </p>
-
-            <p class="muted">
-              In practice, that means I’m comfortable owning the messy middle: turning research into flows, flows into screens,
-              and screens into something you can test, iterate, and ship. I’m especially drawn to products where clarity and trust matter:
-              onboarding, payments, account areas, and anything people rely on when they’re stressed or in a hurry.
-            </p>
-
-            <div class="button-row">
-              <a class="btn btn-primary" href="files/cv.pdf" target="_blank" rel="noopener">View CV</a>
-              <a class="btn btn-secondary" href="contact.html">Contact</a>
-            </div>
+  <main>
+    <section class="about-hero">
+      <div class="container about-grid">
+        <div class="portrait-card">
+          <div class="portrait">
+            <picture>
+              <source media="(min-width: 700px)" srcset="img/profile/profile-lg.jpg">
+              <img src="img/profile/profile-sm.jpg" alt="Portrait of Shandor ten Hoven">
+            </picture>
           </div>
         </div>
-      </section>
 
-      <section class="section section-skills">
-        <div class="container">
-          <div class="section-head">
-            <h2>Skills &amp; Tools</h2>
-            <p class="muted">A practical toolkit focused on product craft and clean execution.</p>
-          </div>
+        <div class="about-content">
+          <div class="kicker">About</div>
+          <h1>Design with clarity, calm, and craft.</h1>
 
-          <div class="skills-grid">
-            <div class="panel">
-              <h3>Skills</h3>
-              <ul class="bullets">
-                <li>User research &amp; synthesis</li>
-                <li>Information architecture</li>
-                <li>User flows &amp; journey mapping</li>
-                <li>Wireframing (low → high fidelity)</li>
-                <li>UI design systems</li>
-                <li>Usability testing</li>
-                <li>Responsive design</li>
-              </ul>
-            </div>
-
-            <div class="panel">
-              <h3>Tools</h3>
-              <ul class="bullets">
-                <li>Figma</li>
-                <li>FigJam</li>
-                <li>Adobe (basic)</li>
-                <li>HTML &amp; CSS</li>
-                <li>GitHub</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <!-- FOOTER (same on every page) -->
-    <footer class="site-footer">
-      <div class="container footer-inner">
-        <div class="footer-left">
-          <h2 class="footer-title">Get in touch</h2>
-          <p class="muted">
-            Want to collaborate or ask a question? Send me a message and I’ll reply as soon as possible.
+          <p>
+            I’m a Product & UX/UI designer who likes calm layouts, strong hierarchy, and products that feel obvious to use.
+            My background in hospitality management trained me to stay structured under pressure, and to design with real people in mind.
           </p>
 
-          <div class="button-row">
-            <a class="btn btn-primary" href="mailto:Shandortenhoven@gmail.com">Email</a>
-            <a class="btn btn-secondary" href="files/cv.pdf" target="_blank" rel="noopener">View CV</a>
+          <p>
+            In practice, that means I’m comfortable owning the messy middle: turning research into flows,
+            flows into screens, and screens into something you can test, iterate, and ship.
+            I’m especially drawn to products where clarity and trust matter: onboarding, payments, account areas,
+            and anything people rely on when they’re stressed or in a hurry.
+          </p>
+
+          <div class="card-actions">
+            <a class="btn primary" href="contact.html">Contact</a>
+            <a class="btn" href="index.html#work">View work</a>
           </div>
-        </div>
 
-        <div class="footer-right">
-          <ul class="social-list" aria-label="Social links">
-            <li>
-              <a
-                class="social-link"
-                href="https://www.linkedin.com/in/shandortenhoven"
-                target="_blank"
-                rel="noopener"
-                aria-label="LinkedIn profile"
-              >
-                <svg viewBox="0 0 24 24" aria-hidden="true">
-                  <path
-                    d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.11 1 2.48 1c1.38 0 2.5 1.12 2.5 2.5ZM.5 24h4V7.98h-4V24ZM8 7.98h3.8v2.2h.05c.53-1 1.83-2.2 3.77-2.2C19.6 7.98 24 10.1 24 16.2V24h-4v-6.9c0-1.64-.03-3.75-2.28-3.75-2.28 0-2.63 1.78-2.63 3.63V24H11.1V7.98H8Z"
-                  />
-                </svg>
-              </a>
-            </li>
-            <li>
-              <a class="social-link" href="mailto:Shandortenhoven@gmail.com" aria-label="Email Shandor">
-                <svg viewBox="0 0 24 24" aria-hidden="true">
-                  <path
-                    d="M20 4H4C2.9 4 2 4.9 2 6v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2Zm0 4-8 5-8-5V6l8 5 8-5v2Z"
-                  />
-                </svg>
-              </a>
-            </li>
-          </ul>
+          <div class="skills">
+            <div class="skill-box">
+              <h3>Skills</h3>
+              <ul>
+                <li>User research & synthesis</li>
+                <li>Information architecture</li>
+                <li>User flows & wireframes</li>
+                <li>UI design & design systems</li>
+                <li>Usability testing</li>
+              </ul>
+            </div>
 
-          <p class="copyright">© 2025 Shandor ten Hoven</p>
+            <div class="skill-box">
+              <h3>Tools</h3>
+              <ul>
+                <li>Figma</li>
+                <li>FigJam</li>
+                <li>Prototyping</li>
+                <li>HTML / CSS (responsive)</li>
+                <li>Accessibility basics</li>
+              </ul>
+            </div>
+          </div>
+
         </div>
       </div>
-    </footer>
-  </body>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-card">
+        <div>
+          <h2>Let’s build something clear.</h2>
+          <div class="footer-meta">Want to collaborate or ask a question? Use the contact form and I’ll reply as soon as possible.</div>
+        </div>
+        <div class="card-actions">
+          <a class="btn primary" href="contact.html">Contact form</a>
+          <a class="btn" href="mailto:Shandortenhoven@gmail.com">Email</a>
+        </div>
+      </div>
+
+      <div class="smallprint">
+        <div class="social" aria-label="Social links">
+          <a class="icon-btn" href="https://www.linkedin.com/in/shandortenhoven" target="_blank" rel="noreferrer" aria-label="LinkedIn">in</a>
+          <a class="icon-btn" href="mailto:Shandortenhoven@gmail.com" aria-label="Email">✉</a>
+        </div>
+        <div>© 2025 Shandor ten Hoven</div>
+      </div>
+    </div>
+  </footer>
+</body>
 </html>
