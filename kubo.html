@@ -16,7 +16,19 @@
           <span class="brand-role">Product & UX/UI Designer</span>
         </a>
 
-        <nav class="nav" aria-label="Primary">
+        <!-- Mobile hamburger -->
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-label="Toggle menu"
+          aria-expanded="false"
+          aria-controls="primary-nav"
+        >
+          <span class="hamburger" aria-hidden="true"></span>
+        </button>
+
+        <!-- UPDATED: nav class aligned with CSS (.site-nav) -->
+        <nav class="site-nav" id="primary-nav" aria-label="Primary">
           <a class="nav-link" href="./Index.html#work">Work</a>
           <a class="nav-link" href="./about.html">About</a>
           <a class="nav-link" href="./contact.html">Contact</a>
@@ -91,5 +103,8 @@
         </div>
       </div>
     </footer>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="./js/scripts.js"></script>
   </body>
 </html>
