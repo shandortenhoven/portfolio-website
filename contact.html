@@ -1,105 +1,140 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact Shandor ten Hoven</title>
-    <link rel="stylesheet" href="./css/style.css" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contact — Shandor ten Hoven</title>
+    <meta name="description" content="Contact Shandor ten Hoven — Product & UX/UI Designer." />
+    <link rel="stylesheet" href="css/style.css" />
   </head>
 
   <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <!-- Header -->
     <header class="site-header">
       <div class="container header-inner">
-        <a class="brand" href="./Index.html" aria-label="Homepage">
+        <a class="brand" href="Index.html" aria-label="Go to homepage">
           <span class="brand-mark">STH</span>
           <span class="brand-name">Shandor ten Hoven</span>
           <span class="brand-role">Product & UX/UI Designer</span>
         </a>
 
-        <nav class="nav" aria-label="Primary">
-          <a class="nav-link" href="./Index.html#work">Work</a>
-          <a class="nav-link" href="./about.html">About</a>
-          <a class="nav-link is-active" href="./contact.html">Contact</a>
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-label="Toggle menu"
+          aria-expanded="false"
+          aria-controls="primary-nav"
+        >
+          <span class="hamburger" aria-hidden="true"></span>
+        </button>
+
+        <nav class="site-nav" id="primary-nav" aria-label="Primary">
+          <a class="nav-link" href="Index.html#work">Work</a>
+          <a class="nav-link" href="about.html">About</a>
+          <a class="nav-link" href="contact.html" aria-current="page">Contact</a>
         </nav>
       </div>
     </header>
 
-    <main>
+    <main id="main">
       <section class="section">
         <div class="container contact-grid">
+          <!-- Left column: form -->
           <div>
-            <p class="kicker">Contact</p>
+            <p class="eyebrow">Contact</p>
             <h1 class="page-title">Send a message</h1>
             <p class="page-lead">
               Want to collaborate or ask a question? Use the form and I’ll reply as soon as possible.
             </p>
 
-            <div class="card contact-card">
-              <form class="form" action="#" method="post">
-                <div class="form-row">
-                  <label for="name">Name</label>
-                  <input id="name" name="name" type="text" autocomplete="name" required />
-                </div>
+            <div class="card">
+              <div class="card-body">
+                <form class="contact-form" action="#" method="post">
+                  <div class="field">
+                    <label for="name">Name</label>
+                    <input id="name" name="name" type="text" autocomplete="name" required />
+                  </div>
 
-                <div class="form-row">
-                  <label for="email">Email</label>
-                  <input id="email" name="email" type="email" autocomplete="email" required />
-                </div>
+                  <div class="field">
+                    <label for="email">Email</label>
+                    <input id="email" name="email" type="email" autocomplete="email" required />
+                  </div>
 
-                <div class="form-row">
-                  <label for="message">Message</label>
-                  <textarea id="message" name="message" rows="6" required></textarea>
-                </div>
+                  <div class="field">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="6" required></textarea>
+                  </div>
 
-                <button class="btn btn-primary" type="submit">Send</button>
-              </form>
+                  <button class="btn btn-primary" type="submit">Send</button>
+                </form>
+              </div>
             </div>
           </div>
 
-          <aside class="card card-body">
-            <h2 class="card-title">Get in touch</h2>
-            <p class="card-text">
-              Prefer email or LinkedIn? Reach out directly.
-            </p>
+          <!-- Right column: direct contact -->
+          <aside class="card">
+            <div class="card-body">
+              <h2 class="card-title">Get in touch</h2>
+              <p class="card-text">
+                Prefer email or LinkedIn? Reach out directly.
+              </p>
 
-            <div class="stack">
-              <a class="btn btn-ghost" href="mailto:Shandortenhoven@gmail.com">Shandortenhoven@gmail.com</a>
-              <a
-                class="btn btn-ghost"
-                href="https://www.linkedin.com/in/shandortenhoven"
-                target="_blank"
-                rel="noreferrer"
-              >
-                LinkedIn profile
-              </a>
+              <div class="contact-stack">
+                <a class="btn btn-secondary" href="mailto:Shandortenhoven@gmail.com">
+                  Shandortenhoven@gmail.com
+                </a>
+                <a
+                  class="btn btn-secondary"
+                  href="https://www.linkedin.com/in/shandortenhoven"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  LinkedIn profile
+                </a>
+              </div>
             </div>
           </aside>
         </div>
       </section>
     </main>
 
+    <!-- Footer -->
     <footer class="site-footer">
-      <div class="container footer-card">
-        <div>
-          <h2 class="footer-title">Let’s build something clear.</h2>
-          <p class="footer-text">
-            Want to collaborate or ask a question? Use the contact form and I’ll reply as soon as possible.
-          </p>
-        </div>
+      <div class="container">
+        <div class="footer-cta">
+          <div>
+            <h2 class="footer-title">Let’s build something clear.</h2>
+            <p class="footer-text">
+              Want to collaborate or ask a question? Use the contact form and I’ll reply as soon as possible.
+            </p>
+          </div>
 
-        <div class="footer-actions">
-          <a class="btn btn-primary" href="./contact.html">Contact form</a>
-          <a class="btn btn-ghost" href="mailto:Shandortenhoven@gmail.com">Email</a>
+          <div class="footer-actions">
+            <a class="btn btn-primary" href="contact.html">Contact form</a>
+            <a class="btn btn-secondary" href="mailto:Shandortenhoven@gmail.com">Email</a>
+          </div>
         </div>
 
         <div class="footer-bottom">
           <div class="social">
-            <a class="icon-btn" href="https://www.linkedin.com/in/shandortenhoven" target="_blank" rel="noreferrer" aria-label="LinkedIn">in</a>
+            <a
+              class="icon-btn"
+              href="https://www.linkedin.com/in/shandortenhoven"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="LinkedIn"
+            >in</a>
             <a class="icon-btn" href="mailto:Shandortenhoven@gmail.com" aria-label="Email">✉</a>
           </div>
+
           <p class="copyright">© 2025 Shandor ten Hoven</p>
         </div>
       </div>
     </footer>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="js/scripts.js"></script>
   </body>
 </html>
