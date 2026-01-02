@@ -170,6 +170,125 @@ a {
   transform: translateY(-1px);
 }
 
+/* active state (supports aria-current OR .is-active) */
+.nav-link[aria-current="page"],
+.nav-link.is-active {
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+}
+
+/* =========================
+   Mobile menu (jQuery toggle)
+   Breakpoint: < 641px
+========================= */
+
+/* Ensure dropdown anchors correctly */
+.site-header .header-inner {
+  position: relative;
+}
+
+/* Hamburger button */
+.nav-toggle {
+  display: none; /* shown on mobile via media query */
+  width: 44px;
+  height: 44px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.04);
+  cursor: pointer;
+  transition: transform 180ms ease, background 180ms ease, border-color 180ms ease;
+}
+
+.nav-toggle:hover {
+  transform: translateY(-1px);
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.20);
+}
+
+/* Hamburger icon */
+.hamburger {
+  position: relative;
+  width: 20px;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.88);
+  border-radius: 2px;
+}
+
+.hamburger::before,
+.hamburger::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 20px;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.88);
+  border-radius: 2px;
+}
+
+.hamburger::before {
+  top: -6px;
+}
+
+.hamburger::after {
+  top: 6px;
+}
+
+/* MOBILE: hide nav by default, show hamburger */
+@media (max-width: 640px) {
+  .nav-toggle {
+    display: inline-flex;
+  }
+
+  /* Hide nav on mobile until toggled */
+  .site-header .site-nav {
+    display: none;
+  }
+
+  /* Open dropdown */
+  .site-header .site-nav.is-open {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    position: absolute;
+    right: 0;
+    top: calc(100% + 10px);
+
+    width: min(260px, 86vw);
+    padding: 12px;
+    border-radius: 16px;
+
+    background: rgba(6, 10, 18, 0.92);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    backdrop-filter: blur(14px);
+    box-shadow: 0 18px 50px rgba(0, 0, 0, 0.45);
+    z-index: 100;
+  }
+
+  /* Links inside open menu */
+  .site-header .site-nav.is-open .nav-link {
+    display: block;
+    padding: 10px 12px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.10);
+  }
+}
+
+/* DESKTOP: show nav, hide hamburger */
+@media (min-width: 641px) {
+  .nav-toggle {
+    display: none;
+  }
+
+  .site-header .site-nav {
+    display: flex;
+  }
+}
+
 /* =========================================
    Hero
 ========================================= */
@@ -179,6 +298,14 @@ a {
 }
 
 .eyebrow {
+  color: var(--muted);
+  margin: 0 0 12px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+/* optional synonyms used in older HTML */
+.kicker {
   color: var(--muted);
   margin: 0 0 12px;
   font-weight: 600;
@@ -230,6 +357,24 @@ a {
   margin: 0;
   color: var(--muted);
   max-width: 78ch;
+}
+
+/* “page-*” helpers used in case study/contact pages */
+.page-title,
+.contact-title,
+.about-title {
+  margin: 0;
+  font-size: clamp(34px, 4.2vw, 56px);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+}
+
+.page-lead,
+.contact-lede {
+  margin: 16px 0 0;
+  max-width: 72ch;
+  color: var(--muted);
+  font-size: 18px;
 }
 
 /* =========================================
@@ -334,6 +479,97 @@ a {
 .btn-secondary:hover {
   background: rgba(255, 255, 255, 0.07);
   border-color: rgba(255, 255, 255, 0.20);
+}
+
+/* Aliases for older HTML variants */
+.btn-ghost {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  color: var(--text);
+}
+.btn-ghost:hover {
+  background: rgba(255, 255, 255, 0.07);
+  border-color: rgba(255, 255, 255, 0.20);
+}
+
+/* =========================================
+   Contact page (missing blocks)
+========================================= */
+
+.contact-grid {
+  display: grid;
+  gap: 22px;
+  align-items: start;
+}
+
+@media (min-width: 900px) {
+  .contact-grid {
+    grid-template-columns: 1.25fr 0.75fr;
+  }
+}
+
+.contact-form {
+  display: grid;
+  gap: 14px;
+}
+
+.field {
+  display: grid;
+  gap: 8px;
+}
+
+.field label {
+  color: var(--muted);
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.field input,
+.field textarea {
+  width: 100%;
+  padding: 12px 12px;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--text);
+  outline: none;
+}
+
+.field textarea {
+  resize: vertical;
+  min-height: 140px;
+}
+
+.field input:focus,
+.field textarea:focus {
+  border-color: rgba(243, 162, 74, 0.45);
+  box-shadow: 0 0 0 4px rgba(243, 162, 74, 0.12);
+}
+
+.contact-stack,
+.stack {
+  display: grid;
+  gap: 12px;
+}
+
+/* =========================================
+   About page (missing blocks)
+========================================= */
+
+.about-card .about-text {
+  margin: 14px 0 0;
+  color: var(--muted);
+  max-width: 78ch;
+}
+
+.card-list {
+  margin: 12px 0 0;
+  padding-left: 18px;
+  color: var(--muted);
+}
+
+.card-list li {
+  margin: 8px 0;
 }
 
 /* =========================================
@@ -489,4 +725,55 @@ a {
     grid-template-columns: 1fr auto;
     justify-content: space-between;
   }
+}
+
+/* =========================================================
+   FIX (About): Force profile image into a true circle
+   (Paste-at-end override, included here already)
+========================================================= */
+
+.about-grid {
+  display: grid;
+  gap: 22px;
+}
+
+@media (min-width: 900px) {
+  .about-grid {
+    grid-template-columns: 1.25fr 0.75fr;
+    align-items: start;
+  }
+}
+
+/* Circle card container */
+.about-grid .profile-card {
+  padding: 0 !important;
+  overflow: hidden !important;
+
+  /* the magic: it becomes a circle */
+  border-radius: 999px !important;
+  aspect-ratio: 1 / 1;
+
+  /* kill the “white panel” look */
+  background: transparent !important;
+}
+
+/* If you have a wrapper div, make it fill the circle */
+.about-grid .profile-card .profile-img {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: inherit;
+  background: transparent !important;
+}
+
+/* Image fills the circle nicely */
+.about-grid .profile-card img {
+  width: 100% !important;
+  height: 100% !important;
+  display: block;
+  object-fit: cover;
+
+  /* override any old circular/rounded rules */
+  border-radius: 0 !important;
+  background: transparent !important;
 }
