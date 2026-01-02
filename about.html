@@ -1,135 +1,162 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>About — Shandor ten Hoven</title>
-  <link rel="stylesheet" href="css/style.css" />
-</head>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>About — Shandor ten Hoven</title>
+    <meta
+      name="description"
+      content="About Shandor ten Hoven — Product & UX/UI Designer. Calm, clear interfaces that make complex things feel simple."
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
 
-<body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="Index.html" aria-label="Home">
-        <span class="mark">STH</span>
-        <span class="name">
-          <strong>Shandor ten Hoven</strong>
-          <span>Product & UX/UI Designer</span>
-        </span>
-      </a>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
 
-      <nav class="nav" aria-label="Primary">
-        <a href="Index.html">Work</a>
-        <a class="active" href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-    </div>
-  </header>
+    <!-- Header matches Index.html (classes + structure) -->
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="Index.html" aria-label="Go to homepage">
+          <span class="brand-mark">STH</span>
+          <span class="brand-name">Shandor ten Hoven</span>
+          <span class="brand-role">Product & UX/UI Designer</span>
+        </a>
 
-  <main>
-    <section class="section">
-      <div class="container about-grid">
-        <div class="card">
-          <div class="card-inner">
-            <div class="mono">About</div>
-            <h1 style="margin-top: 10px;">Design with clarity, structure, and calm.</h1>
-            <p>
-              I’m a Product & UX/UI designer who likes calm layouts, strong hierarchy, and products that feel obvious to use.
-              My background in hospitality management trained me to stay structured under pressure — and to design with real people in mind.
-            </p>
-            <p>
-              In practice, that means I’m comfortable owning the messy middle: turning research into flows, flows into screens,
-              and screens into something you can test, iterate, and ship.
-              I’m especially drawn to products where clarity and trust matter: onboarding, payments, account areas, and anything people rely on when they’re stressed or in a hurry.
-            </p>
+        <!-- Mobile hamburger -->
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-label="Toggle menu"
+          aria-expanded="false"
+          aria-controls="primary-nav"
+        >
+          <span class="hamburger" aria-hidden="true"></span>
+        </button>
 
-            <div class="actions">
-              <a class="btn primary" href="files/Shandor-ten-Hoven-CV.pdf" target="_blank" rel="noreferrer">View CV</a>
-              <a class="btn" href="contact.html">Contact</a>
+        <nav class="site-nav" id="primary-nav" aria-label="Primary">
+          <a class="nav-link" href="Index.html#work">Work</a>
+          <a class="nav-link" href="about.html" aria-current="page">About</a>
+          <a class="nav-link" href="contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <!-- About hero -->
+      <section class="section">
+        <div class="container about-grid">
+          <article class="card about-card">
+            <div class="card-body about-body">
+              <p class="eyebrow">About</p>
+              <h1 class="about-title">Clarity-first UX, with strong UI craft.</h1>
+
+              <p class="about-text">
+                I’m a Product & UX/UI designer who likes calm layouts, strong hierarchy, and products that feel obvious to use.
+                My background in hospitality management trained me to stay structured under pressure — and to design with real people in mind.
+              </p>
+
+              <p class="about-text">
+                In practice, that means I’m comfortable owning the messy middle: turning research into flows, flows into screens,
+                and screens into something you can test, iterate, and ship. I’m especially drawn to products where clarity and trust matter:
+                onboarding, payments, account areas, and anything people rely on when they’re stressed or in a hurry.
+              </p>
+
+              <div class="hero-actions">
+                <a class="btn btn-primary" href="files/Shandor-ten-Hoven-CV.pdf" target="_blank" rel="noreferrer">
+                  View CV
+                </a>
+                <a class="btn btn-secondary" href="contact.html">Contact</a>
+              </div>
             </div>
-          </div>
-        </div>
+          </article>
 
-        <div class="profile-wrap">
-          <div class="card profile-card">
-            <div class="profile-img" aria-label="Profile photo">
+          <!-- Profile image card -->
+          <aside class="card profile-card" aria-label="Profile photo">
+            <div class="profile-img">
               <img
                 src="img/profile/profile-lg.jpg"
                 srcset="img/profile/profile-sm.jpg 600w, img/profile/profile-lg.jpg 1200w"
                 sizes="(max-width: 900px) 90vw, 520px"
                 alt="Shandor ten Hoven portrait"
+                loading="eager"
               />
             </div>
+          </aside>
+        </div>
+      </section>
+
+      <!-- Skills / Tools -->
+      <section class="section">
+        <div class="container">
+          <div class="grid grid-2">
+            <div class="card">
+              <div class="card-body">
+                <h2 class="card-title">Skills</h2>
+                <ul class="card-list">
+                  <li>User research &amp; synthesis</li>
+                  <li>Information architecture</li>
+                  <li>User flows &amp; wireframing</li>
+                  <li>UI design systems</li>
+                  <li>Prototyping &amp; usability testing</li>
+                  <li>Responsive design</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-body">
+                <h2 class="card-title">Tools</h2>
+                <ul class="card-list">
+                  <li>Figma</li>
+                  <li>FigJam</li>
+                  <li>Adobe (basic)</li>
+                  <li>HTML / CSS (foundations)</li>
+                  <li>Git / GitHub (foundations)</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-actions" style="margin-top: 18px;">
+            <a class="btn btn-secondary" href="Index.html#work">Back to work</a>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </main>
 
-    <section class="section">
+    <!-- Footer matches Index.html -->
+    <footer class="site-footer">
       <div class="container">
-        <div class="two-cards">
-          <div class="card">
-            <div class="card-inner">
-              <h2>Skills</h2>
-              <ul class="list">
-                <li>User research & synthesis</li>
-                <li>Information architecture</li>
-                <li>User flows & wireframing</li>
-                <li>UI design systems</li>
-                <li>Prototyping & usability testing</li>
-                <li>Responsive design</li>
-              </ul>
-            </div>
+        <div class="footer-cta">
+          <div>
+            <h2 class="footer-title">Let’s build something clear.</h2>
+            <p class="footer-text">
+              Want to collaborate or ask a question? Use the contact form and I’ll reply as soon as possible.
+            </p>
           </div>
 
-          <div class="card">
-            <div class="card-inner">
-              <h2>Tools</h2>
-              <ul class="list">
-                <li>Figma</li>
-                <li>FigJam</li>
-                <li>Adobe (basic)</li>
-                <li>HTML / CSS (foundations)</li>
-                <li>Git / GitHub (foundations)</li>
-              </ul>
-            </div>
+          <div class="footer-actions">
+            <a class="btn btn-primary" href="contact.html">Contact form</a>
+            <a class="btn btn-secondary" href="mailto:Shandortenhoven@gmail.com">Email</a>
           </div>
         </div>
 
-        <div class="actions" style="margin-top: 18px;">
-          <a class="btn" href="Index.html">Back to work</a>
-        </div>
-      </div>
-    </section>
-
-    <footer class="site-footer" id="contact">
-      <div class="container">
-        <div class="card footer-card">
-          <div class="card-inner footer-top">
-            <div>
-              <h2>Let’s build something clear.</h2>
-              <p>Want to collaborate or ask a question? Use the contact form and I’ll reply as soon as possible.</p>
-            </div>
-            <div class="footer-actions">
-              <a class="btn primary" href="contact.html">Contact form</a>
-              <a class="btn" href="mailto:Shandortenhoven@gmail.com">Email</a>
-            </div>
+        <div class="footer-bottom">
+          <div class="social">
+            <a class="icon-btn" href="https://www.linkedin.com/in/shandortenhoven" target="_blank" rel="noreferrer" aria-label="LinkedIn">
+              in
+            </a>
+            <a class="icon-btn" href="mailto:Shandortenhoven@gmail.com" aria-label="Email">✉</a>
           </div>
 
-          <div class="card-inner footer-bottom">
-            <div class="social" aria-label="Social links">
-              <a class="icon-btn" href="https://www.linkedin.com/in/shandortenhoven" target="_blank" rel="noreferrer" aria-label="LinkedIn">
-                in
-              </a>
-              <a class="icon-btn" href="mailto:Shandortenhoven@gmail.com" aria-label="Email">
-                ✉
-              </a>
-            </div>
-            <small>© 2025 Shandor ten Hoven</small>
-          </div>
+          <p class="copyright">© 2025 Shandor ten Hoven</p>
         </div>
       </div>
     </footer>
-  </main>
-</body>
+
+    <!-- jQuery must come before scripts.js -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="js/scripts.js"></script>
+  </body>
 </html>
