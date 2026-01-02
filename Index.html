@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>STH  Shandor ten Hoven</title>
+    <title>Shandor ten Hoven — UX/UI & Product Designer</title>
     <meta
       name="description"
       content="Shandor ten Hoven — Product & UX/UI Designer. Calm, clear interfaces that make complex things feel simple."
@@ -22,8 +22,19 @@
           <span class="brand-role">Product & UX/UI Designer</span>
         </a>
 
-        <nav class="site-nav" aria-label="Primary">
-          <a class="nav-link" href="Index.html#work">Work</a>
+        <!-- Mobile hamburger -->
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-label="Toggle menu"
+          aria-expanded="false"
+          aria-controls="primary-nav"
+        >
+          <span class="hamburger" aria-hidden="true"></span>
+        </button>
+
+        <nav class="site-nav" id="primary-nav" aria-label="Primary">
+          <a class="nav-link" href="Index.html#work" aria-current="page">Work</a>
           <a class="nav-link" href="about.html">About</a>
           <a class="nav-link" href="contact.html">Contact</a>
         </nav>
@@ -139,7 +150,7 @@
             </div>
 
             <div class="extra-right" aria-hidden="true">
-              <!-- Amsterdam SVG (shorter mast + attached flag) -->
+              <!-- Amsterdam SVG -->
               <svg class="amsterdam-svg" viewBox="0 0 400 320" role="img" aria-label="Amsterdam illustration">
                 <defs>
                   <linearGradient id="panelGlow" x1="0" y1="0" x2="0" y2="1">
@@ -151,14 +162,12 @@
                 <rect x="12" y="12" width="376" height="296" rx="22"
                       fill="url(#panelGlow)" stroke="rgba(255,255,255,0.14)"/>
 
-                <!-- buildings -->
                 <g fill="none" stroke="rgba(255,255,255,0.22)" stroke-width="3">
                   <path d="M70 240V120L120 90L170 120V240Z"/>
                   <path d="M170 240V90L200 70L230 90V240Z"/>
                   <path d="M230 240V120L280 90L330 120V240Z"/>
                 </g>
 
-                <!-- windows -->
                 <g fill="rgba(243,162,74,0.16)" stroke="rgba(243,162,74,0.22)" stroke-width="2">
                   <rect x="98" y="152" width="22" height="22" rx="4"/>
                   <rect x="128" y="152" width="22" height="22" rx="4"/>
@@ -177,23 +186,16 @@
                   <rect x="288" y="184" width="22" height="22" rx="4"/>
                 </g>
 
-                <!-- water -->
                 <rect x="38" y="242" width="324" height="46" rx="14"
                       fill="rgba(0,160,180,0.12)" stroke="rgba(255,255,255,0.10)"/>
 
-                <!-- BOAT (mast + flag are inside this group now) -->
                 <g class="boat-group" fill="none" stroke="rgba(255,255,255,0.26)" stroke-width="3">
-                  <!-- hull -->
                   <path d="M160 266 C180 280, 220 280, 240 266" />
                   <path d="M160 266 H240" />
 
-                  <!-- mast (SHORTER + lower) -->
                   <line x1="200" y1="228" x2="200" y2="266" stroke="rgba(255,255,255,0.26)" stroke-width="3"/>
-
-                  <!-- sail -->
                   <path d="M200 244 L228 258" />
 
-                  <!-- flag (lowered + attached to mast) -->
                   <g class="flag">
                     <path d="M200 228
                              C216 228, 228 233, 238 233
@@ -208,7 +210,6 @@
       </section>
     </main>
 
-    <!-- FOOTER -->
     <footer class="site-footer">
       <div class="container">
         <div class="footer-cta">
@@ -239,6 +240,9 @@
         </div>
       </div>
     </footer>
- <script src="js/scripts.js"></script>
+
+    <!-- jQuery must come before scripts.js -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="js/scripts.js"></script>
   </body>
 </html>
