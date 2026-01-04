@@ -36,7 +36,7 @@
       }
     });
 
-    // Optional: smooth scroll for in-page anchors (e.g. #work on Index)
+    // Optional: smooth scroll for in-page anchors (e.g. #work on index)
     $(document).on("click", 'a[href^="#"]', function (e) {
       var href = this.getAttribute("href");
 
