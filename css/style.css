@@ -46,9 +46,39 @@ body {
   background-attachment: fixed;
 }
 
+/* UPDATED: safer global image defaults */
 img {
   max-width: 100%;
   display: block;
+  height: auto; /* prevents squishing when containers constrain height */
+}
+
+/* =========================================================
+   FIX: Prevent mobile image squishing (case study/process)
+========================================================= */
+
+/* Any image inside a card should never stretch */
+.card img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Case study hero images */
+.project-hero img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Extra safety on mobile */
+@media (max-width: 640px) {
+  .card img,
+  .project-hero img {
+    height: auto !important;
+    max-height: none !important;
+    object-fit: contain !important;
+  }
 }
 
 a {
