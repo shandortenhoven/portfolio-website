@@ -46,9 +46,11 @@ body {
   background-attachment: fixed;
 }
 
+/* UPDATED: safer global image defaults */
 img {
   max-width: 100%;
   display: block;
+  height: auto; /* prevents squishing when containers constrain height */
 }
 
 a {
@@ -389,6 +391,13 @@ a {
   overflow: hidden;
 }
 
+/* IMPORTANT: do NOT force object-fit on all .card img */
+/* (this can create weird results if any height is applied elsewhere) */
+.card img {
+  width: 100%;
+  height: auto;
+}
+
 .project-card .card-media {
   display: block;
   background: rgba(0, 0, 0, 0.25);
@@ -490,6 +499,44 @@ a {
 .btn-ghost:hover {
   background: rgba(255, 255, 255, 0.07);
   border-color: rgba(255, 255, 255, 0.20);
+}
+
+/* =========================================
+   FIX: Prevent mobile image squishing (Expert/Kubo)
+   (hero + gallery only, safe & targeted)
+========================================= */
+
+.project-hero img,
+.gallery img {
+  width: 100%;
+  height: auto !important;
+  display: block;
+}
+
+.project-hero picture {
+  display: block;
+}
+
+.project-hero {
+  overflow: hidden;
+}
+
+/* Make gallery responsive */
+.gallery {
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+  .gallery {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Captions (if present) */
+.caption {
+  padding: 10px 14px 14px;
+  color: var(--muted);
+  font-size: 14px;
 }
 
 /* =========================================
