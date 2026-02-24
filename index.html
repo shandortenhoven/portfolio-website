@@ -22,6 +22,7 @@
           <span class="brand-role">Product & UX/UI Designer</span>
         </a>
 
+        <!-- Mobile hamburger -->
         <button
           class="nav-toggle"
           type="button"
@@ -41,6 +42,7 @@
     </header>
 
     <main id="main">
+      <!-- HERO -->
       <section class="hero">
         <div class="container">
           <p class="eyebrow">UX/UI Designer • Product-minded • Detail-driven</p>
@@ -61,6 +63,7 @@
         </div>
       </section>
 
+      <!-- WORK -->
       <section id="work" class="section">
         <div class="container">
           <div class="section-head">
@@ -72,6 +75,7 @@
           </div>
 
           <div class="grid grid-2">
+            <!-- Expert card -->
             <article class="card project-card">
               <a class="card-media" href="expert.html" aria-label="Open Expert case study">
                 <img
@@ -99,6 +103,7 @@
               </div>
             </article>
 
+            <!-- Kubo card -->
             <article class="card project-card">
               <a class="card-media" href="kubo.html" aria-label="Open Kubo case study">
                 <img
@@ -129,6 +134,7 @@
         </div>
       </section>
 
+      <!-- EXTRA / SVG -->
       <section class="section">
         <div class="container">
           <div class="card extra-card">
@@ -144,9 +150,9 @@
             </div>
 
             <div class="extra-right" aria-hidden="true">
+              <!-- Amsterdam SVG -->
               <svg class="amsterdam-svg" viewBox="0 0 400 320" role="img" aria-label="Amsterdam illustration">
                 <defs>
-                  <!-- FIXED: Correct SVG casing -->
                   <linearGradient id="panelGlow" x1="0" y1="0" x2="0" y2="1">
                     <stop offset="0" stop-color="rgba(255,255,255,0.10)"/>
                     <stop offset="1" stop-color="rgba(255,255,255,0.02)"/>
@@ -163,18 +169,20 @@
                 </g>
 
                 <g fill="rgba(243,162,74,0.16)" stroke="rgba(243,162,74,0.22)" stroke-width="2">
+                  <!-- Left house -->
                   <rect x="98" y="152" width="22" height="22" rx="4"/>
                   <rect x="128" y="152" width="22" height="22" rx="4"/>
                   <rect x="98" y="184" width="22" height="22" rx="4"/>
                   <rect x="128" y="184" width="22" height="22" rx="4"/>
 
-                  <rect x="188" y="122" width="22" height="22" rx="4"/>
-                  <rect x="218" y="122" width="22" height="22" rx="4"/>
-                  <rect x="188" y="154" width="22" height="22" rx="4"/>
-                  <rect x="218" y="154" width="22" height="22" rx="4"/>
-                  <!-- FIXED: aligned window -->
-                  <rect x="188" y="186" width="22" height="22" rx="4"/>
+                  <!-- Middle house (FIXED: shifted left + centered properly) -->
+                  <rect x="180" y="122" width="22" height="22" rx="4"/>
+                  <rect x="208" y="122" width="22" height="22" rx="4"/>
+                  <rect x="180" y="154" width="22" height="22" rx="4"/>
+                  <rect x="208" y="154" width="22" height="22" rx="4"/>
+                  <rect x="194" y="186" width="22" height="22" rx="4"/>
 
+                  <!-- Right house -->
                   <rect x="258" y="152" width="22" height="22" rx="4"/>
                   <rect x="288" y="152" width="22" height="22" rx="4"/>
                   <rect x="258" y="184" width="22" height="22" rx="4"/>
@@ -187,10 +195,14 @@
                 <g class="boat-group" fill="none" stroke="rgba(255,255,255,0.26)" stroke-width="3">
                   <path d="M160 266 C180 280, 220 280, 240 266" />
                   <path d="M160 266 H240" />
-                  <line x1="200" y1="228" x2="200" y2="266"/>
+
+                  <line x1="200" y1="228" x2="200" y2="266" stroke="rgba(255,255,255,0.26)" stroke-width="3"/>
                   <path d="M200 244 L228 258" />
+
                   <g class="flag">
-                    <path d="M200 228 C216 228, 228 233, 238 233 C228 242, 216 245, 200 243 Z"
+                    <path d="M200 228
+                             C216 228, 228 233, 238 233
+                             C228 242, 216 245, 200 243 Z"
                           fill="rgba(243,162,74,0.85)" stroke="none"/>
                   </g>
                 </g>
@@ -219,9 +231,14 @@
 
         <div class="footer-bottom">
           <div class="social">
-            <a class="icon-btn" href="https://www.linkedin.com/in/shandortenhoven" target="_blank" rel="noreferrer">in</a>
-            <a class="icon-btn" href="mailto:Shandortenhoven@gmail.com">✉</a>
+            <a class="icon-btn" href="https://www.linkedin.com/in/shandortenhoven" target="_blank" rel="noreferrer" aria-label="LinkedIn">
+              in
+            </a>
+            <a class="icon-btn" href="mailto:Shandortenhoven@gmail.com" aria-label="Email">
+              ✉
+            </a>
           </div>
+
           <p class="copyright">© 2025 Shandor ten Hoven</p>
         </div>
       </div>
