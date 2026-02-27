@@ -1,11 +1,32 @@
 (function () {
   "use strict";
 
+  function openLightbox(src, alt) {
+    var $lb = $("#lightbox");
+    var $img = $lb.find(".lightbox__img");
+
+    $img.attr("src", src);
+    $img.attr("alt", alt || "Preview image");
+
+    $lb.addClass("is-open").attr("aria-hidden", "false");
+    $("body").addClass("lb-open");
+  }
+
+  function closeLightbox() {
+    var $lb = $("#lightbox");
+    var $img = $lb.find(".lightbox__img");
+
+    $lb.removeClass("is-open").attr("aria-hidden", "true");
+    $("body").removeClass("lb-open");
+
+    // clear src to prevent large image staying in memory on some browsers
+    $img.attr("src", "");
+    $img.attr("alt", "");
+  }
+
   // jQuery DOM-ready
   $(function () {
-    // ----------------------------
-    // Mobile nav
-    // ----------------------------
+    // Toggle button click
     $(document).on("click", ".nav-toggle", function () {
       var $btn = $(this);
 
@@ -52,67 +73,28 @@
       }
     });
 
-    // ----------------------------
-    // LIGHTBOX (click to enlarge)
-    // Targets: .project-hero img, .gallery img
-    // Optional: use data-full for higher-res image
-    // Optional: use data-caption or alt text for caption
-    // ----------------------------
+    /* =========================================
+       Lightbox
+    ========================================= */
 
-    // Create lightbox once
-    var $lightbox = $(
-      '<div class="lightbox" role="dialog" aria-modal="true" aria-label="Image preview">' +
-        '<div class="lightbox__panel">' +
-          '<button class="lightbox__close" type="button" aria-label="Close">✕</button>' +
-          '<img class="lightbox__img" alt="Expanded view" />' +
-          '<div class="lightbox__caption" style="display:none;"></div>' +
-        "</div>" +
-      "</div>"
-    );
-    $("body").append($lightbox);
+    // Open
+    $(document).on("click", "a[data-lightbox]", function (e) {
+      e.preventDefault();
 
-    function openLightbox(src, caption) {
-      $lightbox.find(".lightbox__img").attr("src", src);
+      var src = $(this).attr("href");
+      var alt = $(this).find("img").attr("alt") || "Preview image";
 
-      var $cap = $lightbox.find(".lightbox__caption");
-      if (caption) {
-        $cap.text(caption).show();
-      } else {
-        $cap.hide().text("");
-      }
-
-      $("body").addClass("lb-open");
-      $lightbox.addClass("is-open");
-    }
-
-    function closeLightbox() {
-      $lightbox.removeClass("is-open");
-      $("body").removeClass("lb-open");
-      $lightbox.find(".lightbox__img").attr("src", "");
-      $lightbox.find(".lightbox__caption").hide().text("");
-    }
-
-    // Open on click (hero + gallery)
-    $(document).on("click", ".project-hero img, .gallery img", function () {
-      var $img = $(this);
-      var full = $img.attr("data-full") || $img.attr("src");
-      var caption = $img.attr("data-caption") || $img.attr("alt") || "";
-      openLightbox(full, caption);
+      if (src) openLightbox(src, alt);
     });
 
-    // Close: button
-    $(document).on("click", ".lightbox__close", function () {
+    // Close (button or backdrop)
+    $(document).on("click", "[data-lightbox-close]", function () {
       closeLightbox();
     });
 
-    // Close: click backdrop (but not the panel)
-    $(document).on("click", ".lightbox", function (e) {
-      if ($(e.target).is(".lightbox")) closeLightbox();
-    });
-
-    // Close: press ESC
+    // Close on ESC
     $(document).on("keydown", function (e) {
-      if (e.key === "Escape" && $lightbox.hasClass("is-open")) {
+      if (e.key === "Escape" && $("#lightbox").hasClass("is-open")) {
         closeLightbox();
       }
     });

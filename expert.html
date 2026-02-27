@@ -8,6 +8,8 @@
   </head>
 
   <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
     <header class="site-header">
       <div class="container header-inner">
         <a class="brand" href="./index.html" aria-label="Homepage">
@@ -16,7 +18,13 @@
           <span class="brand-role">Product & UX/UI Designer</span>
         </a>
 
-        <button class="nav-toggle" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="primary-nav">
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-label="Toggle menu"
+          aria-expanded="false"
+          aria-controls="primary-nav"
+        >
           <span class="hamburger" aria-hidden="true"></span>
         </button>
 
@@ -28,13 +36,14 @@
       </div>
     </header>
 
-    <main>
+    <main id="main">
+      <!-- HERO -->
       <section class="section">
         <div class="container">
           <p class="kicker">Case study</p>
           <h1 class="page-title">Expert</h1>
           <p class="page-lead">
-            A responsive mentorship platform designed for fast discovery, trustworthy profiles, and pay-per-session advice.
+            A pay-per-session platform connecting advice seekers with vetted professionals — designed for speed, clarity, and trust.
           </p>
 
           <div class="card project-hero">
@@ -52,85 +61,159 @@
         </div>
       </section>
 
+      <!-- OVERVIEW -->
       <section class="section">
         <div class="container">
-          <h2 class="section-title">Process highlights</h2>
-
-          <div class="grid gallery">
-            <figure class="card">
-              <button class="lb-trigger" type="button" data-full="./img/Expert/affinityMap.png" aria-label="Open Affinity map image">
-                <div class="thumb">
-                  <img src="./img/Expert/affinityMap.png" alt="Affinity map" loading="lazy" />
-                </div>
-              </button>
-              <figcaption class="caption">Affinity map</figcaption>
-            </figure>
-
-            <figure class="card">
-              <button class="lb-trigger" type="button" data-full="./img/Expert/lowFidelityWireframes.png" aria-label="Open Low-fidelity wireframes image">
-                <div class="thumb">
-                  <img src="./img/Expert/lowFidelityWireframes.png" alt="Low-fidelity wireframes" loading="lazy" />
-                </div>
-              </button>
-              <figcaption class="caption">Low-fidelity wireframes</figcaption>
-            </figure>
-
-            <figure class="card">
-              <button class="lb-trigger" type="button" data-full="./img/Expert/midFidelityWireframes.png" aria-label="Open Mid-fidelity wireframes image">
-                <div class="thumb">
-                  <img src="./img/Expert/midFidelityWireframes.png" alt="Mid-fidelity wireframes" loading="lazy" />
-                </div>
-              </button>
-              <figcaption class="caption">Mid-fidelity wireframes</figcaption>
-            </figure>
-
-            <figure class="card">
-              <button class="lb-trigger" type="button" data-full="./img/Expert/highFidelityWireframes.png" aria-label="Open High-fidelity wireframes image">
-                <div class="thumb">
-                  <img src="./img/Expert/highFidelityWireframes.png" alt="High-fidelity wireframes" loading="lazy" />
-                </div>
-              </button>
-              <figcaption class="caption">High-fidelity wireframes</figcaption>
-            </figure>
-
-            <figure class="card">
-              <button class="lb-trigger" type="button" data-full="./img/Expert/usabilityTesting.png" aria-label="Open Usability testing notes image">
-                <div class="thumb">
-                  <img src="./img/Expert/usabilityTesting.png" alt="Usability testing notes" loading="lazy" />
-                </div>
-              </button>
-              <figcaption class="caption">Usability testing</figcaption>
-            </figure>
-
-            <figure class="card">
-              <button class="lb-trigger" type="button" data-full="./img/Expert/peerFeedback.png" aria-label="Open Peer feedback image">
-                <div class="thumb">
-                  <img src="./img/Expert/peerFeedback.png" alt="Peer feedback" loading="lazy" />
-                </div>
-              </button>
-              <figcaption class="caption">Peer feedback</figcaption>
-            </figure>
+          <h2 class="section-title">Overview</h2>
+          <div class="card">
+            <div class="card-body">
+              <p class="card-text">
+                Expert focuses on fast matching, clear expert profiles, and a confident booking flow. Below are key artifacts from the process —
+                research synthesis, personas, flows, wireframes, and UI iterations.
+              </p>
+            </div>
           </div>
 
-          <div class="section-actions" style="margin-top: 18px; display: flex; gap: 12px; flex-wrap: wrap;">
+          <div class="section-actions">
             <a class="btn btn-ghost" href="./index.html#work">Back to work</a>
             <a class="btn btn-primary" href="./contact.html">Contact</a>
           </div>
         </div>
       </section>
+
+      <!-- GALLERY (ALL EXPERT IMAGES) -->
+      <section class="section">
+        <div class="container">
+          <h2 class="section-title">Gallery</h2>
+          <p class="section-subtitle">Click any image to view it full-size.</p>
+
+          <div class="grid gallery">
+            <!-- Research / synthesis -->
+            <figure class="gallery-item card">
+              <a class="thumb" href="./img/projects/Expert/affinityMap.png" data-lightbox aria-label="Open Affinity Map full-size">
+                <img src="./img/projects/Expert/affinityMap.png" alt="Affinity map" loading="lazy" />
+              </a>
+              <figcaption class="caption">Affinity map</figcaption>
+            </figure>
+
+            <figure class="gallery-item card">
+              <a class="thumb" href="./img/projects/Expert/usabilityTesting.png" data-lightbox aria-label="Open Usability Testing full-size">
+                <img src="./img/projects/Expert/usabilityTesting.png" alt="Usability testing notes" loading="lazy" />
+              </a>
+              <figcaption class="caption">Usability testing</figcaption>
+            </figure>
+
+            <figure class="gallery-item card">
+              <a class="thumb" href="./img/projects/Expert/peerFeedback.png" data-lightbox aria-label="Open Peer Feedback full-size">
+                <img src="./img/projects/Expert/peerFeedback.png" alt="Peer feedback" loading="lazy" />
+              </a>
+              <figcaption class="caption">Peer feedback</figcaption>
+            </figure>
+
+            <!-- Personas -->
+            <figure class="gallery-item card">
+              <a class="thumb" href="./img/projects/Expert/personaEmma.png" data-lightbox aria-label="Open Persona Emma full-size">
+                <img src="./img/projects/Expert/personaEmma.png" alt="Persona: Emma" loading="lazy" />
+              </a>
+              <figcaption class="caption">Persona: Emma</figcaption>
+            </figure>
+
+            <figure class="gallery-item card">
+              <a class="thumb" href="./img/projects/Expert/personaDaniel.png" data-lightbox aria-label="Open Persona Daniel full-size">
+                <img src="./img/projects/Expert/personaDaniel.png" alt="Persona: Daniel" loading="lazy" />
+              </a>
+              <figcaption class="caption">Persona: Daniel</figcaption>
+            </figure>
+
+            <!-- User flows -->
+            <figure class="gallery-item card">
+              <a class="thumb" href="./img/projects/Expert/userFlowOnboarding.png" data-lightbox aria-label="Open User Flow Onboarding full-size">
+                <img src="./img/projects/Expert/userFlowOnboarding.png" alt="User flow: onboarding" loading="lazy" />
+              </a>
+              <figcaption class="caption">User flow: Onboarding</figcaption>
+            </figure>
+
+            <figure class="gallery-item card">
+              <a class="thumb" href="./img/projects/Expert/userFlowBooking.png" data-lightbox aria-label="Open User Flow Booking full-size">
+                <img src="./img/projects/Expert/userFlowBooking.png" alt="User flow: booking" loading="lazy" />
+              </a>
+              <figcaption class="caption">User flow: Booking</figcaption>
+            </figure>
+
+            <figure class="gallery-item card">
+              <a class="thumb" href="./img/projects/Expert/userFlowPostSession.png" data-lightbox aria-label="Open User Flow Post-session full-size">
+                <img src="./img/projects/Expert/userFlowPostSession.png" alt="User flow: post-session" loading="lazy" />
+              </a>
+              <figcaption class="caption">User flow: Post-session</figcaption>
+            </figure>
+
+            <!-- Wireframes -->
+            <figure class="gallery-item card">
+              <a class="thumb" href="./img/projects/Expert/lowFidelityWireframes.png" data-lightbox aria-label="Open Low-fidelity Wireframes full-size">
+                <img src="./img/projects/Expert/lowFidelityWireframes.png" alt="Low-fidelity wireframes" loading="lazy" />
+              </a>
+              <figcaption class="caption">Low-fidelity wireframes</figcaption>
+            </figure>
+
+            <figure class="gallery-item card">
+              <a class="thumb" href="./img/projects/Expert/midFidelityWireframes.png" data-lightbox aria-label="Open Mid-fidelity Wireframes full-size">
+                <img src="./img/projects/Expert/midFidelityWireframes.png" alt="Mid-fidelity wireframes" loading="lazy" />
+              </a>
+              <figcaption class="caption">Mid-fidelity wireframes</figcaption>
+            </figure>
+
+            <figure class="gallery-item card">
+              <a class="thumb" href="./img/projects/Expert/highFidelityWireframes.png" data-lightbox aria-label="Open High-fidelity Wireframes full-size">
+                <img src="./img/projects/Expert/highFidelityWireframes.png" alt="High-fidelity wireframes" loading="lazy" />
+              </a>
+              <figcaption class="caption">High-fidelity wireframes</figcaption>
+            </figure>
+
+            <!-- UI iterations -->
+            <figure class="gallery-item card">
+              <a class="thumb" href="./img/projects/Expert/loadingStateIterations.png" data-lightbox aria-label="Open Loading State Iterations full-size">
+                <img src="./img/projects/Expert/loadingStateIterations.png" alt="Loading state iterations" loading="lazy" />
+              </a>
+              <figcaption class="caption">Loading state iterations</figcaption>
+            </figure>
+
+            <figure class="gallery-item card">
+              <a class="thumb" href="./img/projects/Expert/availabilityComparison.png" data-lightbox aria-label="Open Availability Comparison full-size">
+                <img src="./img/projects/Expert/availabilityComparison.png" alt="Availability comparison" loading="lazy" />
+              </a>
+              <figcaption class="caption">Availability comparison</figcaption>
+            </figure>
+
+            <figure class="gallery-item card">
+              <a class="thumb" href="./img/projects/Expert/afterSessionScreen.png" data-lightbox aria-label="Open After-session Screen full-size">
+                <img src="./img/projects/Expert/afterSessionScreen.png" alt="After-session screen" loading="lazy" />
+              </a>
+              <figcaption class="caption">After-session screen</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- LIGHTBOX (shared) -->
+      <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-label="Image preview">
+        <div class="lightbox__backdrop" data-lightbox-close></div>
+        <div class="lightbox__dialog" role="document">
+          <button class="lightbox__close" type="button" aria-label="Close" data-lightbox-close>×</button>
+          <img class="lightbox__img" alt="" />
+        </div>
+      </div>
     </main>
 
     <footer class="site-footer">
-      <div class="container">
-        <div class="footer-cta">
-          <div>
-            <h2 class="footer-title">Let’s build something clear.</h2>
-            <p class="footer-text">Want to collaborate or ask a question? Use the contact form and I’ll reply as soon as possible.</p>
-          </div>
-          <div class="footer-actions">
-            <a class="btn btn-primary" href="./contact.html">Contact form</a>
-            <a class="btn btn-secondary" href="mailto:Shandortenhoven@gmail.com">Email</a>
-          </div>
+      <div class="container footer-card">
+        <div>
+          <h2 class="footer-title">Let’s build something clear.</h2>
+          <p class="footer-text">Want to collaborate or ask a question? Use the contact form — I’ll reply as soon as possible.</p>
+        </div>
+
+        <div class="footer-actions">
+          <a class="btn btn-primary" href="./contact.html">Contact form</a>
+          <a class="btn btn-ghost" href="mailto:Shandortenhoven@gmail.com">Email</a>
         </div>
 
         <div class="footer-bottom">
