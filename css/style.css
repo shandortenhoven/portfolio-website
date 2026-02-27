@@ -913,3 +913,55 @@ body.lb-open {
   background: rgba(255, 255, 255, 0.10);
   border-color: rgba(255, 255, 255, 0.22);
 }
+/* =========================================
+   Lightbox (click-to-enlarge)
+========================================= */
+
+.no-scroll {
+  overflow: hidden;
+}
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  display: none;
+  place-items: center;
+  padding: 18px;
+  background: rgba(0, 0, 0, 0.72);
+  backdrop-filter: blur(6px);
+  z-index: 9999;
+}
+
+.lightbox.is-open {
+  display: grid;
+}
+
+.lightbox-img {
+  width: min(1100px, 92vw);
+  max-height: 86vh;
+  height: auto;
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  box-shadow: 0 22px 70px rgba(0, 0, 0, 0.55);
+  background: rgba(255, 255, 255, 0.04);
+  object-fit: contain;
+}
+
+.lightbox-close {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  width: 46px;
+  height: 46px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.20);
+  background: rgba(10, 14, 22, 0.60);
+  color: rgba(255, 255, 255, 0.92);
+  font-size: 26px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.lightbox-close:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
