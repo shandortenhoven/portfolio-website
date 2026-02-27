@@ -8,8 +8,6 @@
   </head>
 
   <body>
-    <a class="skip-link" href="#main">Skip to content</a>
-
     <header class="site-header">
       <div class="container header-inner">
         <a class="brand" href="./index.html" aria-label="Homepage">
@@ -18,13 +16,7 @@
           <span class="brand-role">Product & UX/UI Designer</span>
         </a>
 
-        <button
-          class="nav-toggle"
-          type="button"
-          aria-label="Toggle menu"
-          aria-expanded="false"
-          aria-controls="primary-nav"
-        >
+        <button class="nav-toggle" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="primary-nav">
           <span class="hamburger" aria-hidden="true"></span>
         </button>
 
@@ -36,87 +28,87 @@
       </div>
     </header>
 
-    <main id="main">
+    <main>
       <section class="section">
         <div class="container">
           <p class="kicker">Concept</p>
           <h1 class="page-title">Moodstream</h1>
           <p class="page-lead">
-            An experimental web platform that reimagines media discovery through emotion —
-            a spatial, mood-driven streaming experience that replaces traditional search with emotional exploration.
+            An experimental web platform that reimagines media discovery through emotion — a spatial, mood-based streaming experience
+            that replaces traditional search with emotional exploration.
           </p>
 
           <div class="card project-hero">
-            <picture>
-              <source media="(min-width: 900px)" srcset="./img/projects/project-moodstream-lg.png" />
-              <img
-                src="./img/projects/project-moodstream-lg.png"
-                alt="Moodstream project hero image"
-                loading="eager"
-                width="1400"
-                height="788"
-              />
-            </picture>
+            <img
+              src="./img/projects/project-moodstream-lg.png"
+              alt="Moodstream project hero image"
+              loading="eager"
+            />
           </div>
         </div>
       </section>
 
       <section class="section">
         <div class="container">
-          <h2 class="section-title">Gallery</h2>
-          <p class="section-subtitle">Thumbnails are cropped for consistency — click to view full-size.</p>
+          <h2 class="section-title">Design system & key screens</h2>
 
           <div class="grid gallery">
-            <figure class="gallery-item card">
-              <a class="thumb" href="./img/projects/Moodstream/design-system.png" data-lightbox aria-label="Open Moodstream design system full-size">
-                <img src="./img/projects/Moodstream/design-system.png" alt="Moodstream design system" loading="lazy" />
-              </a>
+            <figure class="card">
+              <button class="lb-trigger" type="button" data-full="./img/Moodstream/design-system.png" data-title="Design system">
+                <div class="thumb">
+                  <img src="./img/Moodstream/design-system.png" alt="Moodstream design system" loading="lazy" />
+                </div>
+              </button>
               <figcaption class="caption">Design system</figcaption>
             </figure>
 
-            <figure class="gallery-item card">
-              <a class="thumb" href="./img/projects/Moodstream/hi-1.jpg" data-lightbox aria-label="Open Moodstream mockup 1 full-size">
-                <img src="./img/projects/Moodstream/hi-1.jpg" alt="Moodstream hi-fi mockup 1" loading="lazy" />
-              </a>
-              <figcaption class="caption">Hi-fi mockup 1</figcaption>
+            <figure class="card">
+              <button class="lb-trigger" type="button" data-full="./img/Moodstream/hi-1.jpg" data-title="Hi-fi screen 1">
+                <div class="thumb">
+                  <img src="./img/Moodstream/hi-1.jpg" alt="Moodstream hi-fi screen 1" loading="lazy" />
+                </div>
+              </button>
+              <figcaption class="caption">Hi-fi screen 1</figcaption>
             </figure>
 
-            <figure class="gallery-item card">
-              <a class="thumb" href="./img/projects/Moodstream/hi-2.jpg" data-lightbox aria-label="Open Moodstream mockup 2 full-size">
-                <img src="./img/projects/Moodstream/hi-2.jpg" alt="Moodstream hi-fi mockup 2" loading="lazy" />
-              </a>
-              <figcaption class="caption">Hi-fi mockup 2</figcaption>
+            <figure class="card">
+              <button class="lb-trigger" type="button" data-full="./img/Moodstream/hi-2.jpg" data-title="Hi-fi screen 2">
+                <div class="thumb">
+                  <img src="./img/Moodstream/hi-2.jpg" alt="Moodstream hi-fi screen 2" loading="lazy" />
+                </div>
+              </button>
+              <figcaption class="caption">Hi-fi screen 2</figcaption>
             </figure>
 
-            <figure class="gallery-item card">
-              <a class="thumb" href="./img/projects/Moodstream/hi-3.jpg" data-lightbox aria-label="Open Moodstream mockup 3 full-size">
-                <img src="./img/projects/Moodstream/hi-3.jpg" alt="Moodstream hi-fi mockup 3" loading="lazy" />
-              </a>
-              <figcaption class="caption">Hi-fi mockup 3</figcaption>
+            <figure class="card">
+              <button class="lb-trigger" type="button" data-full="./img/Moodstream/hi-3.jpg" data-title="Hi-fi screen 3">
+                <div class="thumb">
+                  <img src="./img/Moodstream/hi-3.jpg" alt="Moodstream hi-fi screen 3" loading="lazy" />
+                </div>
+              </button>
+              <figcaption class="caption">Hi-fi screen 3</figcaption>
             </figure>
+          </div>
+
+          <div class="section-actions" style="margin-top: 18px; display: flex; gap: 12px; flex-wrap: wrap;">
+            <a class="btn btn-ghost" href="./index.html#work">Back to work</a>
+            <a class="btn btn-primary" href="./contact.html">Contact</a>
           </div>
         </div>
       </section>
-
-      <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-label="Image preview">
-        <div class="lightbox__backdrop" data-lightbox-close></div>
-        <div class="lightbox__dialog" role="document">
-          <button class="lightbox__close" type="button" aria-label="Close" data-lightbox-close>×</button>
-          <img class="lightbox__img" alt="" />
-        </div>
-      </div>
     </main>
 
     <footer class="site-footer">
-      <div class="container footer-card">
-        <div>
-          <h2 class="footer-title">Let’s build something clear.</h2>
-          <p class="footer-text">Want to collaborate or ask a question? Use the contact form — I’ll reply as soon as possible.</p>
-        </div>
-
-        <div class="footer-actions">
-          <a class="btn btn-primary" href="./contact.html">Contact form</a>
-          <a class="btn btn-ghost" href="mailto:Shandortenhoven@gmail.com">Email</a>
+      <div class="container">
+        <div class="footer-cta">
+          <div>
+            <h2 class="footer-title">Let’s build something clear.</h2>
+            <p class="footer-text">Want to collaborate or ask a question? Use the contact form and I’ll reply as soon as possible.</p>
+          </div>
+          <div class="footer-actions">
+            <a class="btn btn-primary" href="./contact.html">Contact form</a>
+            <a class="btn btn-secondary" href="mailto:Shandortenhoven@gmail.com">Email</a>
+          </div>
         </div>
 
         <div class="footer-bottom">

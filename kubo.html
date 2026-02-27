@@ -8,8 +8,6 @@
   </head>
 
   <body>
-    <a class="skip-link" href="#main">Skip to content</a>
-
     <header class="site-header">
       <div class="container header-inner">
         <a class="brand" href="./index.html" aria-label="Homepage">
@@ -18,13 +16,7 @@
           <span class="brand-role">Product & UX/UI Designer</span>
         </a>
 
-        <button
-          class="nav-toggle"
-          type="button"
-          aria-label="Toggle menu"
-          aria-expanded="false"
-          aria-controls="primary-nav"
-        >
+        <button class="nav-toggle" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="primary-nav">
           <span class="hamburger" aria-hidden="true"></span>
         </button>
 
@@ -36,7 +28,7 @@
       </div>
     </header>
 
-    <main id="main">
+    <main>
       <section class="section">
         <div class="container">
           <p class="kicker">Concept</p>
@@ -46,88 +38,67 @@
           </p>
 
           <div class="card project-hero">
-            <picture>
-              <source media="(min-width: 900px)" srcset="./img/projects/project-kubo-lg.png" />
-              <img
-                src="./img/projects/project-kubo-sm.png"
-                alt="Kubo project hero image"
-                loading="eager"
-                width="1400"
-                height="788"
-              />
-            </picture>
+            <img
+              src="./img/projects/project-kubo-lg.png"
+              alt="Kubo project hero image"
+              loading="eager"
+            />
           </div>
         </div>
       </section>
 
       <section class="section">
         <div class="container">
-          <h2 class="section-title">Overview</h2>
-          <div class="card">
-            <div class="card-body">
-              <p class="card-text">
-                Kubo explores how a simple vault structure can help users feel in control of essential identity documents.
-                The concept prioritizes calm visual hierarchy, quick scanning, and a minimal action set.
-              </p>
-            </div>
+          <h2 class="section-title">Key screens & structure</h2>
+
+          <div class="grid gallery">
+            <figure class="card">
+              <button class="lb-trigger" type="button" data-full="./img/Kubo/mobile-home.png" data-title="Home screen (Hi-fi mock)">
+                <div class="thumb">
+                  <img src="./img/Kubo/mobile-home.png" alt="Kubo home screen hi-fi mockup" loading="lazy" />
+                </div>
+              </button>
+              <figcaption class="caption">Home screen (Hi-fi mock)</figcaption>
+            </figure>
+
+            <figure class="card">
+              <button class="lb-trigger" type="button" data-full="./img/Kubo/sitemap.png" data-title="Sitemap">
+                <div class="thumb">
+                  <img src="./img/Kubo/sitemap.png" alt="Kubo sitemap" loading="lazy" />
+                </div>
+              </button>
+              <figcaption class="caption">Sitemap</figcaption>
+            </figure>
+
+            <figure class="card">
+              <button class="lb-trigger" type="button" data-full="./img/Kubo/user-flows.png" data-title="User flows">
+                <div class="thumb">
+                  <img src="./img/Kubo/user-flows.png" alt="Kubo user flows" loading="lazy" />
+                </div>
+              </button>
+              <figcaption class="caption">User flows</figcaption>
+            </figure>
           </div>
 
-          <div class="section-actions">
+          <div class="section-actions" style="margin-top: 18px; display: flex; gap: 12px; flex-wrap: wrap;">
             <a class="btn btn-ghost" href="./index.html#work">Back to work</a>
             <a class="btn btn-primary" href="./contact.html">Contact</a>
           </div>
         </div>
       </section>
-
-      <section class="section">
-        <div class="container">
-          <h2 class="section-title">Key visuals</h2>
-          <p class="section-subtitle">All thumbnails are cropped to match; click to view full-size.</p>
-
-          <div class="grid gallery">
-            <figure class="gallery-item card">
-              <a class="thumb" href="./img/projects/Kubo/mobile-home.png" data-lightbox aria-label="Open Mobile home screen full-size">
-                <img src="./img/projects/Kubo/mobile-home.png" alt="High-fidelity mockup: Kubo home screen" loading="lazy" />
-              </a>
-              <figcaption class="caption">High-fidelity mockup (Home)</figcaption>
-            </figure>
-
-            <figure class="gallery-item card">
-              <a class="thumb" href="./img/projects/Kubo/sitemap.png" data-lightbox aria-label="Open Sitemap full-size">
-                <img src="./img/projects/Kubo/sitemap.png" alt="Kubo sitemap" loading="lazy" />
-              </a>
-              <figcaption class="caption">Sitemap</figcaption>
-            </figure>
-
-            <figure class="gallery-item card">
-              <a class="thumb" href="./img/projects/Kubo/user-flows.png" data-lightbox aria-label="Open User flows full-size">
-                <img src="./img/projects/Kubo/user-flows.png" alt="Kubo user flows" loading="lazy" />
-              </a>
-              <figcaption class="caption">User flows</figcaption>
-            </figure>
-          </div>
-        </div>
-      </section>
-
-      <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-label="Image preview">
-        <div class="lightbox__backdrop" data-lightbox-close></div>
-        <div class="lightbox__dialog" role="document">
-          <button class="lightbox__close" type="button" aria-label="Close" data-lightbox-close>×</button>
-          <img class="lightbox__img" alt="" />
-        </div>
-      </div>
     </main>
 
     <footer class="site-footer">
-      <div class="container footer-card">
-        <div>
-          <h2 class="footer-title">Let’s build something clear.</h2>
-          <p class="footer-text">Want to collaborate or ask a question? Use the contact form — I’ll reply as soon as possible.</p>
-        </div>
-
-        <div class="footer-actions">
-          <a class="btn btn-primary" href="./contact.html">Contact form</a>
-          <a class="btn btn-ghost" href="mailto:Shandortenhoven@gmail.com">Email</a>
+      <div class="container">
+        <div class="footer-cta">
+          <div>
+            <h2 class="footer-title">Let’s build something clear.</h2>
+            <p class="footer-text">Want to collaborate or ask a question? Use the contact form and I’ll reply as soon as possible.</p>
+          </div>
+          <div class="footer-actions">
+            <a class="btn btn-primary" href="./contact.html">Contact form</a>
+            <a class="btn btn-secondary" href="mailto:Shandortenhoven@gmail.com">Email</a>
+          </div>
         </div>
 
         <div class="footer-bottom">
