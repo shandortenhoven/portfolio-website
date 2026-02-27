@@ -91,16 +91,14 @@ a {
   gap: 22px;
 }
 
+/* UPDATED: supports 2 OR 3 project cards automatically */
 .grid-2 {
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
 }
 
 @media (min-width: 768px) {
   .section {
     padding: 84px 0;
-  }
-  .grid-2 {
-    grid-template-columns: 1fr 1fr;
   }
 }
 
@@ -523,6 +521,8 @@ a {
 
 /* Make gallery responsive */
 .gallery {
+  display: grid;
+  gap: 18px;
   grid-template-columns: 1fr;
 }
 
@@ -537,6 +537,93 @@ a {
   padding: 10px 14px 14px;
   color: var(--muted);
   font-size: 14px;
+}
+
+/* =========================================
+   CLICK TO ENLARGE (Lightbox styles)
+   - Add class="lightbox-trigger" to any image OR link wrapping an image
+   - Your JS can open/close a <dialog class="lightbox"> (recommended)
+========================================= */
+
+/* Make it obvious images are clickable */
+.lightbox-trigger,
+.lightbox-trigger img,
+.gallery img {
+  cursor: zoom-in;
+}
+
+/* Optional: subtle hover cue on gallery images */
+.gallery img {
+  border-radius: calc(var(--radius) - 10px);
+  transition: transform 220ms ease, filter 220ms ease;
+}
+.gallery a:hover img,
+.gallery img:hover {
+  transform: scale(1.01);
+  filter: brightness(1.03);
+}
+
+/* Dialog-based lightbox (recommended) */
+dialog.lightbox {
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 18px;
+  padding: 0;
+  background: rgba(6, 10, 18, 0.92);
+  backdrop-filter: blur(14px);
+  box-shadow: 0 24px 90px rgba(0, 0, 0, 0.6);
+  max-width: min(1100px, calc(100% - 28px));
+  width: 100%;
+  overflow: hidden;
+}
+
+dialog.lightbox::backdrop {
+  background: rgba(0, 0, 0, 0.68);
+}
+
+/* Layout inside the dialog */
+.lightbox__frame {
+  position: relative;
+  padding: 14px;
+}
+
+.lightbox__img {
+  width: 100%;
+  height: auto;
+  max-height: min(78vh, 900px);
+  object-fit: contain;
+  border-radius: 14px;
+  cursor: zoom-out;
+}
+
+/* Close button */
+.lightbox__close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 42px;
+  height: 42px;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--text);
+  cursor: pointer;
+  transition: transform 180ms ease, background 180ms ease, border-color 180ms ease;
+}
+
+.lightbox__close:hover {
+  transform: translateY(-1px);
+  background: rgba(255, 255, 255, 0.10);
+  border-color: rgba(255, 255, 255, 0.22);
+}
+
+/* Keyboard focus visibility */
+.lightbox__close:focus,
+.lightbox-trigger:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(243, 162, 74, 0.14);
+  border-color: rgba(243, 162, 74, 0.45);
 }
 
 /* =========================================
@@ -776,7 +863,6 @@ a {
 
 /* =========================================================
    FIX (About): Force profile image into a true circle
-   (Paste-at-end override, included here already)
 ========================================================= */
 
 .about-grid {
