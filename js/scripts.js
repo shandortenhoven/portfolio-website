@@ -3,7 +3,9 @@
 
   // jQuery DOM-ready
   $(function () {
-    // Toggle button click
+    // ----------------------------
+    // Mobile nav
+    // ----------------------------
     $(document).on("click", ".nav-toggle", function () {
       var $btn = $(this);
 
@@ -47,6 +49,71 @@
       if ($target.length) {
         e.preventDefault();
         $("html, body").animate({ scrollTop: $target.offset().top - 70 }, 500);
+      }
+    });
+
+    // ----------------------------
+    // LIGHTBOX (click to enlarge)
+    // Targets: .project-hero img, .gallery img
+    // Optional: use data-full for higher-res image
+    // Optional: use data-caption or alt text for caption
+    // ----------------------------
+
+    // Create lightbox once
+    var $lightbox = $(
+      '<div class="lightbox" role="dialog" aria-modal="true" aria-label="Image preview">' +
+        '<div class="lightbox__panel">' +
+          '<button class="lightbox__close" type="button" aria-label="Close">✕</button>' +
+          '<img class="lightbox__img" alt="Expanded view" />' +
+          '<div class="lightbox__caption" style="display:none;"></div>' +
+        "</div>" +
+      "</div>"
+    );
+    $("body").append($lightbox);
+
+    function openLightbox(src, caption) {
+      $lightbox.find(".lightbox__img").attr("src", src);
+
+      var $cap = $lightbox.find(".lightbox__caption");
+      if (caption) {
+        $cap.text(caption).show();
+      } else {
+        $cap.hide().text("");
+      }
+
+      $("body").addClass("lb-open");
+      $lightbox.addClass("is-open");
+    }
+
+    function closeLightbox() {
+      $lightbox.removeClass("is-open");
+      $("body").removeClass("lb-open");
+      $lightbox.find(".lightbox__img").attr("src", "");
+      $lightbox.find(".lightbox__caption").hide().text("");
+    }
+
+    // Open on click (hero + gallery)
+    $(document).on("click", ".project-hero img, .gallery img", function () {
+      var $img = $(this);
+      var full = $img.attr("data-full") || $img.attr("src");
+      var caption = $img.attr("data-caption") || $img.attr("alt") || "";
+      openLightbox(full, caption);
+    });
+
+    // Close: button
+    $(document).on("click", ".lightbox__close", function () {
+      closeLightbox();
+    });
+
+    // Close: click backdrop (but not the panel)
+    $(document).on("click", ".lightbox", function (e) {
+      if ($(e.target).is(".lightbox")) closeLightbox();
+    });
+
+    // Close: press ESC
+    $(document).on("keydown", function (e) {
+      if (e.key === "Escape" && $lightbox.hasClass("is-open")) {
+        closeLightbox();
       }
     });
   });
