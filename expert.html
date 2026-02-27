@@ -8,8 +8,6 @@
   </head>
 
   <body>
-    <a class="skip-link" href="#main">Skip to content</a>
-
     <header class="site-header">
       <div class="container header-inner">
         <a class="brand" href="./index.html" aria-label="Homepage">
@@ -18,13 +16,7 @@
           <span class="brand-role">Product & UX/UI Designer</span>
         </a>
 
-        <button
-          class="nav-toggle"
-          type="button"
-          aria-label="Toggle menu"
-          aria-expanded="false"
-          aria-controls="primary-nav"
-        >
+        <button class="nav-toggle" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="primary-nav">
           <span class="hamburger" aria-hidden="true"></span>
         </button>
 
@@ -36,7 +28,7 @@
       </div>
     </header>
 
-    <main id="main">
+    <main>
       <section class="section">
         <div class="container">
           <p class="kicker">Case study</p>
@@ -46,19 +38,16 @@
           </p>
 
           <div class="card project-hero">
-            <!-- Lightbox-enabled hero -->
-            <a class="lightbox-item" href="./img/projects/project-expert-lg.png" aria-label="Open hero image in lightbox">
-              <picture>
-                <source media="(min-width: 900px)" srcset="./img/projects/project-expert-lg.png" />
-                <img
-                  src="./img/projects/project-expert-sm.png"
-                  alt="Expert project hero image"
-                  loading="eager"
-                  width="1400"
-                  height="788"
-                />
-              </picture>
-            </a>
+            <picture>
+              <source media="(min-width: 900px)" srcset="./img/projects/project-expert-lg.png" />
+              <img
+                src="./img/projects/project-expert-sm.png"
+                alt="Expert project hero image"
+                loading="eager"
+                width="1400"
+                height="788"
+              />
+            </picture>
           </div>
         </div>
       </section>
@@ -69,96 +58,79 @@
 
           <div class="grid gallery">
             <figure class="card">
-              <a class="lightbox-item" href="./img/Expert/affinityMap.png" aria-label="Open Affinity map image in lightbox">
-                <img src="./img/Expert/affinityMap.png" alt="Affinity map" loading="lazy" width="1400" height="788" />
-              </a>
+              <button class="lb-trigger" type="button" data-full="./img/Expert/affinityMap.png" aria-label="Open Affinity map image">
+                <div class="thumb">
+                  <img src="./img/Expert/affinityMap.png" alt="Affinity map" loading="lazy" />
+                </div>
+              </button>
               <figcaption class="caption">Affinity map</figcaption>
             </figure>
 
             <figure class="card">
-              <a class="lightbox-item" href="./img/Expert/lowFidelityWireframes.png" aria-label="Open Low-fidelity wireframes image in lightbox">
-                <img
-                  src="./img/Expert/lowFidelityWireframes.png"
-                  alt="Low-fidelity wireframes"
-                  loading="lazy"
-                  width="1400"
-                  height="788"
-                />
-              </a>
+              <button class="lb-trigger" type="button" data-full="./img/Expert/lowFidelityWireframes.png" aria-label="Open Low-fidelity wireframes image">
+                <div class="thumb">
+                  <img src="./img/Expert/lowFidelityWireframes.png" alt="Low-fidelity wireframes" loading="lazy" />
+                </div>
+              </button>
               <figcaption class="caption">Low-fidelity wireframes</figcaption>
             </figure>
 
             <figure class="card">
-              <a class="lightbox-item" href="./img/Expert/midFidelityWireframes.png" aria-label="Open Mid-fidelity wireframes image in lightbox">
-                <img
-                  src="./img/Expert/midFidelityWireframes.png"
-                  alt="Mid-fidelity wireframes"
-                  loading="lazy"
-                  width="1400"
-                  height="788"
-                />
-              </a>
+              <button class="lb-trigger" type="button" data-full="./img/Expert/midFidelityWireframes.png" aria-label="Open Mid-fidelity wireframes image">
+                <div class="thumb">
+                  <img src="./img/Expert/midFidelityWireframes.png" alt="Mid-fidelity wireframes" loading="lazy" />
+                </div>
+              </button>
               <figcaption class="caption">Mid-fidelity wireframes</figcaption>
             </figure>
 
             <figure class="card">
-              <a class="lightbox-item" href="./img/Expert/highFidelityWireframes.png" aria-label="Open High-fidelity wireframes image in lightbox">
-                <img
-                  src="./img/Expert/highFidelityWireframes.png"
-                  alt="High-fidelity wireframes"
-                  loading="lazy"
-                  width="1400"
-                  height="788"
-                />
-              </a>
+              <button class="lb-trigger" type="button" data-full="./img/Expert/highFidelityWireframes.png" aria-label="Open High-fidelity wireframes image">
+                <div class="thumb">
+                  <img src="./img/Expert/highFidelityWireframes.png" alt="High-fidelity wireframes" loading="lazy" />
+                </div>
+              </button>
               <figcaption class="caption">High-fidelity wireframes</figcaption>
             </figure>
 
             <figure class="card">
-              <a class="lightbox-item" href="./img/Expert/usabilityTesting.png" aria-label="Open Usability testing notes image in lightbox">
-                <img
-                  src="./img/Expert/usabilityTesting.png"
-                  alt="Usability testing notes"
-                  loading="lazy"
-                  width="1400"
-                  height="788"
-                />
-              </a>
+              <button class="lb-trigger" type="button" data-full="./img/Expert/usabilityTesting.png" aria-label="Open Usability testing notes image">
+                <div class="thumb">
+                  <img src="./img/Expert/usabilityTesting.png" alt="Usability testing notes" loading="lazy" />
+                </div>
+              </button>
               <figcaption class="caption">Usability testing</figcaption>
             </figure>
 
             <figure class="card">
-              <a class="lightbox-item" href="./img/Expert/peerFeedback.png" aria-label="Open Peer feedback image in lightbox">
-                <img src="./img/Expert/peerFeedback.png" alt="Peer feedback" loading="lazy" width="1400" height="788" />
-              </a>
+              <button class="lb-trigger" type="button" data-full="./img/Expert/peerFeedback.png" aria-label="Open Peer feedback image">
+                <div class="thumb">
+                  <img src="./img/Expert/peerFeedback.png" alt="Peer feedback" loading="lazy" />
+                </div>
+              </button>
               <figcaption class="caption">Peer feedback</figcaption>
             </figure>
           </div>
 
-          <div class="section-actions" style="margin-top: 18px;">
+          <div class="section-actions" style="margin-top: 18px; display: flex; gap: 12px; flex-wrap: wrap;">
             <a class="btn btn-ghost" href="./index.html#work">Back to work</a>
             <a class="btn btn-primary" href="./contact.html">Contact</a>
           </div>
         </div>
       </section>
-
-      <!-- Lightbox overlay (one per page) -->
-      <div class="lightbox" id="lightbox" aria-hidden="true">
-        <button class="lightbox-close" type="button" aria-label="Close image">×</button>
-        <img class="lightbox-img" alt="" />
-      </div>
     </main>
 
     <footer class="site-footer">
-      <div class="container footer-card">
-        <div>
-          <h2 class="footer-title">Let’s build something clear.</h2>
-          <p class="footer-text">Want to collaborate or ask a question? Use the contact form and I’ll reply as soon as possible.</p>
-        </div>
-
-        <div class="footer-actions">
-          <a class="btn btn-primary" href="./contact.html">Contact form</a>
-          <a class="btn btn-ghost" href="mailto:Shandortenhoven@gmail.com">Email</a>
+      <div class="container">
+        <div class="footer-cta">
+          <div>
+            <h2 class="footer-title">Let’s build something clear.</h2>
+            <p class="footer-text">Want to collaborate or ask a question? Use the contact form and I’ll reply as soon as possible.</p>
+          </div>
+          <div class="footer-actions">
+            <a class="btn btn-primary" href="./contact.html">Contact form</a>
+            <a class="btn btn-secondary" href="mailto:Shandortenhoven@gmail.com">Email</a>
+          </div>
         </div>
 
         <div class="footer-bottom">
@@ -172,49 +144,6 @@
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-
-    <!-- Lightbox behavior (keeps your existing menu JS intact) -->
-    <script>
-      (function () {
-        "use strict";
-
-        function openLightbox(src, alt) {
-          var $lb = $("#lightbox");
-          $lb.find(".lightbox-img").attr("src", src).attr("alt", alt || "");
-          $lb.addClass("is-open").attr("aria-hidden", "false");
-          $("body").addClass("no-scroll");
-        }
-
-        function closeLightbox() {
-          var $lb = $("#lightbox");
-          $lb.removeClass("is-open").attr("aria-hidden", "true");
-          $lb.find(".lightbox-img").attr("src", "").attr("alt", "");
-          $("body").removeClass("no-scroll");
-        }
-
-        $(function () {
-          $(document).on("click", "a.lightbox-item", function (e) {
-            e.preventDefault();
-            var src = $(this).attr("href");
-            var alt = $(this).find("img").attr("alt") || "";
-            openLightbox(src, alt);
-          });
-
-          $(document).on("click", "#lightbox .lightbox-close", function () {
-            closeLightbox();
-          });
-
-          $(document).on("click", "#lightbox", function (e) {
-            if ($(e.target).is("#lightbox")) closeLightbox();
-          });
-
-          $(document).on("keydown", function (e) {
-            if (e.key === "Escape") closeLightbox();
-          });
-        });
-      })();
-    </script>
-
     <script src="./js/scripts.js"></script>
   </body>
 </html>
