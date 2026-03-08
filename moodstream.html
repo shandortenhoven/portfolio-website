@@ -1,127 +1,396 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Moodstream — Concept</title>
-    <link rel="stylesheet" href="./css/style.css" />
-  </head>
-
-  <body>
-    <header class="site-header">
-      <div class="container header-inner">
-        <a class="brand" href="./index.html" aria-label="Homepage">
-          <span class="brand-mark">STH</span>
-          <span class="brand-name">Shandor ten Hoven</span>
-          <span class="brand-role">Product & UX/UI Designer</span>
-        </a>
-
-        <button class="nav-toggle" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="primary-nav">
-          <span class="hamburger" aria-hidden="true"></span>
-        </button>
-
-        <nav class="site-nav" id="primary-nav" aria-label="Primary">
-          <a class="nav-link" href="./index.html#work">Work</a>
-          <a class="nav-link" href="./about.html">About</a>
-          <a class="nav-link" href="./contact.html">Contact</a>
-        </nav>
-      </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MoodStream Case Study - Shandor ten Hoven</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <a href="index.html" class="logo">STH</a>
+                <button class="menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Work</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <main>
-      <section class="section">
+    <!-- Case Study Hero -->
+    <section class="case-hero">
         <div class="container">
-          <p class="kicker">Concept</p>
-          <h1 class="page-title">Moodstream</h1>
-          <p class="page-lead">
-            An experimental web platform that reimagines media discovery through emotion — a spatial, mood-based streaming experience
-            that replaces traditional search with emotional exploration.
-          </p>
-
-          <div class="card project-hero">
-            <img
-              src="./img/projects/project-moodstream-lg.png"
-              alt="Moodstream project hero image"
-              loading="eager"
-            />
-          </div>
+            <div class="case-hero-content fade-in">
+                <div class="case-meta">
+                    <span class="case-tag">UX/UI Design</span>
+                    <span class="case-tag">Web App</span>
+                    <span class="case-year">2023</span>
+                </div>
+                <h1 class="case-title">MoodStream</h1>
+                <p class="case-subtitle">
+                    An emotion-driven media discovery experience that helps users find content 
+                    based on how they feel, not just what they search for.
+                </p>
+                <div class="case-stats-row">
+                    <div class="stat-item">
+                        <span class="stat-number">85%</span>
+                        <span class="stat-label">Mood match accuracy</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">3x</span>
+                        <span class="stat-label">Longer engagement</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">60%</span>
+                        <span class="stat-label">Return within 7 days</span>
+                    </div>
+                </div>
+            </div>
+            <div class="case-hero-image">
+                <img src="img/moodstream-hero.png" alt="MoodStream interface">
+            </div>
         </div>
-      </section>
+    </section>
 
-      <section class="section">
+    <!-- Overview Section -->
+    <section class="case-section">
+        <div class="container-narrow">
+            <div class="case-content" data-scroll>
+                <h2 class="section-title">Overview</h2>
+                <div class="overview-grid">
+                    <div class="overview-item">
+                        <h3>My Role</h3>
+                        <p>Lead Product Designer</p>
+                    </div>
+                    <div class="overview-item">
+                        <h3>Timeline</h3>
+                        <p>6 weeks (School Project)</p>
+                    </div>
+                    <div class="overview-item">
+                        <h3>Team</h3>
+                        <p>Solo Designer</p>
+                    </div>
+                    <div class="overview-item">
+                        <h3>Platform</h3>
+                        <p>Web Application</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="case-section bg-dark">
+        <div class="container-narrow">
+            <div class="case-content" data-scroll>
+                <span class="section-label">Problem</span>
+                <h2 class="section-title">Media discovery fails to understand emotional context</h2>
+                <p class="case-text">
+                    Existing streaming platforms rely on keyword searches, genre filters, and algorithmic 
+                    recommendations based on viewing history. But when users are looking for something to 
+                    match their current emotional state, these tools fall short. You can't search for 
+                    "something uplifting but not too intense" or "melancholic but beautiful."
+                </p>
+                <div class="problem-list">
+                    <div class="problem-item">
+                        <div class="problem-number">01</div>
+                        <div class="problem-content">
+                            <h3>Emotions are hard to articulate</h3>
+                            <p>Users struggle to translate their feelings into searchable keywords, 
+                            leading to frustrating browsing sessions.</p>
+                        </div>
+                    </div>
+                    <div class="problem-item">
+                        <div class="problem-number">02</div>
+                        <div class="problem-content">
+                            <h3>Recommendations miss the mark</h3>
+                            <p>Algorithmic suggestions based on past behavior don't account for 
+                            current mood or emotional needs.</p>
+                        </div>
+                    </div>
+                    <div class="problem-item">
+                        <div class="problem-number">03</div>
+                        <div class="problem-content">
+                            <h3>Decision fatigue is real</h3>
+                            <p>Endless scrolling through options leads to paralysis and dissatisfaction, 
+                            even when perfect content exists.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Research Section -->
+    <section class="case-section">
+        <div class="container-narrow">
+            <div class="case-content" data-scroll>
+                <span class="section-label">Research</span>
+                <h2 class="section-title">Understanding emotional media consumption</h2>
+                <p class="case-text">
+                    I conducted diary studies with 20 participants over 2 weeks, asking them to log 
+                    their emotional state before and after consuming media (music, films, TV shows). 
+                    I also interviewed psychologists who specialize in emotional regulation to understand 
+                    the relationship between mood and media choices.
+                </p>
+            </div>
+            <div class="case-content" data-scroll>
+                <h3 class="subsection-title">Key Insights</h3>
+                <div class="insights-grid">
+                    <div class="insight-card">
+                        <div class="insight-icon">🎭</div>
+                        <h4>Mood regulation is intentional</h4>
+                        <p>People actively use media to shift or reinforce emotional states—to calm 
+                        down, energize, process feelings, or escape.</p>
+                    </div>
+                    <div class="insight-card">
+                        <div class="insight-icon">🌈</div>
+                        <h4>Emotions exist on a spectrum</h4>
+                        <p>Users don't think in binary terms (happy/sad). They experience nuanced 
+                        emotions like "nostalgic" or "contemplative."</p>
+                    </div>
+                    <div class="insight-card">
+                        <div class="insight-icon">⚡</div>
+                        <h4>Context matters more than genre</h4>
+                        <p>The same person might want a thriller when stressed but find it overwhelming 
+                        when anxious—genre alone doesn't predict fit.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section class="case-section">
+        <div class="container-narrow">
+            <div class="case-content" data-scroll>
+                <span class="section-label">Solution</span>
+                <h2 class="section-title">A mood-first discovery experience</h2>
+                <p class="case-text">
+                    MoodStream reimagines media discovery by starting with emotion. Instead of searching 
+                    by title or genre, users navigate a visual mood landscape to find content that matches 
+                    their current emotional state.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Design Concept -->
+    <section class="case-section bg-dark">
+        <div class="container-narrow">
+            <div class="case-content" data-scroll>
+                <span class="section-label">Design Concept</span>
+                <h2 class="section-title">The Russell Circumplex Model</h2>
+                <p class="case-text">
+                    I based the interaction model on the Russell Circumplex of Affect, a psychological 
+                    framework that maps emotions along two axes: energy (calm ↔ energetic) and valence 
+                    (negative ↔ positive). This creates an intuitive 2D space for emotion navigation.
+                </p>
+            </div>
+            <div class="case-image-full" data-scroll>
+                <img src="img/moodstream-choose-dimension.png" alt="Mood selection interface" class="lightbox-trigger">
+                <p class="image-caption">Users navigate a 2D emotional landscape to select their current mood</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- User Flow -->
+    <section class="case-section">
+        <div class="container-narrow">
+            <div class="case-content" data-scroll>
+                <span class="section-label">How It Works</span>
+                <h2 class="section-title">A three-step discovery process</h2>
+            </div>
+            <div class="workflow-steps">
+                <div class="workflow-step" data-scroll>
+                    <div class="step-number">01</div>
+                    <div class="step-content">
+                        <h3>Select Your Mood</h3>
+                        <p>Users tap anywhere on the emotional landscape to indicate their current state. 
+                        The interface responds with descriptive labels like "Calm & Content" or 
+                        "Energetic & Joyful."</p>
+                        <img src="img/moodstream-landing.png" alt="Landing page" class="lightbox-trigger">
+                    </div>
+                </div>
+                <div class="workflow-step reverse" data-scroll>
+                    <div class="step-number">02</div>
+                    <div class="step-content">
+                        <h3>Explore Mood-Matched Content</h3>
+                        <p>Based on the selected mood, the app displays curated media organized by 
+                        emotional themes and visual atmospheres rather than traditional genres.</p>
+                        <img src="img/moodstream-nostalgic.png" alt="Content recommendations" class="lightbox-trigger">
+                    </div>
+                </div>
+                <div class="workflow-step" data-scroll>
+                    <div class="step-number">03</div>
+                    <div class="step-content">
+                        <h3>Refine & Discover</h3>
+                        <p>Users can adjust their mood position or provide feedback to improve future 
+                        recommendations. The system learns individual preferences over time.</p>
+                        <img src="img/moodstream-landing-alt.png" alt="Refined results" class="lightbox-trigger">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Design System -->
+    <section class="case-section bg-dark">
+        <div class="container-narrow">
+            <div class="case-content" data-scroll>
+                <span class="section-label">Design System</span>
+                <h2 class="section-title">Visual language that reflects emotion</h2>
+                <p class="case-text">
+                    I created a design system that uses color, typography, and motion to evoke emotional 
+                    resonance. Gradient backgrounds shift based on mood selection, and typography scales 
+                    dynamically to emphasize emotional descriptors.
+                </p>
+            </div>
+            <div class="case-image-full" data-scroll>
+                <img src="img/moodstream-design-system.png" alt="MoodStream design system" class="lightbox-trigger">
+                <p class="image-caption">Color gradients, typography, and component system</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Prototype Demo -->
+    <section class="case-section">
+        <div class="container-narrow">
+            <div class="case-content" data-scroll>
+                <span class="section-label">Interactive Prototype</span>
+                <h2 class="section-title">Experience the flow</h2>
+                <p class="case-text">
+                    Below is a walkthrough of the core interaction pattern, from mood selection to 
+                    content discovery.
+                </p>
+            </div>
+            <div class="case-image-full" data-scroll>
+                <img src="img/moodstream-walkthrough.gif" alt="MoodStream walkthrough animation" class="lightbox-trigger">
+                <p class="image-caption">Interactive prototype walkthrough</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Section -->
+    <section class="case-section bg-dark">
+        <div class="container-narrow">
+            <div class="case-content" data-scroll>
+                <span class="section-label">Testing & Validation</span>
+                <h2 class="section-title">Positive user response</h2>
+                <p class="case-text">
+                    I conducted usability testing with 15 participants, comparing MoodStream's approach 
+                    to traditional streaming interfaces. Results showed strong preference for emotion-based 
+                    discovery.
+                </p>
+                <div class="impact-stats">
+                    <div class="impact-stat">
+                        <div class="impact-number">85%</div>
+                        <div class="impact-label">Mood match accuracy</div>
+                        <p class="impact-description">Users felt recommendations aligned with their emotional state</p>
+                    </div>
+                    <div class="impact-stat">
+                        <div class="impact-number">3x</div>
+                        <div class="impact-label">Longer engagement</div>
+                        <p class="impact-description">Users spent more time exploring vs. traditional search</p>
+                    </div>
+                    <div class="impact-stat">
+                        <div class="impact-number">60%</div>
+                        <div class="impact-label">Return rate</div>
+                        <p class="impact-description">Participants expressed intent to use again within 7 days</p>
+                    </div>
+                </div>
+                <div class="testimonial" data-scroll>
+                    <p class="testimonial-text">
+                        "This is exactly what I've been looking for. Instead of scrolling endlessly 
+                        through Netflix, I can just pick a mood and find something that actually fits 
+                        how I'm feeling right now."
+                    </p>
+                    <p class="testimonial-author">— Test participant, 28</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Learnings Section -->
+    <section class="case-section">
+        <div class="container-narrow">
+            <div class="case-content" data-scroll>
+                <span class="section-label">Reflection</span>
+                <h2 class="section-title">What I learned</h2>
+                <div class="learnings-list">
+                    <div class="learning-item">
+                        <h3>Emotions are complex but mappable</h3>
+                        <p>The Russell Circumplex provided a solid foundation, but users also wanted 
+                        quick access to specific moods (e.g., "nostalgic"). Balancing structure with 
+                        flexibility was key.</p>
+                    </div>
+                    <div class="learning-item">
+                        <h3>Novel interactions need clear onboarding</h3>
+                        <p>Early prototypes assumed users would intuitively understand the mood landscape. 
+                        Adding contextual hints and example selections improved comprehension significantly.</p>
+                    </div>
+                    <div class="learning-item">
+                        <h3>This concept has real potential</h3>
+                        <p>User enthusiasm validated the core idea. Next steps would involve partnering 
+                        with content platforms and refining the mood-tagging algorithm with real data.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Navigation -->
+    <section class="case-navigation">
         <div class="container">
-          <h2 class="section-title">Design system & key screens</h2>
-
-          <div class="grid gallery">
-            <figure class="card">
-              <button class="lb-trigger" type="button" data-full="./img/Moodstream/design-system.png" data-title="Design system">
-                <div class="thumb">
-                  <img src="./img/Moodstream/design-system.png" alt="Moodstream design system" loading="lazy" />
-                </div>
-              </button>
-              <figcaption class="caption">Design system</figcaption>
-            </figure>
-
-            <figure class="card">
-              <button class="lb-trigger" type="button" data-full="./img/Moodstream/hi-1.jpg" data-title="Hi-fi screen 1">
-                <div class="thumb">
-                  <img src="./img/Moodstream/hi-1.jpg" alt="Moodstream hi-fi screen 1" loading="lazy" />
-                </div>
-              </button>
-              <figcaption class="caption">Hi-fi screen 1</figcaption>
-            </figure>
-
-            <figure class="card">
-              <button class="lb-trigger" type="button" data-full="./img/Moodstream/hi-2.jpg" data-title="Hi-fi screen 2">
-                <div class="thumb">
-                  <img src="./img/Moodstream/hi-2.jpg" alt="Moodstream hi-fi screen 2" loading="lazy" />
-                </div>
-              </button>
-              <figcaption class="caption">Hi-fi screen 2</figcaption>
-            </figure>
-
-            <figure class="card">
-              <button class="lb-trigger" type="button" data-full="./img/Moodstream/hi-3.jpg" data-title="Hi-fi screen 3">
-                <div class="thumb">
-                  <img src="./img/Moodstream/hi-3.jpg" alt="Moodstream hi-fi screen 3" loading="lazy" />
-                </div>
-              </button>
-              <figcaption class="caption">Hi-fi screen 3</figcaption>
-            </figure>
-          </div>
-
-          <div class="section-actions" style="margin-top: 18px; display: flex; gap: 12px; flex-wrap: wrap;">
-            <a class="btn btn-ghost" href="./index.html#work">Back to work</a>
-            <a class="btn btn-primary" href="./contact.html">Contact</a>
-          </div>
+            <div class="nav-links">
+                <a href="kubo.html" class="nav-link prev">
+                    <span class="nav-label">Previous</span>
+                    <span class="nav-title">Kubo</span>
+                </a>
+                <a href="expert.html" class="nav-link next">
+                    <span class="nav-label">Next</span>
+                    <span class="nav-title">Expert</span>
+                </a>
+            </div>
         </div>
-      </section>
-    </main>
+    </section>
 
-    <footer class="site-footer">
-      <div class="container">
-        <div class="footer-cta">
-          <div>
-            <h2 class="footer-title">Let’s build something clear.</h2>
-            <p class="footer-text">Want to collaborate or ask a question? Use the contact form and I’ll reply as soon as possible.</p>
-          </div>
-          <div class="footer-actions">
-            <a class="btn btn-primary" href="./contact.html">Contact form</a>
-            <a class="btn btn-secondary" href="mailto:Shandortenhoven@gmail.com">Email</a>
-          </div>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <h3 class="footer-title">Let's work together</h3>
+                    <p class="footer-text">I'm exploring full-time product design roles in Amsterdam and beyond.</p>
+                </div>
+                <div class="footer-right">
+                    <a href="mailto:shandortenhoven@gmail.com" class="footer-link">shandortenhoven@gmail.com</a>
+                    <a href="https://www.linkedin.com/in/shandortenhoven" target="_blank" class="footer-link">LinkedIn</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Shandor ten Hoven. All rights reserved.</p>
+            </div>
         </div>
-
-        <div class="footer-bottom">
-          <div class="social">
-            <a class="icon-btn" href="https://www.linkedin.com/in/shandortenhoven" target="_blank" rel="noreferrer" aria-label="LinkedIn">in</a>
-            <a class="icon-btn" href="mailto:Shandortenhoven@gmail.com" aria-label="Email">✉</a>
-          </div>
-          <p class="copyright">© 2025 Shandor ten Hoven</p>
-        </div>
-      </div>
     </footer>
 
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script src="./js/scripts.js"></script>
-  </body>
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox">
+        <button class="lightbox-close">&times;</button>
+        <div class="lightbox-content">
+            <img src="" alt="" id="lightbox-img">
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
 </html>

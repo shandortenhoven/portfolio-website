@@ -1,113 +1,209 @@
-(function () {
-  "use strict";
+// ======================
+// Mobile Menu Toggle
+// ======================
 
-  $(function () {
-    /* -----------------------------
-       Mobile nav toggle
-    ----------------------------- */
-    $(document).on("click", ".nav-toggle", function () {
-      var $btn = $(this);
-      var controlsId = $btn.attr("aria-controls");
-      var $nav = controlsId ? $("#" + controlsId) : $btn.siblings("nav").first();
+const menuToggle = document.querySelector('.menu-toggle');
+const navMenu = document.querySelector('.nav-menu');
 
-      $nav.toggleClass("is-open");
-
-      var isOpen = $nav.hasClass("is-open");
-      $btn.attr("aria-expanded", isOpen ? "true" : "false");
+if (menuToggle) {
+    menuToggle.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+        
+        // Animate hamburger menu
+        const spans = menuToggle.querySelectorAll('span');
+        if (navMenu.classList.contains('active')) {
+            spans[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
+            spans[1].style.opacity = '0';
+            spans[2].style.transform = 'rotate(-45deg) translate(7px, -7px)';
+        } else {
+            spans[0].style.transform = 'none';
+            spans[1].style.opacity = '1';
+            spans[2].style.transform = 'none';
+        }
     });
-
-    $(document).on("click", "nav.site-nav a, nav.nav a", function () {
-      if (window.matchMedia("(max-width: 640px)").matches) {
-        var $nav = $(this).closest("nav");
-        $nav.removeClass("is-open");
-        $nav.siblings(".nav-toggle").attr("aria-expanded", "false");
-      }
+    
+    // Close menu when clicking on a link
+    const navLinks = navMenu.querySelectorAll('a');
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            navMenu.classList.remove('active');
+            const spans = menuToggle.querySelectorAll('span');
+            spans[0].style.transform = 'none';
+            spans[1].style.opacity = '1';
+            spans[2].style.transform = 'none';
+        });
     });
+}
 
-    $(window).on("resize", function () {
-      if (window.matchMedia("(min-width: 641px)").matches) {
-        $("nav.site-nav, nav.nav").removeClass("is-open");
-        $(".nav-toggle").attr("aria-expanded", "false");
-      }
+// ======================
+// Scroll Animations
+// ======================
+
+const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+};
+
+const scrollObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+        }
     });
+}, observerOptions);
 
-    $(document).on("click", 'a[href^="#"]', function (e) {
-      var href = this.getAttribute("href");
-      if (!href || href === "#") return;
+// Observe all elements with data-scroll attribute
+const scrollElements = document.querySelectorAll('[data-scroll]');
+scrollElements.forEach(el => scrollObserver.observe(el));
 
-      var $target = $(href);
-      if ($target.length) {
+// ======================
+// Lightbox Functionality
+// ======================
+
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightbox-img');
+const lightboxClose = document.querySelector('.lightbox-close');
+const lightboxTriggers = document.querySelectorAll('.lightbox-trigger');
+
+// Open lightbox on image click
+lightboxTriggers.forEach(trigger => {
+    trigger.addEventListener('click', (e) => {
         e.preventDefault();
-        $("html, body").animate({ scrollTop: $target.offset().top - 70 }, 500);
-      }
+        lightboxImg.src = trigger.src;
+        lightboxImg.alt = trigger.alt;
+        lightbox.classList.add('active');
+        document.body.style.overflow = 'hidden';
     });
+});
 
-    /* -----------------------------
-       Lightbox (click to enlarge)
-       Works with: .lb-trigger[data-full]
-    ----------------------------- */
+// Close lightbox
+if (lightboxClose) {
+    lightboxClose.addEventListener('click', closeLightbox);
+}
 
-    // Create once
-    if (!$(".lightbox").length) {
-      $("body").append(`
-        <div class="lightbox" aria-hidden="true">
-          <div class="lightbox__backdrop" data-lb-close="1"></div>
-          <div class="lightbox__dialog" role="dialog" aria-modal="true" aria-label="Image preview">
-            <div class="lightbox__bar">
-              <p class="lightbox__title" id="lbTitle">Preview</p>
-              <button class="lightbox__close" type="button" aria-label="Close preview" data-lb-close="1">✕</button>
-            </div>
-            <div class="lightbox__imgwrap">
-              <img class="lightbox__img" src="" alt="" />
-            </div>
-          </div>
-        </div>
-      `);
+if (lightbox) {
+    // Close on background click
+    lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox) {
+            closeLightbox();
+        }
+    });
+    
+    // Close on ESC key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+            closeLightbox();
+        }
+    });
+}
+
+function closeLightbox() {
+    if (lightbox) {
+        lightbox.classList.remove('active');
+        document.body.style.overflow = '';
     }
+}
 
-    function openLightbox(fullSrc, altText, titleText) {
-      // Guard against empty paths (this is what causes your “empty src” errors)
-      if (!fullSrc || !String(fullSrc).trim()) return;
+// ======================
+// Smooth Scroll for Anchor Links
+// ======================
 
-      var $lb = $(".lightbox");
-      $lb.addClass("is-open").attr("aria-hidden", "false");
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        const href = this.getAttribute('href');
+        if (href !== '#' && href !== '#lightbox') {
+            e.preventDefault();
+            const target = document.querySelector(href);
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        }
+    });
+});
 
-      $lb.find(".lightbox__img").attr("src", fullSrc).attr("alt", altText || "Expanded image");
-      $lb.find("#lbTitle").text(titleText || "Preview");
+// ======================
+// Active Navigation State
+// ======================
 
-      // prevent background scroll
-      $("body").css("overflow", "hidden");
+function setActiveNav() {
+    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+    const navLinks = document.querySelectorAll('.nav-menu a');
+    
+    navLinks.forEach(link => {
+        link.classList.remove('active');
+        const linkPage = link.getAttribute('href');
+        if (linkPage === currentPage || 
+            (currentPage === '' && linkPage === 'index.html')) {
+            link.classList.add('active');
+        }
+    });
+}
+
+setActiveNav();
+
+// ======================
+// Parallax Effect on Scroll (Optional)
+// ======================
+
+let ticking = false;
+
+function updateParallax() {
+    const scrolled = window.pageYOffset;
+    const parallaxElements = document.querySelectorAll('.hero-title, .hero-description');
+    
+    parallaxElements.forEach(el => {
+        const speed = 0.5;
+        el.style.transform = `translateY(${scrolled * speed}px)`;
+    });
+    
+    ticking = false;
+}
+
+window.addEventListener('scroll', () => {
+    if (!ticking) {
+        window.requestAnimationFrame(() => {
+            updateParallax();
+        });
+        ticking = true;
     }
+});
 
-    function closeLightbox() {
-      var $lb = $(".lightbox");
-      $lb.removeClass("is-open").attr("aria-hidden", "true");
+// ======================
+// Image Lazy Loading Fallback
+// ======================
 
-      // clear src to stop memory usage
-      $lb.find(".lightbox__img").attr("src", "").attr("alt", "");
+if ('loading' in HTMLImageElement.prototype) {
+    // Browser supports native lazy loading
+    const images = document.querySelectorAll('img[loading="lazy"]');
+    images.forEach(img => {
+        img.src = img.dataset.src || img.src;
+    });
+} else {
+    // Fallback for browsers that don't support lazy loading
+    const script = document.createElement('script');
+    script.src = 'https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js';
+    document.body.appendChild(script);
+}
 
-      $("body").css("overflow", "");
+// ======================
+// Console Easter Egg
+// ======================
+
+console.log('%c👋 Hi there!', 'font-size: 20px; font-weight: bold; color: #6366f1;');
+console.log('%cInterested in how this was built? Let\'s chat!', 'font-size: 14px; color: #a3a3a3;');
+console.log('%cshandortenhoven@gmail.com', 'font-size: 14px; color: #6366f1;');
+
+// ======================
+// Performance Monitoring
+// ======================
+
+window.addEventListener('load', () => {
+    // Log page load time for development
+    if (window.performance && window.performance.timing) {
+        const loadTime = window.performance.timing.loadEventEnd - window.performance.timing.navigationStart;
+        console.log(`Page loaded in ${loadTime}ms`);
     }
-
-    // Open
-    $(document).on("click", ".lb-trigger", function () {
-      var fullSrc = $(this).attr("data-full");
-      var altText = $(this).find("img").attr("alt") || "Expanded image";
-      var titleText = $(this).attr("data-title") || altText;
-
-      openLightbox(fullSrc, altText, titleText);
-    });
-
-    // Close (button or backdrop)
-    $(document).on("click", "[data-lb-close]", function () {
-      closeLightbox();
-    });
-
-    // Close on ESC
-    $(document).on("keydown", function (e) {
-      if (e.key === "Escape" && $(".lightbox").hasClass("is-open")) {
-        closeLightbox();
-      }
-    });
-  });
-})();
+});
