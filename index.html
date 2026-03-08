@@ -1,173 +1,290 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shandor ten Hoven - Product Designer</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-    <!-- Header -->
-    <header class="header">
-        <div class="container">
-            <nav class="nav">
-                <a href="index.html" class="logo">STH</a>
-                <button class="menu-toggle" aria-label="Toggle menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-                <ul class="nav-menu">
-                    <li><a href="index.html" class="active">Work</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Shandor ten Hoven — UX/UI & Product Designer</title>
+    <meta
+      name="description"
+      content="Shandor ten Hoven — Product & UX/UI Designer. Calm, clear interfaces that make complex things feel simple."
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="index.html" aria-label="Go to homepage">
+          <span class="brand-mark">STH</span>
+          <span class="brand-name">Shandor ten Hoven</span>
+          <span class="brand-role">Product & UX/UI Designer</span>
+        </a>
+
+        <!-- Mobile hamburger -->
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-label="Toggle menu"
+          aria-expanded="false"
+          aria-controls="primary-nav"
+        >
+          <span class="hamburger" aria-hidden="true"></span>
+        </button>
+
+        <nav class="site-nav" id="primary-nav" aria-label="Primary">
+          <a class="nav-link" href="index.html#work" aria-current="page">Work</a>
+          <a class="nav-link" href="about.html">About</a>
+          <a class="nav-link" href="contact.html">Contact</a>
+        </nav>
+      </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
+    <main id="main">
+      <!-- HERO -->
+      <section class="hero">
         <div class="container">
-            <div class="hero-content fade-in">
-                <p class="hero-label">Product Designer (UX/UI)</p>
-                <h1 class="hero-title">Designing experiences that feel intentional, not overwhelming</h1>
-                <p class="hero-description">
-                    I'm Shandor ten Hoven, a product designer based in Amsterdam. I focus on creating 
-                    calm, empathetic interfaces that help people accomplish what matters without the noise.
+          <p class="eyebrow">UX/UI Designer • Product-minded • Detail-driven</p>
+          <h1 class="hero-title">I design calm, clear interfaces and make complex things feel simple.</h1>
+          <p class="hero-lede">
+            I’m Shandor ten Hoven, a Product & UX/UI designer with a background leading hospitality teams. I bring structure,
+            empathy, and strong UI craft to digital products.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#work">View selected work</a>
+            <a class="btn btn-secondary" href="about.html">About me</a>
+          </div>
+
+          <p class="hero-meta">Based in NL • Open to Product design & UX/UI roles</p>
+        </div>
+      </section>
+
+      <!-- WORK -->
+      <section id="work" class="section">
+        <div class="container">
+          <div class="section-head">
+            <h2 class="section-title">Selected work</h2>
+            <p class="section-subtitle">
+              Three projects that show range: a mentorship platform built around trust + speed, a calm identity vault concept,
+              and an experimental mood-driven media discovery platform.
+            </p>
+          </div>
+
+          <div class="grid grid-2">
+            <!-- Expert card -->
+            <article class="card project-card">
+              <a class="card-media" href="expert.html" aria-label="Open Expert case study">
+                <img src="img/projects/project-expert-lg.png" alt="Expert project preview" loading="lazy" />
+              </a>
+
+              <div class="card-body">
+                <div class="card-top">
+                  <h3 class="card-title">Expert</h3>
+                  <span class="pill">Responsive web app</span>
+                </div>
+
+                <p class="card-text">
+                  A pay-per-session platform that connects advice seekers with vetted professionals. Designed for speed,
+                  clarity, and trust.
                 </p>
-            </div>
-        </div>
-    </section>
 
-    <!-- Projects Section -->
-    <section class="projects">
-        <div class="container">
-            <h2 class="section-title">Selected Work</h2>
-            
-            <!-- Expert Project -->
-            <article class="project-card" data-scroll>
-                <a href="expert.html" class="project-link">
-                    <div class="project-image">
-                        <img src="img/expert-hero.png" alt="Expert - AI-powered professional development platform">
-                        <div class="project-overlay">
-                            <span class="view-case-study">View Case Study →</span>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <div class="project-meta">
-                            <span class="project-tag">UX/UI Design</span>
-                            <span class="project-tag">Mobile App</span>
-                            <span class="project-year">2024</span>
-                        </div>
-                        <h3 class="project-title">Expert</h3>
-                        <p class="project-description">
-                            Redesigning an AI-powered platform that connects professionals with expert 
-                            coaches for personalized development sessions.
-                        </p>
-                        <div class="project-stats">
-                            <div class="stat">
-                                <span class="stat-value">2.5x</span>
-                                <span class="stat-label">Increase in session bookings</span>
-                            </div>
-                            <div class="stat">
-                                <span class="stat-value">65%</span>
-                                <span class="stat-label">Reduction in support tickets</span>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </article>
-
-            <!-- Kubo Project -->
-            <article class="project-card" data-scroll>
-                <a href="kubo.html" class="project-link">
-                    <div class="project-image">
-                        <img src="img/kubo-hero.png" alt="Kubo - Family logistics app">
-                        <div class="project-overlay">
-                            <span class="view-case-study">View Case Study →</span>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <div class="project-meta">
-                            <span class="project-tag">UX/UI Design</span>
-                            <span class="project-tag">Mobile App</span>
-                            <span class="project-year">2023</span>
-                        </div>
-                        <h3 class="project-title">Kubo</h3>
-                        <p class="project-description">
-                            A family logistics app that helps parents coordinate household tasks, 
-                            schedules, and responsibilities in one shared space.
-                        </p>
-                        <div class="project-stats">
-                            <div class="stat">
-                                <span class="stat-value">4.8★</span>
-                                <span class="stat-label">App Store rating</span>
-                            </div>
-                            <div class="stat">
-                                <span class="stat-value">10k+</span>
-                                <span class="stat-label">Active families</span>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </article>
-
-            <!-- MoodStream Project -->
-            <article class="project-card" data-scroll>
-                <a href="moodstream.html" class="project-link">
-                    <div class="project-image">
-                        <img src="img/moodstream-hero.png" alt="MoodStream - Emotion-driven media discovery">
-                        <div class="project-overlay">
-                            <span class="view-case-study">View Case Study →</span>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <div class="project-meta">
-                            <span class="project-tag">UX/UI Design</span>
-                            <span class="project-tag">Web App</span>
-                            <span class="project-year">2023</span>
-                        </div>
-                        <h3 class="project-title">MoodStream</h3>
-                        <p class="project-description">
-                            An emotion-driven media discovery experience that helps users find content 
-                            based on how they feel, not just what they search for.
-                        </p>
-                        <div class="project-stats">
-                            <div class="stat">
-                                <span class="stat-value">85%</span>
-                                <span class="stat-label">Mood match accuracy</span>
-                            </div>
-                            <div class="stat">
-                                <span class="stat-value">3x</span>
-                                <span class="stat-label">Longer engagement time</span>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </article>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-left">
-                    <h3 class="footer-title">Let's work together</h3>
-                    <p class="footer-text">I'm exploring full-time product design roles in Amsterdam and beyond.</p>
+                <div class="card-actions">
+                  <a class="btn btn-primary" href="expert.html">View case study</a>
+                  <a class="btn btn-secondary" href="contact.html">Let’s talk</a>
                 </div>
-                <div class="footer-right">
-                    <a href="mailto:shandortenhoven@gmail.com" class="footer-link">shandortenhoven@gmail.com</a>
-                    <a href="https://www.linkedin.com/in/shandortenhoven" target="_blank" class="footer-link">LinkedIn</a>
+              </div>
+            </article>
+
+            <!-- Kubo card -->
+            <article class="card project-card">
+              <a class="card-media" href="kubo.html" aria-label="Open Kubo concept">
+                <img src="img/projects/project-kubo-lg.png" alt="Kubo project preview" loading="lazy" />
+              </a>
+
+              <div class="card-body">
+                <div class="card-top">
+                  <h3 class="card-title">Kubo</h3>
+                  <span class="pill">Mobile concept</span>
                 </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 Shandor ten Hoven. All rights reserved.</p>
-            </div>
+
+                <p class="card-text">
+                  A calm identity vault concept for organizing important documents; focused on clarity, confidence, and
+                  peace of mind.
+                </p>
+
+                <div class="card-actions">
+                  <a class="btn btn-primary" href="kubo.html">View concept</a>
+                  <a class="btn btn-secondary" href="contact.html">Let’s talk</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Moodstream card -->
+            <article class="card project-card">
+              <a class="card-media" href="moodstream.html" aria-label="Open Moodstream concept">
+                <img
+                  src="img/projects/project-moodstream-lg.png"
+                  alt="Moodstream project preview"
+                  loading="lazy"
+                />
+              </a>
+
+              <div class="card-body">
+                <div class="card-top">
+                  <h3 class="card-title">Moodstream</h3>
+                  <span class="pill">Web concept</span>
+                </div>
+
+                <p class="card-text">
+                  An experimental platform that reimagines media discovery through emotion—explore music and film based on
+                  how you want to feel, replacing search with mood-driven exploration.
+                </p>
+
+                <div class="card-actions">
+                  <a class="btn btn-primary" href="moodstream.html">View concept</a>
+                  <a class="btn btn-secondary" href="contact.html">Let’s talk</a>
+                </div>
+              </div>
+            </article>
+          </div>
         </div>
+      </section>
+
+      <!-- EXTRA / SVG -->
+      <section class="section">
+        <div class="container">
+          <div class="card extra-card">
+            <div class="extra-left">
+              <p class="eyebrow">A small extra</p>
+              <h2 class="extra-title">Based in Amsterdam</h2>
+              <p class="extra-text">
+                I like building interfaces that feel calm and intentional, with small details that make the experience
+                feel alive. Here’s a tiny animated illustration to bring that vibe into the site.
+              </p>
+              <a class="btn btn-secondary" href="contact.html">Let’s work together</a>
+            </div>
+
+            <div class="extra-right" aria-hidden="true">
+              <!-- Amsterdam SVG -->
+              <svg class="amsterdam-svg" viewBox="0 0 400 320" role="img" aria-label="Amsterdam illustration">
+                <defs>
+                  <!-- HTMLHint: keep SVG tag names lowercase -->
+                  <lineargradient id="panelGlow" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0" stop-color="rgba(255,255,255,0.10)" />
+                    <stop offset="1" stop-color="rgba(255,255,255,0.02)" />
+                  </lineargradient>
+                </defs>
+
+                <rect
+                  x="12"
+                  y="12"
+                  width="376"
+                  height="296"
+                  rx="22"
+                  fill="url(#panelGlow)"
+                  stroke="rgba(255,255,255,0.14)"
+                />
+
+                <g fill="none" stroke="rgba(255,255,255,0.22)" stroke-width="3">
+                  <path d="M70 240V120L120 90L170 120V240Z" />
+                  <path d="M170 240V90L200 70L230 90V240Z" />
+                  <path d="M230 240V120L280 90L330 120V240Z" />
+                </g>
+
+                <g fill="rgba(243,162,74,0.16)" stroke="rgba(243,162,74,0.22)" stroke-width="2">
+                  <!-- Left house -->
+                  <rect x="98" y="152" width="22" height="22" rx="4" />
+                  <rect x="128" y="152" width="22" height="22" rx="4" />
+                  <rect x="98" y="184" width="22" height="22" rx="4" />
+                  <rect x="128" y="184" width="22" height="22" rx="4" />
+
+                  <!-- Middle house (centered) -->
+                  <rect x="174" y="122" width="22" height="22" rx="4" />
+                  <rect x="204" y="122" width="22" height="22" rx="4" />
+                  <rect x="174" y="154" width="22" height="22" rx="4" />
+                  <rect x="204" y="154" width="22" height="22" rx="4" />
+                  <rect x="189" y="186" width="22" height="22" rx="4" />
+
+                  <!-- Right house -->
+                  <rect x="258" y="152" width="22" height="22" rx="4" />
+                  <rect x="288" y="152" width="22" height="22" rx="4" />
+                  <rect x="258" y="184" width="22" height="22" rx="4" />
+                  <rect x="288" y="184" width="22" height="22" rx="4" />
+                </g>
+
+                <rect
+                  x="38"
+                  y="242"
+                  width="324"
+                  height="46"
+                  rx="14"
+                  fill="rgba(0,160,180,0.12)"
+                  stroke="rgba(255,255,255,0.10)"
+                />
+
+                <g class="boat-group" fill="none" stroke="rgba(255,255,255,0.26)" stroke-width="3">
+                  <path d="M160 266 C180 280, 220 280, 240 266" />
+                  <path d="M160 266 H240" />
+
+                  <line x1="200" y1="228" x2="200" y2="266" stroke="rgba(255,255,255,0.26)" stroke-width="3" />
+                  <path d="M200 244 L228 258" />
+
+                  <g class="flag">
+                    <path
+                      d="M200 228
+                             C216 228, 228 233, 238 233
+                             C228 242, 216 245, 200 243 Z"
+                      fill="rgba(243,162,74,0.85)"
+                      stroke="none"
+                    />
+                  </g>
+                </g>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-cta">
+          <div>
+            <h2 class="footer-title">Let’s build something clear.</h2>
+            <p class="footer-text">
+              Want to collaborate or ask a question? Use the contact form and I’ll reply as soon as possible.
+            </p>
+          </div>
+
+          <div class="footer-actions">
+            <a class="btn btn-primary" href="contact.html">Contact form</a>
+            <a class="btn btn-secondary" href="mailto:Shandortenhoven@gmail.com">Email</a>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <div class="social">
+            <a
+              class="icon-btn"
+              href="https://www.linkedin.com/in/shandortenhoven"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="LinkedIn"
+            >
+              in
+            </a>
+            <a class="icon-btn" href="mailto:Shandortenhoven@gmail.com" aria-label="Email"> ✉ </a>
+          </div>
+
+          <p class="copyright">© 2025 Shandor ten Hoven</p>
+        </div>
+      </div>
     </footer>
 
-    <script src="js/script.js"></script>
-</body>
+    <!-- jQuery must come before scripts.js -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="js/scripts.js"></script>
+  </body>
 </html>
