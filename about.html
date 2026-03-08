@@ -1,162 +1,200 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>About — Shandor ten Hoven</title>
-    <meta
-      name="description"
-      content="About Shandor ten Hoven — Product & UX/UI Designer. Calm, clear interfaces that make complex things feel simple."
-    />
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
-
-  <body>
-    <a class="skip-link" href="#main">Skip to content</a>
-
-    <!-- Header matches index.html (classes + structure) -->
-    <header class="site-header">
-      <div class="container header-inner">
-        <a class="brand" href="index.html" aria-label="Go to homepage">
-          <span class="brand-mark">STH</span>
-          <span class="brand-name">Shandor ten Hoven</span>
-          <span class="brand-role">Product & UX/UI Designer</span>
-        </a>
-
-        <!-- Mobile hamburger -->
-        <button
-          class="nav-toggle"
-          type="button"
-          aria-label="Toggle menu"
-          aria-expanded="false"
-          aria-controls="primary-nav"
-        >
-          <span class="hamburger" aria-hidden="true"></span>
-        </button>
-
-        <nav class="site-nav" id="primary-nav" aria-label="Primary">
-          <a class="nav-link" href="index.html#work">Work</a>
-          <a class="nav-link" href="about.html" aria-current="page">About</a>
-          <a class="nav-link" href="contact.html">Contact</a>
-        </nav>
-      </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Shandor ten Hoven</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <a href="index.html" class="logo">STH</a>
+                <button class="menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Work</a></li>
+                    <li><a href="about.html" class="active">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <main id="main">
-      <!-- About hero -->
-      <section class="section">
-        <div class="container about-grid">
-          <article class="card about-card">
-            <div class="card-body about-body">
-              <p class="eyebrow">About</p>
-              <h1 class="about-title">Clarity-first UX, with strong UI craft.</h1>
-
-              <p class="about-text">
-                I’m a Product & UX/UI designer who likes calm layouts, strong hierarchy, and products that feel obvious to use.
-                My background in hospitality management trained me to stay structured under pressure and to design with real people in mind.
-              </p>
-
-              <p class="about-text">
-                In practice, that means I’m comfortable owning the messy middle: turning research into flows, flows into screens,
-                and screens into something you can test, iterate, and ship. I’m especially drawn to products where clarity and trust matter:
-                onboarding, payments, account areas, and anything people rely on when they’re stressed or in a hurry.
-              </p>
-
-              <div class="hero-actions">
-                <a class="btn btn-primary" href="files/Shandor-ten-Hoven-CV.pdf" target="_blank" rel="noreferrer">
-                  View CV
-                </a>
-                <a class="btn btn-secondary" href="contact.html">Contact</a>
-              </div>
-            </div>
-          </article>
-
-          <!-- Profile image card -->
-          <aside class="card profile-card" aria-label="Profile photo">
-            <div class="profile-img">
-              <img
-                src="img/profile/profile-lg.jpg"
-                srcset="img/profile/profile-sm.jpg 600w, img/profile/profile-lg.jpg 1200w"
-                sizes="(max-width: 900px) 90vw, 520px"
-                alt="Shandor ten Hoven portrait"
-                loading="eager"
-              />
-            </div>
-          </aside>
-        </div>
-      </section>
-
-      <!-- Skills / Tools -->
-      <section class="section">
+    <!-- Intro Section -->
+    <section class="about-hero">
         <div class="container">
-          <div class="grid grid-2">
-            <div class="card">
-              <div class="card-body">
-                <h2 class="card-title">Skills</h2>
-                <ul class="card-list">
-                  <li>User research &amp; synthesis</li>
-                  <li>Information architecture</li>
-                  <li>User flows &amp; wireframing</li>
-                  <li>UI design systems</li>
-                  <li>Prototyping &amp; usability testing</li>
-                  <li>Responsive design</li>
-                </ul>
-              </div>
+            <div class="about-intro fade-in">
+                <h1 class="about-main-title">Designing with empathy and intention</h1>
+                <p class="about-main-description">
+                    I'm Shandor ten Hoven, a product designer who believes the best experiences 
+                    are built on genuine understanding of people's needs.
+                </p>
+                <p class="about-location">
+                    Based in Amsterdam, the Netherlands
+                </p>
             </div>
+        </div>
+    </section>
 
-            <div class="card">
-              <div class="card-body">
-                <h2 class="card-title">Tools</h2>
-                <ul class="card-list">
-                  <li>Figma</li>
-                  <li>Javascript</li>
-                  <li>Adobe (basic)</li>
-                  <li>HTML / CSS (foundations)</li>
-                  <li>Git / GitHub (foundations)</li>
-                </ul>
-              </div>
+    <!-- Profile Section -->
+    <section class="profile-section">
+        <div class="container">
+            <div class="profile-grid" data-scroll>
+                <div class="profile-image-wrapper">
+                    <img src="img/profile/profile-lg.jpg" alt="Shandor ten Hoven" class="profile-image">
+                </div>
+                <div class="profile-text">
+                    <p>
+                        My path to product design wasn't traditional, and I think that's my strength. 
+                        I approach design the way I approached hospitality—with genuine care for the 
+                        people I'm serving. Every interface is an opportunity to make someone's day 
+                        a little easier, every interaction a chance to show thoughtfulness.
+                    </p>
+                </div>
             </div>
-          </div>
-
-          <div class="hero-actions" style="margin-top: 18px;">
-            <a class="btn btn-secondary" href="index.html#work">Back to work</a>
-          </div>
         </div>
-      </section>
-    </main>
+    </section>
 
-    <!-- Footer matches index.html -->
-    <footer class="site-footer">
-      <div class="container">
-        <div class="footer-cta">
-          <div>
-            <h2 class="footer-title">Let’s build something clear.</h2>
-            <p class="footer-text">
-              Want to collaborate or ask a question? Use the contact form and I’ll reply as soon as possible.
-            </p>
-          </div>
-
-          <div class="footer-actions">
-            <a class="btn btn-primary" href="contact.html">Contact form</a>
-            <a class="btn btn-secondary" href="mailto:Shandortenhoven@gmail.com">Email</a>
-          </div>
+    <!-- Background Section -->
+    <section class="background-section">
+        <div class="container-narrow">
+            <div class="case-content" data-scroll>
+                <h2 class="section-title">From Hospitality to Design</h2>
+                <div class="background-text">
+                    <p>
+                        Before designing digital products, I worked in hospitality. I learned to read 
+                        a room, anticipate needs before they're voiced, and create experiences where 
+                        people feel welcomed and understood. Those skills translate directly to UX design.
+                    </p>
+                    <p>
+                        Great hospitality, like great design, is about empathy. It's about noticing 
+                        the small details that make a difference. It's about creating systems that work 
+                        seamlessly in the background so people can focus on what matters to them.
+                    </p>
+                    <p>
+                        That service mindset shapes everything I create. I don't just design interfaces—I 
+                        design moments of clarity, reduction of friction, and quiet delight.
+                    </p>
+                </div>
+            </div>
         </div>
+    </section>
 
-        <div class="footer-bottom">
-          <div class="social">
-            <a class="icon-btn" href="https://www.linkedin.com/in/shandortenhoven" target="_blank" rel="noreferrer" aria-label="LinkedIn">
-              in
-            </a>
-            <a class="icon-btn" href="mailto:Shandortenhoven@gmail.com" aria-label="Email">✉</a>
-          </div>
-
-          <p class="copyright">© 2025 Shandor ten Hoven</p>
+    <!-- Approach Section -->
+    <section class="approach-section">
+        <div class="container">
+            <h2 class="section-title">My Approach</h2>
+            <div class="approach-grid">
+                <div class="approach-card" data-scroll>
+                    <h3 class="approach-title">Empathy-driven design</h3>
+                    <p class="approach-description">
+                        I start every project by truly understanding the people who will use it. 
+                        Their goals, frustrations, and context shape every design decision.
+                    </p>
+                </div>
+                <div class="approach-card" data-scroll>
+                    <h3 class="approach-title">Clarity and simplicity</h3>
+                    <p class="approach-description">
+                        Complex problems don't need complex solutions. I strip away everything 
+                        unnecessary to reveal elegant, intuitive experiences.
+                    </p>
+                </div>
+                <div class="approach-card" data-scroll>
+                    <h3 class="approach-title">Thoughtful digital experiences</h3>
+                    <p class="approach-description">
+                        Great design anticipates needs and guides naturally. It should feel less 
+                        like using software and more like having a helpful conversation.
+                    </p>
+                </div>
+            </div>
         </div>
-      </div>
+    </section>
+
+    <!-- Tools & Skills Section -->
+    <section class="tools-section">
+        <div class="container-narrow">
+            <div class="case-content" data-scroll>
+                <h2 class="section-title">Tools & Skills</h2>
+                <div class="tools-grid">
+                    <div class="tool-item">Figma</div>
+                    <div class="tool-item">UX Research</div>
+                    <div class="tool-item">Wireframing</div>
+                    <div class="tool-item">Interaction Design</div>
+                    <div class="tool-item">Prototyping</div>
+                    <div class="tool-item">Front-end Development</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Personal Note Section -->
+    <section class="personal-note-section">
+        <div class="container-narrow">
+            <div class="personal-note-card" data-scroll>
+                <p class="personal-note-text">
+                    I'm endlessly curious about how things work and how they could work better. 
+                    I love learning new tools, exploring emerging patterns, and finding inspiration 
+                    in unexpected places. Design is about continuous growth, and I'm always looking 
+                    for the next thing to learn.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Get in Touch Section -->
+    <section class="get-in-touch-section">
+        <div class="container-narrow">
+            <div class="get-in-touch-content" data-scroll>
+                <h2 class="section-title">Get in Touch</h2>
+                <p class="get-in-touch-description">
+                    I'm always interested in hearing about new opportunities and collaborations
+                </p>
+                <div class="contact-buttons">
+                    <a href="mailto:shandortenhoven@gmail.com" class="contact-button">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="4" width="20" height="16" rx="2"/>
+                            <path d="M22 7L13.03 12.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+                        </svg>
+                        <span>shandortenhoven@gmail.com</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/shandortenhoven" target="_blank" rel="noopener noreferrer" class="contact-button">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                            <rect x="2" y="9" width="4" height="12"/>
+                            <circle cx="4" cy="4" r="2"/>
+                        </svg>
+                        <span>LinkedIn</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <h3 class="footer-title">Let's work together</h3>
+                    <p class="footer-text">I'm exploring full-time product design roles in Amsterdam and beyond.</p>
+                </div>
+                <div class="footer-right">
+                    <a href="mailto:shandortenhoven@gmail.com" class="footer-link">shandortenhoven@gmail.com</a>
+                    <a href="https://www.linkedin.com/in/shandortenhoven" target="_blank" class="footer-link">LinkedIn</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Shandor ten Hoven. All rights reserved.</p>
+            </div>
+        </div>
     </footer>
 
-    <!-- jQuery must come before scripts.js -->
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="js/scripts.js"></script>
-  </body>
+</body>
 </html>

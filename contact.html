@@ -1,141 +1,154 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Contact — Shandor ten Hoven</title>
-    <meta name="description" content="Contact Shandor ten Hoven — Product & UX/UI Designer." />
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
-
-  <body>
-    <a class="skip-link" href="#main">Skip to content</a>
-
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Shandor ten Hoven</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
     <!-- Header -->
-    <header class="site-header">
-      <div class="container header-inner">
-        <a class="brand" href="index.html" aria-label="Go to homepage">
-          <span class="brand-mark">STH</span>
-          <span class="brand-name">Shandor ten Hoven</span>
-          <span class="brand-role">Product & UX/UI Designer</span>
-        </a>
-
-        <button
-          class="nav-toggle"
-          type="button"
-          aria-label="Toggle menu"
-          aria-expanded="false"
-          aria-controls="primary-nav"
-        >
-          <span class="hamburger" aria-hidden="true"></span>
-        </button>
-
-        <nav class="site-nav" id="primary-nav" aria-label="Primary">
-          <a class="nav-link" href="index.html#work">Work</a>
-          <a class="nav-link" href="about.html">About</a>
-          <a class="nav-link" href="contact.html" aria-current="page">Contact</a>
-        </nav>
-      </div>
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <a href="index.html" class="logo">STH</a>
+                <button class="menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Work</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <main id="main">
-      <section class="section">
-        <div class="container contact-grid">
-          <!-- Left column: form -->
-          <div>
-            <p class="eyebrow">Contact</p>
-            <h1 class="page-title">Send a message</h1>
-            <p class="page-lead">
-              Want to collaborate or ask a question? Use the form and I’ll reply as soon as possible.
-            </p>
-
-            <div class="card">
-              <div class="card-body">
-                <form class="contact-form" action="#" method="post">
-                  <div class="field">
-                    <label for="name">Name</label>
-                    <input id="name" name="name" type="text" autocomplete="name" required />
-                  </div>
-
-                  <div class="field">
-                    <label for="email">Email</label>
-                    <input id="email" name="email" type="email" autocomplete="email" required />
-                  </div>
-
-                  <div class="field">
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" rows="6" required></textarea>
-                  </div>
-
-                  <button class="btn btn-primary" type="submit">Send</button>
-                </form>
-              </div>
+    <!-- Contact Hero -->
+    <section class="contact-hero">
+        <div class="container">
+            <div class="contact-content fade-in">
+                <h1 class="contact-title">Let's create something meaningful together</h1>
+                <p class="contact-subtitle">
+                    I'm always interested in hearing about new opportunities, 
+                    collaborative projects, or just having a conversation about design.
+                </p>
             </div>
-          </div>
-
-          <!-- Right column: direct contact -->
-          <aside class="card">
-            <div class="card-body">
-              <h2 class="card-title">Get in touch</h2>
-              <p class="card-text">
-                Prefer email or LinkedIn? Reach out directly.
-              </p>
-
-              <div class="contact-stack">
-                <a class="btn btn-secondary" href="mailto:Shandortenhoven@gmail.com">
-                  Shandortenhoven@gmail.com
-                </a>
-                <a
-                  class="btn btn-secondary"
-                  href="https://www.linkedin.com/in/shandortenhoven"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  LinkedIn profile
-                </a>
-              </div>
-            </div>
-          </aside>
         </div>
-      </section>
-    </main>
+    </section>
+
+    <!-- Contact Information -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-grid">
+                <!-- Email -->
+                <div class="contact-card" data-scroll>
+                    <div class="contact-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="4" width="20" height="16" rx="2"/>
+                            <path d="M22 7L13.03 12.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+                        </svg>
+                    </div>
+                    <h3 class="contact-card-title">Email</h3>
+                    <a href="mailto:shandortenhoven@gmail.com" class="contact-link">
+                        shandortenhoven@gmail.com
+                    </a>
+                    <p class="contact-card-description">
+                        Best way to reach me. I typically respond within 24 hours.
+                    </p>
+                </div>
+
+                <!-- LinkedIn -->
+                <div class="contact-card" data-scroll>
+                    <div class="contact-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                            <rect x="2" y="9" width="4" height="12"/>
+                            <circle cx="4" cy="4" r="2"/>
+                        </svg>
+                    </div>
+                    <h3 class="contact-card-title">LinkedIn</h3>
+                    <a href="https://www.linkedin.com/in/shandortenhoven" target="_blank" class="contact-link">
+                        linkedin.com/in/shandortenhoven
+                    </a>
+                    <p class="contact-card-description">
+                        Let's connect professionally and stay in touch.
+                    </p>
+                </div>
+
+                <!-- Location -->
+                <div class="contact-card" data-scroll>
+                    <div class="contact-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                            <circle cx="12" cy="10" r="3"/>
+                        </svg>
+                    </div>
+                    <h3 class="contact-card-title">Location</h3>
+                    <p class="contact-link">Amsterdam, Netherlands</p>
+                    <p class="contact-card-description">
+                        Open to remote opportunities and occasional travel.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Availability Section -->
+    <section class="availability-section">
+        <div class="container">
+            <div class="availability-content">
+                <h2 class="availability-title">Currently open to opportunities</h2>
+                <p class="availability-text">
+                    I'm exploring full-time product design roles where I can bring empathy-driven 
+                    design thinking to meaningful problems. If you're building something interesting, 
+                    I'd love to hear about it.
+                </p>
+                <div class="availability-details">
+                    <div class="detail-item">
+                        <h4>What I'm looking for</h4>
+                        <ul>
+                            <li>Full-time product design positions</li>
+                            <li>Collaborative, cross-functional teams</li>
+                            <li>Opportunities to own end-to-end design processes</li>
+                            <li>Companies that value user research and iteration</li>
+                        </ul>
+                    </div>
+                    <div class="detail-item">
+                        <h4>My availability</h4>
+                        <ul>
+                            <li>Available for full-time roles immediately</li>
+                            <li>Open to both remote and hybrid positions</li>
+                            <li>Willing to relocate within Europe</li>
+                            <li>Happy to start with a coffee chat</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Footer -->
-    <footer class="site-footer">
-      <div class="container">
-        <div class="footer-cta">
-          <div>
-            <h2 class="footer-title">Let’s build something clear.</h2>
-            <p class="footer-text">
-              Want to collaborate or ask a question? Use the contact form and I’ll reply as soon as possible.
-            </p>
-          </div>
-
-          <div class="footer-actions">
-            <a class="btn btn-primary" href="contact.html">Contact form</a>
-            <a class="btn btn-secondary" href="mailto:Shandortenhoven@gmail.com">Email</a>
-          </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <h3 class="footer-title">Let's work together</h3>
+                    <p class="footer-text">I'm exploring full-time product design roles in Amsterdam and beyond.</p>
+                </div>
+                <div class="footer-right">
+                    <a href="mailto:shandortenhoven@gmail.com" class="footer-link">shandortenhoven@gmail.com</a>
+                    <a href="https://www.linkedin.com/in/shandortenhoven" target="_blank" class="footer-link">LinkedIn</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Shandor ten Hoven. All rights reserved.</p>
+            </div>
         </div>
-
-        <div class="footer-bottom">
-          <div class="social">
-            <a
-              class="icon-btn"
-              href="https://www.linkedin.com/in/shandortenhoven"
-              target="_blank"
-              rel="noreferrer"
-              aria-label="LinkedIn"
-            >in</a>
-            <a class="icon-btn" href="mailto:Shandortenhoven@gmail.com" aria-label="Email">✉</a>
-          </div>
-
-          <p class="copyright">© 2025 Shandor ten Hoven</p>
-        </div>
-      </div>
     </footer>
 
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="js/scripts.js"></script>
-  </body>
+</body>
 </html>
-

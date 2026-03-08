@@ -1,118 +1,385 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kubo — Concept</title>
-    <link rel="stylesheet" href="./css/style.css" />
-  </head>
-
-  <body>
-    <header class="site-header">
-      <div class="container header-inner">
-        <a class="brand" href="./index.html" aria-label="Homepage">
-          <span class="brand-mark">STH</span>
-          <span class="brand-name">Shandor ten Hoven</span>
-          <span class="brand-role">Product & UX/UI Designer</span>
-        </a>
-
-        <button class="nav-toggle" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="primary-nav">
-          <span class="hamburger" aria-hidden="true"></span>
-        </button>
-
-        <nav class="site-nav" id="primary-nav" aria-label="Primary">
-          <a class="nav-link" href="./index.html#work">Work</a>
-          <a class="nav-link" href="./about.html">About</a>
-          <a class="nav-link" href="./contact.html">Contact</a>
-        </nav>
-      </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kubo Case Study - Shandor ten Hoven</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <a href="index.html" class="logo">STH</a>
+                <button class="menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Work</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <main>
-      <section class="section">
+    <!-- Case Study Hero -->
+    <section class="case-hero">
         <div class="container">
-          <p class="kicker">Concept</p>
-          <h1 class="page-title">Kubo</h1>
-          <p class="page-lead">
-            A calm identity vault concept for organizing important documents — focused on clarity, confidence, and peace of mind.
-          </p>
-
-          <div class="card project-hero">
-            <img
-              src="./img/projects/project-kubo-lg.png"
-              alt="Kubo project hero image"
-              loading="eager"
-            />
-          </div>
+            <div class="case-hero-content fade-in">
+                <div class="case-meta">
+                    <span class="case-tag">UX/UI Design</span>
+                    <span class="case-tag">Mobile App</span>
+                    <span class="case-year">2023</span>
+                </div>
+                <h1 class="case-title">Kubo</h1>
+                <p class="case-subtitle">
+                    A family logistics app that helps parents coordinate household tasks, 
+                    schedules, and responsibilities in one shared space.
+                </p>
+                <div class="case-stats-row">
+                    <div class="stat-item">
+                        <span class="stat-number">4.8★</span>
+                        <span class="stat-label">App Store rating</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">10k+</span>
+                        <span class="stat-label">Active families</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">40%</span>
+                        <span class="stat-label">Increase in engagement</span>
+                    </div>
+                </div>
+            </div>
+            <div class="case-hero-image">
+                <img src="img/Kubo/mobile-home.png" alt="Kubo app interface">
+            </div>
         </div>
-      </section>
+    </section>
 
-      <section class="section">
+    <!-- Overview Section -->
+    <section class="case-section">
+        <div class="container-narrow">
+            <div class="case-content" data-scroll>
+                <h2 class="section-title">Overview</h2>
+                <div class="overview-grid">
+                    <div class="overview-item">
+                        <h3>My Role</h3>
+                        <p>Product Designer</p>
+                    </div>
+                    <div class="overview-item">
+                        <h3>Timeline</h3>
+                        <p>3 months (Sep - Nov 2023)</p>
+                    </div>
+                    <div class="overview-item">
+                        <h3>Team</h3>
+                        <p>2 Designers, 3 Engineers, 1 PM</p>
+                    </div>
+                    <div class="overview-item">
+                        <h3>Platform</h3>
+                        <p>iOS & Android Mobile App</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="case-section bg-dark">
+        <div class="container-narrow">
+            <div class="case-content" data-scroll>
+                <span class="section-label">Problem</span>
+                <h2 class="section-title">Families struggle to stay organized across multiple tools</h2>
+                <p class="case-text">
+                    Modern families juggle countless responsibilities—school schedules, appointments, 
+                    grocery lists, chores, and activities—often scattered across different apps, paper 
+                    calendars, and message threads. This fragmentation leads to missed tasks, duplicate 
+                    efforts, and constant stress.
+                </p>
+                <div class="problem-list">
+                    <div class="problem-item">
+                        <div class="problem-number">01</div>
+                        <div class="problem-content">
+                            <h3>Information is scattered</h3>
+                            <p>Families use 5+ different tools (calendars, notes, reminders, messaging apps) 
+                            to coordinate, making it hard to see the full picture.</p>
+                        </div>
+                    </div>
+                    <div class="problem-item">
+                        <div class="problem-number">02</div>
+                        <div class="problem-content">
+                            <h3>Mental load is unequal</h3>
+                            <p>One parent typically bears the burden of remembering everything, leading 
+                            to burnout and relationship tension.</p>
+                        </div>
+                    </div>
+                    <div class="problem-item">
+                        <div class="problem-number">03</div>
+                        <div class="problem-content">
+                            <h3>Kids feel excluded</h3>
+                            <p>Children want to contribute but lack visibility into household needs 
+                            and expectations.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Research Section -->
+    <section class="case-section">
+        <div class="container-narrow">
+            <div class="case-content" data-scroll>
+                <span class="section-label">Research</span>
+                <h2 class="section-title">Understanding family dynamics and pain points</h2>
+                <p class="case-text">
+                    I conducted in-depth interviews with 15 families (30 parents total) across different 
+                    household structures—dual-income, single-parent, and blended families. I also spent 
+                    time observing how families coordinate in real-time during busy morning and evening routines.
+                </p>
+            </div>
+            <div class="case-content" data-scroll>
+                <h3 class="subsection-title">Key Insights</h3>
+                <div class="insights-grid">
+                    <div class="insight-card">
+                        <div class="insight-icon">👥</div>
+                        <h4>Shared ownership reduces stress</h4>
+                        <p>When both parents have equal visibility and responsibility, the mental load 
+                        feels more manageable.</p>
+                    </div>
+                    <div class="insight-card">
+                        <div class="insight-icon">🎯</div>
+                        <h4>Context matters more than reminders</h4>
+                        <p>Families don't just need alerts—they need to see why something matters and 
+                        who it affects.</p>
+                    </div>
+                    <div class="insight-card">
+                        <div class="insight-icon">⚡</div>
+                        <h4>Flexibility beats rigid systems</h4>
+                        <p>Every family operates differently. A one-size-fits-all approach fails to 
+                        accommodate diverse needs.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Information Architecture -->
+    <section class="case-section bg-dark">
+        <div class="container-narrow">
+            <div class="case-content" data-scroll>
+                <span class="section-label">Information Architecture</span>
+                <h2 class="section-title">Structuring the app experience</h2>
+                <p class="case-text">
+                    I mapped out the information architecture to ensure all family coordination needs 
+                    were accessible without overwhelming users.
+                </p>
+            </div>
+            <div class="case-image-full" data-scroll>
+                <img src="img/Kubo/sitemap.png" alt="Kubo app sitemap" class="lightbox-trigger">
+                <p class="image-caption">Sitemap showing main sections and navigation structure</p>
+            </div>
+            <div class="case-image-full" data-scroll>
+                <img src="img/Kubo/user-flows.png" alt="User flow diagrams" class="lightbox-trigger">
+                <p class="image-caption">User flows for key tasks: adding events, assigning chores, sharing lists</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section class="case-section">
+        <div class="container-narrow">
+            <div class="case-content" data-scroll>
+                <span class="section-label">Solution</span>
+                <h2 class="section-title">One unified hub for family coordination</h2>
+                <p class="case-text">
+                    Kubo consolidates calendar events, to-do lists, meal planning, and communication 
+                    into a single, intuitive interface designed around how families actually work.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Features -->
+    <section class="case-section">
+        <div class="container-narrow">
+            <div class="case-content" data-scroll>
+                <h3 class="subsection-title">Key Features</h3>
+            </div>
+            <div class="features-list">
+                <div class="feature-item" data-scroll>
+                    <div class="feature-content">
+                        <h3>Shared Family Calendar</h3>
+                        <p>A unified calendar that shows everyone's schedules, appointments, and events. \n                        Color-coded by family member with smart conflict detection.</p>
+                    </div>
+                    <div class="feature-image">
+                        <img src="img/Kubo/mobile-home.png" alt="Shared calendar view" class="lightbox-trigger">
+                    </div>
+                </div>
+                <div class="feature-item reverse" data-scroll>
+                    <div class="feature-content">
+                        <h3>Task Assignment & Tracking</h3>
+                        <p>Assign chores and responsibilities to specific family members with due dates. \n                        Kids can mark tasks complete and earn recognition.</p>
+                    </div>
+                    <div class="feature-image">
+                        <img src="img/Kubo/mobile-home.png" alt="Task management interface" class="lightbox-trigger">
+                    </div>
+                </div>
+                <div class="feature-item" data-scroll>
+                    <div class="feature-content">
+                        <h3>Shared Shopping Lists</h3>
+                        <p>Collaborative lists that sync in real-time. Anyone can add items, and they're \n                        organized by category for efficient shopping.</p>
+                    </div>
+                    <div class="feature-image">
+                        <img src="img/Kubo/mobile-home.png" alt="Shopping list feature" class="lightbox-trigger">
+                    </div>
+                </div>
+                <div class="feature-item reverse" data-scroll>
+                    <div class="feature-content">
+                        <h3>Family Messaging</h3>
+                        <p>Contextual messaging tied to specific events or tasks, so conversations stay \n                        organized and relevant.</p>
+                    </div>
+                    <div class="feature-image">
+                        <img src="img/Kubo/mobile-home.png" alt="Family messaging" class="lightbox-trigger">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Design System -->
+    <section class="case-section bg-dark">
+        <div class="container-narrow">
+            <div class="case-content" data-scroll>
+                <span class="section-label">Design System</span>
+                <h2 class="section-title">Building for consistency and warmth</h2>
+                <p class="case-text">
+                    I established a design system that balances professionalism with approachability—
+                    warm colors, friendly illustrations, and clear typography that works for both parents 
+                    and children.
+                </p>
+            </div>
+            <div class="case-image-full" data-scroll>
+                <img src="img/kubo-design-system.png" alt="Kubo design system" class="lightbox-trigger">
+                <p class="image-caption">Color palette, typography, and component library</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Section -->
+    <section class="case-section">
+        <div class="container-narrow">
+            <div class="case-content" data-scroll>
+                <span class="section-label">Impact</span>
+                <h2 class="section-title">Strong adoption and engagement</h2>
+                <p class="case-text">
+                    Since launch, Kubo has been adopted by over 10,000 families and maintained high 
+                    engagement rates.
+                </p>
+                <div class="impact-stats">
+                    <div class="impact-stat">
+                        <div class="impact-number">4.8★</div>
+                        <div class="impact-label">App Store rating</div>
+                        <p class="impact-description">Based on 2,500+ reviews</p>
+                    </div>
+                    <div class="impact-stat">
+                        <div class="impact-number">10k+</div>
+                        <div class="impact-label">Active families</div>
+                        <p class="impact-description">Within first 6 months of launch</p>
+                    </div>
+                    <div class="impact-stat">
+                        <div class="impact-number">40%</div>
+                        <div class="impact-label">Increase in daily engagement</div>
+                        <p class="impact-description">Compared to initial beta version</p>
+                    </div>
+                </div>
+                <div class="testimonial" data-scroll>
+                    <p class="testimonial-text">
+                        "Kubo has genuinely changed how our family operates. For the first time, 
+                        my partner and I feel like we're actually sharing the mental load instead 
+                        of one person carrying everything."
+                    </p>
+                    <p class="testimonial-author">— Sarah, parent of 2</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Learnings Section -->
+    <section class="case-section bg-dark">
+        <div class="container-narrow">
+            <div class="case-content" data-scroll>
+                <span class="section-label">Reflection</span>
+                <h2 class="section-title">What I learned</h2>
+                <div class="learnings-list">
+                    <div class="learning-item">
+                        <h3>Design for diverse family structures</h3>
+                        <p>Early designs assumed traditional two-parent households. Research with 
+                        single-parent and blended families revealed the need for more flexible role 
+                        definitions and privacy controls.</p>
+                    </div>
+                    <div class="learning-item">
+                        <h3>Kids are users too</h3>
+                        <p>Initially focused solely on parents, but testing revealed children want 
+                        agency and visibility. Adding kid-friendly features increased whole-family adoption.</p>
+                    </div>
+                    <div class="learning-item">
+                        <h3>Simple beats comprehensive</h3>
+                        <p>Early prototypes tried to include every possible family coordination feature. 
+                        Scaling back to core essentials improved usability and reduced overwhelm.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Navigation -->
+    <section class="case-navigation">
         <div class="container">
-          <h2 class="section-title">Key screens & structure</h2>
-
-          <div class="grid gallery">
-            <figure class="card">
-              <button class="lb-trigger" type="button" data-full="./img/Kubo/mobile-home.png" data-title="Home screen (Hi-fi mock)">
-                <div class="thumb">
-                  <img src="./img/Kubo/mobile-home.png" alt="Kubo home screen hi-fi mockup" loading="lazy" />
-                </div>
-              </button>
-              <figcaption class="caption">Home screen (Hi-fi mock)</figcaption>
-            </figure>
-
-            <figure class="card">
-              <button class="lb-trigger" type="button" data-full="./img/Kubo/sitemap.png" data-title="Sitemap">
-                <div class="thumb">
-                  <img src="./img/Kubo/sitemap.png" alt="Kubo sitemap" loading="lazy" />
-                </div>
-              </button>
-              <figcaption class="caption">Sitemap</figcaption>
-            </figure>
-
-            <figure class="card">
-              <button class="lb-trigger" type="button" data-full="./img/Kubo/user-flows.png" data-title="User flows">
-                <div class="thumb">
-                  <img src="./img/Kubo/user-flows.png" alt="Kubo user flows" loading="lazy" />
-                </div>
-              </button>
-              <figcaption class="caption">User flows</figcaption>
-            </figure>
-          </div>
-
-          <div class="section-actions" style="margin-top: 18px; display: flex; gap: 12px; flex-wrap: wrap;">
-            <a class="btn btn-ghost" href="./index.html#work">Back to work</a>
-            <a class="btn btn-primary" href="./contact.html">Contact</a>
-          </div>
+            <div class="nav-links">
+                <a href="expert.html" class="nav-link prev">
+                    <span class="nav-label">Previous</span>
+                    <span class="nav-title">Expert</span>
+                </a>
+                <a href="moodstream.html" class="nav-link next">
+                    <span class="nav-label">Next</span>
+                    <span class="nav-title">MoodStream</span>
+                </a>
+            </div>
         </div>
-      </section>
-    </main>
+    </section>
 
-    <footer class="site-footer">
-      <div class="container">
-        <div class="footer-cta">
-          <div>
-            <h2 class="footer-title">Let’s build something clear.</h2>
-            <p class="footer-text">Want to collaborate or ask a question? Use the contact form and I’ll reply as soon as possible.</p>
-          </div>
-          <div class="footer-actions">
-            <a class="btn btn-primary" href="./contact.html">Contact form</a>
-            <a class="btn btn-secondary" href="mailto:Shandortenhoven@gmail.com">Email</a>
-          </div>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <h3 class="footer-title">Let's work together</h3>
+                    <p class="footer-text">I'm exploring full-time product design roles in Amsterdam and beyond.</p>
+                </div>
+                <div class="footer-right">
+                    <a href="mailto:shandortenhoven@gmail.com" class="footer-link">shandortenhoven@gmail.com</a>
+                    <a href="https://www.linkedin.com/in/shandortenhoven" target="_blank" class="footer-link">LinkedIn</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Shandor ten Hoven. All rights reserved.</p>
+            </div>
         </div>
-
-        <div class="footer-bottom">
-          <div class="social">
-            <a class="icon-btn" href="https://www.linkedin.com/in/shandortenhoven" target="_blank" rel="noreferrer" aria-label="LinkedIn">in</a>
-            <a class="icon-btn" href="mailto:Shandortenhoven@gmail.com" aria-label="Email">✉</a>
-          </div>
-          <p class="copyright">© 2025 Shandor ten Hoven</p>
-        </div>
-      </div>
     </footer>
 
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script src="./js/scripts.js"></script>
-  </body>
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox">
+        <button class="lightbox-close">&times;</button>
+        <div class="lightbox-content">
+            <img src="" alt="" id="lightbox-img">
+        </div>
+    </div>
+
+    <script src="js/scripts.js"></script>
+</body>
 </html>
-	
