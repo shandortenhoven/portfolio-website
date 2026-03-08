@@ -449,50 +449,6 @@ body {
     max-width: 42rem;
 }
 
-.case-content {
-    margin-bottom: 0;
-}
-
-.case-content h2 {
-    margin-bottom: 1.5rem;
-}
-
-.case-content h3,
-.cs-subtitle {
-    font-size: clamp(1.3rem, 3vw, 1.6rem);
-    color: var(--color-text-primary);
-    margin-top: 2rem;
-    margin-bottom: 1rem;
-}
-
-.cs-main-title {
-    font-size: clamp(2rem, 4vw, 3rem);
-    color: var(--color-text-primary);
-    margin-bottom: 2rem;
-    line-height: 1.1;
-}
-
-.case-content p,
-.background-text p {
-    font-size: clamp(1.05rem, 2vw, 1.2rem);
-    color: var(--color-text-secondary);
-    line-height: 1.85;
-    margin-bottom: 1.5rem;
-}
-
-.case-content ul {
-    list-style: disc;
-    margin-left: 1.5rem;
-    margin-bottom: 1.5rem;
-}
-
-.case-content li {
-    color: var(--color-text-secondary);
-    font-size: 1.05rem;
-    line-height: 1.8;
-    margin-bottom: 0.5rem;
-}
-
 .approach-section .section-title {
     margin-bottom: 2rem;
 }
@@ -735,20 +691,71 @@ body {
 
 .case-hero-image {
     margin-top: 2rem;
-    border-radius: 1.2rem;
+    border-radius: 1.5rem;
     overflow: hidden;
     border: 1px solid var(--color-border);
-    background: rgba(15, 23, 42, 0.35);
+    background: linear-gradient(180deg, rgba(12, 23, 48, 0.88), rgba(13, 27, 58, 0.8));
+    box-shadow: var(--shadow-soft);
 }
 
 .case-hero-image img {
     width: 100%;
     height: auto;
     display: block;
+    object-fit: cover;
 }
 
 .case-section {
-    padding: 2.75rem 0;
+    padding: 3.25rem 0;
+}
+
+.case-content {
+    margin-bottom: 2.5rem;
+}
+
+.case-content:last-child {
+    margin-bottom: 0;
+}
+
+.case-content h2 {
+    margin-bottom: 1.5rem;
+}
+
+.case-content h3,
+.cs-subtitle {
+    font-size: clamp(1.3rem, 3vw, 1.65rem);
+    color: var(--color-text-primary);
+    line-height: 1.2;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.cs-main-title {
+    font-size: clamp(2rem, 4vw, 3rem);
+    color: var(--color-text-primary);
+    margin-bottom: 2rem;
+    line-height: 1.1;
+}
+
+.case-content p,
+.background-text p {
+    font-size: clamp(1.05rem, 2vw, 1.16rem);
+    color: var(--color-text-secondary);
+    line-height: 1.9;
+    margin-bottom: 1.4rem;
+}
+
+.case-content ul {
+    list-style: disc;
+    margin-left: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.case-content li {
+    color: var(--color-text-secondary);
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin-bottom: 0.5rem;
 }
 
 .case-image-section {
@@ -766,9 +773,10 @@ body {
     width: 100%;
     height: auto;
     display: block;
-    border-radius: 1rem;
+    border-radius: 1.25rem;
     border: 1px solid var(--color-border);
-    transition: transform 0.35s ease, border-color 0.35s ease;
+    background: rgba(15, 23, 42, 0.35);
+    transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
 }
 
 .case-image.lightbox-trigger {
@@ -776,27 +784,31 @@ body {
 }
 
 .case-image.lightbox-trigger:hover {
-    transform: scale(1.01);
+    transform: translateY(-2px);
     border-color: var(--color-border-strong);
+    box-shadow: var(--shadow-soft);
 }
 
 .case-image-caption {
     color: var(--color-text-tertiary);
-    font-size: 0.92rem;
+    font-size: 0.95rem;
+    line-height: 1.65;
     margin-top: 0.9rem;
-    line-height: 1.6;
+    max-width: 56rem;
 }
 
 .highlight-box {
-    background: rgba(15, 23, 42, 0.52);
+    background: linear-gradient(135deg, rgba(18, 33, 68, 0.56), rgba(10, 19, 42, 0.48));
+    border: 1px solid var(--color-border);
     border-left: 3px solid var(--color-accent);
-    border-radius: 0.85rem;
-    padding: 1.25rem 1.25rem 1.25rem 1rem;
+    border-radius: 1rem;
+    padding: 1rem 1.1rem 1rem 1rem;
     margin: 1rem 0;
 }
 
 .highlight-box p {
     margin-bottom: 0;
+    color: var(--color-text-primary);
 }
 
 .scrollable-mockup-container {
@@ -838,7 +850,7 @@ body {
 
 .scrollable-design-system-inner {
     width: 100%;
-    max-height: 700px;
+    max-height: 600px;
     overflow-y: auto;
 }
 
@@ -1142,6 +1154,22 @@ body {
         width: 240px;
         height: 240px;
         border-radius: 1.25rem;
+    }
+
+    .case-section {
+        padding: 2.5rem 0;
+    }
+
+    .case-content {
+        margin-bottom: 2rem;
+    }
+
+    .case-hero-image,
+    .case-image,
+    .personal-note-card,
+    .availability-card,
+    .home-new-about-card {
+        border-radius: 1.2rem;
     }
 
     .personal-note-card,
