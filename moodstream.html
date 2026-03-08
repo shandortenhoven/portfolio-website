@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <!-- Header -->
     <header class="header">
         <div class="container">
             <nav class="nav">
@@ -25,18 +26,36 @@
         </div>
     </header>
 
+    <!-- Hero Section -->
     <section class="case-hero">
         <div class="container">
             <div class="case-hero-content fade-in">
                 <h1 class="case-title">MoodStream</h1>
-                <p class="case-subtitle">Reimagining media discovery through emotion.</p>
+                <p class="case-subtitle">
+                    Reimagining media discovery through emotion
+                </p>
             </div>
+
             <div class="case-hero-image">
-                <img src="img/Moodstream/hi-1.jpg" alt="MoodStream hero">
+                <img src="img/projects/project-moodstream-lg.png" alt="MoodStream project hero image">
             </div>
         </div>
     </section>
 
+    <!-- Walkthrough GIF -->
+    <section class="case-section">
+        <div class="container">
+            <div class="case-content" data-scroll>
+                <h2>Experience Overview</h2>
+                <img src="img/Moodstream/moodstream-scroll.gif" alt="MoodStream interaction walkthrough" class="case-image lightbox-trigger">
+                <p class="case-image-caption">
+                    Interactive walkthrough demonstrating the emotion-driven discovery flow.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Overview Section -->
     <section class="case-section">
         <div class="container-narrow">
             <div class="case-content" data-scroll>
@@ -45,18 +64,19 @@
                     MoodStream is a conceptual web platform that reimagines media discovery through emotion rather than traditional search or genre-based navigation. Instead of browsing by artist, title, or category, users explore music and film based on how they want to feel.
                 </p>
                 <p>
-                    The platform introduces an immersive, spatial browsing experience where moods such as calm, euphoric, nostalgic, or intense guide content recommendations across both audio and video. The goal is to create a calmer and more intuitive way to discover media while encouraging exploration beyond algorithm-driven feeds.
+                    The platform introduces an immersive browsing experience where moods such as calm, euphoric, nostalgic, or intense guide content recommendations across both audio and video. The goal is to create a more intuitive and emotionally resonant way to discover media while encouraging exploration beyond algorithm-driven feeds.
                 </p>
             </div>
         </div>
     </section>
 
+    <!-- Challenge Section -->
     <section class="case-section">
         <div class="container-narrow">
             <div class="case-content" data-scroll>
                 <h2>Challenge</h2>
                 <p>
-                    Most streaming platforms organize content through genres, algorithms, search queries, and popularity rankings. However, users often start with a feeling rather than a specific title.
+                    Most streaming platforms organise content through genres, algorithms, search queries, and popularity rankings. However, users often begin with a feeling rather than a specific title.
                 </p>
 
                 <div class="highlight-box">
@@ -73,7 +93,7 @@
                     Existing platforms require users to translate emotions into genres or keywords, which creates friction in discovery. The challenge was to design a system that makes emotions navigable while still providing clear structure, usability, and scalable product architecture.
                 </p>
 
-                <h3>Key design questions:</h3>
+                <h3>Key design questions</h3>
                 <ul>
                     <li>How can abstract emotions be translated into intuitive navigation?</li>
                     <li>How can music and film coexist within one discovery experience?</li>
@@ -84,180 +104,95 @@
         </div>
     </section>
 
+    <!-- Process Section -->
     <section class="case-section">
         <div class="container-narrow">
             <div class="case-content" data-scroll>
                 <h2>Process</h2>
 
-                <h3>1. Problem Exploration</h3>
-                <p>I analyzed how current platforms structure media discovery and identified gaps in emotion-based navigation.</p>
-
-                <h3>2. Mood Taxonomy Development</h3>
-                <p>A mood classification model was created using two axes:</p>
-                <ul>
-                    <li>Emotional tone</li>
-                    <li>Energy level</li>
-                </ul>
+                <h3>Problem Exploration</h3>
                 <p>
-                    This allowed emotions to be structured into categories such as calm, nostalgic, intense, and euphoric, creating a scalable tagging system for media.
+                    I explored how current streaming platforms structure discovery and identified a gap between how users feel and how platforms ask them to search. Many people know the mood they want, but not necessarily the title, genre, or artist.
                 </p>
 
-                <h3>3. Concept Exploration</h3>
-                <p>Three design directions were explored:</p>
-                <div class="highlight-box">
-                    <p><strong>Cinematic Minimal</strong><br>Premium streaming aesthetic</p>
-                </div>
-                <div class="highlight-box">
-                    <p><strong>Playful Emotional</strong><br>Color-coded mood interface</p>
-                </div>
-                <div class="highlight-box">
-                    <p><strong>Experimental Immersive</strong><br>Spatial mood exploration</p>
-                </div>
+                <h3>Mood Taxonomy Development</h3>
                 <p>
-                    The experimental immersive direction was chosen because it best supported the concept of emotional discovery.
+                    To make emotional browsing more usable, I created a mood taxonomy based on emotional tone and energy level. This made it possible to organise moods such as calm, nostalgic, euphoric, and intense into a scalable system for both music and film discovery.
                 </p>
 
-                <h3>4. System Design</h3>
-                <p>A design system was created to support scalability, including:</p>
-                <ul>
-                    <li>Emotion-driven color tokens</li>
-                    <li>Atmospheric background layers</li>
-                    <li>Spatial layout principles</li>
-                    <li>Reusable media components</li>
-                </ul>
-
-                <h3>5. Interface Design</h3>
-                <p>Key product screens were designed including:</p>
-                <ul>
-                    <li>Landing experience</li>
-                    <li>Mood selection interface</li>
-                    <li>Discovery results</li>
-                    <li>Media player</li>
-                    <li>Personal mood library</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <section class="case-section">
-        <div class="container-narrow">
-            <div class="case-content" data-scroll>
-                <h2>Design Decisions</h2>
-
-                <h3>Emotion as Navigation</h3>
+                <h3>Concept Exploration</h3>
                 <p>
-                    Rather than traditional categories, moods act as the primary entry point. Users explore emotions first and content second. This reframes discovery from searching for content to choosing an experience.
+                    I explored multiple visual directions, ranging from more minimal streaming aesthetics to more expressive and immersive interfaces. The final direction focused on a spatial, atmospheric approach that supported emotional exploration while still keeping the experience usable and structured.
                 </p>
 
-                <h3>Spatial Mood Exploration</h3>
+                <h3>System Design</h3>
                 <p>
-                    Instead of static menus, the interface presents moods within a spatial environment that encourages exploration and curiosity. This design supports the idea that emotional states are fluid rather than fixed categories.
+                    A design system was built to support the concept across screens and states. This included emotion-led colour tokens, layered backgrounds, reusable cards, and layout principles that support both immersion and readability.
                 </p>
 
-                <h3>Cross-Media Discovery</h3>
+                <h3>Interface Design</h3>
                 <p>
-                    Music and film are integrated into a single discovery experience. This encourages users to move between media types naturally depending on their emotional context.
-                </p>
-
-                <h3>Atmospheric UI</h3>
-                <p>
-                    The interface uses layered gradients, depth, and motion to create an immersive environment while maintaining strong hierarchy and readability. The goal was to balance visual immersion with usability.
+                    The final concept included a landing experience, mood selection flow, discovery results, and supporting interface states that help users move fluidly between emotional intent and curated content.
                 </p>
             </div>
         </div>
     </section>
 
-    <section class="case-section">
-        <div class="container-narrow">
-            <div class="case-content" data-scroll>
-                <h2>Compassionate Insights</h2>
-                <p>During exploration, several human-centered insights emerged:</p>
-
-                <div class="highlight-box">
-                    <p><strong>People rarely search for media with perfect clarity</strong><br>
-                    Users often begin with a vague emotional state rather than a specific title or artist.</p>
-                </div>
-
-                <div class="highlight-box">
-                    <p><strong>Emotions are fluid</strong><br>
-                    A user's mood can shift during a session, so discovery should feel exploratory rather than transactional.</p>
-                </div>
-
-                <div class="highlight-box">
-                    <p><strong>Overly complex interfaces increase cognitive load</strong><br>
-                    While the concept encourages immersion, clarity and simplicity remain essential for usability.</p>
-                </div>
-
-                <p>
-                    These insights guided the balance between experimental design and clear product structure.
-                </p>
-            </div>
-        </div>
-    </section>
-
+    <!-- Visual Design Section -->
     <section class="case-section">
         <div class="container">
-            <h2 class="cs-main-title" data-scroll>Visual Design</h2>
-
-            <div class="case-content" data-scroll>
-                <h3 class="cs-subtitle">Design System</h3>
-                <div class="scrollable-design-system">
-                    <div class="scrollable-design-system-inner">
-                        <img src="img/Moodstream/design-system.png" alt="MoodStream design system" class="scrollable-design-system-img lightbox-trigger">
-                    </div>
-                </div>
-                <p class="scrollable-mockup-hint">Scroll to explore the full design system ↕</p>
-            </div>
+            <h2 class="section-title" data-scroll>Visual Design</h2>
 
             <div class="case-content" data-scroll>
                 <h3 class="cs-subtitle">Landing Experience</h3>
-                <img src="img/Moodstream/hi-2.jpg" alt="Landing page overview" class="case-image lightbox-trigger">
-                <p class="case-image-caption">Immersive landing page introducing the emotion-driven experience.</p>
+                <img src="img/Moodstream/hi-2.jpg" alt="MoodStream landing page" class="case-image lightbox-trigger">
+                <p class="case-image-caption">
+                    Immersive landing page introducing the emotion-driven discovery experience.
+                </p>
             </div>
 
             <div class="case-content" data-scroll>
-                <h3 class="cs-subtitle">Interactive Walkthrough</h3>
-                <img src="img/Moodstream/moodstream-scroll.gif" alt="Interactive page transitions" class="case-image lightbox-trigger">
-                <p class="case-image-caption">Animated walkthrough showing navigation flow through key screens.</p>
+                <h3 class="cs-subtitle">Mood Navigation</h3>
+                <img src="img/Moodstream/hi-3.jpg" alt="MoodStream mood selection interface" class="case-image lightbox-trigger">
+                <p class="case-image-caption">
+                    Users explore media through emotional states rather than traditional genres or categories.
+                </p>
             </div>
 
             <div class="case-content" data-scroll>
-                <h3 class="cs-subtitle">Mood Selection Interface</h3>
-                <img src="img/Moodstream/hi-3.jpg" alt="Choose Your Dimension interface" class="case-image lightbox-trigger">
-                <p class="case-image-caption">2D emotional mapping interface where users navigate through mood dimensions.</p>
+                <h3 class="cs-subtitle">Discovery View</h3>
+                <img src="img/Moodstream/hi-1.jpg" alt="MoodStream content discovery view" class="case-image lightbox-trigger">
+                <p class="case-image-caption">
+                    Curated media recommendations based on selected mood and emotional direction.
+                </p>
             </div>
 
             <div class="case-content" data-scroll>
-                <h3 class="cs-subtitle">Content Discovery</h3>
-                <img src="img/Moodstream/hi-1.jpg" alt="Nostalgic content recommendations" class="case-image lightbox-trigger">
-                <p class="case-image-caption">Curated media recommendations based on selected emotional state.</p>
+                <h3 class="cs-subtitle">Design System</h3>
+                <img src="img/Moodstream/design-system.png" alt="MoodStream design system" class="case-image lightbox-trigger">
+                <p class="case-image-caption">
+                    Colour tokens, atmospheric layers, and reusable components supporting emotion-driven navigation.
+                </p>
             </div>
         </div>
     </section>
 
+    <!-- Outcome Section -->
     <section class="case-section">
         <div class="container-narrow">
             <div class="case-content" data-scroll>
                 <h2>Outcome</h2>
                 <p>
-                    MoodStream demonstrates how emotional intent can reshape media discovery by replacing traditional search-driven interfaces with a more intuitive and immersive experience.
+                    MoodStream demonstrates how emotional intent can reshape media discovery by replacing traditional search-driven patterns with a more intuitive and immersive experience.
                 </p>
-
-                <h3>The final concept includes:</h3>
-                <ul>
-                    <li>A scalable mood taxonomy system</li>
-                    <li>An experimental spatial browsing interface</li>
-                    <li>A reusable design system for immersive media products</li>
-                    <li>Integrated discovery across music and film</li>
-                </ul>
-
                 <p>
-                    The project highlights how product design can translate abstract human experiences into structured, usable digital systems.
+                    The final concept presents a structured yet expressive platform where users can browse content through feeling rather than function alone. It highlights how abstract emotional experiences can be translated into a usable digital system through thoughtful information architecture, visual design, and interaction design.
                 </p>
             </div>
         </div>
     </section>
 
+    <!-- Next Project -->
     <section class="nav-links-section">
         <div class="container">
             <div class="nav-links">
@@ -269,6 +204,7 @@
         </div>
     </section>
 
+    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
@@ -287,6 +223,7 @@
         </div>
     </footer>
 
+    <!-- Lightbox -->
     <div id="lightbox" class="lightbox">
         <button class="lightbox-close">&times;</button>
         <div class="lightbox-content">
