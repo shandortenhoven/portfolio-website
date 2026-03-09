@@ -116,3 +116,42 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         }
     });
 });
+
+// Page fade transitions + stagger cards
+document.addEventListener("DOMContentLoaded", () => {
+    document.body.classList.add("page-loaded");
+
+    const links = document.querySelectorAll('a[href]');
+
+    links.forEach(link => {
+        const url = link.getAttribute("href");
+
+        if (
+            !url ||
+            url.startsWith("#") ||
+            url.startsWith("mailto") ||
+            url.startsWith("http") ||
+            link.target === "_blank"
+        ) {
+            return;
+        }
+
+        link.addEventListener("click", e => {
+            e.preventDefault();
+
+            document.body.classList.remove("page-loaded");
+            document.body.classList.add("page-exit");
+
+            setTimeout(() => {
+                window.location.href = url;
+            }, 350);
+        });
+    });
+
+    const cards = document.querySelectorAll(".work-card");
+    cards.forEach((card, index) => {
+        setTimeout(() => {
+            card.classList.add("visible");
+        }, index * 180);
+    });
+});
