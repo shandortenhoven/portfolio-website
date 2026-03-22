@@ -849,29 +849,24 @@ body.page-exit {
     max-width: 56rem;
 }
 
-/* Stronger fix for MoodStream landing image white strip */
-.case-image[src*="Moodstream/hi-2.jpg"] {
-    width: calc(100% + 140px);
-    max-width: none;
-    height: clamp(260px, 62vw, 760px);
-    object-fit: cover;
-    object-position: left center;
-    display: block;
-    margin-right: -140px;
-}
-
-.highlight-box {
-    background: linear-gradient(135deg, rgba(18, 33, 68, 0.56), rgba(10, 19, 42, 0.48));
+/* MoodStream hi-2 crop fix */
+.moodstream-image-crop {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 1.25rem;
     border: 1px solid var(--color-border);
-    border-left: 3px solid var(--color-accent);
-    border-radius: 1rem;
-    padding: 1rem 1.1rem 1rem 1rem;
-    margin: 1rem 0;
+    background: rgba(15, 23, 42, 0.35);
 }
 
-.highlight-box p {
-    margin-bottom: 0;
-    color: var(--color-text-primary);
+.case-image-moodstream {
+    width: calc(100% + 180px);
+    max-width: none;
+    height: auto;
+    display: block;
+    margin-right: -180px;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
 }
 
 /* KUBO GIF replacement */
@@ -879,34 +874,32 @@ body.page-exit {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
 }
 
 .mockup-gif-frame {
     width: 320px;
     height: 640px;
     border-radius: 2.25rem;
-    background: rgba(15, 23, 42, 0.45);
-    border: 1px solid var(--color-border);
+    background: transparent;
+    border: none;
     overflow: hidden;
-    box-shadow: var(--shadow-soft);
-    padding: 0;
-    clip-path: inset(0 round 2.25rem);
+    box-shadow: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
 }
 
 .mockup-gif {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
     object-position: center;
     display: block;
     cursor: pointer;
     border-radius: 2.25rem;
-    clip-path: inset(0 round 2.25rem);
-}
-
-/* Optional extra clip for image descendants in case browsers ignore gif rounding */
-.mockup-gif-frame img {
-    border-radius: 2.25rem;
+    background: transparent;
 }
 
 /* Existing scrollable styles kept for other pages */
@@ -1264,6 +1257,7 @@ body.page-exit {
 
     .case-hero-image,
     .case-image,
+    .moodstream-image-crop,
     .personal-note-card,
     .availability-card,
     .home-new-about-card {
@@ -1300,23 +1294,13 @@ body.page-exit {
         right: -0.5rem;
     }
 
-    .case-image[src*="Moodstream/hi-2.jpg"] {
-        width: calc(100% + 110px);
-        height: clamp(220px, 70vw, 520px);
-        margin-right: -110px;
-        object-position: left center;
+    .case-image-moodstream {
+        width: calc(100% + 120px);
+        margin-right: -120px;
     }
 
     .mockup-gif-frame {
         width: min(320px, 100%);
         height: 600px;
-        border-radius: 2rem;
-        clip-path: inset(0 round 2rem);
-    }
-
-    .mockup-gif,
-    .mockup-gif-frame img {
-        border-radius: 2rem;
-        clip-path: inset(0 round 2rem);
     }
 }
