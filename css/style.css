@@ -869,7 +869,31 @@ body.page-exit {
     background: transparent;
 }
 
-/* KUBO GIF replacement */
+/* KUBO centered gif block */
+.case-content-centered {
+    text-align: center;
+}
+
+.case-content-centered .cs-subtitle {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+}
+
+.case-content-centered .mockup-gif-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.case-content-centered .case-image-caption {
+    margin-top: 1.25rem;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    max-width: 34rem;
+}
+
 .mockup-gif-container {
     display: flex;
     justify-content: center;
@@ -880,15 +904,13 @@ body.page-exit {
 .mockup-gif-frame {
     width: 320px;
     height: 640px;
-    border-radius: 2.25rem;
-    background: transparent;
-    border: none;
+    margin: 0 auto;
+    border-radius: 2rem;
     overflow: hidden;
-    box-shadow: none;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 auto;
+    background: transparent;
 }
 
 .mockup-gif {
@@ -898,7 +920,6 @@ body.page-exit {
     object-position: center;
     display: block;
     cursor: pointer;
-    border-radius: 2.25rem;
     background: transparent;
 }
 
@@ -975,6 +996,20 @@ body.page-exit {
 .scrollable-mockup-inner::-webkit-scrollbar-track,
 .scrollable-design-system-inner::-webkit-scrollbar-track {
     background: transparent;
+}
+
+.highlight-box {
+    background: linear-gradient(135deg, rgba(18, 33, 68, 0.56), rgba(10, 19, 42, 0.48));
+    border: 1px solid var(--color-border);
+    border-left: 3px solid var(--color-accent);
+    border-radius: 1rem;
+    padding: 1rem 1.1rem 1rem 1rem;
+    margin: 1rem 0;
+}
+
+.highlight-box p {
+    margin-bottom: 0;
+    color: var(--color-text-primary);
 }
 
 .nav-links-section {
