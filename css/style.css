@@ -884,21 +884,32 @@ body.page-exit {
 .mockup-gif-frame {
     width: 320px;
     height: 640px;
-    border-radius: 1.5rem;
+    border-radius: 2.25rem;
     background: rgba(15, 23, 42, 0.45);
     border: 1px solid var(--color-border);
     overflow: hidden;
     box-shadow: var(--shadow-soft);
+    padding: 0;
+    clip-path: inset(0 round 2.25rem);
 }
 
 .mockup-gif {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center;
     display: block;
     cursor: pointer;
+    border-radius: 2.25rem;
+    clip-path: inset(0 round 2.25rem);
 }
 
+/* Optional extra clip for image descendants in case browsers ignore gif rounding */
+.mockup-gif-frame img {
+    border-radius: 2.25rem;
+}
+
+/* Existing scrollable styles kept for other pages */
 .scrollable-mockup-container {
     display: flex;
     flex-direction: column;
@@ -1299,5 +1310,13 @@ body.page-exit {
     .mockup-gif-frame {
         width: min(320px, 100%);
         height: 600px;
+        border-radius: 2rem;
+        clip-path: inset(0 round 2rem);
+    }
+
+    .mockup-gif,
+    .mockup-gif-frame img {
+        border-radius: 2rem;
+        clip-path: inset(0 round 2rem);
     }
 }
