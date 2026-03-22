@@ -849,6 +849,24 @@ body.page-exit {
     max-width: 56rem;
 }
 
+/* Specific fix for MoodStream landing image with white strip */
+.case-image[src*="Moodstream/hi-2.jpg"] {
+    width: 100%;
+    height: clamp(260px, 62vw, 760px);
+    object-fit: cover;
+    object-position: left center;
+    display: block;
+    overflow: hidden;
+}
+
+/* Make the crop slightly stronger on smaller screens */
+@media (max-width: 768px) {
+    .case-image[src*="Moodstream/hi-2.jpg"] {
+        height: clamp(220px, 70vw, 520px);
+        object-position: left center;
+    }
+}
+
 .highlight-box {
     background: linear-gradient(135deg, rgba(18, 33, 68, 0.56), rgba(10, 19, 42, 0.48));
     border: 1px solid var(--color-border);
