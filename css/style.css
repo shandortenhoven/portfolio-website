@@ -484,7 +484,17 @@ footer a.link:hover { background: var(--accent); color: var(--accent-text); }
   border-radius: 4px;
   overflow: hidden;
 }
-.case-image img { width: 100%; display: block; }
+.case-image img {
+  width: 100%;
+  display: block;
+  max-height: 80vh;
+  object-fit: contain;
+  object-position: top;
+  background: var(--surface);
+}
+.case-image.tall img {
+  max-height: 90vh;
+}
 .case-image .caption {
   font-family: 'JetBrains Mono', monospace;
   font-size: 11px;
@@ -502,6 +512,8 @@ footer a.link:hover { background: var(--accent); color: var(--accent-text); }
   margin: 40px 0;
 }
 .image-grid.three { grid-template-columns: repeat(3, 1fr); }
+.image-grid .case-image { margin: 0; }
+.image-grid .case-image img { max-height: 60vh; }
 
 .callout {
   background: var(--accent);
