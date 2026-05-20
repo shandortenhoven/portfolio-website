@@ -43,3 +43,63 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 });
+
+/* ========================================
+   LIGHTBOX
+   Click case-images to view at full size
+   ======================================== */
+document.addEventListener('DOMContentLoaded', function () {
+  // Create lightbox structure once
+  const lightbox = document.createElement('div');
+  lightbox.className = 'lightbox';
+  lightbox.innerHTML = `
+    <button class="lightbox-close" aria-label="Close">×</button>
+    <div class="lightbox-inner">
+      <img class="lightbox-img" alt="">
+      <div class="lightbox-caption"></div>
+    </div>
+  `;
+  document.body.appendChild(lightbox);
+
+  const lightboxImg = lightbox.querySelector('.lightbox-img');
+  const lightboxCaption = lightbox.querySelector('.lightbox-caption');
+  const lightboxClose = lightbox.querySelector('.lightbox-close');
+
+  function openLightbox(src, alt, caption) {
+    lightboxImg.src = src;
+    lightboxImg.alt = alt || '';
+    lightboxCaption.textContent = caption || '';
+    lightbox.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeLightbox() {
+    lightbox.classList.remove('active');
+    document.body.style.overflow = '';
+    setTimeout(() => { lightboxImg.src = ''; }, 200);
+  }
+
+  // Wire up every case-image
+  document.querySelectorAll('.case-image').forEach(function (frame) {
+    frame.addEventListener('click', function (e) {
+      // Don't open if clicking inside caption text only
+      const img = frame.querySelector('img');
+      if (!img) return;
+      const captionEl = frame.querySelector('.caption');
+      const captionText = captionEl ? captionEl.textContent.replace(/View full\s*→\s*$/i, '').trim() : '';
+      openLightbox(img.src, img.alt, captionText);
+    });
+  });
+
+  // Close handlers
+  lightboxClose.addEventListener('click', function (e) {
+    e.stopPropagation();
+    closeLightbox();
+  });
+  lightbox.addEventListener('click', function (e) {
+    if (e.target === lightbox) closeLightbox();
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && lightbox.classList.contains('active')) closeLightbox();
+  });
+});
