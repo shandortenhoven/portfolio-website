@@ -1,105 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - Shandor ten Hoven</title>
-    <link rel="stylesheet" href="css/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact · Shandor ten Hoven</title>
+<meta name="description" content="Get in touch. Email, LinkedIn, or just say hi.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<script src="js/scripts.js" defer></script>
 </head>
-<body class="page-transition">
-    <header class="header">
-        <div class="container">
-            <nav class="nav">
-                <a href="index.html" class="logo">STH</a>
-                <button class="menu-toggle" aria-label="Toggle menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-                <ul class="nav-menu">
-                    <li><a href="index.html">Work</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html" class="active">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+<body>
 
-    <section class="contact-page-hero">
-        <div class="container">
-            <div class="contact-page-hero-content fade-in">
-                <h1 class="contact-page-title">Let's connect</h1>
-                <p class="contact-page-description">
-                    I'm always interested in hearing about new projects, creative collaboration, or opportunities to create meaningful digital experiences together.
-                </p>
-            </div>
-        </div>
-    </section>
+<div class="topbar">
+  <div class="live">Available now</div>
+  <div>Amsterdam · CET</div>
+  <div>EN · NL</div>
+  <div>Hybrid / remote / on-site</div>
+</div>
 
-    <section class="contact-options-section">
-        <div class="container-narrow">
-            <div class="contact-options-grid">
-                <a href="mailto:shandortenhoven@gmail.com" class="contact-option-card" data-scroll>
-                    <div class="contact-option-icon">
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <rect x="2" y="4" width="20" height="16" rx="2"></rect>
-                            <path d="M22 7L13.03 12.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
-                        </svg>
-                    </div>
-                    <h2 class="contact-option-title">Email</h2>
-                    <p class="contact-option-description">
-                        The best way to reach me for detailed conversations or project inquiries.
-                    </p>
-                    <span class="contact-option-link">shandortenhoven@gmail.com</span>
-                </a>
+<nav class="main-nav">
+  <a href="index.html" class="logo">SHANDOR<span class="dot-mark"></span></a>
+  <ul>
+    <li><a href="index.html">01 Work</a></li>
+    <li><a href="about.html">02 About</a></li>
+    <li><a href="contact.html" class="active">03 Contact</a></li>
+    <li>
+      <button class="theme-toggle" aria-label="Toggle dark mode">
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="4"/>
+          <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>
+        </svg>
+      </button>
+    </li>
+  </ul>
+</nav>
 
-                <a href="https://www.linkedin.com/in/shandortenhoven" target="_blank" rel="noopener noreferrer" class="contact-option-card" data-scroll>
-                    <div class="contact-option-icon">
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
-                            <rect x="2" y="9" width="4" height="12"></rect>
-                            <circle cx="4" cy="4" r="2"></circle>
-                        </svg>
-                    </div>
-                    <h2 class="contact-option-title">LinkedIn</h2>
-                    <p class="contact-option-description">
-                        Connect with me professionally and see my full work history.
-                    </p>
-                    <span class="contact-option-link">linkedin.com/in/shandortenhoven →</span>
-                </a>
-            </div>
-        </div>
-    </section>
+<section class="contact-hero">
+  <h1>Say hi<span class="accent-mark"></span></h1>
+  <p style="font-size: clamp(20px, 2.2vw, 26px); max-width: 720px; line-height: 1.4; color: var(--ink);">
+    Open to product and UX/UI design roles. Hybrid, on-site, or remote. Also happy to chat about a project, a referral, or just design in general.
+  </p>
+</section>
 
-    <section class="availability-section">
-        <div class="container-narrow">
-            <div class="availability-card" data-scroll>
-                <h2 class="availability-title">Currently open to opportunities</h2>
-                <p class="availability-description">
-                    I'm exploring full-time product design roles where I can bring empathy-driven design thinking to meaningful problems. If you're building something interesting, I'd love to hear about it.
-                </p>
-            </div>
-        </div>
-    </section>
+<section class="contact-grid">
 
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-left">
-                    <h3 class="footer-title">Let's work together</h3>
-                    <p class="footer-text">I'm exploring full-time product design roles in Amsterdam and beyond.</p>
-                </div>
-                <div class="footer-right">
-                    <a href="mailto:shandortenhoven@gmail.com" class="footer-link">shandortenhoven@gmail.com</a>
-                    <a href="https://www.linkedin.com/in/shandortenhoven" target="_blank" rel="noopener noreferrer" class="footer-link">LinkedIn</a>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 Shandor ten Hoven. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
+  <div class="contact-row">
+    <div class="label">Email</div>
+    <div class="value"><a href="mailto:shandortenhoven@gmail.com">shandortenhoven@gmail.com</a></div>
+    <div class="arrow">→</div>
+  </div>
 
-    <script src="js/scripts.js"></script>
+  <div class="contact-row">
+    <div class="label">LinkedIn</div>
+    <div class="value"><a href="https://www.linkedin.com/in/shandortenhoven" target="_blank" rel="noopener">linkedin.com/in/shandortenhoven</a></div>
+    <div class="arrow">↗</div>
+  </div>
+
+  <div class="contact-row">
+    <div class="label">GitHub</div>
+    <div class="value"><a href="https://github.com/shandortenhoven" target="_blank" rel="noopener">github.com/shandortenhoven</a></div>
+    <div class="arrow">↗</div>
+  </div>
+
+  <div class="contact-row">
+    <div class="label">Phone</div>
+    <div class="value"><a href="tel:+31619678738">+31 6 196 78 738</a></div>
+    <div class="arrow">→</div>
+  </div>
+
+  <div class="contact-row">
+    <div class="label">Based in</div>
+    <div class="value">Amsterdam, Netherlands</div>
+    <div class="arrow"></div>
+  </div>
+
+  <div class="contact-row">
+    <div class="label">Languages</div>
+    <div class="value">Dutch · English</div>
+    <div class="arrow"></div>
+  </div>
+
+  <div class="contact-row">
+    <div class="label">Response time</div>
+    <div class="value">Usually within 24 hours</div>
+    <div class="arrow"></div>
+  </div>
+
+</section>
+
+<footer class="site-footer" style="margin-top: 80px;">
+  <div class="grid" style="border-top: 1px solid var(--ink); padding-top: 32px;">
+    <div>
+      <div class="label">Email</div>
+      <a href="mailto:shandortenhoven@gmail.com" class="link">shandortenhoven@gmail.com</a>
+    </div>
+    <div>
+      <div class="label">Network</div>
+      <a href="https://www.linkedin.com/in/shandortenhoven" class="link">LinkedIn ↗</a>
+    </div>
+    <div>
+      <div class="label">Location</div>
+      Amsterdam, NL
+    </div>
+    <div>
+      <div class="label">© 2026</div>
+      Shandor ten Hoven
+    </div>
+  </div>
+</footer>
+
 </body>
 </html>

@@ -1,211 +1,230 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Expert - Shandor ten Hoven</title>
-    <link rel="stylesheet" href="css/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Expert · Shandor ten Hoven</title>
+<meta name="description" content="Expert: a platform connecting people with professionals for real-time advice. UX research, journey mapping, wireframes, and usability testing.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<script src="js/scripts.js" defer></script>
 </head>
-<body class="page-transition">
-    <header class="header">
-        <div class="container">
-            <nav class="nav">
-                <a href="index.html" class="logo">STH</a>
-                <button class="menu-toggle" aria-label="Toggle menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-                <ul class="nav-menu">
-                    <li><a href="index.html">Work</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+<body>
 
-    <section class="case-hero">
-        <div class="container">
-            <div class="case-hero-content fade-in">
-                <h1 class="case-title">Expert</h1>
-                <p class="case-subtitle">
-                    Connecting people with experienced professionals for focused advice.
-                </p>
-            </div>
-            <div class="case-hero-image">
-                <img src="img/projects/project-expert-lg.png" alt="Expert platform hero">
-            </div>
-        </div>
-    </section>
+<div class="topbar">
+  <div class="live">Available now</div>
+  <div>Amsterdam · CET</div>
+  <div>EN · NL</div>
+  <div>Hybrid / remote / on-site</div>
+</div>
 
-    <section class="case-section">
-        <div class="container-narrow">
-            <div class="case-content" data-scroll>
-                <h2>Overview</h2>
-                <p>
-                    Expert is a responsive web app designed to connect people with experienced professionals for quick, focused advice sessions. Users can browse experts across different fields, filter by expertise or availability, and book short consultations directly through the platform. The goal is to make professional insight more accessible by creating a simple, trustworthy environment where users can quickly find the right expert and schedule a conversation.
-                </p>
-            </div>
-        </div>
-    </section>
+<nav class="main-nav">
+  <a href="index.html" class="logo">SHANDOR<span class="dot-mark"></span></a>
+  <ul>
+    <li><a href="index.html" class="active">01 Work</a></li>
+    <li><a href="about.html">02 About</a></li>
+    <li><a href="contact.html">03 Contact</a></li>
+    <li>
+      <button class="theme-toggle" aria-label="Toggle dark mode">
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="4"/>
+          <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>
+        </svg>
+      </button>
+    </li>
+  </ul>
+</nav>
 
-    <section class="case-section">
-        <div class="container-narrow">
-            <div class="case-content" data-scroll>
-                <h2>Challenge</h2>
-                <p>
-                    Many people struggle to find reliable guidance when making career decisions, working on projects, or navigating unfamiliar situations. Existing platforms often feel overwhelming, unclear, or require long-term commitments. The challenge was to design an experience that makes discovering and booking expert advice feel quick, transparent, and approachable, while still maintaining credibility and professionalism.
-                </p>
-            </div>
-        </div>
-    </section>
+<section class="case-hero">
+  <div class="kicker">04 / 04 · UX · Product Design</div>
+  <h1><span class="accent-block"><span>Expert</span></span></h1>
+</section>
 
-    <section class="case-section">
-        <div class="container">
-            <h2 class="section-title" data-scroll>Process</h2>
+<section class="case-meta">
+  <div class="item">
+    <div class="label">Type</div>
+    <div class="val">Concept project</div>
+  </div>
+  <div class="item">
+    <div class="label">Year</div>
+    <div class="val">2025</div>
+  </div>
+  <div class="item">
+    <div class="label">Role</div>
+    <div class="val">UX research and design</div>
+  </div>
+  <div class="item">
+    <div class="label">Scope</div>
+    <div class="val">Research to high-fi UI</div>
+  </div>
+</section>
 
-            <div class="case-image-section" data-scroll>
-                <img src="img/Expert/affinityMap.png" alt="Affinity map showing key design opportunities" class="case-image lightbox-trigger">
-                <p class="case-image-caption">Affinity map identifying key themes from user research.</p>
-            </div>
+<section class="case-section">
+  <span class="sec-label">[ 01 ] Brief</span>
+  <div class="sec-content">
+    <h2>People don't always want a course. Sometimes they want a person, right now.</h2>
+    <p>Expert is a concept for an on-demand advice platform. Connecting people with verified professionals for short, focused sessions. The problem space: when you have a specific question (legal, design, career, health), online courses are too slow, AI is too generic, and your network is hit-or-miss. Expert tries to solve for the in-between.</p>
+    <p>This was a research-led project from the ground up. I wanted to design something that started from real user behaviour, not from a feature wishlist.</p>
+  </div>
+</section>
 
-            <div class="case-image-section" data-scroll>
-                <h3>User Personas &amp; Journey Maps</h3>
-                <img src="img/Expert/personaDaniel.png" alt="User journey map for Daniel" class="case-image lightbox-trigger">
-                <img src="img/Expert/personaEmma.png" alt="User journey map for Emma" class="case-image lightbox-trigger" style="margin-top: 2rem;">
-                <p class="case-image-caption">Journey maps for key personas revealing pain points and opportunities.</p>
-            </div>
-
-            <div class="case-image-section" data-scroll>
-                <h3>Usability Testing Insights</h3>
-                <img src="img/Expert/usabilityTesting.png" alt="Usability testing findings" class="case-image lightbox-trigger">
-                <p class="case-image-caption">Testing findings from 6 participants, identifying errors, observations, and sentiment.</p>
-            </div>
-
-            <div class="case-image-section" data-scroll>
-                <h3>User Flows</h3>
-                <div class="case-two-column">
-                    <div>
-                        <img src="img/Expert/userFlowOnboarding.png" alt="User flow - login" class="case-image lightbox-trigger">
-                        <p class="case-image-caption">User Flow 1: Secure login &amp; profile creation.</p>
-                    </div>
-                    <div>
-                        <img src="img/Expert/userFlowPostSession.png" alt="User flow - post-session review" class="case-image lightbox-trigger">
-                        <p class="case-image-caption">User Flow 2: Post-session review &amp; next steps.</p>
-                    </div>
-                </div>
-                <img src="img/Expert/userFlowBooking.png" alt="User flow - browsing and booking" class="case-image lightbox-trigger" style="margin-top: 2rem;">
-                <p class="case-image-caption">User Flow 3: Browsing experts and booking sessions.</p>
-            </div>
-
-            <div class="case-image-section" data-scroll>
-                <img src="img/Expert/lowFidelityWireframes.png" alt="Low-fidelity wireframes" class="case-image lightbox-trigger">
-                <p class="case-image-caption">Early wireframes exploring layout and information hierarchy.</p>
-            </div>
-        </div>
-    </section>
-
-    <section class="case-section">
-        <div class="container">
-            <h2 class="section-title" data-scroll>Design Decisions</h2>
-
-            <div class="case-content" data-scroll>
-                <h3>Clear navigation and hierarchy</h3>
-                <p>
-                    Through user testing, I discovered that unclear close actions created confusion. By reducing typography to match the interface and adding a prominent "Return to dashboard" button, I created a homogeneous, clear way to close screens while maintaining hierarchy.
-                </p>
-                <img src="img/Expert/afterSessionScreen.png" alt="Session complete design iterations" class="case-image lightbox-trigger">
-            </div>
-
-            <div class="case-content" data-scroll>
-                <h3>Visual clarity for availability</h3>
-                <p>
-                    Initial designs didn't clearly communicate expert availability. By increasing opacity contrast and adjusting hierarchy, the "Not available" state became immediately apparent, reducing user confusion.
-                </p>
-                <img src="img/Expert/availabilityComparison.png" alt="Expert availability iterations" class="case-image lightbox-trigger">
-            </div>
-
-            <div class="case-content" data-scroll>
-                <h3>Engaging the wait</h3>
-                <p>
-                    To enhance user engagement and reduce perceived wait time, I integrated a circular indeterminate progress indicator with motivational phrases that slide in dynamically, creating a more personal and positive loading experience.
-                </p>
-                <img src="img/Expert/loadingStateIterations.png" alt="Loading screen iterations" class="case-image lightbox-trigger">
-            </div>
-
-            <div class="case-content" data-scroll>
-                <h3>Peer Feedback Integration</h3>
-                <p>
-                    Based on peer feedback and usability testing, I refined several interface elements to improve clarity and user confidence throughout the booking and consultation flow.
-                </p>
-                <img src="img/Expert/peerFeedback.png" alt="Peer feedback summary" class="case-image lightbox-trigger">
-            </div>
-        </div>
-    </section>
-
-    <section class="case-section">
-        <div class="container-narrow">
-            <div class="case-content" data-scroll>
-                <h2>Outcome</h2>
-                <p>
-                    The final concept is a clean, responsive platform that allows users to easily browse experts, explore profiles, and book sessions in just a few steps. Clear filters, simple booking flows, and a calm visual design help reduce friction and support quick decision-making. Usability testing helped refine the interface, improving navigation clarity and call-to-action hierarchy, resulting in a more intuitive experience for both first-time and returning users.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <section class="case-section">
-        <div class="container">
-            <h2 class="section-title" data-scroll>Gallery</h2>
-            <div class="case-two-column">
-                <img src="img/Expert/afterSessionScreen.png" alt="Session complete screen" class="case-image lightbox-trigger" data-scroll>
-                <img src="img/Expert/availabilityComparison.png" alt="Expert availability design" class="case-image lightbox-trigger" data-scroll>
-                <img src="img/Expert/loadingStateIterations.png" alt="Loading screen iterations" class="case-image lightbox-trigger" data-scroll>
-                <img src="img/Expert/highFidelityWireframes.png" alt="High-fidelity wireframes" class="case-image lightbox-trigger" data-scroll>
-                <img src="img/Expert/midFidelityWireframes.png" alt="Mid-fidelity wireframes" class="case-image lightbox-trigger" data-scroll>
-                <img src="img/Expert/lowFidelityWireframes.png" alt="Low-fidelity wireframes" class="case-image lightbox-trigger" data-scroll>
-            </div>
-            <p class="case-image-caption">Click any image to view in full size.</p>
-        </div>
-    </section>
-
-    <section class="nav-links-section">
-        <div class="container">
-            <div class="nav-links">
-                <a href="kubo.html" class="nav-link next">
-                    <span class="nav-link-label">Next Project</span>
-                    <span class="nav-link-title">Kubo</span>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-left">
-                    <h3 class="footer-title">Let's work together</h3>
-                    <p class="footer-text">I'm exploring full-time product design roles in Amsterdam and beyond.</p>
-                </div>
-                <div class="footer-right">
-                    <a href="mailto:shandortenhoven@gmail.com" class="footer-link">shandortenhoven@gmail.com</a>
-                    <a href="https://www.linkedin.com/in/shandortenhoven" target="_blank" rel="noopener noreferrer" class="footer-link">LinkedIn</a>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 Shandor ten Hoven. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
-
-    <div id="lightbox" class="lightbox">
-        <button class="lightbox-close">&times;</button>
-        <div class="lightbox-content">
-            <img src="#" alt="Lightbox image" id="lightbox-img" class="lightbox-image">
-        </div>
+<section class="case-section">
+  <span class="sec-label">[ 02 ] Research</span>
+  <div class="sec-content">
+    <h2>Interviews, affinity mapping, and finding the real friction.</h2>
+    <p>I ran user interviews to understand how people currently look for expert advice and where the gaps are. Clustering the findings into an affinity map surfaced two consistent pain points: <strong>trust before booking</strong> (how do I know this person is the right fit?) and <strong>availability that respects my schedule</strong>, not theirs.</p>
+    <div class="case-image">
+      <img src="img/Expert/affinityMap.png" alt="Affinity mapping of user interview insights" loading="lazy">
+      <div class="caption">Affinity map · interview synthesis</div>
     </div>
+    <p>Those two themes became the design's north stars. Every screen had to either build trust or remove friction from scheduling. Anything else was a nice-to-have.</p>
+  </div>
+</section>
 
-    <script src="js/scripts.js"></script>
+<section class="case-section">
+  <span class="sec-label">[ 03 ] Personas</span>
+  <div class="sec-content">
+    <h2>Two users, two very different jobs to be done.</h2>
+    <p>I built two personas from the research. Not as decorative artifacts but as decision-making tools. Daniel needs answers in a hurry and is willing to pay for confidence. Emma is more deliberate and wants to compare options before committing.</p>
+    <div class="image-grid">
+      <div class="case-image">
+        <img src="img/Expert/personaDaniel.png" alt="Persona: Daniel" loading="lazy">
+        <div class="caption">Daniel · the urgent decider</div>
+      </div>
+      <div class="case-image">
+        <img src="img/Expert/personaEmma.png" alt="Persona: Emma" loading="lazy">
+        <div class="caption">Emma · the careful comparer</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="case-section">
+  <span class="sec-label">[ 04 ] Flows</span>
+  <div class="sec-content">
+    <h2>Three flows that had to work without thinking.</h2>
+    <p>I mapped the three flows that mattered most: onboarding, booking, and the post-session loop where trust either compounds or breaks.</p>
+    <div class="case-image">
+      <img src="img/Expert/userFlowOnboarding.png" alt="Onboarding user flow" loading="lazy">
+      <div class="caption">Onboarding flow</div>
+    </div>
+    <div class="case-image">
+      <img src="img/Expert/userFlowBooking.png" alt="Booking user flow" loading="lazy">
+      <div class="caption">Booking flow</div>
+    </div>
+    <div class="case-image">
+      <img src="img/Expert/userFlowPostSession.png" alt="Post-session user flow" loading="lazy">
+      <div class="caption">Post-session flow</div>
+    </div>
+  </div>
+</section>
+
+<section class="case-section">
+  <span class="sec-label">[ 05 ] Wireframes</span>
+  <div class="sec-content">
+    <h2>From low-fidelity sketches to a working interface.</h2>
+    <p>I worked through three fidelity passes (pencil-low, mid, and high). Each round answering specific questions raised by the previous one. The mid-fidelity step was where most of the real product decisions happened.</p>
+    <div class="image-grid">
+      <div class="case-image">
+        <img src="img/Expert/lowFidelityWireframes.png" alt="Low fidelity wireframes" loading="lazy">
+        <div class="caption">Low fidelity</div>
+      </div>
+      <div class="case-image">
+        <img src="img/Expert/midFidelityWireframes.png" alt="Mid fidelity wireframes" loading="lazy">
+        <div class="caption">Mid fidelity</div>
+      </div>
+    </div>
+    <div class="case-image">
+      <img src="img/Expert/highFidelityWireframes.png" alt="High fidelity wireframes" loading="lazy">
+      <div class="caption">High fidelity</div>
+    </div>
+  </div>
+</section>
+
+<section class="case-section">
+  <span class="sec-label">[ 06 ] Detail</span>
+  <div class="sec-content">
+    <h2>Two interface details I'm proud of.</h2>
+    <p>The <strong>availability comparison</strong> screen lets users see expert availability side-by-side instead of clicking through each profile. A small UX gain that addresses one of the loudest research themes. The <strong>after-session screen</strong> closes the loop with a focused review prompt rather than a generic thank-you state.</p>
+    <div class="image-grid">
+      <div class="case-image">
+        <img src="img/Expert/availabilityComparison.png" alt="Availability comparison view" loading="lazy">
+        <div class="caption">Availability comparison</div>
+      </div>
+      <div class="case-image">
+        <img src="img/Expert/afterSessionScreen.png" alt="After session screen" loading="lazy">
+        <div class="caption">After-session state</div>
+      </div>
+    </div>
+    <p>I also iterated on loading states. Small thing, but it sets the tone for the platform. The wait between requesting and receiving advice is the most emotionally loaded moment in the flow.</p>
+    <div class="case-image">
+      <img src="img/Expert/loadingStateIterations.png" alt="Loading state iterations" loading="lazy">
+      <div class="caption">Loading state iterations</div>
+    </div>
+  </div>
+</section>
+
+<section class="case-section">
+  <span class="sec-label">[ 07 ] Testing</span>
+  <div class="sec-content">
+    <h2>Putting it in front of real people.</h2>
+    <p>I ran usability testing with six participants across both personas. The booking flow held up. The onboarding had two friction points I'd missed (both around expectations management) which I redesigned in the next pass.</p>
+    <div class="case-image">
+      <img src="img/Expert/usabilityTesting.png" alt="Usability testing findings" loading="lazy">
+      <div class="caption">Usability testing · key findings</div>
+    </div>
+    <div class="case-image">
+      <img src="img/Expert/peerFeedback.png" alt="Peer feedback session" loading="lazy">
+      <div class="caption">Peer feedback round</div>
+    </div>
+  </div>
+</section>
+
+<section class="case-section">
+  <span class="sec-label">[ 08 ] Reflection</span>
+  <div class="sec-content">
+    <h2>The project where research-first became a habit.</h2>
+    <p>Expert was where research-first stopped being a slogan and became instinct. The most useful design decisions came from the affinity map, not from the pixels. That lesson landed for good here.</p>
+    <p>The thing I'd do differently is start the trust-building work earlier. Before booking, before someone has committed time or money. The current design handles trust well from booking onward, but the moment of "should I even try this?" is where most of the drop-off would happen in reality. That's a research question I never properly opened.</p>
+  </div>
+</section>
+
+<section class="case-next">
+  <a href="kubo.html" class="prev">
+    <div class="label">← Previous</div>
+    <div class="name">Kubo</div>
+  </a>
+  <a href="energycheck.html" class="next">
+    <div class="label">Next →</div>
+    <div class="name">Energy Check</div>
+  </a>
+</section>
+
+<footer class="site-footer">
+  <div class="grid" style="border-top: 1px solid var(--ink); padding-top: 32px;">
+    <div>
+      <div class="label">Email</div>
+      <a href="mailto:shandortenhoven@gmail.com" class="link">shandortenhoven@gmail.com</a>
+    </div>
+    <div>
+      <div class="label">Network</div>
+      <a href="https://www.linkedin.com/in/shandortenhoven" class="link">LinkedIn ↗</a>
+    </div>
+    <div>
+      <div class="label">Location</div>
+      Amsterdam, NL
+    </div>
+    <div>
+      <div class="label">© 2026</div>
+      Shandor ten Hoven
+    </div>
+  </div>
+</footer>
+
 </body>
 </html>

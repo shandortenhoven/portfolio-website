@@ -1,234 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MoodStream - Shandor ten Hoven</title>
-    <link rel="stylesheet" href="css/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MoodStream · Shandor ten Hoven</title>
+<meta name="description" content="MoodStream: a streaming concept where mood replaces genre. Finding film and music by how you want to feel, not by category.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<script src="js/scripts.js" defer></script>
 </head>
-<body class="page-transition">
-    <header class="header">
-        <div class="container">
-            <nav class="nav">
-                <a href="index.html" class="logo">STH</a>
-                <button class="menu-toggle" aria-label="Toggle menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-                <ul class="nav-menu">
-                    <li><a href="index.html">Work</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+<body>
 
-    <section class="case-hero">
-        <div class="container">
-            <div class="case-hero-content fade-in">
-                <h1 class="case-title">MoodStream</h1>
-                <p class="case-subtitle">
-                    Reimagining media discovery through emotion.
-                </p>
-            </div>
-            <div class="case-hero-image">
-                <img src="img/projects/project-moodstream-lg.png" alt="MoodStream project hero image">
-            </div>
-        </div>
-    </section>
+<div class="topbar">
+  <div class="live">Available now</div>
+  <div>Amsterdam · CET</div>
+  <div>EN · NL</div>
+  <div>Hybrid / remote / on-site</div>
+</div>
 
-    <section class="case-section">
-        <div class="container-narrow">
-            <div class="case-content" data-scroll>
-                <h2>Overview</h2>
-                <p>
-                    MoodStream is a conceptual web platform that reimagines media discovery through emotion rather than traditional search or genre-based navigation. Instead of browsing by artist, title, or category, users explore music and film based on how they want to feel.
-                </p>
-                <p>
-                    The platform introduces an immersive, spatial browsing experience where moods such as calm, euphoric, nostalgic, or intense guide content recommendations across both audio and video. The goal is to create a calmer and more intuitive way to discover media while encouraging exploration beyond algorithm-driven feeds.
-                </p>
-            </div>
-        </div>
-    </section>
+<nav class="main-nav">
+  <a href="index.html" class="logo">SHANDOR<span class="dot-mark"></span></a>
+  <ul>
+    <li><a href="index.html" class="active">01 Work</a></li>
+    <li><a href="about.html">02 About</a></li>
+    <li><a href="contact.html">03 Contact</a></li>
+    <li>
+      <button class="theme-toggle" aria-label="Toggle dark mode">
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="4"/>
+          <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>
+        </svg>
+      </button>
+    </li>
+  </ul>
+</nav>
 
-    <section class="case-section">
-        <div class="container-narrow">
-            <div class="case-content" data-scroll>
-                <h2>Challenge</h2>
-                <p>
-                    Most streaming platforms organize content through genres, algorithms, search queries, and popularity rankings. However, users often start with a feeling rather than a specific title.
-                </p>
+<section class="case-hero">
+  <div class="kicker">02 / 04 · UX · Media Concept</div>
+  <h1>Mood<span class="accent-block"><span>Stream</span></span></h1>
+</section>
 
-                <div class="highlight-box">
-                    <p>"I want something calming while working."</p>
-                </div>
-                <div class="highlight-box">
-                    <p>"I feel nostalgic tonight."</p>
-                </div>
-                <div class="highlight-box">
-                    <p>"I want something intense and cinematic."</p>
-                </div>
+<section class="case-meta">
+  <div class="item">
+    <div class="label">Type</div>
+    <div class="val">Concept project</div>
+  </div>
+  <div class="item">
+    <div class="label">Year</div>
+    <div class="val">2026</div>
+  </div>
+  <div class="item">
+    <div class="label">Role</div>
+    <div class="val">Concept and UI</div>
+  </div>
+  <div class="item">
+    <div class="label">Scope</div>
+    <div class="val">Concept to design system</div>
+  </div>
+</section>
 
-                <p>
-                    Existing platforms require users to translate emotions into genres or keywords, which creates friction in discovery. The challenge was to design a system that makes emotions navigable while still providing clear structure, usability, and scalable product architecture.
-                </p>
+<section class="case-section">
+  <span class="sec-label">[ 01 ] Brief</span>
+  <div class="sec-content">
+    <h2>What if you stopped browsing by genre and started browsing by feeling?</h2>
+    <p>MoodStream is a concept for a media platform that drops genre as the primary navigation. Instead of "Action," "Drama," "Indie Rock," you choose how you want to <em>feel</em>. Focused, melancholic, in motion, curious. The platform then serves film and music that match.</p>
+    <p>The idea started as a frustration with my own behaviour. I open Netflix or Spotify, scroll through categories that don't describe what I'm actually looking for, and close the app five minutes later. Genre is a librarian's framework. Mood is how people actually decide.</p>
+  </div>
+</section>
 
-                <h3>Key design questions</h3>
-                <ul>
-                    <li>How can abstract emotions be translated into intuitive navigation?</li>
-                    <li>How can music and film coexist within one discovery experience?</li>
-                    <li>How do we maintain clarity while creating an immersive interface?</li>
-                    <li>How can experimental UI still feel like a real, usable product?</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <section class="case-section">
-        <div class="container-narrow">
-            <div class="case-content" data-scroll>
-                <h2>Process</h2>
-                <p>
-                    The concept started by looking at how current streaming platforms guide discovery and where they fall short when users are searching based on feeling rather than title or genre.
-                </p>
-                <p>
-                    I developed a mood-based taxonomy system using emotional tone and energy level as the core axes. This created a flexible structure for categorizing both music and film into navigable emotional states.
-                </p>
-                <p>
-                    From there, I explored multiple visual directions and selected the most immersive concept: a spatial, atmospheric interface that encourages emotional exploration while maintaining clarity and usability.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <section class="case-section">
-        <div class="container">
-            <div class="case-content" data-scroll>
-                <h3 class="cs-subtitle">Interactive Walkthrough</h3>
-                <img src="img/Moodstream/moodstream-scroll.gif" alt="Animated walkthrough of MoodStream" class="case-image lightbox-trigger">
-                <p class="case-image-caption">
-                    Animated walkthrough showing how the mood-based journey flows across the interface.
-                </p>
-            </div>
-
-            <div class="case-content" data-scroll>
-                <h3 class="cs-subtitle">Landing Experience</h3>
-                <div class="moodstream-image-crop">
-                    <img src="img/Moodstream/hi-2.jpg" alt="MoodStream landing page" class="case-image case-image-moodstream lightbox-trigger">
-                </div>
-                <p class="case-image-caption">
-                    Immersive landing page introducing the emotion-driven discovery experience.
-                </p>
-            </div>
-
-            <div class="case-content" data-scroll>
-                <h3 class="cs-subtitle">Mood Navigation</h3>
-                <img src="img/Moodstream/hi-3.jpg" alt="Mood navigation interface" class="case-image lightbox-trigger">
-                <p class="case-image-caption">
-                    A spatial interface where users move through emotional dimensions instead of conventional categories.
-                </p>
-            </div>
-
-            <div class="case-content" data-scroll>
-                <h3 class="cs-subtitle">Discovery Results</h3>
-                <img src="img/Moodstream/hi-1.jpg" alt="MoodStream discovery results" class="case-image lightbox-trigger">
-                <p class="case-image-caption">
-                    Content recommendations are shaped by selected mood, blending atmosphere with clarity.
-                </p>
-            </div>
-
-            <div class="case-content" data-scroll>
-                <h3 class="cs-subtitle">Design System</h3>
-                <div class="scrollable-design-system">
-                    <div class="scrollable-design-system-inner">
-                        <img src="img/Moodstream/design-system.png" alt="MoodStream design system" class="scrollable-design-system-img lightbox-trigger">
-                    </div>
-                </div>
-                <p class="scrollable-mockup-hint">Scroll to explore the full design system ↕</p>
-            </div>
-        </div>
-    </section>
-
-    <section class="case-section">
-        <div class="container-narrow">
-            <div class="case-content" data-scroll>
-                <h2>Design Decisions</h2>
-
-                <h3>Emotion as navigation</h3>
-                <p>
-                    Rather than traditional categories, moods act as the primary entry point. Users explore emotions first and content second. This reframes discovery from searching for content to choosing an experience.
-                </p>
-
-                <h3>Spatial mood exploration</h3>
-                <p>
-                    Instead of static menus, the interface presents moods within a spatial environment that encourages exploration and curiosity. This design supports the idea that emotional states are fluid rather than fixed categories.
-                </p>
-
-                <h3>Cross-media discovery</h3>
-                <p>
-                    Music and film are integrated into a single discovery experience. This encourages users to move between media types naturally depending on their emotional context.
-                </p>
-
-                <h3>Atmospheric UI</h3>
-                <p>
-                    The interface uses layered gradients, depth, and motion to create an immersive environment while maintaining strong hierarchy and readability. The goal was to balance visual immersion with usability.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <section class="case-section">
-        <div class="container-narrow">
-            <div class="case-content" data-scroll>
-                <h2>Outcome</h2>
-                <p>
-                    MoodStream demonstrates how emotional intent can reshape media discovery by replacing traditional search-driven interfaces with a more intuitive and immersive experience.
-                </p>
-                <p>
-                    The final concept combines a scalable mood taxonomy, experimental browsing patterns, and a strong visual system into a cohesive product vision. It shows how abstract human experiences can be translated into usable digital systems without losing emotional depth.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <section class="nav-links-section">
-        <div class="container">
-            <div class="nav-links">
-                <a href="expert.html" class="nav-link next">
-                    <span class="nav-link-label">Next Project</span>
-                    <span class="nav-link-title">Expert</span>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-left">
-                    <h3 class="footer-title">Let's work together</h3>
-                    <p class="footer-text">I'm exploring full-time product design roles in Amsterdam and beyond.</p>
-                </div>
-                <div class="footer-right">
-                    <a href="mailto:shandortenhoven@gmail.com" class="footer-link">shandortenhoven@gmail.com</a>
-                    <a href="https://www.linkedin.com/in/shandortenhoven" target="_blank" rel="noopener noreferrer" class="footer-link">LinkedIn</a>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 Shandor ten Hoven. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
-
-    <div id="lightbox" class="lightbox">
-        <button class="lightbox-close">&times;</button>
-        <div class="lightbox-content">
-            <img src="#" alt="Lightbox image" id="lightbox-img" class="lightbox-image">
-        </div>
+<section class="case-section">
+  <span class="sec-label">[ 02 ] Premise</span>
+  <div class="sec-content">
+    <h2>A spectrum, not a grid.</h2>
+    <p>The core interaction is a mood selector. Not a list of genres but a navigable space of emotional states. You orient yourself within that space, and the content reorders around you. The UI had to feel calm and atmospheric, more like adjusting lighting than browsing a database.</p>
+    <div class="callout">
+      <div class="label">Design principle</div>
+      <p>"The interface should feel like the mood it's helping you find."</p>
     </div>
+  </div>
+</section>
 
-    <script src="js/scripts.js"></script>
+<section class="case-section full">
+  <h2>Visual language: dark, soft, deliberate.</h2>
+  <div class="image-grid three">
+    <div class="case-image">
+      <img src="img/Moodstream/hi-1.jpg" alt="MoodStream high fidelity screen 1" loading="lazy">
+      <div class="caption">Mood selection</div>
+    </div>
+    <div class="case-image">
+      <img src="img/Moodstream/hi-2.jpg" alt="MoodStream high fidelity screen 2" loading="lazy">
+      <div class="caption">Content browse</div>
+    </div>
+    <div class="case-image">
+      <img src="img/Moodstream/hi-3.jpg" alt="MoodStream high fidelity screen 3" loading="lazy">
+      <div class="caption">Playback state</div>
+    </div>
+  </div>
+</section>
+
+<section class="case-section">
+  <span class="sec-label">[ 03 ] System</span>
+  <div class="sec-content">
+    <h2>Designed as a system, not screens.</h2>
+    <p>Because the platform's character had to feel consistent across very different content types (moving image, static covers, audio), I built out a small design system early. Type scale, mood color tokens, component library. It made the high-fidelity work go three times faster.</p>
+    <div class="case-image">
+      <img src="img/Moodstream/design-system.png" alt="MoodStream design system" loading="lazy">
+      <div class="caption">Design system · tokens and components</div>
+    </div>
+  </div>
+</section>
+
+<section class="case-section">
+  <span class="sec-label">[ 04 ] Motion</span>
+  <div class="sec-content">
+    <h2>Scroll behaviour as part of the mood.</h2>
+    <p>Motion was a deliberate part of the design. Slow, weighted scroll, transitions that fade rather than cut, micro-animations that feel like breath rather than feedback. The platform should feel like it's listening, not reacting.</p>
+    <div class="case-image">
+      <img src="img/Moodstream/moodstream-scroll.gif" alt="MoodStream scroll animation" loading="lazy">
+      <div class="caption">Scroll behavior · motion study</div>
+    </div>
+  </div>
+</section>
+
+<section class="case-section">
+  <span class="sec-label">[ 05 ] Reflection</span>
+  <div class="sec-content">
+    <h2>The honest hard part.</h2>
+    <p>MoodStream is where I started thinking about <em>tone</em> as a design material. Not just typography or color, but the felt sense a product gives off. It's harder to articulate than usability but it's often what makes someone come back, or not.</p>
+    <p>The harder, unfinished question: how do you actually build a mood taxonomy that works across cultures and individuals? "Melancholic" means something different to everyone. A next pass would treat mood as something you tune over time, not something you select from a menu. That's a much bigger project than the brief I gave myself.</p>
+  </div>
+</section>
+
+<section class="case-next">
+  <a href="energycheck.html" class="prev">
+    <div class="label">← Previous</div>
+    <div class="name">Energy Check</div>
+  </a>
+  <a href="kubo.html" class="next">
+    <div class="label">Next →</div>
+    <div class="name">Kubo</div>
+  </a>
+</section>
+
+<footer class="site-footer">
+  <div class="grid" style="border-top: 1px solid var(--ink); padding-top: 32px;">
+    <div>
+      <div class="label">Email</div>
+      <a href="mailto:shandortenhoven@gmail.com" class="link">shandortenhoven@gmail.com</a>
+    </div>
+    <div>
+      <div class="label">Network</div>
+      <a href="https://www.linkedin.com/in/shandortenhoven" class="link">LinkedIn ↗</a>
+    </div>
+    <div>
+      <div class="label">Location</div>
+      Amsterdam, NL
+    </div>
+    <div>
+      <div class="label">© 2026</div>
+      Shandor ten Hoven
+    </div>
+  </div>
+</footer>
+
 </body>
 </html>
