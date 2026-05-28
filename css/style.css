@@ -235,9 +235,9 @@ nav.main-nav a.active::after { width: 100%; }
 .projects-table { padding: 0; }
 .project-row {
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  gap: 24px;
-  padding: 28px 40px;
+  grid-template-columns: 40px 140px 1fr auto auto 40px;
+  gap: 28px;
+  padding: 24px 40px;
   border-bottom: 1px solid var(--rule);
   align-items: center;
   cursor: pointer;
@@ -251,35 +251,59 @@ nav.main-nav a.active::after { width: 100%; }
 .project-row:hover .meta,
 .project-row:hover .year { color: var(--ink-faint); }
 .project-row:hover .arrow { color: var(--accent); transform: translateX(8px); }
+.project-row:hover .thumb { transform: scale(1.03); }
 
 .project-row .num {
-  grid-column: 1 / 2;
   font-family: 'JetBrains Mono', monospace;
   font-size: 12px;
   color: var(--ink-soft);
 }
+.project-row .thumb {
+  width: 140px;
+  height: 90px;
+  border-radius: 4px;
+  overflow: hidden;
+  background: var(--surface);
+  border: 1px solid var(--rule);
+  transition: transform 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.project-row .thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.project-row .thumb-mobile {
+  background: #F4F5F7;
+  padding: 6px;
+}
+.project-row .thumb-mobile img {
+  width: auto;
+  height: 100%;
+  object-fit: contain;
+}
 .project-row .name {
-  grid-column: 2 / 7;
   font-weight: 700;
   font-size: clamp(20px, 2.5vw, 32px);
   letter-spacing: -0.02em;
 }
 .project-row .meta {
-  grid-column: 7 / 10;
   font-family: 'JetBrains Mono', monospace;
   font-size: 12px;
   color: var(--ink-soft);
   text-transform: uppercase;
   letter-spacing: 0.05em;
+  white-space: nowrap;
 }
 .project-row .year {
-  grid-column: 10 / 12;
   font-family: 'JetBrains Mono', monospace;
   font-size: 12px;
   color: var(--ink-soft);
 }
 .project-row .arrow {
-  grid-column: 12 / 13;
   text-align: right;
   font-family: 'JetBrains Mono', monospace;
   transition: all 0.3s ease;
@@ -839,11 +863,22 @@ footer a.link:hover { background: var(--accent); color: var(--accent-text); }
 
   .hero-meta, .case-meta { grid-template-columns: 1fr 1fr; }
 
-  .project-row { grid-template-columns: auto 1fr auto; gap: 12px; padding: 20px 24px; }
-  .project-row .num { grid-column: 1; }
-  .project-row .name { grid-column: 2; font-size: 18px; }
-  .project-row .arrow { grid-column: 3; }
-  .project-row .meta, .project-row .year { grid-column: 2; font-size: 10px; margin-top: 4px; }
+  .project-row {
+    grid-template-columns: 80px 1fr auto;
+    grid-template-areas:
+      "thumb name arrow"
+      "thumb meta year";
+    gap: 4px 16px;
+    padding: 16px 24px;
+    align-items: center;
+  }
+  .project-row .num { display: none; }
+  .project-row .thumb { grid-area: thumb; width: 80px; height: 60px; align-self: center; }
+  .project-row .thumb-mobile { padding: 4px; }
+  .project-row .name { grid-area: name; font-size: 18px; align-self: end; }
+  .project-row .meta { grid-area: meta; font-size: 10px; align-self: start; }
+  .project-row .year { grid-area: year; font-size: 10px; text-align: right; align-self: start; }
+  .project-row .arrow { grid-area: arrow; align-self: end; }
 
   .about-strip { grid-template-columns: 1fr; gap: 20px; }
   .about-strip .label, .about-strip p { grid-column: 1 / -1; }
