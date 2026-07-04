@@ -82,17 +82,20 @@ h2 b{font-weight:700}
 .work.lit .bg-reveal{opacity:1}
 .bg-reveal .bg{position:absolute;inset:0;opacity:0;transition:opacity .55s ease}
 .bg-reveal .bg.on{opacity:1}
-/* tidy image grid flanking the centered menu card */
-.bg{display:flex;justify-content:space-between;align-items:flex-start;padding:40px}
-.bg .col{display:flex;flex-direction:column;gap:28px;width:calc(50vw - 480px);max-width:380px;overflow:hidden}
-.bg .col.right{align-items:flex-end}
-.tile{background:#fff;padding:8px;border:1px solid var(--line);width:100%;transform:translateY(20px);opacity:0;transition:opacity .5s ease,transform .8s cubic-bezier(.16,1,.3,1)}
+/* full-bleed grid collage covering the whole section behind the card */
+.bg{display:grid;grid-template-columns:repeat(4,1fr);grid-template-rows:repeat(2,1fr);gap:14px;height:100%;padding:14px}
+.tile{overflow:hidden;background:#fff;transform:scale(.985);opacity:0;transition:opacity .5s ease,transform 1s cubic-bezier(.16,1,.3,1)}
 .bg.on .tile{opacity:1;transform:none}
-.bg.on .tile:nth-child(2){transition-delay:.08s}
-.bg.on .col.right .tile{transition-delay:.12s}
-.bg.on .col.right .tile:nth-child(2){transition-delay:.2s}
-.tile img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;object-position:top}
-.tile.tall img{aspect-ratio:3/4}
+.bg.on .tile:nth-child(2){transition-delay:.05s}
+.bg.on .tile:nth-child(3){transition-delay:.1s}
+.bg.on .tile:nth-child(4){transition-delay:.15s}
+.bg.on .tile:nth-child(5){transition-delay:.2s}
+.bg.on .tile:nth-child(6){transition-delay:.25s}
+.bg.on .tile:nth-child(7){transition-delay:.3s}
+.bg.on .tile:nth-child(8){transition-delay:.35s}
+.tile img{width:100%;height:100%;object-fit:cover;object-position:center top}
+.tile.wide{grid-column:span 2}
+.tile.tall2{grid-row:span 2}
 @media (max-width:1180px){.bg{display:none}}
 .work .wrap{position:relative;z-index:1}
 .menucard{max-width:780px;margin:0 auto;border:1px solid var(--line);padding:70px 70px 60px;background:rgba(255,254,251,.94);backdrop-filter:blur(2px);position:relative;transition:box-shadow .6s}
