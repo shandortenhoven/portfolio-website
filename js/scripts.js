@@ -1,8 +1,17 @@
 /* Shandor ten Hoven · Portfolio scripts */
 
-// ---------- marquee: duplicate content for seamless loop ----------
+// ---------- marquee: repeat content until it more than fills the screen ----------
 const mq = document.getElementById('marquee');
-if (mq) mq.innerHTML += mq.innerHTML;
+if (mq) {
+  const chunk = mq.innerHTML;
+  // keep doubling until one half of the track is wider than the viewport,
+  // so the -50% loop never shows a gap
+  while (mq.scrollWidth < window.innerWidth * 2) {
+    mq.innerHTML += chunk;
+  }
+  // ensure an even number of chunks so the halfway point lines up seamlessly
+  mq.innerHTML += mq.innerHTML;
+}
 
 // ---------- scroll reveals ----------
 if ('IntersectionObserver' in window) {
