@@ -1,118 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Contact · Shandor ten Hoven</title>
-<meta name="description" content="Get in touch. Email, LinkedIn, or just say hi.">
+<meta name="description" content="Get in touch with Shandor ten Hoven, product designer in Amsterdam.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,200;14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=Fraunces:ital,opsz,wght@1,9..144,300&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
-<script src="js/scripts.js" defer></script>
 </head>
 <body>
 
-<div class="topbar">
-  <div class="live">Available now</div>
-  <div>Amsterdam · CET</div>
-  <div>EN · NL</div>
-  <div>Hybrid / remote / on-site</div>
-</div>
-
-<nav class="main-nav">
-  <a href="index.html" class="logo">SHANDOR<span class="dot-mark"></span></a>
-  <ul>
-    <li><a href="index.html">01 Work</a></li>
-    <li><a href="about.html">02 About</a></li>
-    <li><a href="contact.html" class="active">03 Contact</a></li>
-    <li>
-      <button class="theme-toggle" aria-label="Toggle dark mode">
-        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
-        </svg>
-        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <circle cx="12" cy="12" r="4"/>
-          <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>
-        </svg>
-      </button>
-    </li>
-  </ul>
-</nav>
-
-<section class="contact-hero">
-  <h1>Say hi<span class="accent-mark"></span></h1>
-  <p style="font-size: clamp(20px, 2.2vw, 26px); max-width: 720px; line-height: 1.4; color: var(--ink);">
-    Open to product and UX/UI design roles. Hybrid, on-site, or remote. Also happy to chat about a project, a referral, or just design in general.
-  </p>
-</section>
-
-<section class="contact-grid">
-
-  <div class="contact-row">
-    <div class="label">Email</div>
-    <div class="value"><a href="mailto:shandortenhoven@gmail.com">shandortenhoven@gmail.com</a></div>
-    <div class="arrow">→</div>
+<nav id="nav"><div class="wrap">
+  <a class="seal" href="index.html" aria-label="Home">STH</a>
+  <div class="navlinks">
+    <a href="index.html#work">The Menu</a><a href="index.html#host">The Host</a><a href="contact.html" class="res">Reserve a call</a>
   </div>
+</div></nav>
 
-  <div class="contact-row">
-    <div class="label">LinkedIn</div>
-    <div class="value"><a href="https://www.linkedin.com/in/shandortenhoven" target="_blank" rel="noopener">linkedin.com/in/shandortenhoven</a></div>
-    <div class="arrow">↗</div>
+<header class="case-hero"><div class="wrap">
+  <span class="kicker rv in">Reservations</span>
+  <h1>
+    <span class="line-mask"><span>Let's find</span></span>
+    <span class="line-mask lm2"><span><b>a table.</b></span></span>
+  </h1>
+  <div class="kind rv d1">for a role, a project, or just an oat latte</div>
+  <div class="case-facts rv d2">
+    <div class="cf"><span class="k">Email</span><span class="v"><a href="mailto:shandortenhoven@gmail.com">shandortenhoven@gmail.com</a></span></div>
+    <div class="cf"><span class="k">LinkedIn</span><span class="v"><a href="https://www.linkedin.com/in/shandortenhoven" target="_blank" rel="noopener">/in/shandortenhoven</a></span></div>
+    <div class="cf"><span class="k">Based in</span><span class="v">Amsterdam, NL</span></div>
+    <div class="cf"><span class="k">Status</span><span class="v pulse">Accepting reservations</span></div>
   </div>
+</div></header>
 
-  <div class="contact-row">
-    <div class="label">GitHub</div>
-    <div class="value"><a href="https://github.com/shandortenhoven" target="_blank" rel="noopener">github.com/shandortenhoven</a></div>
-    <div class="arrow">↗</div>
-  </div>
+<footer id="contact"><div class="wrap">
+  <span class="kicker rv">Reservations</span>
+  <h2 class="rv d1">The table is <b>set.</b></h2>
+  <p class="rv d2">Looking for a designer who treats users like guests? Let's talk. I'll bring the oat lattes.</p>
+  <div class="cta-row rv d3"><a class="btn" href="mailto:shandortenhoven@gmail.com"><span>Reserve a call</span></a></div>
+  <div class="small rv d4">Amsterdam<i>&middot;</i><a href="https://www.linkedin.com/in/shandortenhoven" target="_blank" rel="noopener">LinkedIn</a><i>&middot;</i><a href="https://github.com/shandortenhoven" target="_blank" rel="noopener">GitHub</a></div>
+</div></footer>
 
-  <div class="contact-row">
-    <div class="label">Phone</div>
-    <div class="value"><a href="tel:+31619678738">+31 6 196 78 738</a></div>
-    <div class="arrow">→</div>
-  </div>
-
-  <div class="contact-row">
-    <div class="label">Based in</div>
-    <div class="value">Amsterdam, Netherlands</div>
-    <div class="arrow"></div>
-  </div>
-
-  <div class="contact-row">
-    <div class="label">Languages</div>
-    <div class="value">Dutch · English</div>
-    <div class="arrow"></div>
-  </div>
-
-  <div class="contact-row">
-    <div class="label">Response time</div>
-    <div class="value">Usually within 24 hours</div>
-    <div class="arrow"></div>
-  </div>
-
-</section>
-
-<footer class="site-footer" style="margin-top: 80px;">
-  <div class="grid" style="border-top: 1px solid var(--ink); padding-top: 32px;">
-    <div>
-      <div class="label">Email</div>
-      <a href="mailto:shandortenhoven@gmail.com" class="link">shandortenhoven@gmail.com</a>
-    </div>
-    <div>
-      <div class="label">Network</div>
-      <a href="https://www.linkedin.com/in/shandortenhoven" class="link">LinkedIn ↗</a>
-    </div>
-    <div>
-      <div class="label">Location</div>
-      Amsterdam, NL
-    </div>
-    <div>
-      <div class="label">© 2026</div>
-      Shandor ten Hoven
-    </div>
-  </div>
-</footer>
-
+<script src="js/scripts.js"></script>
 </body>
 </html>

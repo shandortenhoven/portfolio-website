@@ -1,232 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Energy Check · Shandor ten Hoven</title>
-<meta name="description" content="A homepage redesign for Energy Check, an independent Dutch energy consultancy. Strategy, competitive scan, mid-fidelity wireframes, design system, and final desktop UI.">
+<meta name="description" content="Energy Check — a B2B homepage redesign for a Dutch independent energy consultancy.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,200;14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=Fraunces:ital,opsz,wght@1,9..144,300&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
-<script src="js/scripts.js" defer></script>
 </head>
 <body>
 
-<div class="topbar">
-  <div class="live">Available now</div>
-  <div>Amsterdam · CET</div>
-  <div>EN · NL</div>
-  <div>Hybrid / remote / on-site</div>
-</div>
-
-<nav class="main-nav">
-  <a href="index.html" class="logo">SHANDOR<span class="dot-mark"></span></a>
-  <ul>
-    <li><a href="index.html" class="active">01 Work</a></li>
-    <li><a href="about.html">02 About</a></li>
-    <li><a href="contact.html">03 Contact</a></li>
-    <li>
-      <button class="theme-toggle" aria-label="Toggle dark mode">
-        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
-        </svg>
-        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <circle cx="12" cy="12" r="4"/>
-          <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>
-        </svg>
-      </button>
-    </li>
-  </ul>
-</nav>
-
-<section class="case-hero">
-  <div class="kicker">01 / 04 · Take-home assignment · B2B · Energy</div>
-  <h1>Energy <span class="accent-block"><span>Check</span></span></h1>
-</section>
-
-<section class="case-meta">
-  <div class="item">
-    <div class="label">Client</div>
-    <div class="val">Energy Check (NL)</div>
+<nav id="nav"><div class="wrap">
+  <a class="seal" href="index.html" aria-label="Home">STH</a>
+  <div class="navlinks">
+    <a href="index.html#work">The Menu</a><a href="index.html#host">The Host</a><a href="contact.html" class="res">Reserve a call</a>
   </div>
-  <div class="item">
-    <div class="label">Year</div>
-    <div class="val">2026</div>
-  </div>
-  <div class="item">
-    <div class="label">Role</div>
-    <div class="val">Solo designer</div>
-  </div>
-  <div class="item">
-    <div class="label">Scope</div>
-    <div class="val">Research to final UI</div>
-  </div>
-</section>
+</div></nav>
 
-<section class="case-section">
-  <span class="sec-label">[ 01 ] Brief</span>
-  <div class="sec-content">
-    <h2>A 20-year-old energy advisory bureau that needed to sound like its team.</h2>
-    <p>Energy Check is an independent Dutch energy consultancy. About ten people, two offices, twenty years in the business, advising large organisations on procurement, savings, grid congestion, ISO compliance, and policy. The take-home asked for a desktop homepage redesign with full creative freedom on color, type, and direction.</p>
-    <p>The interesting question wasn't visual. It was strategic. The current site sounds like every other player in the category. Formal, feature-listed, "u" everywhere. The team I'd been told about, and seen on LinkedIn, sounded nothing like that. The work was about closing that gap.</p>
+<header class="case-hero"><div class="wrap">
+  <span class="kicker rv in">Case study &middot; the commission</span>
+  <h1>
+    <span class="line-mask"><span><b>Energy Check</b></span></span>
+  </h1>
+  <div class="kind rv d1">a homepage that earns trust before the first call</div>
+  <div class="case-facts rv d2">
+    <div class="cf"><span class="k">Role</span><span class="v">UX/UI Designer</span></div>
+    <div class="cf"><span class="k">Type</span><span class="v">Client brief · B2B</span></div>
+    <div class="cf"><span class="k">Tools</span><span class="v">Figma</span></div>
+    <div class="cf"><span class="k">Year</span><span class="v">2026</span></div>
   </div>
-</section>
+  <div class="case-cover rv d3"><img src="img/projects/project-energycheck-lg.png" alt="Energy Check cover image"></div>
+</div></header>
 
-<section class="case-section">
-  <span class="sec-label">[ 02 ] Discovery</span>
-  <div class="sec-content">
-    <h2>Talking to the team, then looking at what they actually shipped.</h2>
-    <p>I started with a long conversation with Ivana, my main contact. The brief was clear on tone: <em>"professioneel met persoonlijke touch. Je/jij, geen u. Warm team, vakkundig."</em> Three quotes from her became my messaging anchors:</p>
-    <div class="callout">
-      <div class="label">Messaging anchors</div>
-      <p>"Wij kennen de energiemarkt van binnen en van buiten" · "Bouw met ons mee aan de energietoekomst" · "Met Energy Check heb je overzicht en grip in jouw energiezaken"</p>
-    </div>
-    <p>Then I looked at the live site. The contrast was stark. Formal "u"-tone throughout, dense feature lists, no team visible, hero photo of a sunset windmill. Most of the warmth Ivana described lived on LinkedIn, where team members write personal posts that never reach the website.</p>
-    <div class="case-image">
-      <img src="img/Energycheck/EnergyCheck%20original.png" alt="Current Energy Check homepage" loading="lazy">
-      <div class="caption">Current homepage · formal tone, hidden team, generic green imagery</div>
-    </div>
-  </div>
-</section>
 
-<section class="case-section">
-  <span class="sec-label">[ 03 ] Scan</span>
-  <div class="sec-content">
-    <h2>Seven Dutch competitors. One pattern.</h2>
-    <p>I mapped seven Dutch energy advisory firms, from incumbents like NIFE and SPOT to smaller players like Sustendo and Kasper. Different brands, almost identical websites. The shared category conventions:</p>
-    <p style="font-family: 'JetBrains Mono', monospace; font-size: 13px; line-height: 1.9; color: var(--ink); padding-left: 16px; border-left: 2px solid var(--accent); max-width: 640px;">
-      → Generic green imagery (windmills, panels, lightbulbs)<br>
-      → Formal "u"-tone throughout<br>
-      → Phone number hidden in the footer<br>
-      → "Independent" claimed by everyone<br>
-      → Feature lists in place of outcome language<br>
-      → No team visible<br>
-      → Numbers rarely used in hero<br>
-      → Single CTA, never multi-modal contact
-    </p>
-    <p>Each of these is a convention. Conventions exist because they're safe. They're also where the opportunity is. The patterns nobody breaks are the patterns nobody owns.</p>
-  </div>
-</section>
+<section class="case-section"><div class="wrap">
+  <div class="label rv"><span class="no">01</span><h3>The <b>brief</b></h3></div>
+  <p class="rv d1">Energy Check, an independent Dutch energy consultancy, needed a homepage that converts sceptical business visitors into conversations. A take-home assignment I treated as a real commission. <em>[Vervang met jouw eigen samenvatting]</em></p>
+</div></section>
 
-<section class="case-section">
-  <span class="sec-label">[ 04 ] Strategy</span>
-  <div class="sec-content">
-    <h2>Six moves that came out of the research.</h2>
-    <p>The competitive scan and the conversation with Ivana converged on six strategic moves. Each one tied to a specific category convention I wanted to break.</p>
-    <p><strong>1 · Show the team.</strong> Energy Check's LinkedIn is full of personal posts from team members. None of that warmth reaches the website. Putting the team in the hero, or just below it, is the single biggest differentiator available.</p>
-    <p><strong>2 · Lead with outcomes, not features.</strong> Energy Check already has the numbers. 30% of national energy lost in buildings, 20% savings often achievable, 65% of electricity going to lighting. All currently buried in body copy. Move to the hero, make them large.</p>
-    <p><strong>3 · Use "je/jij" throughout.</strong> Direct from the briefing, and rarely done in the B2B category. This single decision rewrites half the copy.</p>
-    <p><strong>4 · Surface "direct contact with the executor."</strong> A real differentiator currently hidden on the About page. It belongs on the homepage as a sales argument.</p>
-    <p><strong>5 · Multi-modal contact.</strong> Calendly, WhatsApp, phone. All three offered as equal options, no hierarchy. Energy Check already does this. The site just doesn't reflect it.</p>
-    <p><strong>6 · EC wordmark as a design system, not just a logo.</strong> The brand has a strong E + C wordmark that's used once and then forgotten. Treating it as a recurring motif (section dividers, watermarks, accent shapes) builds visual identity nobody else has.</p>
-  </div>
-</section>
+<section class="case-section"><div class="wrap">
+  <div class="label rv"><span class="no">02</span><h3>Research &amp; <b>strategy</b></h3></div>
+  <p class="rv d1">Competitive analysis across the Dutch energy consultancy landscape shaped a persuasion framework: independence as the core promise, proof before claims, one clear action per scroll depth.</p>
+  <div class="pull rv"><p>Independence is the product. Every section of the page had to prove it, not just say it.</p></div>
+</div></section>
 
-<section class="case-section">
-  <span class="sec-label">[ 05 ] Hero</span>
-  <div class="sec-content">
-    <h2>Two hero directions. Both honest about their trade-offs.</h2>
-    <p>Rather than commit to one direction and pretend the alternatives didn't exist, I built two. Each with explicit strengths and weaknesses written below it. That way the conversation with the client would be about strategy, not taste.</p>
-    <div class="case-image">
-      <img src="img/Energycheck/Mid-fidelityHero.jpg" alt="Two hero direction explorations: Team in context vs Abstract EC-beeldmerk" loading="lazy">
-      <div class="caption">Hero exploration · Optie A vs Optie B with explicit trade-offs</div>
-    </div>
-    <p><strong>Optie A · Team in context.</strong> A 60/40 split. Type-led headline left, photograph of two or three consultants in a client setting right. Breaks the category convention hardest. The risk: requires real photography, not stock.</p>
-    <p><strong>Optie B · Abstract EC-beeldmerk.</strong> Full-bleed type, the E and C of the wordmark blown up as graphic shapes on the right. Designerly, producible without photography, sets up the wordmark-as-system idea immediately. The risk: less immediate "this is for me" signal for the visitor.</p>
-    <p>The recommendation is Optie A if real team photography is feasible, Optie B as a credible fallback that still differentiates the brand.</p>
-  </div>
-</section>
+<section class="case-section"><div class="wrap">
+  <div class="label rv"><span class="no">03</span><h3>Building the <b>structure</b></h3></div>
+  <p class="rv d1">Mid-fidelity wireframes established the narrative arc of the page: problem, promise, proof, action.</p>
+  <div class="case-grid-2 rv"><img src="img/Energycheck/Mid-fidelityHero.jpg" alt=""><img src="img/Energycheck/Mid-fidelityMiddle.jpg" alt=""></div>
+</div></section>
 
-<section class="case-section">
-  <span class="sec-label">[ 06 ] Mid-fi</span>
-  <div class="sec-content">
-    <h2>The full page, structure first.</h2>
-    <p>Before any high-fidelity work, I laid out every section in mid-fidelity. Not pretty, but decision-ready. The structure: hero, services, way of working, customer stories, team, knowledge base, final CTA, footer. Each section earns its place by doing a specific job in the conversion narrative.</p>
-    <div class="case-image">
-      <img src="img/Energycheck/Mid-fidelityMiddle.jpg" alt="Mid-fidelity wireframes: Services, Werkwijze, Klantverhalen" loading="lazy">
-      <div class="caption">Sections 04 to 06 · services grouped by outcome, process with a recurring signature line, customer stories without a carousel</div>
-    </div>
-    <p>A few decisions worth flagging. The <strong>services section</strong> groups six offerings into three outcome categories (Inzicht & Besparen, Inkopen & Beheren, Financieel & Juridisch) instead of listing them flat. The <strong>way-of-working section</strong> ends every step with "direct contact met de uitvoerder" as a recurring signature line. The <strong>customer stories section</strong> deliberately avoids a carousel. One highlighted case with a number, three secondary cases below.</p>
-    <div class="case-image">
-      <img src="img/Energycheck/Mid-fidelityEnd.jpg" alt="Mid-fidelity wireframes: Team, Knowledge base, Final CTA, Footer" loading="lazy">
-      <div class="caption">Sections 07 to 10 · team with hover-revealed intros, knowledge base preview, three equal contact options, footer with EC watermark</div>
-    </div>
-    <p>The <strong>team section</strong> uses four cards per row with portraits that reveal a personal intro on hover. The move that directly answers "no team visible" from the competitive scan. The <strong>final CTA</strong> is full-bleed teal with three equal contact options (Calendly, WhatsApp, phone). No hierarchy, no salespraatje. The <strong>footer</strong> uses the EC wordmark as a subtle watermark. The small detail that quietly reinforces the system.</p>
-  </div>
-</section>
+<section class="case-section"><div class="wrap">
+  <div class="label rv"><span class="no">04</span><h3>The design <b>system</b></h3></div>
+  <p class="rv d1">A five-colour palette — teal, petrol, warm neutrals and espresso — paired with Inter and Fraunces. Components documented for handoff.</p>
+  <div class="case-img rv"><img src="img/Energycheck/Design system.svg" alt=""><div class="cap">The design system</div></div>
+</div></section>
 
-<section class="case-section">
-  <span class="sec-label">[ 07 ] System</span>
-  <div class="sec-content">
-    <h2>A small design system built around one good idea.</h2>
-    <p>Even at mid-fidelity, I built out the system. Tokens, components, and the EC wordmark treated as a graphic motif. The idea: any future page or campaign should be buildable from these pieces, and should be unmistakably Energy Check at a glance.</p>
-    <div class="case-image">
-      <img src="img/Energycheck/Design%20system.svg" alt="Energy Check design system: typography, color, spacing, components" loading="lazy">
-      <div class="caption">Design system · type scale, color tokens, spacing rhythm, EC-beeldmerk treatments</div>
-    </div>
-    <div class="case-image">
-      <img src="img/Energycheck/componenten.svg" alt="Component library: buttons, cards, navigation, form elements" loading="lazy">
-      <div class="caption">Component library · buttons, cards, navigation, form elements</div>
-    </div>
-    <p>The wordmark treatments (large, cropped, watermark, divider) are the part of the system I'm most happy with. They give Energy Check a distinctive visual signature that doesn't depend on photography or illustration, and they cost the production team nothing extra to use.</p>
-  </div>
-</section>
+<section class="case-section"><div class="wrap">
+  <div class="label rv"><span class="no">05</span><h3>The final <b>page</b></h3></div>
+  <p class="rv d1">The complete desktop homepage: research-led structure, calm confident visual language, ready for development.</p>
+  <div class="case-img rv"><img src="img/Energycheck/EnergyCheck_Desktop.svg" alt=""><div class="cap">Final desktop design</div></div>
+</div></section>
 
-<section class="case-section">
-  <span class="sec-label">[ 08 ] Final design</span>
-  <div class="sec-content">
-    <h2>Strategy and system, brought together at full fidelity.</h2>
-    <p>The final desktop homepage. Every move from the strategy section is now visible on the page. Team in the hero, outcomes in large numbers, "je/jij" throughout, the executor-promise as a recurring signature line, multi-modal contact as three equal options, and the EC wordmark surfacing as section dividers and watermark.</p>
-    <div class="case-image">
-      <img src="img/Energycheck/EnergyCheck_Desktop.svg" alt="Final desktop homepage design for Energy Check" loading="lazy">
-      <div class="caption">Final design · 1680px desktop homepage</div>
-    </div>
-    <p>The full page is long. By design. The strategy was never about a punchy hero alone, it was about earning trust progressively, section by section. A B2B buyer scrolling on a Tuesday morning gets the proof, the services, the process, the team, and the multiple ways to get in touch in a sequence that makes sense rather than a stack of CTAs.</p>
-  </div>
-</section>
+<div class="next-course"><div class="wrap">
+  <span class="lbl">next course</span>
+  <a class="big" href="moodstream.html"><b>MoodStream</b><span class="ar">&rarr;</span></a>
+</div></div>
 
-<section class="case-section">
-  <span class="sec-label">[ 09 ] Reflection</span>
-  <div class="sec-content">
-    <h2>What I'd validate next.</h2>
-    <p>The project felt finished in terms of strategy, structure, system, and visual design. What it's missing is contact with real buyers. Operations or facility managers at mid-sized industrial clients. The current homepage assumes their priorities (overzicht, grip, multi-modal contact). Validation would either confirm that or surface something I missed. B2B work gets stuck on assumptions more than anywhere else, and I'd want to close that loop before pushing this live.</p>
-    <p>The other thing I'd build next is the mobile design. The brief was desktop-only at 1680px, but the buyer is just as likely scrolling on a phone between meetings. The desktop layout has enough structural decisions baked in that a mobile pass would be more translation than redesign, but it still needs doing properly.</p>
-    <p>If I look back at the process, the move I'm most proud of is presenting two hero directions with their trade-offs written out, instead of one polished option. It made the conversation with the client about strategy rather than taste, and that's the kind of conversation I want to be having more of.</p>
-  </div>
-</section>
+<footer id="contact"><div class="wrap">
+  <span class="kicker rv">Reservations</span>
+  <h2 class="rv d1">The table is <b>set.</b></h2>
+  <p class="rv d2">Looking for a designer who treats users like guests? Let's talk. I'll bring the oat lattes.</p>
+  <div class="cta-row rv d3"><a class="btn" href="mailto:shandortenhoven@gmail.com"><span>Reserve a call</span></a></div>
+  <div class="small rv d4">Amsterdam<i>&middot;</i><a href="https://www.linkedin.com/in/shandortenhoven" target="_blank" rel="noopener">LinkedIn</a><i>&middot;</i><a href="https://github.com/shandortenhoven" target="_blank" rel="noopener">GitHub</a></div>
+</div></footer>
 
-<section class="case-next">
-  <a href="expert.html" class="prev">
-    <div class="label">← Previous</div>
-    <div class="name">Expert</div>
-  </a>
-  <a href="moodstream.html" class="next">
-    <div class="label">Next →</div>
-    <div class="name">MoodStream</div>
-  </a>
-</section>
-
-<footer class="site-footer">
-  <div class="grid" style="border-top: 1px solid var(--ink); padding-top: 32px;">
-    <div>
-      <div class="label">Email</div>
-      <a href="mailto:shandortenhoven@gmail.com" class="link">shandortenhoven@gmail.com</a>
-    </div>
-    <div>
-      <div class="label">Network</div>
-      <a href="https://www.linkedin.com/in/shandortenhoven" class="link">LinkedIn ↗</a>
-    </div>
-    <div>
-      <div class="label">Location</div>
-      Amsterdam, NL
-    </div>
-    <div>
-      <div class="label">© 2026</div>
-      Shandor ten Hoven
-    </div>
-  </div>
-</footer>
-
+<script src="js/scripts.js"></script>
 </body>
 </html>

@@ -1,162 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Kubo · Shandor ten Hoven</title>
-<meta name="description" content="Kubo: a digital vault for the important documents of a life. UX work around trust, privacy, and the principle of never asking twice.">
+<meta name="description" content="Kubo — a digital fashion vault exploring identity and ownership in digital spaces.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,200;14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=Fraunces:ital,opsz,wght@1,9..144,300&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
-<script src="js/scripts.js" defer></script>
 </head>
 <body>
 
-<div class="topbar">
-  <div class="live">Available now</div>
-  <div>Amsterdam · CET</div>
-  <div>EN · NL</div>
-  <div>Hybrid / remote / on-site</div>
-</div>
-
-<nav class="main-nav">
-  <a href="index.html" class="logo">SHANDOR<span class="dot-mark"></span></a>
-  <ul>
-    <li><a href="index.html" class="active">01 Work</a></li>
-    <li><a href="about.html">02 About</a></li>
-    <li><a href="contact.html">03 Contact</a></li>
-    <li>
-      <button class="theme-toggle" aria-label="Toggle dark mode">
-        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
-        </svg>
-        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <circle cx="12" cy="12" r="4"/>
-          <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>
-        </svg>
-      </button>
-    </li>
-  </ul>
-</nav>
-
-<section class="case-hero">
-  <div class="kicker">03 / 04 · UX · Privacy and Trust</div>
-  <h1><span class="accent-block"><span>Kubo</span></span></h1>
-</section>
-
-<section class="case-meta">
-  <div class="item">
-    <div class="label">Type</div>
-    <div class="val">Concept project</div>
+<nav id="nav"><div class="wrap">
+  <a class="seal" href="index.html" aria-label="Home">STH</a>
+  <div class="navlinks">
+    <a href="index.html#work">The Menu</a><a href="index.html#host">The Host</a><a href="contact.html" class="res">Reserve a call</a>
   </div>
-  <div class="item">
-    <div class="label">Year</div>
-    <div class="val">2025</div>
-  </div>
-  <div class="item">
-    <div class="label">Role</div>
-    <div class="val">UX and UI design</div>
-  </div>
-  <div class="item">
-    <div class="label">Scope</div>
-    <div class="val">Mobile concept</div>
-  </div>
-</section>
+</div></nav>
 
-<section class="case-section">
-  <span class="sec-label">[ 01 ] Brief</span>
-  <div class="sec-content">
-    <h2>The documents of a life shouldn't live in screenshots and email attachments.</h2>
-    <p>Kubo is a concept for a personal digital vault. Passport, insurance, medical records, contracts, the kind of documents you need rarely but urgently. The current default for most people is a chaotic mix of cloud storage, photos folder, and the inbox. Kubo asks what a calmer, more trustworthy alternative could look like.</p>
-    <p>The brief was small in surface area but tricky in feel. This is the kind of product that has to communicate <strong>safety</strong> in every interaction. Any cleverness or friction breaks the trust it depends on.</p>
+<header class="case-hero"><div class="wrap">
+  <span class="kicker rv in">Case study &middot; the concept</span>
+  <h1>
+    <span class="line-mask"><span><b>Kubo</b></span></span>
+  </h1>
+  <div class="kind rv d1">a vault for who you are online</div>
+  <div class="case-facts rv d2">
+    <div class="cf"><span class="k">Role</span><span class="v">UX/UI Designer</span></div>
+    <div class="cf"><span class="k">Type</span><span class="v">Concept case study</span></div>
+    <div class="cf"><span class="k">Tools</span><span class="v">Figma · Miro</span></div>
+    <div class="cf"><span class="k">Year</span><span class="v">2025</span></div>
   </div>
-</section>
+  <div class="case-cover rv d3"><img src="img/projects/project-kubo-lg.png" alt="Kubo cover image"></div>
+</div></header>
 
-<section class="case-section">
-  <span class="sec-label">[ 02 ] Sitemap</span>
-  <div class="sec-content">
-    <h2>A flat structure, not a deep one.</h2>
-    <p>Security products often hide behind layered settings and permission screens. Kubo goes the other way. A deliberately flat architecture where everything important is one or two taps from the home screen. The complexity sits in the background. The surface stays calm.</p>
-    <div class="case-image">
-      <img src="img/Kubo/sitemap.png" alt="Kubo sitemap" loading="lazy">
-      <div class="caption">Sitemap · flat by design</div>
-    </div>
-  </div>
-</section>
 
-<section class="case-section">
-  <span class="sec-label">[ 03 ] Flows</span>
-  <div class="sec-content">
-    <h2>Designing for the principle of never asking twice.</h2>
-    <p>The core UX principle came from watching myself use existing tools. The worst feeling is re-authenticating, re-confirming, or being asked the same question I just answered. Every Kubo flow had to make that pattern impossible.</p>
-    <div class="case-image">
-      <img src="img/Kubo/user-flows.png" alt="Kubo user flows" loading="lazy">
-      <div class="caption">User flows · adding, retrieving, sharing</div>
-    </div>
-    <div class="callout">
-      <div class="label">Design principle</div>
-      <p>"Never ask twice. Confidence and confirmation are not the same thing."</p>
-    </div>
-  </div>
-</section>
+<section class="case-section"><div class="wrap">
+  <div class="label rv"><span class="no">01</span><h3>The <b>brief</b></h3></div>
+  <p class="rv d1">Digital fashion is growing, but ownership is scattered across platforms. Kubo is a vault where your digital identity lives in one place. <em>[Vervang met jouw eigen samenvatting]</em></p>
+</div></section>
 
-<section class="case-section">
-  <span class="sec-label">[ 04 ] Interface</span>
-  <div class="sec-content">
-    <h2>A mobile-first interface that reads more like a notebook than a database.</h2>
-    <p>The home screen is intentionally quiet. No nudges, no notifications, no upsells. The visual language draws from notebooks and document folders rather than security software. Warm, considered, slightly tactile.</p>
-    <div class="case-image">
-      <img src="img/Kubo/mobile-home.png" alt="Kubo mobile home screen" loading="lazy">
-      <div class="caption">Home screen · calm by default</div>
-    </div>
-    <div class="case-image">
-      <img src="img/Kubo/kubo-mock-up.gif" alt="Kubo prototype animation" loading="lazy">
-      <div class="caption">Prototype · interaction study</div>
-    </div>
-  </div>
-</section>
+<section class="case-section"><div class="wrap">
+  <div class="label rv"><span class="no">02</span><h3>Structuring the <b>vault</b></h3></div>
+  <p class="rv d1">A clear sitemap and user flows turned an abstract idea into a navigable product. The challenge: making something novel feel instantly familiar.</p>
+  <div class="case-grid-2 rv"><img src="img/Kubo/sitemap.png" alt=""><img src="img/Kubo/user-flows.png" alt=""></div>
+</div></section>
 
-<section class="case-section">
-  <span class="sec-label">[ 05 ] Reflection</span>
-  <div class="sec-content">
-    <h2>The thing this project taught me about restraint.</h2>
-    <p>Kubo was the first project where the hardest design problems weren't visible. They were about emotional tone. Designing for trust is mostly about restraint. The temptation is to add reassurance everywhere. The right answer is usually to do less, and to let the absence of friction be the reassurance.</p>
-    <p>The sharing flows are the part I'd revisit first. The moment when a Kubo user has to give someone else temporary access to a document is where most real-world trust products fail. The current design handles it, but the next version would treat that flow as the headline feature, not an edge case.</p>
-  </div>
-</section>
+<section class="case-section"><div class="wrap">
+  <div class="label rv"><span class="no">03</span><h3>The <b>interface</b></h3></div>
+  <p class="rv d1">Mobile-first design with a focus on the collection view: your digital wardrobe should feel as tactile as a physical one.</p>
+  <div class="case-img rv"><img src="img/Kubo/mobile-home.png" alt=""><div class="cap">The mobile home screen</div></div>
+</div></section>
 
-<section class="case-next">
-  <a href="moodstream.html" class="prev">
-    <div class="label">← Previous</div>
-    <div class="name">MoodStream</div>
-  </a>
-  <a href="expert.html" class="next">
-    <div class="label">Next →</div>
-    <div class="name">Expert</div>
-  </a>
-</section>
+<section class="case-section"><div class="wrap">
+  <div class="label rv"><span class="no">04</span><h3>In <b>motion</b></h3></div>
+  <p class="rv d1">A working mock-up brought the interactions to life and tested whether the concept communicated itself without explanation.</p>
+  <div class="case-img rv"><img src="img/Kubo/kubo-mock-up.gif" alt=""><div class="cap">Interactive mock-up</div></div>
+</div></section>
 
-<footer class="site-footer">
-  <div class="grid" style="border-top: 1px solid var(--ink); padding-top: 32px;">
-    <div>
-      <div class="label">Email</div>
-      <a href="mailto:shandortenhoven@gmail.com" class="link">shandortenhoven@gmail.com</a>
-    </div>
-    <div>
-      <div class="label">Network</div>
-      <a href="https://www.linkedin.com/in/shandortenhoven" class="link">LinkedIn ↗</a>
-    </div>
-    <div>
-      <div class="label">Location</div>
-      Amsterdam, NL
-    </div>
-    <div>
-      <div class="label">© 2026</div>
-      Shandor ten Hoven
-    </div>
-  </div>
-</footer>
+<div class="next-course"><div class="wrap">
+  <span class="lbl">next course</span>
+  <a class="big" href="energycheck.html"><b>Energy Check</b><span class="ar">&rarr;</span></a>
+</div></div>
 
+<footer id="contact"><div class="wrap">
+  <span class="kicker rv">Reservations</span>
+  <h2 class="rv d1">The table is <b>set.</b></h2>
+  <p class="rv d2">Looking for a designer who treats users like guests? Let's talk. I'll bring the oat lattes.</p>
+  <div class="cta-row rv d3"><a class="btn" href="mailto:shandortenhoven@gmail.com"><span>Reserve a call</span></a></div>
+  <div class="small rv d4">Amsterdam<i>&middot;</i><a href="https://www.linkedin.com/in/shandortenhoven" target="_blank" rel="noopener">LinkedIn</a><i>&middot;</i><a href="https://github.com/shandortenhoven" target="_blank" rel="noopener">GitHub</a></div>
+</div></footer>
+
+<script src="js/scripts.js"></script>
 </body>
 </html>
