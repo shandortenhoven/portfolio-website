@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://shandortenhoven.github.io/portfolio-website/sitemap.xml

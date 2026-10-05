@@ -2,94 +2,57 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Kubo · Shandor ten Hoven</title>
-<meta name="description" content="Kubo: a digital vault for the important documents of a life. UX work around trust, privacy, and the principle of never asking twice.">
-<link rel="canonical" href="https://shandortenhoven.github.io/portfolio-website/kubo.html">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Kubo · Case study · Shandor ten Hoven</title>
+<meta name="description" content="A calm place for important documents. A mobile concept by Shandor ten Hoven.">
+<meta name="theme-color" content="#F4F4F1">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
 <meta property="og:type" content="website">
-<meta property="og:site_name" content="Shandor ten Hoven">
-<meta property="og:url" content="https://shandortenhoven.github.io/portfolio-website/kubo.html">
-<meta property="og:title" content="Kubo · Shandor ten Hoven">
-<meta property="og:description" content="A digital vault for the important documents of a life. UX work around trust, privacy and never asking twice.">
+<meta property="og:title" content="Kubo · Case study · Shandor ten Hoven">
+<meta property="og:description" content="A calm place for important documents. A mobile concept by Shandor ten Hoven.">
 <meta property="og:image" content="https://shandortenhoven.github.io/portfolio-website/img/og/og-kubo.jpg">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://shandortenhoven.github.io/portfolio-website/kubo.html">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Kubo · Shandor ten Hoven">
-<meta name="twitter:description" content="A digital vault for the important documents of a life. UX work around trust, privacy and never asking twice.">
-<meta name="twitter:image" content="https://shandortenhoven.github.io/portfolio-website/img/og/og-kubo.jpg">
-<noscript><style>.rv{opacity:1;transform:none}</style></noscript>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,200;14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=Fraunces:ital,opsz,wght@1,9..144,300&display=swap" rel="stylesheet">
+<link rel="preload" href="css/fonts/mona-sans.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="css/style.css">
+<script>
+/* entered without a page transition? then the cover does its own compress-and-reveal */
+document.documentElement.classList.add('no-vt');
+addEventListener('pagereveal',e=>{ if(e.viewTransition) document.documentElement.classList.remove('no-vt'); });
+</script>
 </head>
 <body>
-
 <a class="skip" href="#main">Skip to content</a>
-
-<nav id="nav"><div class="wrap">
-  <a class="seal" href="index.html" aria-label="Home">STH</a>
-  <div class="navlinks">
-    <a href="index.html#work">The Menu</a><a href="index.html#host">The Host</a><a href="contact.html" class="res">Reserve a call</a>
-  </div>
-</div></nav>
-
-<header class="case-hero"><div class="wrap">
-  <span class="kicker rv in">Case study · the concept · 03 / 04</span>
-  <h1>
-    <span class="line-mask"><span><b>Kubo</b></span></span>
-  </h1>
-  <div class="kind rv d1">a calm home for the documents of a life</div>
-  <div class="case-facts rv d2">
-    <div class="cf"><span class="k">Type</span><span class="v">Concept project</span></div>
-    <div class="cf"><span class="k">Year</span><span class="v">2025</span></div>
-    <div class="cf"><span class="k">Role</span><span class="v">UX and UI design</span></div>
-    <div class="cf"><span class="k">Scope</span><span class="v">Mobile concept</span></div>
-  </div>
+<header class="nav" id="nav"><div class="row px">
+  <a class="name" href="index.html" aria-label="Shandor ten Hoven, home"><span class="shbox" id="shbox"><span class="shf" id="navSh" style="view-transition-name:site-name">Shandor</span></span><span class="rest">ten Hoven</span></a>
+  <span class="role" aria-hidden="true">UX/UI and product designer</span>
+  <nav aria-label="Main"><ul>
+    <li><a href="index.html#work">Work</a></li>
+    <li><a href="index.html#about">About</a></li>
+    <li class="cvl"><a href="files/CV-Shandor-ten-Hoven.docx" download>CV</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul></nav>
 </div></header>
-
-<main id="main">
-<section class="case-section"><div class="wrap">
-  <div class="label rv"><span class="no">[ 01 ]</span><h3>The <b>brief</b></h3></div>
-  <p class="rv d1">The documents of a life shouldn't live in screenshots and email attachments. Kubo is a concept for a personal digital vault. Passport, insurance, medical records, contracts, the kind of documents you need rarely but urgently. The current default for most people is a chaotic mix of cloud storage, photos folder, and the inbox. Kubo asks what a calmer, more trustworthy alternative could look like.</p>
-  <p class="rv">The brief was small in surface area but tricky in feel. This is the kind of product that has to communicate <strong>safety</strong> in every interaction. Any cleverness or friction breaks the trust it depends on.</p>
-</div></section>
-<section class="case-section"><div class="wrap">
-  <div class="label rv"><span class="no">[ 02 ]</span><h3>A flat structure, <b>not a deep one</b></h3></div>
-  <p class="rv d1">Security products often hide behind layered settings and permission screens. Kubo goes the other way. A deliberately flat architecture where everything important is one or two taps from the home screen. The complexity sits in the background. The surface stays calm.</p>
-  <div class="case-img rv"><img loading="lazy" decoding="async" src="img/Kubo/sitemap.png" alt="Sitemap · flat by design"><div class="cap">Sitemap · flat by design</div></div>
-</div></section>
-<section class="case-section"><div class="wrap">
-  <div class="label rv"><span class="no">[ 03 ]</span><h3>Designing for the principle of <b>never asking twice</b></h3></div>
-  <p class="rv d1">The core UX principle came from watching myself use existing tools. The worst feeling is re-authenticating, re-confirming, or being asked the same question I just answered. Every Kubo flow had to make that pattern impossible.</p>
-  <div class="pull rv"><p>Never ask twice. Confidence and confirmation are not the same thing.</p></div>
-  <div class="case-img rv"><img loading="lazy" decoding="async" src="img/Kubo/user-flows.png" alt="User flows · adding, retrieving, sharing"><div class="cap">User flows · adding, retrieving, sharing</div></div>
-</div></section>
-<section class="case-section"><div class="wrap">
-  <div class="label rv"><span class="no">[ 04 ]</span><h3>An interface that reads like a notebook, <b>not a database</b></h3></div>
-  <p class="rv d1">The home screen is intentionally quiet. No nudges, no notifications, no upsells. The visual language draws from notebooks and document folders rather than security software. Warm, considered, slightly tactile.</p>
-  <div class="case-grid-2 rv"><div><img loading="lazy" decoding="async" src="img/Kubo/mobile-home.png" alt="Home screen · calm by default"><div class="cap">Home screen · calm by default</div></div><div><img loading="lazy" decoding="async" src="img/Kubo/kubo-mock-up.gif" alt="Prototype · interaction study"><div class="cap">Prototype · interaction study</div></div></div>
-</div></section>
-<section class="case-section"><div class="wrap">
-  <div class="label rv"><span class="no">[ 05 ]</span><h3>What this project taught me <b>about restraint</b></h3></div>
-  <p class="rv d1">Kubo was the first project where the hardest design problems weren't visible. They were about emotional tone. Designing for trust is mostly about restraint. The temptation is to add reassurance everywhere. The right answer is usually to do less, and to let the absence of friction be the reassurance.</p>
-  <p class="rv">The sharing flows are the part I'd revisit first. The moment when a Kubo user has to give someone else temporary access to a document is where most real-world trust products fail. The current design handles it, but the next version would treat that flow as the headline feature, not an edge case.</p>
-</div></section>
+<main id="main" tabindex="-1" class="case-wrap" style="--pc:#1E3FB4">
+<div class="px">
+<header class="c-open" data-hoven="100,500,0">
+  <p class="c-meta idx"><span style="display:inline-flex;gap:14px;flex-wrap:wrap"><a href="index.html#work">All work</a><span>Case study 04 / 04</span></span><span class="muted">Mobile concept</span></p>
+  <h1 class="c-title" id="caseTitle" style="view-transition-name:title-kubo">Kubo</h1>
+  <p class="c-lede">A calm place for the documents that matter most when you need them quickly.</p>
+  <dl class="c-facts"><div><dt>Project type</dt><dd>Mobile concept</dd></div><div><dt>Year</dt><dd>2025</dd></div><div><dt>Role</dt><dd>UX and UI design</dd></div><div><dt>Scope</dt><dd>Architecture, flows and mobile UI</dd></div></dl>
+  <figure class="c-cover" id="caseCover" style="view-transition-name:cover-kubo"><img src="img/projects/kubo_a.webp" alt="The Kubo vault on mobile" width="1600" height="1000" fetchpriority="high"></figure>
+</header>
+<section class="blk stmt" data-hoven="96,640,0"><p class="lab">The problem<span>01</span></p><div class="body"><p class="bigline">Needed rarely.</p><p class="bigline">Needed urgently.</p><div class="small one"><p>Passport, insurance, contracts, medical records: most people keep them in a mix of screenshots, email attachments and cloud folders. You rarely need them, but when you do, you need them fast, and that’s exactly when the mix fails.</p></div></div></section><section class="blk split" data-hoven="118,420,0"><p class="lab">The principle<span>02</span></p><div class="txt"><h2>Complexity behind the scenes, simplicity in front</h2><p>The sitemap looks busy because it describes the whole system: categories, metadata, reminders and settings. What the user sees is deliberately flat. Everything important is one or two taps from the home screen, and the rest stays in the background.</p></div><div class="vis"><figure class="cr"><div class="im"><img src="img/Kubo/sitemap.webp" alt="Sitemap: the full system behind a flat surface" width="2000" height="1934" loading="lazy" decoding="async"></div><figcaption>Sitemap: the full system behind a flat surface</figcaption></figure></div></section><section class="blk dec" data-hoven="92,700,0"><p class="lab">Never ask twice<span>03</span></p><div class="head"><h2>Three flows, one rule</h2><p>Re-confirming, re-entering and re-authenticating break trust in a product like this. Every flow had to avoid asking for something it already knows.</p></div><ol><li><span class="n">01</span><div class="what"><h3>Adding a document</h3><dl><div><dt>Why</dt><dd>Typing out document details is where people give up.</dd></div><div><dt>Evidence</dt><dd>The add flow scans, uploads or takes a photo, then reads it.</dd></div><div><dt>Changed</dt><dd>OCR fills in the details; you only check them and pick a category.</dd></div></dl></div><div class="vis"><figure class="cr"><div class="im"><img src="img/Kubo/vault.webp" alt="The vault, organised by category" width="400" height="821" loading="lazy" decoding="async"></div><figcaption>The vault, organised by category</figcaption></figure></div></li><li><span class="n">02</span><div class="what"><h3>Finding it again</h3><dl><div><dt>Why</dt><dd>In the urgent moment you remember a word, not a folder.</dd></div><div><dt>Evidence</dt><dd>The retrieve flow starts from search: type “Passport”, open it.</dd></div><div><dt>Changed</dt><dd>Search on the home screen, with share and download right on the document.</dd></div></dl></div><div class="vis"><figure class="cr"><div class="im"><img src="img/Kubo/user-flows.webp" alt="The three flows: adding, retrieving, expiry reminder" width="2000" height="2597" loading="lazy" decoding="async"></div><figcaption>The three flows: adding, retrieving, expiry reminder</figcaption></figure></div></li><li><span class="n">03</span><div class="what"><h3>Before it expires</h3><dl><div><dt>Why</dt><dd>The worst time to discover an expired passport is when you need it.</dd></div><div><dt>Evidence</dt><dd>The third flow is a reminder: Kubo notifies you, you renew or snooze.</dd></div><div><dt>Changed</dt><dd>“Expiring soon” sits at the top of the home screen.</dd></div></dl></div><div class="vis"><figure class="cr"><div class="im"><img src="img/Kubo/home-frame.webp" alt="Home screen with documents that expire soon" width="400" height="821" loading="lazy" decoding="async"></div><figcaption>Home screen with documents that expire soon</figcaption></figure></div></li></ol></section><section class="blk full" data-hoven="110,460,1"><p class="lab">Final interface<span>04</span></p><div class="head"><h2>A notebook, not a database</h2><p>No nudges, no upsells. The visual language comes from notebooks and document folders rather than security software.</p></div><div class="vis phone"><figure class="cr tall"><div class="im" tabindex="0" role="region" aria-label="Home screen, calm by default, scrollable"><img src="img/Kubo/mobile-home.webp" alt="Home screen, calm by default" width="1323" height="5616" loading="lazy" decoding="async"></div><figcaption>Home screen, calm by default</figcaption></figure><figure class="vid"><div class="im"><video data-loop autoplay muted loop playsinline preload="metadata" poster="img/Kubo/kubo-mock-up-poster.webp" width="400" height="821" aria-label="Prototype, interaction study"><source src="img/Kubo/kubo-mock-up.mp4" type="video/mp4"></video></div><figcaption>Prototype, interaction study</figcaption></figure></div></section><section class="blk rfl" data-hoven="88,620,0"><p class="lab">Reflection<span>05</span></p><div class="head"><h2>What I’d revisit</h2></div><dl><div><dt>Still open</dt><dd>Sharing. Giving someone temporary access to a document is where most trust products fail. Kubo handles it at the end of the retrieve flow, but it deserves its own design.</dd></div><div><dt>Next</dt><dd>Treat sharing as the headline feature rather than an edge case.</dd></div><div><dt>What it taught me</dt><dd>Designing for trust is mostly restraint: the absence of friction is the reassurance.</dd></div></dl></section>
+<a class="c-next" href="energycheck.html" data-hoven="110,600,0"><span class="lbl"><span>Next project</span><span class="muted">Take-home assignment, B2B website</span></span><span class="nn" id="nextName" data-key="energy">Energy Check</span><span class="ni" id="nextImg" style="--pc:#0E3A36"><img src="img/projects/energy_a.webp" alt="" loading="lazy" width="1280" height="800"></span></a>
+</div>
 </main>
-
-<div class="next-course"><div class="wrap">
-  <span class="lbl">next course</span>
-  <a class="big" href="moodstream.html"><b>MoodStream</b><span class="ar">&rarr;</span></a>
-</div></div>
-
-<footer id="contact"><div class="wrap">
-  <span class="kicker rv">Reservations</span>
-  <h2 class="rv d1">The table is <b>set.</b></h2>
-  <p class="rv d2">Looking for a designer who treats users like guests? Let's talk. I'll bring the oat lattes.</p>
-  <div class="cta-row rv d3"><a class="btn" href="mailto:shandortenhoven@gmail.com"><span>Send an email</span></a></div>
-  <div class="small rv d4">Amsterdam<i>&middot;</i><a href="https://www.linkedin.com/in/shandortenhoven" target="_blank" rel="noopener">LinkedIn</a><i>&middot;</i><a href="https://github.com/shandortenhoven" target="_blank" rel="noopener">GitHub</a></div>
-</div></footer>
-
-<script src="js/scripts.js"></script>
+<footer class="c-foot px" id="contact" aria-labelledby="contactTitle" data-hoven="80,820,0">
+  <h2 id="contactTitle">Let's work together.</h2>
+  <div class="row"><a class="mail" href="mailto:shandortenhoven@gmail.com">shandortenhoven@gmail.com</a><button class="copy" id="copy" type="button"><span class="a">Copy address</span><span class="b" aria-hidden="true">Copied</span></button><span class="sr" id="copyStatus" role="status"></span></div>
+  <div class="row"><a class="ln" href="https://www.linkedin.com/in/shandortenhoven" target="_blank" rel="noopener">LinkedIn<span class="sr"> (opens in a new tab)</span></a><a class="ln" href="files/CV-Shandor-ten-Hoven.docx" download>Download CV</a><a class="ln" href="index.html#work">All work</a></div>
+  <div class="colo"><span>Shandor ten Hoven, Amsterdam</span><span>Set in Mona Sans</span></div>
+</footer>
+<script src="js/scripts.js" defer></script>
 </body>
 </html>

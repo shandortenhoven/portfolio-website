@@ -2,95 +2,57 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>MoodStream · Shandor ten Hoven</title>
-<meta name="description" content="MoodStream: a streaming concept where mood replaces genre. Finding film and music by how you want to feel, not by category.">
-<link rel="canonical" href="https://shandortenhoven.github.io/portfolio-website/moodstream.html">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>MoodStream · Case study · Shandor ten Hoven</title>
+<meta name="description" content="What if mood, rather than genre, became the first decision? An interaction and visual design concept by Shandor ten Hoven.">
+<meta name="theme-color" content="#F4F4F1">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
 <meta property="og:type" content="website">
-<meta property="og:site_name" content="Shandor ten Hoven">
+<meta property="og:title" content="MoodStream · Case study · Shandor ten Hoven">
+<meta property="og:description" content="What if mood, rather than genre, became the first decision? An interaction and visual design concept by Shandor ten Hoven.">
+<meta property="og:image" content="https://shandortenhoven.github.io/portfolio-website/img/og/og-mood.jpg">
 <meta property="og:url" content="https://shandortenhoven.github.io/portfolio-website/moodstream.html">
-<meta property="og:title" content="MoodStream · Shandor ten Hoven">
-<meta property="og:description" content="A streaming concept where mood replaces genre. Finding film and music by how you want to feel.">
-<meta property="og:image" content="https://shandortenhoven.github.io/portfolio-website/img/og/og-moodstream.jpg">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="MoodStream · Shandor ten Hoven">
-<meta name="twitter:description" content="A streaming concept where mood replaces genre. Finding film and music by how you want to feel.">
-<meta name="twitter:image" content="https://shandortenhoven.github.io/portfolio-website/img/og/og-moodstream.jpg">
-<noscript><style>.rv{opacity:1;transform:none}</style></noscript>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,200;14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=Fraunces:ital,opsz,wght@1,9..144,300&display=swap" rel="stylesheet">
+<link rel="preload" href="css/fonts/mona-sans.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="css/style.css">
+<script>
+/* entered without a page transition? then the cover does its own compress-and-reveal */
+document.documentElement.classList.add('no-vt');
+addEventListener('pagereveal',e=>{ if(e.viewTransition) document.documentElement.classList.remove('no-vt'); });
+</script>
 </head>
 <body>
-
 <a class="skip" href="#main">Skip to content</a>
-
-<nav id="nav"><div class="wrap">
-  <a class="seal" href="index.html" aria-label="Home">STH</a>
-  <div class="navlinks">
-    <a href="index.html#work">The Menu</a><a href="index.html#host">The Host</a><a href="contact.html" class="res">Reserve a call</a>
-  </div>
-</div></nav>
-
-<header class="case-hero"><div class="wrap">
-  <span class="kicker rv in">Case study · the experiment · 04 / 04</span>
-  <h1>
-    <span class="line-mask"><span><b>MoodStream</b></span></span>
-  </h1>
-  <div class="kind rv d1">browsing by feeling, not by genre</div>
-  <div class="case-facts rv d2">
-    <div class="cf"><span class="k">Type</span><span class="v">Concept project</span></div>
-    <div class="cf"><span class="k">Year</span><span class="v">2026</span></div>
-    <div class="cf"><span class="k">Role</span><span class="v">Concept and UI</span></div>
-    <div class="cf"><span class="k">Scope</span><span class="v">Concept to design system</span></div>
-  </div>
+<header class="nav" id="nav"><div class="row px">
+  <a class="name" href="index.html" aria-label="Shandor ten Hoven, home"><span class="shbox" id="shbox"><span class="shf" id="navSh" style="view-transition-name:site-name">Shandor</span></span><span class="rest">ten Hoven</span></a>
+  <span class="role" aria-hidden="true">UX/UI and product designer</span>
+  <nav aria-label="Main"><ul>
+    <li><a href="index.html#work">Work</a></li>
+    <li><a href="index.html#about">About</a></li>
+    <li class="cvl"><a href="files/CV-Shandor-ten-Hoven.docx" download>CV</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul></nav>
 </div></header>
-
-<main id="main">
-<section class="case-section"><div class="wrap">
-  <div class="label rv"><span class="no">[ 01 ]</span><h3>The <b>brief</b></h3></div>
-  <p class="rv d1">What if you stopped browsing by genre and started browsing by feeling? MoodStream is a concept for a media platform that drops genre as the primary navigation. Instead of “Action,” “Drama,” “Indie Rock,” you choose how you want to <em>feel</em>. Focused, melancholic, in motion, curious. The platform then serves film and music that match.</p>
-  <p class="rv">The idea started as a frustration with my own behaviour. I open Netflix or Spotify, scroll through categories that don't describe what I'm actually looking for, and close the app five minutes later. Genre is a librarian's framework. Mood is how people actually decide.</p>
-</div></section>
-<section class="case-section"><div class="wrap">
-  <div class="label rv"><span class="no">[ 02 ]</span><h3>A spectrum, <b>not a grid</b></h3></div>
-  <p class="rv d1">The core interaction is a mood selector. Not a list of genres but a navigable space of emotional states. You orient yourself within that space, and the content reorders around you. The UI had to feel calm and atmospheric, more like adjusting lighting than browsing a database.</p>
-  <div class="pull rv"><p>The interface should feel like the mood it's helping you find.</p></div>
-  <div class="case-grid-2 rv"><div><img loading="lazy" decoding="async" src="img/Moodstream/hi-1.jpg" alt="Mood selection"><div class="cap">Mood selection</div></div><div><img loading="lazy" decoding="async" src="img/Moodstream/hi-2.jpg" alt="Content browse"><div class="cap">Content browse</div></div></div>
-  <div class="case-img rv"><img loading="lazy" decoding="async" src="img/Moodstream/hi-3.jpg" alt="Playback state"><div class="cap">Playback state</div></div>
-</div></section>
-<section class="case-section"><div class="wrap">
-  <div class="label rv"><span class="no">[ 03 ]</span><h3>Designed as a system, <b>not screens</b></h3></div>
-  <p class="rv d1">Because the platform's character had to feel consistent across very different content types (moving image, static covers, audio), I built out a small design system early. Type scale, mood color tokens, component library. It made the high-fidelity work go three times faster.</p>
-  <div class="case-img rv"><img loading="lazy" decoding="async" src="img/Moodstream/design-system.webp" alt="Design system · tokens and components"><div class="cap">Design system · tokens and components</div></div>
-</div></section>
-<section class="case-section"><div class="wrap">
-  <div class="label rv"><span class="no">[ 04 ]</span><h3>Scroll behaviour as <b>part of the mood</b></h3></div>
-  <p class="rv d1">Motion was a deliberate part of the design. Slow, weighted scroll, transitions that fade rather than cut, micro-animations that feel like breath rather than feedback. The platform should feel like it's listening, not reacting.</p>
-  <div class="case-img rv"><img loading="lazy" decoding="async" src="img/Moodstream/moodstream-scroll.gif" alt="Scroll behavior · motion study"><div class="cap">Scroll behavior · motion study</div></div>
-</div></section>
-<section class="case-section"><div class="wrap">
-  <div class="label rv"><span class="no">[ 05 ]</span><h3>The honest <b>hard part</b></h3></div>
-  <p class="rv d1">MoodStream is where I started thinking about <em>tone</em> as a design material. Not just typography or color, but the felt sense a product gives off. It's harder to articulate than usability but it's often what makes someone come back, or not.</p>
-  <p class="rv">The harder, unfinished question: how do you actually build a mood taxonomy that works across cultures and individuals? “Melancholic” means something different to everyone. A next pass would treat mood as something you tune over time, not something you select from a menu. That's a much bigger project than the brief I gave myself.</p>
-</div></section>
+<main id="main" tabindex="-1" class="case-wrap" style="--pc:#000000">
+<div class="px">
+<header class="c-open" data-hoven="100,500,0">
+  <p class="c-meta idx"><span style="display:inline-flex;gap:14px;flex-wrap:wrap"><a href="index.html#work">All work</a><span>Case study 03 / 04</span></span><span class="muted">Experimental concept</span></p>
+  <h1 class="c-title" id="caseTitle" style="view-transition-name:title-mood">MoodStream</h1>
+  <p class="c-lede">An experimental streaming concept that starts with how you want to feel, instead of a genre.</p>
+  <dl class="c-facts"><div><dt>Project type</dt><dd>Experimental concept</dd></div><div><dt>Year</dt><dd>2026</dd></div><div><dt>Role</dt><dd>Concept, interaction and visual design</dd></div><div><dt>Scope</dt><dd>Concept, prototype and design system. Not user tested.</dd></div></dl>
+  <figure class="c-cover" id="caseCover" style="view-transition-name:cover-mood"><img src="img/projects/mood_a.webp" alt="Choosing one of six moods" width="1600" height="1000" fetchpriority="high"></figure>
+</header>
+<section class="blk stmt" data-hoven="124,300,0"><p class="lab">The hypothesis<span>01</span></p><div class="body"><p class="bigline">What if mood, not genre,</p><p class="bigline">became the first decision?</p><div class="small one"><p>It started with my own behaviour: I open a streaming app, scroll through categories that don’t describe what I’m in the mood for, and close it again. That’s a personal observation, not a research finding. MoodStream is a way to explore the premise visually and see whether it holds up as an interface.</p></div></div></section><section class="blk ba" data-hoven="100,520,1"><p class="lab">Where it started<span>02</span></p><div class="head"><h2>One page, then six moods</h2><p>MoodStream began as a single home page: “Feel the moment”, an atmospheric way into music and film. Once that page worked, I extended it into six moods, each with its own landscape. Scroll to see the step from the home page to the moods.</p></div><div class="fig" role="img" aria-label="The MoodStream home page becoming the mood selector"><img class="before" src="img/Moodstream/landing.webp" alt="" loading="lazy"><img class="after" src="img/Moodstream/selector.webp" alt="" loading="lazy"><span class="seam" aria-hidden="true"></span></div><p class="tags"><span>Home page</span><span>Six moods</span></p></section><section class="blk split" data-hoven="112,440,0"><p class="lab">The interaction<span>03</span></p><div class="txt"><h2>Choose a dimension</h2><p>Instead of a genre menu, you start by picking one of six moods: calm, nostalgic, intense, euphoric, dreamy or focused. Each one is an orb in a dark space rather than an item in a list.</p><p>Choosing one moves you into that mood’s landscape, where film and music are presented in its colour. “Shift your frequency” takes you back to choose another.</p></div><div class="vis"><figure class="cr"><div class="im"><img src="img/Moodstream/landscape.webp" alt="Inside a mood: the nostalgic landscape" width="1600" height="1700" loading="lazy" decoding="async"></div><figcaption>Inside a mood: the nostalgic landscape</figcaption></figure></div></section><section class="blk split" data-hoven="84,700,0"><p class="lab">The visual system<span>04</span></p><div class="txt"><h2>The system came last</h2><p>Only once the six moods existed did I pull the shared parts into a design system: one dark base, a gradient per mood, and the same components in every landscape. It keeps the moods consistent without making them identical.</p></div><div class="vis"><figure class="cr"><div class="im"><img src="img/Moodstream/system-colours.webp" alt="A gradient per mood on one dark base" width="1600" height="1422" loading="lazy" decoding="async"></div><figcaption>A gradient per mood on one dark base</figcaption></figure><figure class="cr tall"><div class="im" tabindex="0" role="region" aria-label="The full design system: colours, type and components, scrollable"><img src="img/Moodstream/design-system.webp" alt="The full design system: colours, type and components" width="1600" height="7111" loading="lazy" decoding="async"></div><figcaption>The full design system: colours, type and components</figcaption></figure></div></section><section class="blk full" data-hoven="112,420,0"><p class="lab">Motion<span>05</span></p><div class="head"><h2>Slow on purpose</h2><p>Motion is part of the mood: weighted scroll and soft transitions, so the interface feels like it’s listening rather than reacting.</p></div><div class="vis "><figure class="vid"><div class="im"><video data-loop autoplay muted loop playsinline preload="metadata" poster="img/Moodstream/moodstream-scroll-poster.webp" width="800" height="584" aria-label="Scroll and motion study"><source src="img/Moodstream/moodstream-scroll.mp4" type="video/mp4"></video></div><figcaption>Scroll and motion study</figcaption></figure></div></section><section class="blk stmt" data-hoven="78,860,0"><p class="lab">The open question<span>06</span></p><div class="body"><p class="bigline">“Melancholic” means something different to everyone.</p><div class="small"><p>Mood is subjective. A taxonomy that works across cultures and individuals would need real research and validation, and I haven’t tested MoodStream with users.</p><p>If I took it further, I’d treat mood as something you tune over time rather than pick from a menu, and I’d test that before designing more screens.</p></div></div></section>
+<a class="c-next" href="kubo.html" data-hoven="110,600,0"><span class="lbl"><span>Next project</span><span class="muted">Mobile concept</span></span><span class="nn" id="nextName" data-key="kubo">Kubo</span><span class="ni" id="nextImg" style="--pc:#1E3FB4"><img src="img/projects/kubo_a.webp" alt="" loading="lazy" width="1280" height="800"></span></a>
+</div>
 </main>
-
-<div class="next-course"><div class="wrap">
-  <span class="lbl">next course</span>
-  <a class="big" href="energycheck.html"><b>Energy Check</b><span class="ar">&rarr;</span></a>
-</div></div>
-
-<footer id="contact"><div class="wrap">
-  <span class="kicker rv">Reservations</span>
-  <h2 class="rv d1">The table is <b>set.</b></h2>
-  <p class="rv d2">Looking for a designer who treats users like guests? Let's talk. I'll bring the oat lattes.</p>
-  <div class="cta-row rv d3"><a class="btn" href="mailto:shandortenhoven@gmail.com"><span>Send an email</span></a></div>
-  <div class="small rv d4">Amsterdam<i>&middot;</i><a href="https://www.linkedin.com/in/shandortenhoven" target="_blank" rel="noopener">LinkedIn</a><i>&middot;</i><a href="https://github.com/shandortenhoven" target="_blank" rel="noopener">GitHub</a></div>
-</div></footer>
-
-<script src="js/scripts.js"></script>
+<footer class="c-foot px" id="contact" aria-labelledby="contactTitle" data-hoven="80,820,0">
+  <h2 id="contactTitle">Let's work together.</h2>
+  <div class="row"><a class="mail" href="mailto:shandortenhoven@gmail.com">shandortenhoven@gmail.com</a><button class="copy" id="copy" type="button"><span class="a">Copy address</span><span class="b" aria-hidden="true">Copied</span></button><span class="sr" id="copyStatus" role="status"></span></div>
+  <div class="row"><a class="ln" href="https://www.linkedin.com/in/shandortenhoven" target="_blank" rel="noopener">LinkedIn<span class="sr"> (opens in a new tab)</span></a><a class="ln" href="files/CV-Shandor-ten-Hoven.docx" download>Download CV</a><a class="ln" href="index.html#work">All work</a></div>
+  <div class="colo"><span>Shandor ten Hoven, Amsterdam</span><span>Set in Mona Sans</span></div>
+</footer>
+<script src="js/scripts.js" defer></script>
 </body>
 </html>

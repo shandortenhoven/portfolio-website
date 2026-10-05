@@ -2,173 +2,117 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Shandor ten Hoven · Product Designer</title>
-<meta name="description" content="Product designer in Amsterdam. Design, served with ten years of hospitality.">
-<link rel="canonical" href="https://shandortenhoven.github.io/portfolio-website/index.html">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Shandor ten Hoven · UX/UI and product designer</title>
+<meta name="description" content="Shandor ten Hoven, UX/UI and product designer in Amsterdam, shaped by a background in fashion and ten years in hospitality.">
+<meta name="theme-color" content="#F4F4F1">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
 <meta property="og:type" content="website">
-<meta property="og:site_name" content="Shandor ten Hoven">
-<meta property="og:url" content="https://shandortenhoven.github.io/portfolio-website/index.html">
-<meta property="og:title" content="Shandor ten Hoven · Product Designer">
-<meta property="og:description" content="Product designer in Amsterdam. Design, served with ten years of hospitality.">
+<meta property="og:title" content="Shandor ten Hoven · UX/UI and product designer">
+<meta property="og:description" content="Shandor ten Hoven, UX/UI and product designer in Amsterdam, shaped by a background in fashion and ten years in hospitality.">
 <meta property="og:image" content="https://shandortenhoven.github.io/portfolio-website/img/og/og-home.jpg">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://shandortenhoven.github.io/portfolio-website/">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Shandor ten Hoven · Product Designer">
-<meta name="twitter:description" content="Product designer in Amsterdam. Design, served with ten years of hospitality.">
-<meta name="twitter:image" content="https://shandortenhoven.github.io/portfolio-website/img/og/og-home.jpg">
-<noscript><style>.rv{opacity:1;transform:none}</style></noscript>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,200;14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=Fraunces:ital,opsz,wght@1,9..144,300&display=swap" rel="stylesheet">
+<link rel="preload" href="css/fonts/mona-sans.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="css/style.css">
+<script>
+/* entered without a page transition? then the cover does its own compress-and-reveal */
+document.documentElement.classList.add('no-vt');
+addEventListener('pagereveal',e=>{ if(e.viewTransition) document.documentElement.classList.remove('no-vt'); });
+</script>
 </head>
 <body>
-
-<a class="skip" href="#main">Skip to content</a>
-
-<nav id="nav"><div class="wrap">
-  <a class="seal" href="index.html" aria-label="Home">STH</a>
-  <div class="navlinks">
-    <a href="index.html#work">The Menu</a><a href="index.html#host">The Host</a><a href="contact.html" class="res">Reserve a call</a>
-  </div>
-</div></nav>
-
-<header class="hero" id="top"><div class="wrap">
-  <span class="kicker rv in">Product Designer &middot; Amsterdam</span>
-  <h1>
-    <span class="line-mask"><span>Design, served with</span></span>
-    <span class="line-mask lm2"><span><b>ten years of hospitality.</b></span></span>
-  </h1>
-  <div class="hero-cols">
-    <div class="hero-left rv d2">
-      <p>I'm Shandor. I design digital products the way a good host runs a room: with attention, timing and a sharp eye for what people actually need. That instinct comes from years in hospitality, from Amsterdam to Melbourne, and it shows in my work.</p>
-      <div class="cta-row">
-        <a class="btn" href="#work"><span>View the menu</span></a>
-        <a class="link-u" href="#host">Meet the host</a>
-      </div>
+<a class="skip" href="#work">Skip to the work</a>
+<div class="splash" id="splash" data-hint="">
+  <div class="panel" id="panel"><div class="inner" id="pIn">
+    <div class="meta"><span>Shandor ten Hoven<span class="yr">, portfolio 2026</span></span><span>Amsterdam <span class="idx" id="clock"></span></span></div>
+    <p class="who"><b>UX/UI and product designer</b> with a background in fashion and ten years in hospitality.</p>
+    <p class="ask">Where would you like to start?</p>
+    <ul class="index" aria-label="Start here">
+      <li><a href="#work" data-go="work" data-hint="work"><span class="idx">01</span><span class="lbl">See the work</span><span class="hint">4 projects</span></a></li>
+      <li><a href="#about" data-go="about" data-hint="about"><span class="idx">02</span><span class="lbl">About me</span><span class="hint">Background and skills</span></a></li>
+      <li><a href="#contact" data-go="contact" data-hint="contact"><span class="idx">03</span><span class="lbl">Get in touch</span><span class="hint">Email, LinkedIn, CV</span></a></li>
+    </ul>
+    <div class="reward" aria-hidden="true">
+      <ul class="words">
+        <li style="--i:0"><span>Fashion<small>Proportion, colour, detail</small></span></li>
+        <li style="--i:1"><span>Hospitality<small>Ten years leading hotel teams</small></span></li>
+        <li style="--i:2"><span>Amsterdam<small>to Melbourne and back</small></span></li>
+        <li style="--i:3"><span>People<small>Reading the room</small></span></li>
+        <li style="--i:4"><span>Research<small>Interviews, synthesis</small></span></li>
+        <li style="--i:5"><span>Interface<small>Flows, UI, systems</small></span></li>
+      </ul>
+      <p class="mailline"><span>shandortenhoven@gmail.com</span></p>
     </div>
-    <div class="facts rv d3">
-      <div class="fact"><span class="k">Practice</span><span class="v">UX / UI &middot; Product Design</span></div>
-      <div class="fact"><span class="k">Focus</span><span class="v">End-to-end product design</span></div>
-      <div class="fact"><span class="k">Tools</span><span class="v">Figma &middot; HTML &middot; CSS &middot; JS</span></div>
-      <div class="fact"><span class="k">Based in</span><span class="v">Amsterdam, NL</span></div>
-      <div class="fact"><span class="k">Status</span><span class="v pulse">Accepting reservations</span></div>
-    </div>
-  </div>
-</div></header>
-
-<div class="strip" aria-hidden="true">
-  <div class="marquee" id="marquee">
-    <span>Research-first</span><i>&middot;</i><span>Human-centered</span><i>&middot;</i><span>Service-minded</span><i>&middot;</i><span>Detail-obsessed</span><i>&middot;</i>
-  </div>
+  </div></div>
 </div>
+<div class="big" id="big" aria-hidden="true"><span class="shf" id="bigSh">Shandor</span><span class="shf alt" id="bigSh2">Shandor</span></div>
 
-<main id="main">
-<section class="work" id="work">
-  <div class="bg-reveal" aria-hidden="true">
-    <div class="bg" data-for="expert">
-      <div class="tile wide"><img data-src="img/projects/project-expert-lg.png" alt=""></div>
-      <div class="tile"><img data-src="img/Expert/availabilityComparison.png" alt=""></div>
-      <div class="tile"><img data-src="img/Expert/afterSessionScreen.png" alt=""></div>
-      <div class="tile wide"><img data-src="img/Expert/highFidelityWireframes.png" alt=""></div>
-      <div class="tile"><img data-src="img/Expert/loadingStateIterations.png" alt=""></div>
-      <div class="tile"><img data-src="img/Expert/midFidelityWireframes.png" alt=""></div>
-    </div>
-    <div class="bg" data-for="kubo">
-      <div class="tile wide"><img data-src="img/projects/project-kubo-lg.png" alt=""></div>
-      <div class="tile tall2"><img data-src="img/Kubo/mobile-home.png" alt=""></div>
-      <div class="tile"><img data-src="img/Kubo/kubo-mock-up.gif" alt=""></div>
-      <div class="tile wide"><img data-src="img/Kubo/sitemap.png" alt=""></div>
-      <div class="tile"><img data-src="img/Kubo/user-flows.png" alt=""></div>
-    </div>
-    <div class="bg" data-for="energy">
-      <div class="tile wide"><img data-src="img/projects/project-energycheck-lg.png" alt=""></div>
-      <div class="tile tall2"><img data-src="img/Energycheck/EnergyCheck_Desktop.webp" alt=""></div>
-      <div class="tile"><img data-src="img/Energycheck/Mid-fidelityHero.jpg" alt=""></div>
-      <div class="tile wide"><img data-src="img/Energycheck/Design system.svg" alt=""></div>
-      <div class="tile"><img data-src="img/Energycheck/Mid-fidelityMiddle.jpg" alt=""></div>
-    </div>
-    <div class="bg" data-for="mood">
-      <div class="tile wide"><img data-src="img/Moodstream/hi-1.jpg" alt=""></div>
-      <div class="tile"><img data-src="img/Moodstream/hi-2.jpg" alt=""></div>
-      <div class="tile"><img data-src="img/Moodstream/hi-3.jpg" alt=""></div>
-      <div class="tile wide"><img data-src="img/Moodstream/design-system.webp" alt=""></div>
-      <div class="tile wide"><img data-src="img/Moodstream/moodstream-scroll.gif" alt=""></div>
-    </div>
+<header class="nav" id="nav"><div class="row px">
+  <a class="name" href="#top" aria-label="Shandor ten Hoven, back to the top"><span class="shbox" id="shbox"><span class="shf" id="navSh" style="view-transition-name:site-name">Shandor</span></span><span class="rest">ten Hoven</span></a>
+  <span class="role" aria-hidden="true">UX/UI and product designer</span>
+  <nav aria-label="Main"><ul>
+    <li><a href="#work" data-sec="work">Work</a></li>
+    <li><a href="#about" data-sec="about">About</a></li>
+    <li class="cvl"><a href="files/CV-Shandor-ten-Hoven.docx" download>CV</a></li>
+    <li><a href="#contact" data-sec="contact">Contact</a></li>
+  </ul></nav>
+</div></header>
+<div id="page">
+<main id="main" tabindex="-1">
+<h1 class="sr">Shandor ten Hoven, UX/UI and product designer in Amsterdam</h1>
+<div id="top" data-hoven="100,500,0"></div>
+<section class="stack" id="work" data-sec="work" aria-label="Selected work">
+<article class="p feat" id="energy" aria-labelledby="t-energy" data-hoven="84,720,0"><div class="in"><p class="no"><span class="idx">01 / 04  Featured</span><span class="idx muted">Take-home assignment, B2B website</span></p><a class="shot reveal" id="pl-energy" href="energycheck.html" tabindex="-1" aria-hidden="true" style="--pc:#0E3A36"><img class="under" src="img/projects/energy_b.webp" alt="" loading="lazy" decoding="async"><img class="over" src="img/projects/energy_a.webp" alt="" decoding="async"><span class="tag">Where it started: the old website</span></a><div class="txt"><h3 id="t-energy"><a href="energycheck.html">Energy Check</a></h3><p class="one">A homepage redesign that makes a 20-year-old energy consultancy sound like its team.</p><div class="r"><dl><dt>Type</dt><dd>Take-home assignment, B2B website</dd><dt>My role</dt><dd>Strategy, UX and visual design</dd></dl><a class="ln" href="energycheck.html">Read the case<span class="sr"> study: Energy Check</span></a></div></div></div></article>
+<div class="gap90" aria-hidden="true"></div>
+<article class="p r" id="expert" aria-labelledby="t-expert" data-hoven="120,420,0"><div class="in"><p class="no"><span class="idx">02 / 04</span><span class="idx muted">UX case study</span></p><a class="shot reveal" id="pl-expert" href="expert.html" tabindex="-1" aria-hidden="true" style="--pc:#DCE4FA"><img class="under" src="img/projects/expert_b.webp" alt="" loading="lazy" decoding="async"><img class="over" src="img/projects/expert_a.webp" alt="" decoding="async"><span class="tag">Where it started: the low-fidelity wireframes</span></a><div class="txt"><h3 id="t-expert"><a href="expert.html">Expert</a></h3><p class="one">An advice app built around two research themes: trust before booking, and availability.</p><dl><dt>Type</dt><dd>UX case study</dd><dt>My role</dt><dd>UX research and design, end to end</dd></dl><a class="ln" href="expert.html">Read the case<span class="sr"> study: Expert</span></a></div></div></article>
+<article class="p l" id="mood" aria-labelledby="t-mood" data-hoven="100,560,1"><div class="in"><p class="no"><span class="idx">03 / 04</span><span class="idx muted">Experimental concept</span></p><a class="shot reveal" id="pl-mood" href="moodstream.html" tabindex="-1" aria-hidden="true" style="--pc:#000000"><img class="under" src="img/projects/mood_b.webp" alt="" loading="lazy" decoding="async"><img class="over" src="img/projects/mood_a.webp" alt="" decoding="async"><span class="tag">Where it started: the home page</span></a><div class="txt"><h3 id="t-mood"><a href="moodstream.html">MoodStream</a></h3><p class="one">What if mood, rather than genre, became the first decision in a streaming app?</p><dl><dt>Type</dt><dd>Experimental concept</dd><dt>My role</dt><dd>Concept, interaction and visual design</dd></dl><a class="ln" href="moodstream.html">Read the case<span class="sr"> study: MoodStream</span></a></div></div></article>
+<article class="p s" id="kubo" aria-labelledby="t-kubo" data-hoven="90,480,0"><div class="in"><p class="no"><span class="idx">04 / 04</span><span class="idx muted">Mobile concept</span></p><a class="shot reveal" id="pl-kubo" href="kubo.html" tabindex="-1" aria-hidden="true" style="--pc:#1E3FB4"><img class="over" src="img/projects/kubo_a.webp" alt="" decoding="async"></a><div class="txt"><h3 id="t-kubo"><a href="kubo.html">Kubo</a></h3><p class="one">A calm place for the documents you need most when you need them quickly.</p><dl><dt>Type</dt><dd>Mobile concept</dd><dt>My role</dt><dd>Information architecture and mobile UI</dd></dl><a class="ln" href="kubo.html">Read the case<span class="sr"> study: Kubo</span></a></div></div></article>
+</section>
+
+<section class="inter" id="inter" data-hoven="125,260,0" data-sec="background" aria-label="Background">
+  <p class="b1 px"><span class="v" id="v1">Fashion</span> trained my eye.</p>
+  <p class="b2 px">Hospitality taught me <span class="v" id="v2">people.</span></p>
+</section>
+<section class="about px" id="about" data-sec="about" aria-labelledby="aboutTitle">
+  <figure class="portrait-rv" data-hoven="112,420,1"><img src="img/profile/portrait.webp" alt="Black-and-white portrait of Shandor ten Hoven" width="900" height="1125" loading="lazy" decoding="async"></figure>
+  <div class="body">
+    <h2 id="aboutTitle">Currently looking for my next product team.</h2>
+    <p class="now">I'm a UX/UI and product designer in Amsterdam. Before design I studied fashion and spent nearly a decade leading hotel and hostel teams of 20+, from Amsterdam to Melbourne.</p>
+    <ul class="two">
+      <li><b>Fashion</b><span>An eye for proportion, composition, colour and detail.</span></li>
+      <li><b>Hospitality</b><span>Reading people, spotting friction early, making things feel effortless.</span></li>
+    </ul>
+    <details><summary>Longer story <i aria-hidden="true">+</i></summary>
+      <p>After CareerFoundry's Product Design program I bring both to product work: research that starts from real behaviour, flows that feel obvious, and interfaces with a considered visual finish.</p>
+    </details>
+    <ul class="caps">
+      <li><h3>Research and strategy</h3><p>User and stakeholder interviews, competitive research, affinity mapping, personas.</p></li>
+      <li><h3>Experience and interface</h3><p>User flows, information architecture, wireframes, prototyping, UI and visual design.</p></li>
+      <li><h3>Systems and handoff</h3><p>Design systems, usability testing, Figma handoff, HTML, CSS and JavaScript.</p></li>
+    </ul>
   </div>
-  <div class="wrap">
-  <div class="menucard rv">
-    <div class="menuhead">
-      <span class="seal" style="display:flex">STH</span>
-      <h2>The <b>Menu</b></h2>
-      <div class="sub">selected work, served end to end</div>
-    </div>
-
-    <div class="ingredients" id="ingredients" hidden>
-      <div class="ing-head">
-        <span class="ing-label">The ingredients</span>
-        <button class="lang" id="langToggle" type="button">NL</button>
-      </div>
-      <div class="chips" id="chips" role="group" aria-label="Filter work by skill"></div>
-      <p class="ing-note" id="ingNote" role="status"></p>
-    </div>
-
-    <a class="course" data-bg="energy" href="energycheck.html">
-      <div class="course-top"><span class="name">Energy Check</span><span class="dots"></span><span class="kind">the commission</span></div>
-      <div class="desc">A B2B homepage for a Dutch energy consultancy, with a persuasion-led structure and a complete design system.</div>
-      <div class="meta">Competitive Research &middot; Visual Design &middot; Design System</div>
-      <img class="course-thumb" loading="lazy" decoding="async" src="img/projects/project-energycheck-lg.png" alt="Energy Check homepage redesign">
-      <span class="arrow">&rarr;</span>
-    </a>
-    <a class="course" data-bg="expert" href="expert.html">
-      <div class="course-top"><span class="name">Expert</span><span class="dots"></span><span class="kind">the signature</span></div>
-      <div class="desc">A platform that connects people with professionals for real-time guidance. Built from first interview to high-fidelity prototype.</div>
-      <div class="meta">UX Research &middot; Information Architecture &middot; UI Design &middot; Usability Testing</div>
-      <img class="course-thumb" loading="lazy" decoding="async" src="img/projects/project-expert-lg.png" alt="Expert platform interface">
-      <span class="arrow">&rarr;</span>
-    </a>
-    <a class="course" data-bg="kubo" href="kubo.html">
-      <div class="course-top"><span class="name">Kubo</span><span class="dots"></span><span class="kind">the concept</span></div>
-      <div class="desc">A personal digital vault for the documents of a life. Designing for trust, privacy and the principle of never asking twice.</div>
-      <div class="meta">Information Architecture &middot; UX Design &middot; Mobile UI</div>
-      <img class="course-thumb" loading="lazy" decoding="async" src="img/projects/project-kubo-lg.png" alt="Kubo mobile vault interface">
-      <span class="arrow">&rarr;</span>
-    </a>
-    <a class="course" data-bg="mood" href="moodstream.html">
-      <div class="course-top"><span class="name">MoodStream</span><span class="dots"></span><span class="kind">the experiment</span></div>
-      <div class="desc">A streaming experience shaped by mood rather than genre. Playful, behaviour-driven UX exploration.</div>
-      <div class="meta">UX Design &middot; Prototyping &middot; User Testing</div>
-      <img class="course-thumb" loading="lazy" decoding="async" src="img/projects/project-moodstream-lg.png" alt="MoodStream mood selection interface">
-      <span class="arrow">&rarr;</span>
-    </a>
-  </div>
-</div></section>
-
-<section class="host" id="host"><div class="wrap">
-  <div class="host-text rv">
-    <span class="kicker">The Host</span>
-    <h2>Ten years of<br><b>reading the room.</b></h2>
-    <p>I spent years leading front-of-house teams of 20+, from Amsterdam to Melbourne. Long before I opened a design tool, I was already designing customer journeys, just in the real world. That experience taught me how people actually behave, decide and feel.</p>
-    <p>Today I bring that operational eye to digital products: balancing user needs, business goals and real-world constraints.</p>
-    <div class="sig">
-      <span class="seal">STH</span>
-      <div><div class="a">Shandor ten Hoven</div><div class="b">Product Designer</div></div>
-    </div>
-  </div>
-  <div class="photo rv d2"><img loading="lazy" decoding="async" src="img/profile/profile-lg.jpg" alt="Portrait of Shandor ten Hoven"></div>
-</div></section>
+</section>
+<section class="contact px" id="contact" data-hoven="80,820,0" data-sec="contact" aria-labelledby="contactTitle">
+  <h2 id="contactTitle" aria-label="Let's work together"><span aria-hidden="true">Let's work</span><br><span class="v" aria-hidden="true">together.</span></h2>
+  <div class="mailrow"><a href="mailto:shandortenhoven@gmail.com">shandortenhoven@gmail.com</a><button class="copy" id="copy" type="button"><span class="a">Copy address</span><span class="b" aria-hidden="true">Copied</span></button><span class="sr" id="copyStatus" role="status"></span></div>
+  <p class="more"><a class="ln" href="https://www.linkedin.com/in/shandortenhoven" target="_blank" rel="noopener">LinkedIn<span class="sr"> (opens in a new tab)</span></a><a class="ln" href="files/CV-Shandor-ten-Hoven.docx" download>Download CV (Word)</a></p>
+  <div class="colo"><span>Amsterdam, the Netherlands</span><span>Set in Mona Sans</span></div>
+</section>
 
 </main>
-
-<footer id="contact"><div class="wrap">
-  <span class="kicker rv">Reservations</span>
-  <h2 class="rv d1">The table is <b>set.</b></h2>
-  <p class="rv d2">Looking for a designer who treats users like guests? Let's talk. I'll bring the oat lattes.</p>
-  <div class="cta-row rv d3"><a class="btn" href="mailto:shandortenhoven@gmail.com"><span>Send an email</span></a></div>
-  <div class="small rv d4">Amsterdam<i>&middot;</i><a href="https://www.linkedin.com/in/shandortenhoven" target="_blank" rel="noopener">LinkedIn</a><i>&middot;</i><a href="https://github.com/shandortenhoven" target="_blank" rel="noopener">GitHub</a></div>
-</div></footer>
-
-<script src="js/scripts.js"></script>
+</div>
+<script>
+/* returning from a case: its cover flies back into the panel, if that panel is on screen */
+addEventListener('pagereveal',e=>{ if(!e.viewTransition||!window.navigation||!navigation.activation)return;
+  const from=(navigation.activation.from&&navigation.activation.from.url)||''; const m=from.match(/(moodstream|energycheck|kubo|expert)[.]html/); if(!m)return;
+  const k={moodstream:'mood',energycheck:'energy',kubo:'kubo',expert:'expert'}[m[1]], s=document.getElementById('pl-'+k), t=document.getElementById('t-'+k); if(!s)return;
+  const r=s.getBoundingClientRect(); if(r.bottom<0||r.top>innerHeight) return;
+  s.style.viewTransitionName='cover-'+k; if(t)t.style.viewTransitionName='title-'+k;
+  e.viewTransition.finished.finally(()=>{ s.style.viewTransitionName=''; if(t)t.style.viewTransitionName=''; });
+});
+</script>
+<script src="js/scripts.js" defer></script>
 </body>
 </html>

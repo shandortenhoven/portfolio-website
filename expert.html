@@ -2,115 +2,57 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Expert · Shandor ten Hoven</title>
-<meta name="description" content="Expert: a platform connecting people with professionals for real-time advice. UX research, journey mapping, wireframes, and usability testing.">
-<link rel="canonical" href="https://shandortenhoven.github.io/portfolio-website/expert.html">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Expert · Case study · Shandor ten Hoven</title>
+<meta name="description" content="An advice app built around trust before booking and availability. A UX case study by Shandor ten Hoven.">
+<meta name="theme-color" content="#F4F4F1">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
 <meta property="og:type" content="website">
-<meta property="og:site_name" content="Shandor ten Hoven">
-<meta property="og:url" content="https://shandortenhoven.github.io/portfolio-website/expert.html">
-<meta property="og:title" content="Expert · Shandor ten Hoven">
-<meta property="og:description" content="A platform connecting people with professionals for real-time advice. Research, journey mapping, usability testing.">
+<meta property="og:title" content="Expert · Case study · Shandor ten Hoven">
+<meta property="og:description" content="An advice app built around trust before booking and availability. A UX case study by Shandor ten Hoven.">
 <meta property="og:image" content="https://shandortenhoven.github.io/portfolio-website/img/og/og-expert.jpg">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://shandortenhoven.github.io/portfolio-website/expert.html">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Expert · Shandor ten Hoven">
-<meta name="twitter:description" content="A platform connecting people with professionals for real-time advice. Research, journey mapping, usability testing.">
-<meta name="twitter:image" content="https://shandortenhoven.github.io/portfolio-website/img/og/og-expert.jpg">
-<noscript><style>.rv{opacity:1;transform:none}</style></noscript>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,200;14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=Fraunces:ital,opsz,wght@1,9..144,300&display=swap" rel="stylesheet">
+<link rel="preload" href="css/fonts/mona-sans.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="css/style.css">
+<script>
+/* entered without a page transition? then the cover does its own compress-and-reveal */
+document.documentElement.classList.add('no-vt');
+addEventListener('pagereveal',e=>{ if(e.viewTransition) document.documentElement.classList.remove('no-vt'); });
+</script>
 </head>
 <body>
-
 <a class="skip" href="#main">Skip to content</a>
-
-<nav id="nav"><div class="wrap">
-  <a class="seal" href="index.html" aria-label="Home">STH</a>
-  <div class="navlinks">
-    <a href="index.html#work">The Menu</a><a href="index.html#host">The Host</a><a href="contact.html" class="res">Reserve a call</a>
-  </div>
-</div></nav>
-
-<header class="case-hero"><div class="wrap">
-  <span class="kicker rv in">Case study · the signature · 02 / 04</span>
-  <h1>
-    <span class="line-mask"><span><b>Expert</b></span></span>
-  </h1>
-  <div class="kind rv d1">a person, right now, instead of a course</div>
-  <div class="case-facts rv d2">
-    <div class="cf"><span class="k">Type</span><span class="v">Concept project</span></div>
-    <div class="cf"><span class="k">Year</span><span class="v">2025</span></div>
-    <div class="cf"><span class="k">Role</span><span class="v">UX research and design</span></div>
-    <div class="cf"><span class="k">Scope</span><span class="v">Research to high-fi UI</span></div>
-  </div>
+<header class="nav" id="nav"><div class="row px">
+  <a class="name" href="index.html" aria-label="Shandor ten Hoven, home"><span class="shbox" id="shbox"><span class="shf" id="navSh" style="view-transition-name:site-name">Shandor</span></span><span class="rest">ten Hoven</span></a>
+  <span class="role" aria-hidden="true">UX/UI and product designer</span>
+  <nav aria-label="Main"><ul>
+    <li><a href="index.html#work">Work</a></li>
+    <li><a href="index.html#about">About</a></li>
+    <li class="cvl"><a href="files/CV-Shandor-ten-Hoven.docx" download>CV</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul></nav>
 </div></header>
-
-<main id="main">
-<section class="case-section"><div class="wrap">
-  <div class="label rv"><span class="no">[ 01 ]</span><h3>The <b>brief</b></h3></div>
-  <p class="rv d1">People don't always want a course. Sometimes they want a person, right now. Expert is a concept for an on-demand advice platform, connecting people with verified professionals for short, focused sessions. When you have a specific question (legal, design, career, health), online courses are too slow, AI is too generic, and your network is hit-or-miss. Expert tries to solve for the in-between.</p>
-  <p class="rv">This was a research-led project from the ground up. I wanted to design something that started from real user behaviour, not from a feature wishlist.</p>
-</div></section>
-<section class="case-section"><div class="wrap">
-  <div class="label rv"><span class="no">[ 02 ]</span><h3>Interviews, affinity mapping, and <b>the real friction</b></h3></div>
-  <p class="rv d1">I ran user interviews to understand how people currently look for expert advice and where the gaps are. Clustering the findings into an affinity map surfaced two consistent pain points: <strong>trust before booking</strong> (how do I know this person is the right fit?) and <strong>availability that respects my schedule</strong>, not theirs.</p>
-  <p class="rv">Those two themes became the design's north stars. Every screen had to either build trust or remove friction from scheduling. Anything else was a nice-to-have.</p>
-  <div class="case-img rv"><img loading="lazy" decoding="async" src="img/Expert/affinityMap.png" alt="Affinity map · interview synthesis"><div class="cap">Affinity map · interview synthesis</div></div>
-</div></section>
-<section class="case-section"><div class="wrap">
-  <div class="label rv"><span class="no">[ 03 ]</span><h3>Two users, two very different <b>jobs to be done</b></h3></div>
-  <p class="rv d1">I built two personas from the research. Not as decorative artifacts but as decision-making tools. Daniel needs answers in a hurry and is willing to pay for confidence. Emma is more deliberate and wants to compare options before committing.</p>
-  <div class="case-grid-2 rv"><div><img loading="lazy" decoding="async" src="img/Expert/personaDaniel.png" alt="Daniel · the urgent decider"><div class="cap">Daniel · the urgent decider</div></div><div><img loading="lazy" decoding="async" src="img/Expert/personaEmma.png" alt="Emma · the careful comparer"><div class="cap">Emma · the careful comparer</div></div></div>
-</div></section>
-<section class="case-section"><div class="wrap">
-  <div class="label rv"><span class="no">[ 04 ]</span><h3>Three flows that had to work <b>without thinking</b></h3></div>
-  <p class="rv d1">I mapped the three flows that mattered most: onboarding, booking, and the post-session loop where trust either compounds or breaks.</p>
-  <div class="case-img rv"><img loading="lazy" decoding="async" src="img/Expert/userFlowOnboarding.png" alt="Onboarding flow"><div class="cap">Onboarding flow</div></div>
-  <div class="case-img rv"><img loading="lazy" decoding="async" src="img/Expert/userFlowBooking.png" alt="Booking flow"><div class="cap">Booking flow</div></div>
-  <div class="case-img rv"><img loading="lazy" decoding="async" src="img/Expert/userFlowPostSession.png" alt="Post-session flow"><div class="cap">Post-session flow</div></div>
-</div></section>
-<section class="case-section"><div class="wrap">
-  <div class="label rv"><span class="no">[ 05 ]</span><h3>From low-fidelity sketches to <b>a working interface</b></h3></div>
-  <p class="rv d1">I worked through three fidelity passes (pencil-low, mid, and high). Each round answering specific questions raised by the previous one. The mid-fidelity step was where most of the real product decisions happened.</p>
-  <div class="case-grid-2 rv"><div><img loading="lazy" decoding="async" src="img/Expert/lowFidelityWireframes.png" alt="Low fidelity"><div class="cap">Low fidelity</div></div><div><img loading="lazy" decoding="async" src="img/Expert/midFidelityWireframes.png" alt="Mid fidelity"><div class="cap">Mid fidelity</div></div></div>
-  <div class="case-img rv"><img loading="lazy" decoding="async" src="img/Expert/highFidelityWireframes.png" alt="High fidelity"><div class="cap">High fidelity</div></div>
-</div></section>
-<section class="case-section"><div class="wrap">
-  <div class="label rv"><span class="no">[ 06 ]</span><h3>Two interface details <b>I'm proud of</b></h3></div>
-  <p class="rv d1">The <strong>availability comparison</strong> screen lets users see expert availability side-by-side instead of clicking through each profile. A small UX gain that addresses one of the loudest research themes. The <strong>after-session screen</strong> closes the loop with a focused review prompt rather than a generic thank-you state.</p>
-  <p class="rv">I also iterated on loading states. Small thing, but it sets the tone for the platform. The wait between requesting and receiving advice is the most emotionally loaded moment in the flow.</p>
-  <div class="case-grid-2 rv"><div><img loading="lazy" decoding="async" src="img/Expert/availabilityComparison.png" alt="Availability comparison"><div class="cap">Availability comparison</div></div><div><img loading="lazy" decoding="async" src="img/Expert/afterSessionScreen.png" alt="After-session state"><div class="cap">After-session state</div></div></div>
-  <div class="case-img rv"><img loading="lazy" decoding="async" src="img/Expert/loadingStateIterations.png" alt="Loading state iterations"><div class="cap">Loading state iterations</div></div>
-</div></section>
-<section class="case-section"><div class="wrap">
-  <div class="label rv"><span class="no">[ 07 ]</span><h3>Putting it in front of <b>real people</b></h3></div>
-  <p class="rv d1">I ran usability testing with six participants across both personas. The booking flow held up. The onboarding had two friction points I'd missed (both around expectations management) which I redesigned in the next pass.</p>
-  <div class="case-grid-2 rv"><div><img loading="lazy" decoding="async" src="img/Expert/usabilityTesting.png" alt="Usability testing · key findings"><div class="cap">Usability testing · key findings</div></div><div><img loading="lazy" decoding="async" src="img/Expert/peerFeedback.png" alt="Peer feedback round"><div class="cap">Peer feedback round</div></div></div>
-</div></section>
-<section class="case-section"><div class="wrap">
-  <div class="label rv"><span class="no">[ 08 ]</span><h3>The project where research-first <b>became a habit</b></h3></div>
-  <p class="rv d1">Expert was where research-first stopped being a slogan and became instinct. The most useful design decisions came from the affinity map, not from the pixels. That lesson landed for good here.</p>
-  <p class="rv">The thing I'd do differently is start the trust-building work earlier. Before booking, before someone has committed time or money. The current design handles trust well from booking onward, but the moment of “should I even try this?” is where most of the drop-off would happen in reality. That's a research question I never properly opened.</p>
-  <div class="pull rv"><p>The most useful design decisions came from the affinity map, not from the pixels.</p></div>
-</div></section>
+<main id="main" tabindex="-1" class="case-wrap" style="--pc:#DCE4FA">
+<div class="px">
+<header class="c-open" data-hoven="100,500,0">
+  <p class="c-meta idx"><span style="display:inline-flex;gap:14px;flex-wrap:wrap"><a href="index.html#work">All work</a><span>Case study 02 / 04</span></span><span class="muted">UX case study</span></p>
+  <h1 class="c-title" id="caseTitle" style="view-transition-name:title-expert">Expert</h1>
+  <p class="c-lede">An on-demand advice app that connects you with a verified professional for one specific question.</p>
+  <dl class="c-facts"><div><dt>Project type</dt><dd>UX case study, concept</dd></div><div><dt>Year</dt><dd>2025</dd></div><div><dt>Role</dt><dd>UX research and design</dd></div><div><dt>Scope</dt><dd>Research to high-fidelity UI, six usability tests</dd></div></dl>
+  <figure class="c-cover" id="caseCover" style="view-transition-name:cover-expert"><img src="img/projects/expert_a.webp" alt="The expert list in the final interface" width="1600" height="1000" fetchpriority="high"></figure>
+</header>
+<section class="blk stmt" data-hoven="96,600,0"><p class="lab">The problem<span>01</span></p><div class="body"><p class="bigline">One specific question.</p><p class="bigline">No good place to ask it.</p><div class="small one"><p>When you need advice on a contract, a career move or a design problem, a course is too slow, AI is too generic and your network is hit-or-miss. Expert is a concept for booking a short session with a verified professional instead.</p></div></div></section><section class="blk split" data-hoven="116,440,0"><p class="lab">What changed my direction<span>02</span></p><div class="txt"><h2>Two themes, not a feature list</h2><p>I interviewed people about how they look for expert advice now, and clustered what they said. Two pain points kept coming back: knowing whether someone is the right fit before you book, and finding a moment that fits your schedule rather than theirs.</p><p>Those two themes decided what every screen had to do. Anything that didn’t build trust or remove scheduling friction became a nice-to-have.</p></div><div class="vis"><figure class="cr"><div class="im"><img src="img/Expert/affinitymap.webp" alt="Affinity map from the interviews" width="2000" height="1101" loading="lazy" decoding="async"></div><figcaption>Affinity map from the interviews</figcaption></figure></div></section><section class="blk pair" data-hoven="104,520,0"><p class="lab">Two ways people book<span>03</span></p><div class="head"><h2>Same problem, two speeds</h2><p>The two personas from the research mattered most as two booking behaviours.</p></div><div class="cols"><div><b>Quick decider</b><p>Needs just enough trust to decide fast, and will pay for confidence.</p><figure class="cr"><div class="im"><img src="img/Expert/personadaniel.webp" alt="Persona: the quick decider" width="2000" height="969" loading="lazy" decoding="async"></div><figcaption>Persona: the quick decider</figcaption></figure></div><div><b>Careful comparer</b><p>Wants to compare options before committing to anyone.</p><figure class="cr"><div class="im"><img src="img/Expert/personaemma.webp" alt="Persona: the careful comparer" width="2000" height="973" loading="lazy" decoding="async"></div><figcaption>Persona: the careful comparer</figcaption></figure></div></div></section><section class="blk dec" data-hoven="92,700,0"><p class="lab">Key decisions<span>04</span></p><div class="head"><h2>Built around trust and timing</h2></div><ol><li><span class="n">01</span><div class="what"><h3>Put trust signals before the booking button</h3><dl><div><dt>Why</dt><dd>People decide whether to book on the profile, not after.</dd></div><div><dt>Evidence</dt><dd>Theme one from the interviews. Later, in testing: “Diplomas and reviews make me trust it” and “Portfolios prove credibility instantly.”</dd></div><div><dt>Changed</dt><dd>Profiles show credentials, reviews and portfolio work above the fold, before any booking action.</dd></div></dl></div><div class="vis"><figure class="cr"><div class="im"><img src="img/Expert/trust-screens.webp" alt="Expert list and profile with portfolio and calendar" width="1070" height="1000" loading="lazy" decoding="async"></div><figcaption>Expert list and profile with portfolio and calendar</figcaption></figure></div></li><li><span class="n">02</span><div class="what"><h3>Show availability where people choose</h3><dl><div><dt>Why</dt><dd>Clicking into every profile to check a time is exactly the friction the interviews described.</dd></div><div><dt>Evidence</dt><dd>Theme two. In testing: “Availability calendar is key, makes booking clear.”</dd></div><div><dt>Changed</dt><dd>Each expert card shows whether they’re available now; the profile ends in a calendar, and the booking flow starts from there.</dd></div></dl></div><div class="vis"><figure class="cr"><div class="im"><img src="img/Expert/userflowbooking.webp" alt="The booking flow, the one that carries the core problem" width="2000" height="1115" loading="lazy" decoding="async"></div><figcaption>The booking flow, the one that carries the core problem</figcaption></figure><div class="row2"><figure class="cr"><div class="im"><img src="img/Expert/userflowonboarding.webp" alt="Onboarding flow" width="2000" height="1117" loading="lazy" decoding="async"></div><figcaption>Onboarding flow</figcaption></figure><figure class="cr"><div class="im"><img src="img/Expert/userflowpostsession.webp" alt="Post-session flow" width="2000" height="1115" loading="lazy" decoding="async"></div><figcaption>Post-session flow</figcaption></figure></div></div></li></ol></section><section class="blk full fid" data-hoven="104,520,0"><p class="lab">Iteration<span>05</span></p><div class="head"><h2>Three passes, two screens</h2><p>The wireframes went through low, mid and high fidelity. Two screens show what actually changed between passes.</p></div><div class="vis"><div class="fidrow"><p class="fidt">Expert profile</p><div class="vis three"><figure class="cr"><div class="im"><img src="img/Expert/profile-lo.webp" alt="Low: info, reviews, portfolio and availability as cards" width="480" height="990" loading="lazy" decoding="async"></div><figcaption>Low: info, reviews, portfolio and availability as cards</figcaption></figure><figure class="cr"><div class="im"><img src="img/Expert/profile-mi.webp" alt="Mid: more room for the portfolio, a clearer hierarchy in the profile card" width="480" height="990" loading="lazy" decoding="async"></div><figcaption>Mid: more room for the portfolio, a clearer hierarchy in the profile card</figcaption></figure><figure class="cr"><div class="im"><img src="img/Expert/profile-hi.webp" alt="High: portfolio work and a calendar on the profile" width="480" height="990" loading="lazy" decoding="async"></div><figcaption>High: portfolio work and a calendar on the profile</figcaption></figure></div></div><div class="fidrow"><p class="fidt">Leave a review</p><div class="vis three"><figure class="cr"><div class="im"><img src="img/Expert/review-lo.webp" alt="Low: star rating, optional feedback, links to notes and transcript" width="480" height="990" loading="lazy" decoding="async"></div><figcaption>Low: star rating, optional feedback, links to notes and transcript</figcaption></figure><figure class="cr"><div class="im"><img src="img/Expert/review-mi.webp" alt="Mid: spacing changed and the review placed on a card, like the other screens" width="480" height="990" loading="lazy" decoding="async"></div><figcaption>Mid: spacing changed and the review placed on a card, like the other screens</figcaption></figure><figure class="cr"><div class="im"><img src="img/Expert/review-hi.webp" alt="High: the brand colour on Submit Review. Testing later showed it still competed with the other buttons." width="480" height="990" loading="lazy" decoding="async"></div><figcaption>High: the brand colour on Submit Review. Testing later showed it still competed with the other buttons.</figcaption></figure></div></div></div></section><section class="blk ba" data-hoven="120,380,1"><p class="lab">Iteration<span>06</span></p><div class="head"><h2>Making availability legible at a glance</h2><p>In the first version, “Not available” used the same orange as an available expert. At a glance the two read the same. In the revision the unavailable state drops back to grey, so only available experts draw the eye.</p></div><div class="fig" role="img" aria-label="An expert card where the Not available label changes from orange to grey"><img class="before" src="img/Expert/avail-a.webp" alt="" loading="lazy"><img class="after" src="img/Expert/avail-b.webp" alt="" loading="lazy"><span class="seam" aria-hidden="true"></span></div><p class="tags"><span>Before: same orange</span><span>After: grey, lower emphasis</span></p></section><section class="blk fnd" data-hoven="84,760,0"><p class="lab">Validation<span>07</span></p><div class="head"><h2>Six tests, and what came out of them</h2><p>I tested the prototype with six participants across both behaviours. Booking held up. These were the problems that came up more than once:</p></div><ul class="rows"><li><b>4 of 6</b><span>didn’t understand some icons and found them by trial and error.</span></li><li><b>2 of 6</b><span>couldn’t find their way back to the Home / Dashboard.</span></li><li><b>2 of 6</b><span>found the Submit Review button less visible than Transcript and Notes.</span></li></ul><p class="after">One screen had both of the first two problems: after a session, the only way out was an unlabelled close icon. Below is the change. Labelling the remaining icons, making Submit Review the primary action and clarifying time zones are documented as next steps, not yet designed.</p><figure class="cr"><div class="im"><img src="img/Expert/usabilitytesting.webp" alt="The test log: errors, observations and quotes from all six sessions" width="2000" height="923" loading="lazy" decoding="async"></div><figcaption>The test log: errors, observations and quotes from all six sessions</figcaption></figure></section><section class="blk ba" data-hoven="110,460,0"><p class="lab">Iteration<span>08</span></p><div class="head"><h2>A clear way out after a session</h2><p>Version A ended the session with a close icon in the corner. Version B replaces it with a labelled “Return to dashboard” button and brings the type in line with the rest of the app.</p></div><div class="fig" role="img" aria-label="The session complete screen changing from a close icon to a Return to dashboard button"><img class="before" src="img/Expert/post-a.webp" alt="" loading="lazy"><img class="after" src="img/Expert/post-b.webp" alt="" loading="lazy"><span class="seam" aria-hidden="true"></span></div><p class="tags"><span>Before: icon only</span><span>After: labelled button</span></p></section><section class="blk itr" data-hoven="100,560,0"><p class="lab">Smaller refinements<span>09</span></p><div class="head"><h2>Two things I changed after feedback</h2></div><div class="rows"><div class="row"><figure class="cr"><div class="im"><img src="img/Expert/loadingstateiterations.webp" alt="Loading state, version 1 and version 2" width="2000" height="1200" loading="lazy" decoding="async"></div><figcaption>Loading state, version 1 and version 2</figcaption></figure><dl><div><dt>Earlier</dt><dd>A logo on an empty screen while a session loads.</dd></div><div><dt>Problem</dt><dd>The wait before an expert joins is the most loaded moment in the app, and a static screen gives no sign that anything is happening.</dd></div><div><dt>Change</dt><dd>A progress indicator with short, supportive lines that change while you wait.</dd></div></dl></div><div class="row"><figure class="cr"><div class="im"><img src="img/Expert/peerfeedback.webp" alt="Transcript scrolling, before and after peer feedback" width="2000" height="1341" loading="lazy" decoding="async"></div><figcaption>Transcript scrolling, before and after peer feedback</figcaption></figure><dl><div><dt>Earlier</dt><dd>A default system scrollbar in the transcript view.</dd></div><div><dt>Problem</dt><dd>Peer feedback: “I feel the layout looks a bit old-school compared to the rest of the app.”</dd></div><div><dt>Change</dt><dd>A slim scroll indicator in the app’s own colour.</dd></div></dl></div></div></section><section class="blk rfl" data-hoven="90,640,0"><p class="lab">Reflection<span>10</span></p><div class="head"><h2>What I’d do differently</h2></div><dl><div><dt>Still open</dt><dd>Trust before someone even tries the app. The design builds trust from booking onward, but “should I try this at all?” is where most people would drop off. I never researched that moment.</dd></div><div><dt>Next</dt><dd>The documented next steps from testing: labels for the unclear icons, Submit Review as the primary action, and both time zones shown on bookings.</dd></div><div><dt>What it taught me</dt><dd>The most useful decisions in this project came from the affinity map, not from the pixels.</dd></div></dl></section>
+<a class="c-next" href="moodstream.html" data-hoven="110,600,0"><span class="lbl"><span>Next project</span><span class="muted">Experimental concept</span></span><span class="nn" id="nextName" data-key="mood">MoodStream</span><span class="ni" id="nextImg" style="--pc:#000000"><img src="img/projects/mood_a.webp" alt="" loading="lazy" width="1280" height="800"></span></a>
+</div>
 </main>
-
-<div class="next-course"><div class="wrap">
-  <span class="lbl">next course</span>
-  <a class="big" href="kubo.html"><b>Kubo</b><span class="ar">&rarr;</span></a>
-</div></div>
-
-<footer id="contact"><div class="wrap">
-  <span class="kicker rv">Reservations</span>
-  <h2 class="rv d1">The table is <b>set.</b></h2>
-  <p class="rv d2">Looking for a designer who treats users like guests? Let's talk. I'll bring the oat lattes.</p>
-  <div class="cta-row rv d3"><a class="btn" href="mailto:shandortenhoven@gmail.com"><span>Send an email</span></a></div>
-  <div class="small rv d4">Amsterdam<i>&middot;</i><a href="https://www.linkedin.com/in/shandortenhoven" target="_blank" rel="noopener">LinkedIn</a><i>&middot;</i><a href="https://github.com/shandortenhoven" target="_blank" rel="noopener">GitHub</a></div>
-</div></footer>
-
-<script src="js/scripts.js"></script>
+<footer class="c-foot px" id="contact" aria-labelledby="contactTitle" data-hoven="80,820,0">
+  <h2 id="contactTitle">Let's work together.</h2>
+  <div class="row"><a class="mail" href="mailto:shandortenhoven@gmail.com">shandortenhoven@gmail.com</a><button class="copy" id="copy" type="button"><span class="a">Copy address</span><span class="b" aria-hidden="true">Copied</span></button><span class="sr" id="copyStatus" role="status"></span></div>
+  <div class="row"><a class="ln" href="https://www.linkedin.com/in/shandortenhoven" target="_blank" rel="noopener">LinkedIn<span class="sr"> (opens in a new tab)</span></a><a class="ln" href="files/CV-Shandor-ten-Hoven.docx" download>Download CV</a><a class="ln" href="index.html#work">All work</a></div>
+  <div class="colo"><span>Shandor ten Hoven, Amsterdam</span><span>Set in Mona Sans</span></div>
+</footer>
+<script src="js/scripts.js" defer></script>
 </body>
 </html>
