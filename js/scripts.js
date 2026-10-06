@@ -29,6 +29,20 @@ const root=document.documentElement;
 addEventListener('pointermove',e=>{ if(e.pointerType==='mouse') root.classList.add('hv-ok'); },{passive:true});
 addEventListener('wheel',()=>root.classList.remove('hv-ok'),{passive:true});
 
+/* "Where it started": a deliberate switch on a project image */
+document.addEventListener('click',e=>{ const b=e.target.closest('.cmp'); if(!b) return; e.preventDefault();
+  const shot=b.closest('.shot'), on=!shot.classList.contains('show'); shot.classList.toggle('show',on);
+  b.setAttribute('aria-pressed',String(on)); b.firstChild.textContent=on?b.dataset.on:b.dataset.off; });
+/* long images open in a full-screen viewer instead of scrolling inside a small frame */
+let lb=null;
+document.addEventListener('click',e=>{ const b=e.target.closest('.full'); if(!b) return;
+  if(!lb){ lb=document.createElement('dialog'); lb.className='lb'; lb.setAttribute('aria-label','Full image');
+    lb.innerHTML='<button class="x" type="button">Close</button><img alt="">'; document.body.appendChild(lb);
+    lb.querySelector('.x').addEventListener('click',()=>lb.close());
+    lb.addEventListener('click',ev=>{ if(ev.target===lb) lb.close(); });
+    lb.addEventListener('close',()=>{ if(lb._from) lb._from.focus(); }); }
+  const img=lb.querySelector('img'); img.src=b.dataset.full; img.alt=b.dataset.alt||''; lb._from=b; lb.showModal(); lb.scrollTop=0; lb.querySelector('.x').focus(); });
+
 /* ---------- small shared things ---------- */
 const copyBtn = $('#copy');
 if(copyBtn) copyBtn.addEventListener('click', async()=>{ try{ await navigator.clipboard.writeText('shandortenhoven@gmail.com'); }catch(e){} copyBtn.classList.add('done'); $('#copyStatus').textContent='Email address copied'; setTimeout(()=>{ copyBtn.classList.remove('done'); $('#copyStatus').textContent=''; },2200); });
@@ -75,7 +89,7 @@ if(isHome){
   const clock=$('#clock'); const tick=()=>{ clock.textContent=new Date().toLocaleTimeString('en-GB',{hour:'2-digit',minute:'2-digit',timeZone:'Europe/Amsterdam'}); }; tick(); setInterval(tick,30000);
 
   function glide(to,ms=900){ if(reduce){ scrollTo(0,to); return; } const from=scrollY, t0=performance.now(); const st=t=>{ const k=clamp((t-t0)/ms,0,1); scrollTo(0,lerp(from,to,eio(k))); if(k<1) requestAnimationFrame(st); }; requestAnimationFrame(st); }
-  const target = s => s==='work' ? (reduce ? stack.offsetTop : foldEnd()) : $('#'+s).offsetTop-50;
+  const target = s => s==='work' ? (reduce ? stack.offsetTop : foldEnd()) : $('#'+s).offsetTop-(nav.offsetHeight||60)-40;
   $$('[data-go]').forEach(a=>a.addEventListener('click',e=>{ e.preventDefault(); hint(''); glide(target(a.dataset.go), a.dataset.go==='work'?1100:1500); history.replaceState(null,'','#'+a.dataset.go); }));
   $$('.nav a[data-sec]').forEach(a=>a.addEventListener('click',e=>{ e.preventDefault(); glide(target(a.dataset.sec),900); history.replaceState(null,'','#'+a.dataset.sec); }));
   $('.nav .name').addEventListener('click',e=>{ e.preventDefault(); glide(0,900); history.replaceState(null,'',location.pathname); });

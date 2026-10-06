@@ -41,9 +41,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .reveal .over{clip-path:inset(0 0 0 0);transition:clip-path .8s var(--io)}
 .reveal .tag{position:absolute;left:12px;bottom:10px;z-index:3;font-size:13px;font-weight:560;background:var(--bone);color:var(--ink);padding:3px 9px;clip-path:inset(0 100% 0 0);transition:clip-path .5s var(--out) .25s}
 @media (hover:hover) and (pointer:fine){
-  html.hv-ok .reveal:hover .over,html.hv-ok .p .in:has(h3 a:hover) .reveal .over{clip-path:inset(0 0 0 100%)}
-  html.hv-ok .reveal:hover .under,html.hv-ok .p .in:has(h3 a:hover) .reveal .under{transform:none}
-  html.hv-ok .reveal:hover .tag,html.hv-ok .p .in:has(h3 a:hover) .reveal .tag{clip-path:inset(0)}
+
 }
 /* portrait: compresses into frame, then opens to its full composition */
 .portrait-rv{position:relative;overflow:hidden;aspect-ratio:4/5;background:var(--linen)}
@@ -405,7 +403,7 @@ figcaption{font-size:13.5px;color:var(--muted);margin-top:8px;line-height:1.45}
 .dec .vis .im img{width:auto;max-width:100%;max-height:min(72svh,720px)}
 
 /* a project without a "where it started" image simply doesn't reveal */
-.reveal:not(:has(.under)) .over{clip-path:none!important}
+
 /* fidelity passes: three phones per row, a short label above */
 .fid .fidrow+.fidrow{margin-top:clamp(28px,4vw,48px)}
 .fid .fidt{font-size:14px;font-weight:600;margin-bottom:10px}
@@ -422,3 +420,41 @@ figcaption{font-size:13.5px;color:var(--muted);margin-top:8px;line-height:1.45}
 .fid .vis.two{display:grid;grid-template-columns:1fr 1fr;gap:var(--gap);align-items:start}
 .fid .vis.two .im{background:transparent}
 @media (max-width:860px){.vis .row2{gap:8px}.fid .vis.two{gap:8px}.fid .vis.two figcaption{font-size:12px;padding:0}}
+
+/* the final design stays on top; "Where it started" is a deliberate switch, on desktop and on touch */
+.reveal.show .over{clip-path:inset(0 0 0 100%)}
+.reveal.show .under{transform:none}
+.reveal.show .tag{clip-path:inset(0)}
+.reveal .tag{left:auto;right:12px}
+.shotlink{position:absolute;inset:0;z-index:2}
+.cmp{position:absolute;left:12px;bottom:12px;z-index:4;min-height:40px;padding:0 14px;border-radius:999px;background:var(--bone);color:var(--ink);font-size:13px;font-weight:600;box-shadow:0 0 0 1px rgba(17,17,17,.12);transition:background-color .3s,color .3s}
+.cmp:hover,.cmp[aria-pressed="true"]{background:var(--ink);color:var(--bone)}
+/* case covers keep the 16:10 shape of the images, so there are no empty bands */
+.c-cover{aspect-ratio:16/10}
+/* in short: problem, contribution, outcome, validation */
+.c-sum{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:var(--gap);margin-top:clamp(28px,4vw,48px);border-top:1px solid var(--ink);padding-top:12px}
+.c-sum dt{font-size:13px;font-weight:600;color:var(--muted)}
+.c-sum dd{font-size:clamp(16px,1.25vw,18px);line-height:1.45;margin-top:6px}
+@media (max-width:860px){.c-sum{grid-template-columns:1fr 1fr;row-gap:18px}.c-cover{aspect-ratio:16/10}}
+@media (max-width:520px){.c-sum{grid-template-columns:1fr}}
+/* long images: a preview that fades out, with the whole image one click away */
+.tall .im{max-height:min(70svh,640px);overflow:hidden;position:relative}
+.tall .im::after{content:"";position:absolute;left:0;right:0;bottom:0;height:120px;background:linear-gradient(to bottom,transparent,var(--bone));pointer-events:none}
+.tall figcaption::after{content:none}
+.full{display:inline-flex;align-items:center;min-height:40px;margin-top:10px;padding:0 14px;border-radius:999px;border:1px solid var(--ink);font-size:13px;font-weight:600;transition:background-color .3s,color .3s}
+.full:hover{background:var(--ink);color:var(--bone)}
+dialog.lb{position:fixed;inset:0;width:100%;height:100%;max-width:none;max-height:none;margin:0;padding:0;border:0;background:rgba(17,17,17,.92);overflow:auto;overscroll-behavior:contain}
+dialog.lb::backdrop{background:transparent}
+dialog.lb img{display:block;width:min(1200px,100%);height:auto;margin:72px auto 48px}
+dialog.lb .x{position:fixed;top:calc(12px + env(safe-area-inset-top,0px));right:var(--m);min-height:44px;padding:0 18px;border-radius:999px;background:var(--bone);color:var(--ink);font-weight:600;font-size:14px;z-index:2}
+.p.feat h3{font-size:clamp(52px,6.6vw,118px)}
+
+/* projects: no fixed screen height any more; the image sits right under its label, large, with equal weight for all three */
+.p:not(.feat){height:auto}
+.p:not(.feat) .in{position:relative;inset:auto;align-content:start;padding-bottom:clamp(48px,7vw,96px)}
+.p.l .shot,.p.s .shot{grid-column:1/9;grid-row:2}.p.l .txt,.p.s .txt{grid-column:9/13;grid-row:2}
+.p.r .shot{grid-column:5/13;grid-row:2}.p.r .txt{grid-column:1/5;grid-row:2}
+/* anchors (About, Contact) land with breathing room under the fixed nav */
+#about,#contact{scroll-margin-top:calc(var(--navh) + 40px)}
+.about .avail{font-size:14px;font-weight:600;color:var(--muted);margin-bottom:10px;display:flex;align-items:center;gap:8px}
+.about .avail::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--lacquer)}
