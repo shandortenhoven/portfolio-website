@@ -286,10 +286,10 @@ figcaption{font-size:13.5px;color:var(--muted);margin-top:8px;line-height:1.45}
 .ba .head h2{margin-bottom:16px}
 .ba .fig{grid-column:7/13;position:relative;aspect-ratio:16/10;overflow:hidden;background:var(--pc)}
 .ba .fig img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain}
-.ba .after{clip-path:inset(0 100% 0 0)}
-.ba .seam{position:absolute;top:0;bottom:0;left:0;width:2px;margin-left:-1px;background:#fff;mix-blend-mode:difference}
+.ba .after{clip-path:inset(0 0 0 var(--x,50%))}
+.ba .seam{position:absolute;top:0;bottom:0;left:var(--x,50%);width:2px;margin-left:-1px;background:#fff;mix-blend-mode:difference;pointer-events:none}
 .ba .tags{display:flex;justify-content:space-between;font-size:13px;font-weight:600;margin-top:10px;grid-column:7/13}
-.ba .tags span:last-child{color:var(--muted)}.ba.done .tags span:first-child{color:var(--muted)}.ba.done .tags span:last-child{color:var(--ink)}
+.ba .tags span{color:var(--ink)}
 /* decisions: decision, why, evidence, what changed, beside the visual */
 .dec .head{grid-column:3/10;margin-bottom:clamp(30px,4vw,56px)}
 .dec ol{grid-column:1/-1;list-style:none;display:flex;flex-direction:column;gap:clamp(56px,8vw,110px)}
@@ -377,7 +377,6 @@ figcaption{font-size:13.5px;color:var(--muted);margin-top:8px;line-height:1.45}
 }
 @media (prefers-reduced-motion:reduce){
   .cr .im,.portrait-rv{clip-path:none!important}.cr .im img,.portrait-rv img{transform:none!important}
-  .ba .after{clip-path:none}.ba .seam{display:none}
   html.no-vt .c-cover,html.no-vt .c-cover img{animation:none}
 }
 
@@ -441,8 +440,8 @@ figcaption{font-size:13.5px;color:var(--muted);margin-top:8px;line-height:1.45}
 .tall .im{max-height:min(70svh,640px);overflow:hidden;position:relative}
 .tall .im::after{content:"";position:absolute;left:0;right:0;bottom:0;height:120px;background:linear-gradient(to bottom,transparent,var(--bone));pointer-events:none}
 .tall figcaption::after{content:none}
-.full{display:inline-flex;align-items:center;min-height:40px;margin-top:10px;padding:0 14px;border-radius:999px;border:1px solid var(--ink);font-size:13px;font-weight:600;transition:background-color .3s,color .3s}
-.full:hover{background:var(--ink);color:var(--bone)}
+.fullbtn{display:inline-flex;align-items:center;min-height:40px;margin-top:10px;padding:0 14px;border-radius:999px;border:1px solid var(--ink);font-size:13px;font-weight:600;transition:background-color .3s,color .3s}
+.fullbtn:hover{background:var(--ink);color:var(--bone)}
 dialog.lb{position:fixed;inset:0;width:100%;height:100%;max-width:none;max-height:none;margin:0;padding:0;border:0;background:rgba(17,17,17,.92);overflow:auto;overscroll-behavior:contain}
 dialog.lb::backdrop{background:transparent}
 dialog.lb img{display:block;width:min(1200px,100%);height:auto;margin:72px auto 48px}
@@ -458,3 +457,11 @@ dialog.lb .x{position:fixed;top:calc(12px + env(safe-area-inset-top,0px));right:
 #about,#contact{scroll-margin-top:calc(var(--navh) + 40px)}
 .about .avail{font-size:14px;font-weight:600;color:var(--muted);margin-bottom:10px;display:flex;align-items:center;gap:8px}
 .about .avail::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--lacquer)}
+
+/* before | after: the seam follows the mouse, or drag it / use the arrow keys */
+.ba .fig{cursor:ew-resize;touch-action:pan-y}
+.ba .fig:not(.live) .after,.ba .fig:not(.live) .seam{transition:clip-path .6s var(--out),left .6s var(--out)}
+.ba .cmpr{position:absolute;inset:0;width:100%;height:100%;margin:0;opacity:0;cursor:ew-resize;z-index:2}
+.ba .fig:has(.cmpr:focus-visible){outline:2px solid var(--lacquer);outline-offset:4px}
+.ba .fig::after{content:"Before  |  After";position:absolute;left:50%;top:12px;transform:translateX(-50%);font-size:12px;font-weight:600;background:var(--bone);color:var(--ink);padding:4px 10px;border-radius:999px;pointer-events:none;white-space:pre}
+@media (prefers-reduced-motion:reduce){.ba .fig .after,.ba .fig .seam{transition:none!important}}

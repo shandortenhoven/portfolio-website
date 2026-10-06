@@ -35,7 +35,7 @@ document.addEventListener('click',e=>{ const b=e.target.closest('.cmp'); if(!b) 
   b.setAttribute('aria-pressed',String(on)); b.firstChild.textContent=on?b.dataset.on:b.dataset.off; });
 /* long images open in a full-screen viewer instead of scrolling inside a small frame */
 let lb=null;
-document.addEventListener('click',e=>{ const b=e.target.closest('.full'); if(!b) return;
+document.addEventListener('click',e=>{ const b=e.target.closest('.fullbtn'); if(!b) return;
   if(!lb){ lb=document.createElement('dialog'); lb.className='lb'; lb.setAttribute('aria-label','Full image');
     lb.innerHTML='<button class="x" type="button">Close</button><img alt="">'; document.body.appendChild(lb);
     lb.querySelector('.x').addEventListener('click',()=>lb.close());
@@ -142,17 +142,13 @@ if(isHome){
 /* =================== CASE PAGES =================== */
 else {
   nav.classList.add('landed','solid');
-  const bas=$$('.ba').map(b=>({b, fig:b.querySelector('.fig'), after:b.querySelector('.after'), seam:b.querySelector('.seam')}));
-  function loop(){
-    if(!reduce) bas.forEach(o=>{
-      // before/after: one mask follows the image through the screen
-      const r=o.fig.getBoundingClientRect(); if(r.bottom<0||r.top>innerHeight) return;
-      const w=eio(clamp((innerHeight*.8-r.top)/(innerHeight*.55),0,1));
-      o.after.style.clipPath=`inset(0 ${(1-w)*100}% 0 0)`; o.seam.style.transform=`translateX(${w*o.fig.offsetWidth}px)`; o.seam.style.opacity=w>0&&w<1?1:0;
-      o.b.classList.toggle('done',w>.5);
-    });
-    requestAnimationFrame(loop);
-  }
-  requestAnimationFrame(loop);
+  // before | after: you decide where the seam sits
+  $$('.ba .fig').forEach(fig=>{
+    const range=fig.querySelector('.cmpr'), set=v=>{ fig.style.setProperty('--x',v+'%'); range.value=Math.round(v); };
+    range.addEventListener('input',()=>{ fig.classList.add('live'); set(+range.value); });
+    range.addEventListener('change',()=>fig.classList.remove('live'));
+    if(fine) fig.addEventListener('pointermove',e=>{ const r=fig.getBoundingClientRect(); fig.classList.add('live'); set(clamp((e.clientX-r.left)/r.width*100,0,100)); });
+    fig.addEventListener('pointerleave',()=>{ fig.classList.remove('live'); });
+  });
 }
 })();
