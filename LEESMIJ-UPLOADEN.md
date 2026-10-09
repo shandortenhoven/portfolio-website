@@ -4,13 +4,14 @@ Deze map is de complete website: homepage, vier case studies, een 404-pagina en 
 
 ## Wat er in de map zit
 
-- `index.html` – homepage (splash, projecten in volgorde Energy Check, Expert, MoodStream, Kubo, about, contact)
+- `index.html` – homepage (splash, projecten in volgorde MoodStream, Expert, Energy Check, Kubo, about, contact)
 - `moodstream.html`, `energycheck.html`, `kubo.html`, `expert.html` – de case studies
 - `404.html` – foutpagina in dezelfde stijl
 - `css/style.css` – alle opmaak
 - `js/scripts.js` – alle beweging en interactie
-- `assets/fonts/` – Mona Sans (zelf gehost, niets van Google)
-- `assets/img/` – alle beelden als WebP, animaties als MP4, deelafbeeldingen in `og/`
+- `css/fonts/` – Mona Sans en de lettertypes voor de naam (zelf gehost, niets van Google)
+- `img/` – alle beelden als WebP, animaties als MP4, deelafbeeldingen in `og/`, Gus in `gus/`
+- `files/` – je cv als PDF
 - `favicon.svg`, `apple-touch-icon.png`, `sitemap.xml`, `robots.txt`, `.nojekyll`
 
 ## Stap 1: maak eerst een backup van je huidige site
@@ -26,10 +27,10 @@ Je oude site staat nu veilig in de branch `old-site`.
 **Via de website (makkelijkst):**
 1. Zorg dat je in de branch `gh-pages` zit.
 2. Klik op "Add file" en dan "Upload files".
-3. Sleep de **inhoud** van deze map erin (dus `index.html`, `assets`, enzovoort, niet de map zelf). Het verborgen bestand `.nojekyll` mag je overslaan als je het niet ziet.
+3. Sleep de **inhoud** van deze map erin (dus `index.html`, `img`, enzovoort, niet de map zelf). Het verborgen bestand `.nojekyll` mag je overslaan als je het niet ziet.
 4. Schrijf onderaan een korte beschrijving, bijvoorbeeld "Nieuwe portfolio", en klik op "Commit changes".
 
-Bestaande bestanden met dezelfde naam worden overschreven. **Laat de map `files/` staan**, want daar staat je cv in (`files/CV-Shandor-ten-Hoven.docx`). De oude map `img/` en de oude CSS/JS mag je later verwijderen; de nieuwe site gebruikt ze niet meer.
+Bestaande bestanden met dezelfde naam worden overschreven.
 
 **Via git (als je dat liever doet):**
 ```
@@ -55,7 +56,20 @@ Loop daarna even na:
 
 ## Goed om te weten
 
-- **Cv als PDF:** de site linkt nu naar je Word-bestand. Zet een PDF in `files/` (bijvoorbeeld `CV-Shandor-ten-Hoven.pdf`) en vervang in de HTML-bestanden `CV-Shandor-ten-Hoven.docx` door die naam.
 - **Eigen domein later:** de 404-pagina gebruikt `<base href="/portfolio-website/">`. Koppel je een eigen domein, verander dat dan in `<base href="/">`, en pas de adressen in `sitemap.xml`, `robots.txt` en de `og:`-regels bovenin de HTML-bestanden aan.
 - **Overgangen tussen pagina's:** het projectbeeld dat uitgroeit tot de case-cover werkt in Chrome, Edge en Safari 18.2+. Andere browsers openen de pagina gewoon normaal.
 - **Reduce motion:** staat "beweging verminderen" aan op het apparaat, dan staat alles stil en is de splash gewoon het eerste scherm.
+
+## Gus (easter eggs)
+
+Gus woont op elke pagina, verstopt:
+
+- **Colofon:** onderaan elke pagina staat "Supervised by Gus". Klik op "Gus" en hij klimt uit de lijn erboven (op de telefoon kijkt hij er alleen overheen).
+- **Typen:** typ `gus` op een willekeurige pagina en hij komt omhoog uit de onderrand van het scherm.
+- **Aaien:** klik op Gus voor een boop. Na een paar boops gaat hij terug. Escape of nog een keer op "Gus" klikken stuurt hem ook weg.
+- **404:** op de foutpagina zit hij er standaard ("Gus denies everything.").
+- **Console:** wie de ontwikkelaarstools opent, krijgt een hint.
+
+Zijn zinnetjes pas je aan bovenin het Gus-blok in `js/scripts.js` (`const GUS`). De tekening zelf is `img/gus/gus.svg`.
+
+Bij deze update veranderd: alle `.html`-bestanden, `css/style.css`, `js/scripts.js`, plus het nieuwe bestand `img/gus/gus.svg`. De versie achter css/js is `?v=20261009`, zodat browsers de nieuwe versie ophalen.

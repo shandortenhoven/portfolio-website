@@ -64,6 +64,76 @@ addEventListener('pageswap', e => {
   const nn = $('#nextName'); if(k && nn && nn.dataset.key===k){ vtn($('#nextImg'),'cover-'+k); vtn(nn,'title-'+k); }
 });
 
+/* ---------- Gus. Type "gus" anywhere, or find him in the colophon. Edit his lines here. ---------- */
+const GUS = {
+  src: 'img/gus/gus.svg',
+  colophon: ['Hi, I’m Gus.', 'Boop.', 'Again?', 'Okay, back to supervising.'],
+  typed:    ['You called?', 'Boop.', 'Again?', 'Okay, back to supervising.'],
+  lost:     ['Gus denies everything.', 'Boop.', 'Still denies it.']
+};
+let gus=null, gusLines=[], gusStep=0, gusT=null, gusStay=false, gusFrom=null;
+const gusPreload = () => { if(!gusPreload.done){ gusPreload.done=true; new Image().src=GUS.src; } };
+function gusBuild(){
+  gus=document.createElement('div'); gus.className='gus'; gus.hidden=true;
+  gus.innerHTML=`<p class="gus-tag" role="status"><span></span></p><button class="gus-dog" type="button" aria-label="Boop Gus"><img src="${GUS.src}" alt="" width="916" height="859"></button>`;
+  gus.querySelector('.gus-dog').addEventListener('click',gusBoop);
+  gus.addEventListener('pointerenter',()=>clearTimeout(gusT)); gus.addEventListener('pointerleave',gusIdle);
+}
+const gusUp = () => gus && gus.classList.contains('up');
+function gusSay(t){
+  const tag=gus.querySelector('.gus-tag'); gus.classList.remove('talk','side','flip'); void gus.offsetWidth; tag.firstChild.textContent=t;
+  // his line sits left of his head; no room there, then to his right; no room there either, above him
+  if(tag.getBoundingClientRect().left<8){ gus.classList.add('side'); if(tag.getBoundingClientRect().right>innerWidth-8){ gus.classList.remove('side'); gus.classList.add('flip'); } }
+  gus.classList.add('talk');
+}
+function gusIdle(){ clearTimeout(gusT); if(gus && !gusStay) gusT=setTimeout(gusHide,9000); }
+/* on: a colophon line he climbs out of (otherwise the bottom edge of the screen) */
+function gusShow(lines,{stay=false,on=null}={}){
+  if(!gus) gusBuild(); gusLines=lines; gusStep=0; gusStay=stay;
+  if(gusUp()){ gusSay(lines[0]); gusIdle(); return; }
+  (on||document.body).appendChild(gus);
+  gus.classList.toggle('line',!!on); gus.classList.toggle('gus-xl',stay); gus.style.left='';
+  if(on){ gus.hidden=false; const w=gus.offsetWidth, cr=on.getBoundingClientRect(), b=on.querySelector('.gusbtn'), br=b?b.getBoundingClientRect():cr;
+    gus.style.left=clamp(br.left+br.width/2-cr.left-w*.4,0,cr.width-w)+'px'; gus.hidden=true; }
+  const img=gus.querySelector('img');
+  (img.decode?img.decode():Promise.resolve()).catch(()=>{}).then(()=>{
+    gus.hidden=false; void gus.offsetWidth; gus.classList.add('up');
+    setTimeout(()=>gusSay(gusLines[0]), reduce?0:430); gusIdle();
+  });
+}
+function gusHide(){
+  if(!gusUp()) return; clearTimeout(gusT);
+  if(gus.contains(document.activeElement) && gusFrom) gusFrom.focus();
+  gus.classList.remove('talk');
+  setTimeout(()=>{ gus.classList.remove('up','boop'); setTimeout(()=>{ if(!gusUp()) gus.hidden=true; }, reduce?0:400); }, reduce?0:200);
+}
+function gusBoop(){
+  if(!gusUp()) return;
+  gusStep = gusStay ? (gusStep % (gusLines.length-1)) + 1 : gusStep + 1;
+  if(!reduce){ gus.classList.remove('boop'); void gus.offsetWidth; gus.classList.add('boop'); }
+  if(gusStep >= gusLines.length-1 && !gusStay){ gusSay(gusLines[gusLines.length-1]); clearTimeout(gusT); gusT=setTimeout(gusHide,1800); return; }
+  gusSay(gusLines[gusStep]); gusIdle();
+}
+$$('.gusbtn').forEach(b=>{
+  b.addEventListener('pointerenter',gusPreload); b.addEventListener('focus',gusPreload);
+  b.addEventListener('click',()=>{ gusFrom=b; if(gusUp() && !gusStay) gusHide(); else gusShow(GUS.colophon,{on:b.closest('.colo')}); });
+});
+let gusKeys='';
+addEventListener('keydown',e=>{
+  if(e.key==='Escape'){ if(gusUp() && !gusStay) gusHide(); return; }
+  if(e.ctrlKey||e.metaKey||e.altKey||e.repeat||!e.key||e.key.length!==1) return;
+  if(e.target.closest && e.target.closest('input,textarea,select,[contenteditable]')) return;
+  gusKeys=(gusKeys+e.key.toLowerCase()).slice(-3);
+  if(gusKeys.endsWith('g')) gusPreload();
+  if(gusKeys!=='gus') return; gusKeys=''; gusFrom=null;
+  if(gusStay && gusUp()){ gusBoop(); return; }
+  // if a colophon is on screen he climbs out of that line, otherwise out of the bottom edge
+  const colo=$$('.colo').find(c=>{ const r=c.getBoundingClientRect(); return r.top>innerHeight*.35 && r.top<innerHeight-20; });
+  gusShow(GUS.typed,{on:colo||null});
+});
+if($('[data-gus-home]')) setTimeout(()=>gusShow(GUS.lost,{stay:true}), reduce?0:700);
+console.log('%cHi, you found the console. Someone is hiding on every page of this site. Type “gus” to say hi.','font:600 13px/1.5 "Mona Sans",system-ui,sans-serif;color:#3657FF');
+
 /* =================== HOME =================== */
 if(isHome){
   const splash=$('#splash'), panel=$('#panel'), pIn=$('#pIn'), big=$('#big'), bigSh=$('#bigSh'), bigSh2=$('#bigSh2');
