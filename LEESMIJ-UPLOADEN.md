@@ -4,7 +4,7 @@ Deze map is de complete website: homepage, vier case studies, een 404-pagina en 
 
 ## Wat er in de map zit
 
-- `index.html` – homepage (splash, projecten in volgorde MoodStream, Expert, Energy Check, Kubo, about, contact)
+- `index.html` – homepage (splash, projectindex in volgorde Expert, MoodStream, Energy Check, Kubo, about, contact)
 - `moodstream.html`, `energycheck.html`, `kubo.html`, `expert.html` – de case studies
 - `404.html` – foutpagina in dezelfde stijl
 - `css/style.css` – alle opmaak
@@ -72,4 +72,13 @@ Gus woont op elke pagina, verstopt:
 
 Zijn zinnetjes pas je aan bovenin het Gus-blok in `js/scripts.js` (`const GUS`). De tekening zelf is `img/gus/gus.svg`.
 
-Bij deze update veranderd: alle `.html`-bestanden, `css/style.css`, `js/scripts.js`, plus het nieuwe bestand `img/gus/gus.svg`. De versie achter css/js is `?v=20261009`, zodat browsers de nieuwe versie ophalen.
+Bij deze update veranderd: alle `.html`-bestanden, `css/style.css`, `js/scripts.js`, plus het nieuwe bestand `img/gus/gus.svg`. De versie achter css/js is `?v=20261019`, zodat browsers de nieuwe versie ophalen.
+
+## Deze update
+
+- **Menu:** staat meteen bovenaan en schuift niet meer op; alleen SHANDOR wisselt van lettertype. Op de telefoon opent "Menu" een volledig scherm met grote links en je naam onderaan.
+- **Projecten:** een index met vier vaste titels en één beeldvlak; Expert staat vooraan. Het project in beeld speelt een korte loop van echte schermen (`img/loops/`).
+- **Cases:** bovenaan elke case staan The goal, My hypothesis, How I'd know it worked en What I learned; de regel onder de intro begint met "My role".
+- **Knoppen:** recht in plaats van rond.
+
+Veranderd: alle `.html`-bestanden, `css/style.css`, `js/scripts.js` en de nieuwe map `img/loops/`. De versie achter css/js is `?v=20261019b`, zodat browsers de nieuwe versie ophalen.

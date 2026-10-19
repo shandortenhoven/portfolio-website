@@ -32,7 +32,8 @@ addEventListener('wheel',()=>root.classList.remove('hv-ok'),{passive:true});
 /* "Where it started": a deliberate switch on a project image */
 document.addEventListener('click',e=>{ const b=e.target.closest('.cmp'); if(!b) return; e.preventDefault();
   const shot=b.closest('.shot'), on=!shot.classList.contains('show'); shot.classList.toggle('show',on);
-  b.setAttribute('aria-pressed',String(on)); b.firstChild.textContent=on?b.dataset.on:b.dataset.off; });
+  b.setAttribute('aria-pressed',String(on)); b.firstChild.textContent=on?b.dataset.on:b.dataset.off;
+  const v=shot.querySelector('video.over'); if(v){ if(on) v.pause(); else document.dispatchEvent(new Event('loops:sync')); } });
 /* long images open in a full-screen viewer instead of scrolling inside a small frame */
 let lb=null;
 document.addEventListener('click',e=>{ const b=e.target.closest('.fullbtn'); if(!b) return;
@@ -63,6 +64,48 @@ addEventListener('pageswap', e => {
   vtn($('#caseCover'),'none'); vtn($('#caseTitle'),'none');
   const nn = $('#nextName'); if(k && nn && nn.dataset.key===k){ vtn($('#nextImg'),'cover-'+k); vtn(nn,'title-'+k); }
 });
+
+/* ---------- phones: the editorial menu, built from the bar's own links so there is one source ---------- */
+(() => {
+  const row=nav && nav.querySelector('.row'), links=nav ? [...nav.querySelectorAll('nav a')] : [];
+  if(!row || !links.length) return;
+  const HINT={work:'4 projects',about:'Background and skills',cv:'PDF',contact:'Email, LinkedIn'};
+  const kindOf=a=>/cv/i.test(a.textContent)?'cv':(a.dataset.sec||(a.getAttribute('href').split('#')[1])||'').toLowerCase();
+  const page=location.pathname.split('/').pop();
+  const isCase=/^(moodstream|expert|energycheck|kubo)\.html$/.test(page);
+  const btn=document.createElement('button'); btn.className='mbtn'; btn.type='button'; btn.textContent='Menu';
+  btn.setAttribute('aria-haspopup','dialog'); btn.setAttribute('aria-expanded','false'); btn.setAttribute('aria-controls','mnav');
+  row.appendChild(btn);
+  const dlg=document.createElement('dialog'); dlg.className='mnav'; dlg.id='mnav'; dlg.setAttribute('aria-label','Menu');
+  dlg.innerHTML=`<div class="mn-top px"><span class="mn-lab">Menu</span><button class="mn-x" type="button">Close</button></div>
+    <ul class="mn-list">${links.map((a,i)=>`<li><a href="${a.getAttribute('href')}" data-i="${i}" style="--i:${i}"><span class="l">${a.textContent.trim()}</span><span class="h">${HINT[kindOf(a)]||''}</span></a></li>`).join('')}</ul>
+    <div class="mn-foot"><a href="mailto:shandortenhoven@gmail.com">shandortenhoven@gmail.com</a><a href="https://www.linkedin.com/in/shandortenhoven" target="_blank" rel="noopener">LinkedIn<span class="sr"> (opens in a new tab)</span></a></div>
+    <div class="mn-name" aria-hidden="true"><span>Shandor</span></div>`;
+  document.body.appendChild(dlg);
+  document.documentElement.classList.add('has-mnav');
+  const mLinks=[...dlg.querySelectorAll('.mn-list a')], nameEl=dlg.querySelector('.mn-name span');
+  const fitName=()=>{ nameEl.style.fontSize='100px'; const w=nameEl.getBoundingClientRect().width||1; nameEl.style.fontSize=(100*nameEl.parentElement.clientWidth/w)+'px'; };
+  let busy=false;
+  function open(){
+    if(dlg.open) return;
+    // which part of the site you are in
+    mLinks.forEach((m,i)=>{ const a=links[i], k=kindOf(a);
+      const cur = a.getAttribute('aria-current')==='true' || (isCase && k==='work') || (page==='contact.html' && k==='contact');
+      m.setAttribute('aria-current',String(!!cur)); });
+    dlg.showModal(); document.documentElement.classList.add('mn-open'); btn.setAttribute('aria-expanded','true');
+    fitName(); void dlg.offsetWidth; dlg.classList.add('on');
+  }
+  function close(after){
+    if(!dlg.open || busy) return; busy=true; dlg.classList.remove('on');
+    setTimeout(()=>{ dlg.close(); busy=false; document.documentElement.classList.remove('mn-open'); btn.setAttribute('aria-expanded','false'); if(after) after(); else btn.focus(); }, reduce?0:420);
+  }
+  btn.addEventListener('click',open);
+  dlg.querySelector('.mn-x').addEventListener('click',()=>close());
+  dlg.addEventListener('cancel',e=>{ e.preventDefault(); close(); });
+  // a menu link closes the menu first, then does exactly what the same link in the bar does
+  mLinks.forEach((m,i)=>m.addEventListener('click',e=>{ if(e.metaKey||e.ctrlKey||e.shiftKey) return; e.preventDefault(); close(()=>links[i].click()); }));
+  addEventListener('resize',()=>{ if(innerWidth>860 && dlg.open){ dlg.classList.remove('on'); dlg.close(); document.documentElement.classList.remove('mn-open'); btn.setAttribute('aria-expanded','false'); } });
+})();
 
 /* ---------- Gus. Type "gus" anywhere, or find him in the colophon. Edit his lines here. ---------- */
 const GUS = {
@@ -137,7 +180,7 @@ console.log('%cHi, you found the console. Someone is hiding on every page of thi
 /* =================== HOME =================== */
 if(isHome){
   const splash=$('#splash'), panel=$('#panel'), pIn=$('#pIn'), big=$('#big'), bigSh=$('#bigSh'), bigSh2=$('#bigSh2');
-  const stack=$('#work'), panels=$$('.p'), inter=$('#inter'), v1=$('#v1'), v2=$('#v2');
+  const stack=$('#work'), inter=$('#inter'), v1=$('#v1'), v2=$('#v2');
   let VH=innerHeight, VW=innerWidth;
   const foldEnd = () => VH*.75, PIN = 0;        // the first 28% of the fold keeps the splash pinned
   let bigW=0, navW=0;
@@ -146,11 +189,14 @@ if(isHome){
     const w100=bigSh.getBoundingClientRect().width, base=100*innerWidth*(innerWidth<700?1.0:1.04)/w100;
     bigSh.style.fontSize=base+'px'; bigSh2.style.fontSize=base+'px';
     bigW=bigSh.getBoundingClientRect().width; navW=navTarget||navSh.getBoundingClientRect().width;
+    if(reduce) placeStill();
   }
+  // reduced motion: SHANDOR simply sits at the foot of the first screen, every time the layout is measured
+  function placeStill(){ const hh=bigSh.getBoundingClientRect().height, mm=parseFloat(getComputedStyle(pIn).paddingLeft)||20; big.style.transform=`translate(${innerWidth<700?mm:mm*.4}px,${innerHeight-hh*(innerWidth<700?.98:.72)}px)`; }
   addEventListener('resize',()=>{ if(innerWidth!==VW){ VW=innerWidth; VH=innerHeight; } clearTimeout(window.__rz); window.__rz=setTimeout(layoutBig,150); });
 
   /* rewards for curiosity on the three routes (desktop) */
-  const FILL=$$('.p .shot .over').map(i=>i.getAttribute('src')); let fillT=null;
+  const FILL=$$('#work .shot .over').map(i=>i.getAttribute('poster')||i.getAttribute('src')); let fillT=null;
   function hint(h){ splash.dataset.hint=h||''; clearInterval(fillT); big.classList.remove('fill'); bigSh.style.backgroundImage='';
     if(h==='contact'){ bigSh.style.setProperty('--g',220); bigSh2.style.setProperty('--g',220); } else { bigSh.style.removeProperty('--g'); bigSh2.style.removeProperty('--g'); }
     if(h==='work'&&!reduce){ let j=0; const step=()=>{ bigSh.style.backgroundImage=`url(${FILL[j%FILL.length]})`; j++; }; big.classList.add('fill'); step(); fillT=setInterval(step,650); } }
@@ -164,15 +210,56 @@ if(isHome){
   $$('.nav a[data-sec]').forEach(a=>a.addEventListener('click',e=>{ e.preventDefault(); glide(target(a.dataset.sec),900); history.replaceState(null,'','#'+a.dataset.sec); }));
   $('.nav .name').addEventListener('click',e=>{ e.preventDefault(); glide(0,900); history.replaceState(null,'',location.pathname); });
 
-  const naturalTop = el => { let y=stack.offsetTop; for(const c of stack.children){ if(c===el) break; y+=c.offsetHeight; } return y; };
-  stack.addEventListener('focusin',e=>{ const p=e.target.closest('.p'); if(!p) return; const nt=naturalTop(p); if(Math.abs(scrollY-nt)>4) scrollTo(0,nt); });
+  /* selected work: scrolling walks through the four projects; pointing at a title or tabbing to it shows that one */
+  const wProj=$$('.w-proj'), wide=()=>innerWidth>860;
+  let wT=null;
+  const wShots=wProj.map(a=>a.querySelector('.shot')), wCur=()=>Math.max(0,wProj.findIndex(a=>a.classList.contains('on')));
+  function setWork(i){
+    const cur=wCur(); if(i===cur || !wProj[i]) return;
+    const prev=wProj[cur];
+    wProj.forEach((a,j)=>{ a.classList.toggle('on',j===i); a.classList.toggle('was',a===prev); });
+    wInert(); clearTimeout(wT); wT=setTimeout(()=>prev&&prev.classList.remove('was'), reduce?0:900);
+    const nv=wVids[i]; if(nv && canLoop){ try{ nv.currentTime=0; }catch(e){} } syncLoops();
+  }
+  /* project loops: on a wide screen only the project on stage plays; on a phone, whatever is on screen.
+     Reduced motion or data saver: the still frame stays. */
+  const wVids=wProj.map(a=>a.querySelector('video.over'));
+  const canLoop=!reduce && !(navigator.connection && navigator.connection.saveData);
+  let workSeen=false; const vSeen=new Set();
+  const vPlay=v=>{ if(!v||!canLoop||v.closest('.shot.show')) return; if(!v.getAttribute('src')&&v.dataset.src) v.src=v.dataset.src+(v.canPlayType('video/mp4; codecs="avc1.640028"')?'.mp4':'.webm'); const p=v.play(); if(p&&p.catch) p.catch(()=>{}); };
+  const vStop=v=>{ if(v&&!v.paused) v.pause(); };
+  function syncLoops(){
+    const c=wCur();
+    wVids.forEach((v,j)=>{ if(!v) return;
+      const go = wide() ? (workSeen && j===c) : vSeen.has(v);
+      if(go) vPlay(v); else if(wide() && j!==c && workSeen) setTimeout(()=>{ if(wCur()!==j) vStop(v); },900); else vStop(v); });
+  }
+  new IntersectionObserver(es=>es.forEach(e=>{ workSeen=e.isIntersecting; syncLoops(); }),{threshold:.2}).observe(stack);
+  const vObs=new IntersectionObserver(es=>{ es.forEach(e=>{ if(e.isIntersecting) vSeen.add(e.target); else vSeen.delete(e.target); }); if(!wide()) syncLoops(); },{threshold:.5});
+  wVids.forEach(v=>v&&vObs.observe(v));
+  document.addEventListener('loops:sync',syncLoops);
+  const wInert=()=>{ const c=wCur(); wShots.forEach((s,j)=>{ s.inert = wide() && j!==c; }); };
+  const wStep=()=>innerHeight*.7;
+  const scrollIdx=()=>{ if(!wide()) return -1; const y=scrollY-stack.offsetTop-(reduce?0:foldEnd()); return y<-innerHeight*.5?-1:clamp(Math.floor(y/wStep()),0,wProj.length-1); };
+  let wScroll=null, wHold=false;   // coming back from a case keeps that case on stage until you scroll yourself
+  wProj.forEach((a,i)=>{ const t=a.querySelector('.w-t a'); if(fine) t.addEventListener('pointermove',e=>{ if(e.movementX||e.movementY) setWork(i); }); /* a cursor merely resting there after a page load doesn't count */ a.addEventListener('focusin',()=>setWork(i)); });
+  // a tall window gets the stacked composition: it gives the image more room than a column beside the list would
+  const wIn=$('.w-in'), wLab=$('.w-lab'), wLast=wProj[wProj.length-1].querySelector('.w-t');
+  const wFit=()=>{ const W=innerWidth, H=innerHeight, tall=wide() && (H-400)*1.6 > W*.62; stack.classList.toggle('tall',tall);
+    if(!tall) return; const cs=getComputedStyle(wIn), gap=parseFloat(getComputedStyle(stack).getPropertyValue('--stageGap'))||30;
+    const list=wLast.getBoundingClientRect().bottom-wLab.getBoundingClientRect().top;
+    stack.style.setProperty('--stage', Math.max(240, H-parseFloat(cs.paddingTop)-parseFloat(cs.paddingBottom)-list-gap)+'px'); };
+  wFit(); wInert(); addEventListener('resize',()=>{ wFit(); wInert(); });
+  // phones: each project's image is revealed from its bottom edge when it scrolls in
+  const wSeen=new IntersectionObserver(es=>es.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); wSeen.unobserve(e.target); } }),{rootMargin:'0px 0px -15% 0px'});
+  wProj.forEach(a=>wSeen.observe(a));
 
   fontsReady.then(()=>{ layoutBig(); });
   if(document.fonts) document.fonts.addEventListener('loadingdone',()=>{ layoutBig(); measureNav(); });
   (document.fonts ? document.fonts.ready : Promise.resolve()).then(()=>{
     layoutBig();
     const h=location.hash.slice(1); if(['work','about','contact'].includes(h)) scrollTo(0,target(h));
-    if(reduce){ const hh=bigSh.getBoundingClientRect().height, mm=parseFloat(getComputedStyle(pIn).paddingLeft)||20; big.style.transform=`translate(${innerWidth<700?mm:mm*.4}px,${innerHeight-hh*(innerWidth<700?.98:.72)}px)`; nav.classList.add('landed'); }
+    if(reduce){ placeStill(); nav.classList.add('landed'); }
   });
 
   function loop(){
@@ -183,7 +270,9 @@ if(isHome){
       if(k>0.003&&splash.dataset.hint) hint('');
       // 2. reveal: the grey surface's bottom edge rises, the first project is already underneath
       const r=clamp((k-PIN)/(1-PIN),0,1), eE=1-Math.pow(1-r,3);
-      panel.style.clipPath=`inset(0 0 ${eE*100}% 0)`; pIn.style.transform=`translateY(${-eE*30}vh)`;
+      const nh=nav.offsetHeight||60, edge=vh*(1-eE);
+      panel.style.clipPath=`inset(${nh}px 0 ${eE*100}% 0)`; pIn.style.transform=`translateY(${-eE*30}vh)`;
+      nav.classList.toggle('onpanel', edge>nh+1);
       splash.style.visibility=k>=1?'hidden':'visible'; panel.inert=k>.05;
       // 3. SHANDOR travels into the nav; its colour splits exactly at the surface's edge
       if(bigW&&k<1){
@@ -198,9 +287,12 @@ if(isHome){
         bigSh2.style.clipPath=`inset(${clamp(local,0,h)}px 0 0 0)`; bigSh.style.clipPath=`inset(0 0 ${clamp(h-local,0,h)}px 0)`;
       }
       const landed=k>=.97; big.style.visibility=landed?'hidden':'visible'; nav.classList.toggle('landed',landed); if(!landed) setNavFont(0);
-      if(innerWidth>860) panels.forEach((p,i)=>{ const nx=panels[i+1]; if(!nx) return; const q=clamp(1-nx.getBoundingClientRect().top/vh,0,1); p.firstElementChild.style.transform=q>0&&q<1?`translateY(${-q*5}vh)`:(q>=1?'translateY(-5vh)':''); });
     }
-    nav.classList.toggle('glass',k>=.9);
+    { const si=scrollIdx();
+      if(window.__wFrom){ if(!wHold){ wHold=true; wInert(); const go=()=>{ window.__wFrom=null; wScroll=null; }; ['wheel','touchstart','keydown','pointerdown'].forEach(ev=>addEventListener(ev,go,{once:true,passive:true})); } }
+      else if(wScroll===null){ wScroll=si; if(si>=0) setWork(si); wInert(); }
+      else if(si>=0 && si!==wScroll){ wScroll=si; setWork(si); } }
+    nav.classList.toggle('glass',k>=.9 || (!reduce && !nav.classList.contains('onpanel') && k>0));
     let sec='work'; $$('section[data-sec]').forEach(el=>{ const r=el.getBoundingClientRect(); if(r.top<vh*.45&&r.bottom>vh*.45) sec=el.dataset.sec; }); secNow=sec;
     $$('.nav a[data-sec]').forEach(a=>a.setAttribute('aria-current',String(k>=.98&&a.dataset.sec===sec)));
     if(!reduce&&inter){ const r=inter.getBoundingClientRect(); if(r.bottom>0&&r.top<vh){ const t=clamp((vh-r.top)/(vh+r.height),0,1); v1.style.setProperty('--w',lerp(75,125,t)); v1.style.setProperty('--g',lerp(800,300,t)); v2.style.setProperty('--w',lerp(125,75,t)); v2.style.setProperty('--g',lerp(300,800,t)); } }

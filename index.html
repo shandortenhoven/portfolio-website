@@ -15,7 +15,7 @@
 <meta property="og:url" content="https://shandortenhoven.github.io/portfolio-website/">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preload" href="css/fonts/mona-sans.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="css/style.css?v=20261009">
+<link rel="stylesheet" href="css/style.css?v=20261019b">
 <script>
 /* entered without a page transition? then the cover does its own compress-and-reveal */
 document.documentElement.classList.add('no-vt');
@@ -26,7 +26,7 @@ addEventListener('pagereveal',e=>{ if(e.viewTransition) document.documentElement
 <a class="skip" href="#work">Skip to the work</a>
 <div class="splash" id="splash" data-hint="">
   <div class="panel" id="panel"><div class="inner" id="pIn">
-    <div class="meta"><span>Shandor ten Hoven<span class="yr">, portfolio 2026</span></span><span>Amsterdam <span class="idx" id="clock"></span></span></div>
+    <div class="meta"><span>Portfolio 2026</span><span>Amsterdam <span class="idx" id="clock"></span></span></div>
     <p class="who"><b>UX/UI and product designer</b> with a background in fashion and ten years in hospitality.</p>
     <p class="ask">Where would you like to start?</p>
     <ul class="index" aria-label="Start here">
@@ -63,12 +63,30 @@ addEventListener('pagereveal',e=>{ if(e.viewTransition) document.documentElement
 <main id="main" tabindex="-1">
 <h1 class="sr">Shandor ten Hoven, UX/UI and product designer in Amsterdam</h1>
 <div id="top" data-hoven="100,500,0"></div>
-<section class="stack" id="work" data-sec="work" aria-label="Selected work">
-<article class="p feat" id="mood" aria-labelledby="t-mood" data-hoven="100,560,1"><div class="in"><p class="no"><span class="idx">Experimental concept</span></p><div class="shot reveal" id="pl-mood" style="--pc:#000000"><a class="shotlink" href="moodstream.html" tabindex="-1" aria-hidden="true"></a><img class="under" src="img/projects/mood_b.webp" alt="" loading="lazy" decoding="async"><img class="over" src="img/projects/mood_a.webp" alt="" decoding="async"><span class="tag" aria-hidden="true">The home page</span><button class="cmp" type="button" aria-pressed="false" data-on="Back to the final design" data-off="Where it started">Where it started<span class="sr">: the home page, MoodStream</span></button></div><div class="txt"><h3 id="t-mood"><a href="moodstream.html">MoodStream</a></h3><p class="one">A streaming app concept where you choose a mood before a genre.</p><div class="r"><dl><dt>My role</dt><dd>Concept, interaction and visual design</dd></dl><a class="ln" href="moodstream.html">Read the case<span class="sr"> study: MoodStream</span></a></div></div></div></article>
-<div class="gap90" aria-hidden="true"></div>
-<article class="p r" id="expert" aria-labelledby="t-expert" data-hoven="120,420,0"><div class="in"><p class="no"><span class="idx">UX case study</span></p><div class="shot reveal" id="pl-expert" style="--pc:#DCE4FA"><a class="shotlink" href="expert.html" tabindex="-1" aria-hidden="true"></a><img class="under" src="img/projects/expert_b.webp" alt="" loading="lazy" decoding="async"><img class="over" src="img/projects/expert_a.webp" alt="" decoding="async"><span class="tag" aria-hidden="true">The low-fidelity wireframes</span><button class="cmp" type="button" aria-pressed="false" data-on="Back to the final design" data-off="Where it started">Where it started<span class="sr">: the low-fidelity wireframes, Expert</span></button></div><div class="txt"><h3 id="t-expert"><a href="expert.html">Expert</a></h3><p class="one">An advice app built around two research themes: trust before booking, and availability.</p><dl><dt>My role</dt><dd>UX research and design, end to end</dd></dl><a class="ln" href="expert.html">Read the case<span class="sr"> study: Expert</span></a></div></div></article>
-<article class="p l" id="energy" aria-labelledby="t-energy" data-hoven="84,720,0"><div class="in"><p class="no"><span class="idx">Take-home assignment, B2B website</span></p><div class="shot reveal" id="pl-energy" style="--pc:#0E3A36"><a class="shotlink" href="energycheck.html" tabindex="-1" aria-hidden="true"></a><img class="under" src="img/projects/energy_b.webp" alt="" loading="lazy" decoding="async"><img class="over" src="img/projects/energy_a.webp" alt="" decoding="async"><span class="tag" aria-hidden="true">The old website</span><button class="cmp" type="button" aria-pressed="false" data-on="Back to the final design" data-off="Where it started">Where it started<span class="sr">: the old website, Energy Check</span></button></div><div class="txt"><h3 id="t-energy"><a href="energycheck.html">Energy Check</a></h3><p class="one">A homepage redesign that makes a 20-year-old energy consultancy sound like its team.</p><dl><dt>My role</dt><dd>Strategy, UX and visual design</dd></dl><a class="ln" href="energycheck.html">Read the case<span class="sr"> study: Energy Check</span></a></div></div></article>
-<article class="p s" id="kubo" aria-labelledby="t-kubo" data-hoven="90,480,0"><div class="in"><p class="no"><span class="idx">Mobile concept</span></p><div class="shot reveal" id="pl-kubo" style="--pc:#1E3FB4"><a class="shotlink" href="kubo.html" tabindex="-1" aria-hidden="true"></a><img class="over" src="img/projects/kubo_a.webp" alt="" decoding="async"></div><div class="txt"><h3 id="t-kubo"><a href="kubo.html">Kubo</a></h3><p class="one">A calm place for the documents you need most when you need them quickly.</p><dl><dt>My role</dt><dd>Information architecture and mobile UI</dd></dl><a class="ln" href="kubo.html">Read the case<span class="sr"> study: Kubo</span></a></div></div></article>
+<section class="work" id="work" data-sec="work" aria-labelledby="workTitle">
+<div class="w-pin"><div class="w-in px">
+  <h2 class="w-lab" id="workTitle">Selected work</h2>
+  <article class="w-proj on" id="expert" aria-labelledby="t-expert">
+    <h3 class="w-t" id="t-expert"><a href="expert.html">Expert</a></h3>
+    <div class="w-d"><p class="kind">UX case study</p><p class="one">An advice app built around two research themes: trust before booking, and availability.</p><dl><dt>My role</dt><dd>UX research and design, end to end</dd></dl><a class="ln" href="expert.html">Read the case<span class="sr"> study: Expert</span></a></div>
+    <div class="shot reveal" id="pl-expert" style="--pc:#DCE4FA"><a class="shotlink" href="expert.html" tabindex="-1" aria-hidden="true"></a><img class="under" src="img/projects/expert_b.webp" alt="" loading="lazy" decoding="async"><video class="over" muted loop playsinline preload="none" poster="img/loops/expert.webp" data-src="img/loops/expert" aria-hidden="true"></video><span class="tag" aria-hidden="true">The low-fidelity wireframes</span><button class="cmp" type="button" aria-pressed="false" data-on="Back to the final design" data-off="Where it started">Where it started<span class="sr">: the low-fidelity wireframes, Expert</span></button></div>
+  </article>
+  <article class="w-proj" id="mood" aria-labelledby="t-mood">
+    <h3 class="w-t" id="t-mood"><a href="moodstream.html">MoodStream</a></h3>
+    <div class="w-d"><p class="kind">Experimental concept</p><p class="one">A streaming app concept where you choose a mood before a genre.</p><dl><dt>My role</dt><dd>Concept, interaction and visual design</dd></dl><a class="ln" href="moodstream.html">Read the case<span class="sr"> study: MoodStream</span></a></div>
+    <div class="shot reveal" id="pl-mood" style="--pc:#000000"><a class="shotlink" href="moodstream.html" tabindex="-1" aria-hidden="true"></a><img class="under" src="img/projects/mood_b.webp" alt="" loading="lazy" decoding="async"><video class="over" muted loop playsinline preload="none" poster="img/loops/mood.webp" data-src="img/loops/mood" aria-hidden="true"></video><span class="tag" aria-hidden="true">The home page</span><button class="cmp" type="button" aria-pressed="false" data-on="Back to the final design" data-off="Where it started">Where it started<span class="sr">: the home page, MoodStream</span></button></div>
+  </article>
+  <article class="w-proj" id="energy" aria-labelledby="t-energy">
+    <h3 class="w-t" id="t-energy"><a href="energycheck.html">Energy Check</a></h3>
+    <div class="w-d"><p class="kind">Take-home assignment, B2B website</p><p class="one">A homepage redesign that makes a 20-year-old energy consultancy sound like its team.</p><dl><dt>My role</dt><dd>Strategy, UX and visual design</dd></dl><a class="ln" href="energycheck.html">Read the case<span class="sr"> study: Energy Check</span></a></div>
+    <div class="shot reveal" id="pl-energy" style="--pc:#0E3A36"><a class="shotlink" href="energycheck.html" tabindex="-1" aria-hidden="true"></a><img class="under" src="img/projects/energy_b.webp" alt="" loading="lazy" decoding="async"><video class="over" muted loop playsinline preload="none" poster="img/loops/energy.webp" data-src="img/loops/energy" aria-hidden="true"></video><span class="tag" aria-hidden="true">The old website</span><button class="cmp" type="button" aria-pressed="false" data-on="Back to the final design" data-off="Where it started">Where it started<span class="sr">: the old website, Energy Check</span></button></div>
+  </article>
+  <article class="w-proj" id="kubo" aria-labelledby="t-kubo">
+    <h3 class="w-t" id="t-kubo"><a href="kubo.html">Kubo</a></h3>
+    <div class="w-d"><p class="kind">Mobile concept</p><p class="one">A calm place for the documents you need most when you need them quickly.</p><dl><dt>My role</dt><dd>Information architecture and mobile UI</dd></dl><a class="ln" href="kubo.html">Read the case<span class="sr"> study: Kubo</span></a></div>
+    <div class="shot reveal" id="pl-kubo" style="--pc:#1E3FB4"><a class="shotlink" href="kubo.html" tabindex="-1" aria-hidden="true"></a><video class="over" muted loop playsinline preload="none" poster="img/loops/kubo.webp" data-src="img/loops/kubo" aria-hidden="true"></video></div>
+  </article>
+</div></div>
 </section>
 
 <section class="inter" id="inter" data-hoven="125,260,0" data-sec="background" aria-label="Background">
@@ -102,11 +120,12 @@ addEventListener('pagereveal',e=>{ if(e.viewTransition) document.documentElement
 addEventListener('pagereveal',e=>{ if(!e.viewTransition||!window.navigation||!navigation.activation)return;
   const from=(navigation.activation.from&&navigation.activation.from.url)||''; const m=from.match(/(moodstream|energycheck|kubo|expert)[.]html/); if(!m)return;
   const k={moodstream:'mood',energycheck:'energy',kubo:'kubo',expert:'expert'}[m[1]], s=document.getElementById('pl-'+k), t=document.getElementById('t-'+k); if(!s)return;
+  document.querySelectorAll('.w-proj').forEach(p=>p.classList.toggle('on',p.id===k)); s.style.transition='none'; window.__wFrom=k;
   const r=s.getBoundingClientRect(); if(r.bottom<0||r.top>innerHeight) return;
   s.style.viewTransitionName='cover-'+k; if(t)t.style.viewTransitionName='title-'+k;
-  e.viewTransition.finished.finally(()=>{ s.style.viewTransitionName=''; if(t)t.style.viewTransitionName=''; });
+  e.viewTransition.finished.finally(()=>{ s.style.viewTransitionName=''; if(t)t.style.viewTransitionName=''; s.style.transition=''; });
 });
 </script>
-<script src="js/scripts.js?v=20261009" defer></script>
+<script src="js/scripts.js?v=20261019b" defer></script>
 </body>
 </html>
