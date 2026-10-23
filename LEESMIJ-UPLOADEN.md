@@ -74,11 +74,15 @@ Zijn zinnetjes pas je aan bovenin het Gus-blok in `js/scripts.js` (`const GUS`).
 
 Bij deze update veranderd: alle `.html`-bestanden, `css/style.css`, `js/scripts.js`, plus het nieuwe bestand `img/gus/gus.svg`. De versie achter css/js is `?v=20261019`, zodat browsers de nieuwe versie ophalen.
 
-## Deze update
+## Deze update (23 oktober 2026)
 
-- **Menu:** staat meteen bovenaan en schuift niet meer op; alleen SHANDOR wisselt van lettertype. Op de telefoon opent "Menu" een volledig scherm met grote links en je naam onderaan.
-- **Projecten:** een index met vier vaste titels en één beeldvlak; Expert staat vooraan. Het project in beeld speelt een korte loop van echte schermen (`img/loops/`).
-- **Cases:** bovenaan elke case staan The goal, My hypothesis, How I'd know it worked en What I learned; de regel onder de intro begint met "My role".
-- **Knoppen:** recht in plaats van rond.
+Alleen tekst en je cv, geen opmaak of beweging.
 
-Veranderd: alle `.html`-bestanden, `css/style.css`, `js/scripts.js` en de nieuwe map `img/loops/`. De versie achter css/js is `?v=20261019b`, zodat browsers de nieuwe versie ophalen.
+- **Homepage:** "nearly ten years in hospitality" (ook in de deeltekst voor links), het hospitality-label, de Kubo-regel, "Hospitality taught me to notice where people get stuck." en de About-tekst over je achtergrond, freelancewerk en frontend basics.
+- **Cases:** voorzichtiger claims. Hypotheses als mogelijkheid, concurrenten afgebakend tot de zeven die je bekeek, overal "EC mark", Kubo-kaarten met Problem, Decision en Design, en eerlijkere reflecties.
+- **MoodStream:** je rolregel en een alinea over Figma Make als prototypingtool.
+- **Cv:** `files/CV-Shandor-ten-Hoven.pdf` is vervangen door de nieuwe versie, met de werkervaring in bullets.
+
+Veranderd: `index.html`, `expert.html`, `moodstream.html`, `energycheck.html`, `kubo.html` en `files/CV-Shandor-ten-Hoven.pdf`. CSS en JavaScript zijn niet veranderd, dus de versie achter css/js blijft `?v=20261019b`.
+
+Met GitHub Desktop: kopieer deze bestanden over je lokale map heen, controleer in GitHub Desktop dat alleen deze zes bestanden en deze LEESMIJ veranderd zijn, schrijf een korte beschrijving zoals "Tekst en cv" en klik op "Commit to gh-pages" en daarna "Push origin".
